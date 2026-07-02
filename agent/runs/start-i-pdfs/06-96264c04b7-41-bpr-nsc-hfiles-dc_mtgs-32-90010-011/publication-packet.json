@@ -1,0 +1,934 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-32-90010-011.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "789700e1ff890ad13721d371000e07f1afe7d282ed0b8ecb0d9f87adc7ee2eec",
+    "page_count": 66,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "27,28",
+    "doc_key": null,
+    "title": "NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM",
+    "file_unit": "NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 032-June 7, 1989-NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles. Secret. Sent for action. Sent through Kanter. A stamped notation indicates Gates saw the memorandum.\n\nSource: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, OA/ID 90010-011, NSC/DC 032-June 7, 1989-NSC/DC Meeting on NSR-14 re: U.S. START Position on Air Breathing Systems and Non-Deployed Missiles. Secret. The meeting took place in the Situation Room.\n",
+  "selected_pages": [
+    5,
+    7,
+    9,
+    10,
+    11,
+    13,
+    15,
+    16,
+    17,
+    19,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    45,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2005-1002-F; 2008-1289-F 2005-1002-F; 2008-1289-F : This is not a textual record. This is used as an administrative marker by the George Bush Presidential | Library Staff. ) Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council | Series: H-Files Subseries: NSC/DC Meetings Files OA/ID Number: 90010 Folder ID Number: 90010-011 Folder Title: | NSC/DC 032 - June 07, 1989 - NSC/DC Meeting",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) NE Doc. No. / Type Subject/Title Date Restriction Classification eames I ss a \u2014\u2014ra SS ao Ola. Memo\u2019 Richard Davis to Robert Gates TNII89 (b)(1) Ss . Re: Deputies Committee Meetings on START (1 pp.) . 1b, Summary Re: Summary of Conclusions for the Deputies Committee Meeting 6/7/89 ~ ya)\u2019 Ss [FOIA restrictions redacted] (2 pp.) . 02a. Memo Richard Davis to Robert Gates , . TN9/89 (b)) s Re: Deputies Committee Meetings on START (1 pp.) . . 02b. Summa",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- \u2019 Withdrawal/Redaction Sheet (George Bush Library) - . \u201cDoc. No. / Type Subject/Title : Date Restriction Classification | 03e. Extract Re: Extract from July 25, 1988 Arms Control Support Group n.d. (b)(1) s , Paper (7 pp.) . 03f. Report Re: Alternate Approaches (9 pp.) : nd. (b)(1) Ss 03g. Report Re: Soviet Requirements for Non-Deployed Missiles (2 pp.) . nd. (b)(1) Ss 03h. Paper Re: The Following Information is Provided for Inclusion (1 pp.) nd. (b)(1) Ss 03i. Report Re: NSR 14 START Review P",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": Withdrawal/Redaction Sheet o _- (George Bush Library) \u00a9 Doc. No. / Type , Subject/Title Date Restriction Classification | i 04e. Extract Re: Extract from July 25, 1989 Arms Control Support Group nd. (b)(1) \u201c $ : Paper (7 pp.) - O4f. Report Re: Alternate Approaches (9 pp.) ; nd. (b)(1) . Ss 04g. Report Re: Soviet Requirements for Non-Deployed Missiles (2 pp.) nd, . (b)(1) Ss ! 04h. Paper Re: The Following Information is Provided for Inclusion (1 pp.) nd. _ (b)0) Ss 04i. Talking Points Re: Talki",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\\ \u00a5 ; 7 . -SEGREE\u2014 RECORD IDH/8920871 a NSC/S PROFILE RECEIVED: 19 JUL 89 14 TO: GATES FROM: DAVIS DOC DATE: 19 JUL 89 KANTER SOURCE REF: KEYWORDS: START ARMS CONTROL ICBM Dc soc PERSONS: SUBJECT: SUMMARIES OF CONCLUSIONS OF JUN 7 DC MTG ON AIR BREATHING SYSTEMS & NONDEPLOYED MISSILES ACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 24 JUL 89 STATUS: C STAFF 0 R: DAVIS get LOGREF: 8920581 FL lm J NSCP: DC032 _NSR0014 ODES: g x ii bay io, ww, Do ENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Sey : -SEGREE RECORD ID: 8920871 - ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAQ ASSIGNED ACTION REQUIRED 001 GATES , _ % 89071914 FOR DECISION 001 DAVIS Z 89072109 FOR FURTHER ACTION 001 X 90042515 OBE / STATUS ORIGINAL UNKNOWN . DECLASSIFIED : White House Guidelines E.0. 12958, SEC 3.4 (8) September 11, 2006 _ By ca@ NARA, Datero)ielog : -SEGREE ee",
+      "selected_for_body": false
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "oo 20871 . : NATIONAL SECURITY COUNCIL WASHINGTON. OC 20806 July 19, 1989 ACTION MEMORANDUM FCR RCBERT GATES THROUGH: annoufh@tren FROM: RICHARD navi de SUBCECT: \u00a9 Deputies Committee Meetings on START : : Attached (Tabs A, B, and C) are copies for the record of the summaries of conclusions from the June 7, 9, 12, 1989 Deputies : Committee review of START. Initial drafts of these summaries : were forwarded prior to the NSC meetings on these issues, but were not approved for the files. . | RECOMME",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet \u2019 (George Bush Library) and Type Olb. Summary Re: Summary of Conclusions for the Deputies Committee 6/7/89 (b)C1) Ss | . Meeting [FOIA restrictions redacted] (2 pp.) Collection: * Record Group: \u2014_ Bush Presidential Records : Declassifi Office: _ National Security Council Document P ally ied ; . (Copy of Document Follows) Series: H-Files By on } ln, 3 0 Subseries: NSC/DC Meetings Files ath . WHORM Cat.: | File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR",
+      "selected_for_body": false
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". NATIONAL SECURITY COUNCIL Py WASHINGTON DC 20506 . SSygEN lay, F\u00e9 Ge 2 So0.0] BE Summary of Conclusions for =5 5= The Deputies Commitree Meeting 2\u00a9@ Ss DATE: June 7, 1989 % = LOCATION: Situation Room ny < TIME: 3:00 PM - 4:00 PM Masry yw SUBJECT: Summary of Conclusions of DC Meeting on Air Breathing Systems and Nondeployed Missiles (sj PARTICIPANTS: The Vice President\u2019s Office CIA: Carnes Lord Richard Kerr Douglas MacEachin state: Reginald Bartholomew JCS: Edward Rowny Thomas Fox Allen Holmes ",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". . = \u2018 ; 2 NO ee ee en ge Pee ee STR nee) ieee me ee EGS AA TaM oy TE an acceptable approach is developed, a proposal would then be made to the Soviets. (s% : | ' po | | | \u201cSECRET",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "o . SEGRE: RECORD ID: 8920871 NSC/S PROFILE RECEIVED: 19 JUL 89 14 TO: GATES FROM: DAVIS DOC DATE: 19 JUL 89 KANTER SOURCE REF: KEYWORDS: START ARMS CONTROL ICBM DC soc PERSONS: SUBJECT: SUMMARIES OF CONCLUSIONS OF JUN 7 DC MTG ON AIR BREATHING SYSTEMS & NONDEPLOYED MISSILES ACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 24 JUL 89 STATUS: C STAFF OFFICER: DAVIS LOGREF: 8920581 FILES: IFM Cae NSCP: DC032 NSRO014 CODES: : DOCUMENT DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR_INFO DECLASSIFIED Whit",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~ 4 -GECREE- RECORD ID: 8920871 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED | 001 GATES ; ; Z 89071914 FOR DECISION | 001 DAVIS Z 89072109 FOR FURTHER ACTION 001 X 90042515 OBE / STATUS ORIGINAL UNKNOWN DEGLASSIFIED White House Guldelines . . \u00a3.0. 12958, SEC 3.4 (B) September 11, 2006 By cap _ NARA, Date sofi9/o9 : -SECREE- \u2014",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- 20871 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 July 19, 1989 ACTION . MEMORANDUM FOR ROBERT GATES , THROUGH: annoud hf@ireR FROM: RICHARD oavrde SUBJECT: Deputies Committee Meetings on START , Atzached (Tabs A, B, and C) are copies for the record of the summaries of conclusions from the June 7, 9, 12, 1989 Deputies Cemmittee review of START. Initial drafts of these summaries were forwarded prior to the NSC meetings on these issues, but were not approved for the files. RECOMMENDATIONS T",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type | 02b. Summary Re: Summary of Conclusions for the Deputies Committee 6/7/89 (b)(1) s | __ | Meeting [FOIA restrictions redacted] (2 pp.) Collection: Record Group: Bush Presidential Records . . . . . : Document Partially Oeciassified Office: National Security Council , ABBE | series: HFiles (Copy of Document Follows) : : B On _5g/2023 Subseries: NSC/DC Meetings Files Y ued , WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Me",
+      "selected_for_body": false
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". NATIONAL SECURITY COUNCIL 2 WASHINGTON DC 20506 O os) esi, SENDENTI 47 \u201c4, Ss? \u2018Gio Fe Fy Dz Pe Olo) Be Summary of Conclusions for 22 <= The Deputies Committee Meeting 2 = DATE: June 7, 1989 % = LOCATION: Situation Room Gy, TIME: 3:00 PM - 4:00 PM Mia yyw SUBJECT: Summary of Conclusions of DC Meeting on Air Breathing Systems and Nondeployed Missiles (% PARTICIPANTS: The Vice President\u2019s Office CIA: Carnes Lord Richard Kerr Douglas MacEachin Reginald Bartholomew Jes: Edward Rowny Thomas Fox All",
+      "selected_for_body": true
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a SeCRET 2 OLE a ay ge Paetag avy ead oxat ts || Tf an acceptable approach is developed, a proposal would then be made to the Soviets. (& \u201cSEGREF- .",
+      "selected_for_body": true
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". -SEGRET- RECORD ID\u2122*6920581\"\" \u2018 NSC/S PROFILE RECEIVED: 06 JUN 89 08 TO: AGENCIES FROM: HUGHES DOC DATE: 06 JUN 89 SOURCE REF: KEYWORDS: START NSR . ove AGENDA PERSONS: SUBJECT: NOTIFICATION OF DC MTG ON 7 JUN RE NSR 14 / AIR BREATHING SYSTEMS & NON DEPLOYED MISSILES ACTION: HUGHES SGD MEMO TO AGENCIES - DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICER; DAVIS ; LOGREF: 8920871 russ fi ) se am, NSROO14 CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR_INFO DECLASSIFIED White House Guideli",
+      "selected_for_body": true
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "= . SECRED RECORD ID: 8920581 , ' . _ ACTION DATA SUMMARY REPORT ; DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED | 001 HUGHES ; , Z 89060608 FOR SIGNATURE | 002 X 89060619 HUGHES SGD MEMO TO AGENCIES 003 GATES Z 89060621 ADD-ON. / FOR DECISION 003 X 89060818 NOTED BY GATES \u2018 . \u00bb DECLASSIFIED Whit\u00e9 House Guidelines . _ \u00a3.0..12958, SEC 3.4 (B) September 11, 2006 By cap __ NARA, Dateioighg , \u201cSECREE .",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 National Security Council The White House PROOFED BY: LOG # 20597 URGENT NOT PROOFED: - SYSTEM PRS L185) INT BYPASSED WW DESK: pocco\u20achA AlO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec a MD Philip Hughes S _Mee Bob Gates Brent Scowcroft __ ee a r\u2014) Philip Hughes .. w Situation Room West Wing Desk> 4 wWDk = NSC Secretariat = \u2018a Sika _ 2b eens SS MT ce vp Sununu Other Should be seen by: | ee = (Dateline) eo cae or COMMENTS i NOH] Onde D0 ee 7 att 3.0ypm",
+      "selected_for_body": true
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; 20581 NATIONAL SECURITY COUNCIL Log Number DISTRIBUTION RECORD Date Cc DOCUMENT CLASSIFICATION: OTOP secret Kee OOCONFIDENTIAL QOUNCLASSIFIED a EXTERNAL DISTRIBUTION: #CYS. pate Time_ eceived/Signed for By: | THE VICE PRESIDENT 7 Sn Adv ObYs \u2014 2 THE SECRETARY OF STATE 1 Wo / JS cin / Exec. sevRoom 7241 \u2014 g a= THE SECRETARY OF THE TREASURY Main Bidg/Room 3422 NN THE SECRETARY OF DEFENSE P Room 5933/Dept. of State a. fol 23.35\u201d CHAIRMAN US START DELEGATION % ACDA, 5933 State ee ee CHAIRMAN US IN",
+      "selected_for_body": false
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a \u2014 \u2014\u2014\u2014\u2014 ; 20581 NATIONAL SECURITY COUNCIL Log Number ul DisTRIBUTION RECORD Date ES EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT A 7 TARY OF STATE THE SECRETARY OF THE TREASURY Main BidgRoom 3422 ee THE SECRETARY OF DEFENSE The Pentagon ES ee DIRECTOR, ACDA 1 \" Room 5933/Dept. of State eee CHAIRMAN US START DELEGATION % ACDA, 5933 State in a CHAIRMAN US INF DELEGATION \u2018% ACDA, 5933 State ae DIRECTOR, CIA Langley, VA \u2014\u2014\u2014\u2014\u2014\u2014S ee CHAIRMAN, ICS The Pentagon Neen ",
+      "selected_for_body": false
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "at oo 20581 NATIONAL SECURITY COUNCIL Log Number un DISTRIBUTION RECORD Date a EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: |THE VICE PRESIDENT a THE SECRETARY Of STATE 1 Exec. se~Room 7241 ... ee | THE SECRETARY OF THE TREASURY | Main Bidg/Room 3422 a THE SECRETARY OF DEFENSE . The Pentagon er | NTO os 1 chisg $40 Dif CHAIRMAN US START DELEGATION | \u2018Ye ACDA, 5933 State ee | CHAIRMAN US INF DELEGATION % ACDA, 5933 State SS sooo OIRECTOR, CIA Langley, VA ee CHAIRMAN, JCS The Pent",
+      "selected_for_body": false
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\\ [wasurax RECEIPT || 1\" 1\" vl | af AN \u00a2 PW: ik THE WMETE MOU NE : MESSAGE HO. 0150 CLASSIFICATION a paces zt \u2018 mg. PHILIP MUGWes \u2122 (wan) (SxTEus 10\") (OCH SUNBER) Fi MESSAGE orscasrrion_ YC M6 \u201c2 dianp i TO _(acencr) DELIVEA Tor DgPT/ROOM wD, RTE TON , Deb _ Groene Cole GecSee sae SCS \u2014 Armory nce GecAgr Site A (n-\u2018pes Ack roukedgen eeeped I, Via f hon 6 (ants > DECLASSIFIED \u2018 White House Guidelines 4 ; E.0, 12958, SEC 3.4 (B) September 11, 2006- i",
+      "selected_for_body": true
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018tae \u2018WASHFAX RECEIPT \\ are sy 8 PF: tt \u201cTHE WHITE HOLGE \u2018 wT \u201ctSSAGE wo. 0150 _ CLASSIFICATION Se Fi] cos (WANED ; (R2TENS toOM) (ROOM YUMBER) a TO_taceney) oeLiven To: DEPT/ ROOK NO. CATENSTON : mre) oar boa ; DECLASSIFIED \u00a9 \u2014 : wt oo : White House Guidelines ot ne . E.0. 12958, SEC 3.4 (B) September 11, 2006 _ ; By car_ NARA, Date o)ralog an i",
+      "selected_for_body": true
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SY 7) NY WOnTnY Sle _\u2014 hE Sk eB) Idq \u2018 WOTsRITRS ON WOON7EESS a \u201cTOE WaATTaG TEmIgw) Ol ner FO TT worseressze 2oNssm i (W3GKAK WOON) (MOI SNIzxI) (zen) \u201cPE steve ron avorarssvio \u201cOSLa = aovssaK 4 | (a : Ne , . \u2014W\\eo 1810H 1LIK and a \u2018fle Sup 0 Ldigoau xvansya||",
+      "selected_for_body": true
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| WASHFAX RECEIPT 7 THE WHITE HOLSE 7 5 . J F | y Z | MESSAGE NO. CLASSIFICATION - PAGES 34 FROM__G. PHILIP HUGHES a | (NAME) (EXTENSION) (ROOM NUMBER) | MESSAGE DESCRIPTION | a Loc # Dose! TO_(AGENCY) DELIVER TO: DEPT/ROOM NO. \u00a9 EXTENSION | ed Ggoese Cole \u00a9 GecSee Lnetgy Wilhain Vitale Cue fen SCS \u2014 Pumowm Mave EecAter \u2014_ \u2014_\u2014_\u2014\u2014 \u2014 REMARKS DECLASSIFIED : White House Guidelines E.0, 12958, SEC 3.4 (B) September 11, 2006 By car _ NARA, Date oheleg",
+      "selected_for_body": true
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "department of state",
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 June 6, 1989 MEMORANDUM FOR MR. CARNES LORD MR. FRANK HODSOLL Assistant to the Vice Executive Associate Director President for National Office of Management and Security Affairs Budget MR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL Executive Secretary Executive Secretary Department of State Central Intelligence Agency COLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS Executive Secretary Executive Assistant to the Department of Defense Chairman Join",
+      "selected_for_body": true
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSEGRES 20581 DEPUTIES COMMITTEE MEETING : | ARMS CONTROL POLICY REVIEW Wednesday, June 7, 1989 | White House Situation Room ~ | 3:00 p.m. a NSR-14, U.S. START PROPOSAL: AIR BREATHING SYSTEMS AND NON-DEPLOYED MISSTLES Agenda I. Introductory Remarks by the Chairman II. START: U.S. Proposal on Air Breathing Systems III. START: U.S. Proposal on Non-deployed Missiles ; Iv. Recommendations for the NSC DECLASSIFIED . White House Guidelines . E.O. 13526, SEC 3.4 (b), September 11, 2006 gperna- : . ; By",
+      "selected_for_body": true
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03c. Report Re: NSR 14 START Review Paper Three -- Nondeployed 5/27/89 (b)(1) Ss Missiles (5 pp.) Collection: Record Group: _ Bush Presidential Records Office: National Security Council | Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM Date Closed:",
+      "selected_for_body": false
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Class. | and Type 03d. Memo To Distribution List . 8/20/88 (b)(1) Ss Re: Nondeployed Ballistic Missiles in START (3 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files \u2018WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles",
+      "selected_for_body": false
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03e. Extract Re: Extract from July 25, 1988 Arms Control Support Group (b)(1) Paper (7 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files . WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM Date Closed: 10/19/2",
+      "selected_for_body": false
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Class. | and Type | 03f. Report Re: Alternate Approaches (9 pp.) ' wo) - | | | Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM Date ",
+      "selected_for_body": false
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03g. Report Re: Soviet Requirements for Non-Deployed Missiles (2 pp.) - (1) - Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files : WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM Date Closed: 10/19/2009 OA/D Numbe",
+      "selected_for_body": false
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| _ : . SEERES THE FOLLOWING INFORMATION IS PROVIDED FOR INCLUSION IN THE NEXT NDM PAPER (START REVIEW PAPER THREE) For economic reasons, the US historically has produced all of its missiles of a single type in a \"surge\" during the early years of the lifecycle, while the Soviets maintain an active production line throughout the lifecycle of the system, e.g. the Minuteman II production line was active from 1965 to 1970 ; and produced 648 missiles; the Minuteman III production line was active from",
+      "selected_for_body": true
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SEGREP START 04C | . : 5/6/89 NSR_14 T Revie x Four -- Air Bri i Purpose. To review U.S. positions on dealing with air breathing systems under START. Background. A fundamental premise underlying the U.S. approach to START is that we must be capable of maintaining an adequate deterrent under a START regime. In order to do so, and to improve stability, the U.S. has consistently opposed tight con- straints on ALCMs and other bomber weapons in START. The orig- inal U.S. position did not directly li",
+      "selected_for_body": true
+    },
+    {
+      "page": 36,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSEEREE 2 In establishing this position, the United States recognized that the Soviets would have an equal right to exploit the rules. The United States judged, however, that protecting our ability to cover and damage targets was more important than constraining similar Soviet capabilities. Discussion -- General. Because of the importance of this area and the close interrelationship of all heavy bomber/ALCM posi- tions, a comprehensive review is required. There is consensus that the United State",
+      "selected_for_body": true
+    },
+    {
+      "page": 37,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201c BO \u201cSECREE 3 counting rule, could actually decrease the U.S. ability to deploy : the necessary high number of bomber weapons. On the other hand, such a move would simplify U.S. obligations under the treaty, since no distinctions would have to be made (or verified) re- garding conventionally-armed versus nuclear~armed ALCMs, or heavy bombers equipped for ALCMs vice those not so equipped. A less radical move would be to return to the earlier U.S. position that each heavy bomber equipped for ALCM",
+      "selected_for_body": true
+    },
+    {
+      "page": 38,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "OPT A Pry SECRSE 4 i over, the 1,500 km range better protects U.S. options for future cruise missiles pending resolution of how future nuclear and non- nuclear cruise missile are to be distinguished from each other. The U.S. has indicated some flexibility on the range issue in return for Soviet acceptance of the remainder of the U.S. ALCM- heavy bomber positions, although we have not specified what range we might accept. Some believe this flexibility should be with- drawn, either permanently or ",
+      "selected_for_body": true
+    },
+    {
+      "page": 39,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSBEREP 5 United States. Others believe that the primary consideration is protecting U.S. programs, not constraining Soviet ones. While NTM can distinguish physical features of different cruise missiles, it is not an effective means of determining whether those cruise missiles carry nuclear or conventional warheads. There may be operational penalties from designing future conven- tional cruise missiles such that they are physically distinguish- able. In addition, weapons carried internally ina b",
+      "selected_for_body": true
+    },
+    {
+      "page": 40,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~SECREE SEGREF 20581 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 June 5, 1989 ACTION MEMORANDUM FOR G. PHILIP HUGHES THROUGH: ARNOLD KANTER Ke FROM: RICHARD paves SUBJECT: Deputies Committee Meeting to Discuss NSR-14 (U.S. START Position on Air Breathing Systems and Non- Deployed Missiles) The subject meeting is scheduled for 3:00 p.m. to 4:00 p.m., on Wednesday, June 7, in the White House Situation Room. This DC will focus on two papers from NSR-14. | The notification memorandum for the Ju",
+      "selected_for_body": true
+    },
+    {
+      "page": 41,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~SEERET- RECORD 10: 6920581 NSC/S PROFILE RECEIVED: 06 JUN 89 08 TO: GATES FROM: DAVIS DOC DATE: 06 JUN 90 KANTER SOURCE REF: KEYWORDS: START NSR De AGENDA PERSONS: SUBJECT: BACKGROUND MATERIAL FOR DC MTG ON 7 JUN RE AIR BREATHING SYSTEMS & NON DEPLOYED MISSILES ACTION: NOTED BY GATES DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICER: DAVIS LOGREF: 8920871 runes D> ssotifeo.D _) _NsRoo14 CODES: tail \u201d = a DOCUMENT DISTRIBUTION FOR_ACTION FOR _CONCURRENCE FOR_INFO DECLASSIFIED White House Guidelines E.",
+      "selected_for_body": true
+    },
+    {
+      "page": 42,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~SEGRER RECORD ID: 8920581 . ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED . _001 HUGHES ; \u2018 Z 89060608 FOR SIGNATURE 002 X 89060619 HUGHES SGD MEMO TO AGENCIES 003 GATES . Z 89060621 ADD-ON / FOR DECISION 003 X 89060818 NOTED BY GATES DECLASSIFIED : . . White House Guidelines . : E.0. 12958, SEC 3.4 (B) September 11, 2006 By cap NARA, Date s\u00a2)i9/o9 SECRER",
+      "selected_for_body": false
+    },
+    {
+      "page": 43,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "National Security Council The White House PROOFED BY: LOG # 20881 URGENT NOT PROOFED: SYSTEM | PRS T BYPASSED WW DESK: voc.oc YY AlO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec a Za A Philip Hughes t Ki YY : Bob Gates 2 ee pe Brent Scowcroft 5 cep <= ents ) Philip Hughes er \u201c 7 & SituationRoom > West Wing Desk \u00a9 S : f Rasy NSC Secretariat iy = ae ae Pes SR pe pe eT gp aaa SoS bo | > gs eae nae Lees 3 ae . Clasaglon \u2014Dintormation D=Dispatch R=Retain N=NoturtherAction | CC: vp Sununu Other Should be",
+      "selected_for_body": true
+    },
+    {
+      "page": 44,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 04a. Memo From Richard Davis to Robert Gates, Re: Deputies 6/6/89 (b)(1) Ss Committee Meeting, Wednesday, June 7, 1989, 3:00 p.m. -- START Limits on Air Breathing Systems and Nondeployed Missiles [FOIA restrictions redacted] (7 pp.) : Collection: Record Group: \u2014_ Bush Presidential Records . . . . j : Document Partially Declassified Office: National Security Council \"4 . . {Copy of Document Follows) Series: H-Files B on } ho b Subseries: N",
+      "selected_for_body": false
+    },
+    {
+      "page": 45,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSECREP 20581 Add-on NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 ae \u201cYn, ey fag Seo, June 6, 1989 \u201can Ny, a) 00% 4, Sheen Magn, ACTION s\u00e9 Ge sz Foz Be MEMORANDUM FOR ROBERT GATES 32 ge THROUGH: ARNOLD TER We % = a \u201cMy, we FROM: srounso hits Mes SUBJECT: Deputies Committee Meeting, Wednesday, June 7, 1989, 3:00 p.m. -- START Limits on Air Breathing Systems and Nondeployed Missiles This Deputies Meeting will be the second of three meetings to review the specifics of our START position before ",
+      "selected_for_body": true
+    },
+    {
+      "page": 46,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET - 2 , . c The options paper (at Tab A) addresses three specific issues arising from differences between the U.S. and Soviet proposals: 1) counting rules for ALCMs, 2) a range threshold to distinguish between short-range air-to-surface missiles and ALCMs, and 3) how : : : g : HONG TT to distinguish between nuclear:-and conventional ALCMs. [iQ oie Counting Rules. There are two basic questions: how far should we go in encouraging greater Soviet reliance \u2018on air breathing weapons? What restri",
+      "selected_for_body": false
+    },
+    {
+      "page": 47,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SEGREF 3 a RSRTOTRETSR eaa e e There are two complementary ways to protect conventional ALCMs from being captured in START: we can distinguish between nuclear and conventional ALCMs and limit only the nuclear missiles; or we . can set the minimum range for limited ALCMs high enough to exclude all conventional ALCMs. The U.S. position does both. We have agreed with the Soviets that all currently existing long- . range ALCMs will be considered to be nuclear-armed and subject to the treaty (all are",
+      "selected_for_body": true
+    },
+    {
+      "page": 48,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2019 OCF SOONG TNT Sain eee UR RES, PS ON Sh oe SE ee Re Py ee Gee tee ee eee Oe ee ae There are four options on the range issue and three on distinguishability. We recommend that you do not discuss the options in detail, but use this meeting to: - hear out the JCS on the specific types of programmatic flexibility we need; : . - discuss the flexibility/verification tradeoff; and : - begin the discussion of what kinds of-tradeoffs between - range and distinguishability we should consider. j . boar t",
+      "selected_for_body": true
+    },
+    {
+      "page": 49,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SEGREE 5 SSNS SONOS TS ee Ee ee see WE aes Gen a ee ee Ee ee \u201cSe ae CSOs Ua Se ee te oe FSR BEN MOR nS STS URE oe COM ces ARR NN ACG ora eG See et tia tal POO Tae a Ge a pee pe ROU ae Gop ee rea ee sees oa ese a oe Bee Se POE SGM se (AAR ET ANSE re ae ae te ca a eet en Goa De te AA OS ips ce ee. ee eo ee a SAOMSF SHENG SR Te en a ee Pe eS TEER as OE EE ee, ees a ee a ees es ee eee bal tia Dae) RAG eu eer cy ema an tes Tegmaetta. cot ee Rei ot Cee re ee ! PA a SOA Gry Ee Clea ia te Aa A IO PO I a",
+      "selected_for_body": true
+    },
+    {
+      "page": 50,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "6 Seances (nee a Oe ee No ae Set ee | pee Ee AP, ERC Sa R eS, nee ie toe See eS ee ee LA ee OS os DBS a nee te oe ae eas eo ae ee ee Ue ne as Pie SERIES ae Pee ee ee se ee ue pe SU ee ee ae es ts ae RE a ee a ee aa ee ee | PSD ee SE ss 2 ee es | tere ee Lees ied a ee oo Oe ee oe me oo as Se ge eee | ae ee ee ee eee ponte Gone Ea th eghes ee Pe et ie eran Bian Ngee He ste 36 ele eae ee ee Bt SM, he ae BES 66) IRNOPSAIBNOY TT cee ee eee ee ee Ce en ee ee ie = \u2014\u2014- J eit Ue Bt ess Soke tae eek a ee ",
+      "selected_for_body": true
+    },
+    {
+      "page": 51,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". | . | SECREE 7 . } S9(6NG) SONG) Fee ey pe ee ee Te ne a a ee | Sep pay no ee ear een Ao temie ates eae RECOMMENDATION That you read the papers at Tab A and B and use the points outlined above in guiding discussions at the Deputies Meeting on START Air breathers and Nondeployed limits. : | Approve : Disapprove : | | Black Ler | Bob Blac! fang Condt ice concur. | Attachments : Tab A START 04 -- Air Breathing Systems Tab B START 03 -- Nondeployed Missiles SESRET :",
+      "selected_for_body": true
+    },
+    {
+      "page": 52,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". SEGRE: START 04C | . - : 5/6/89 | - , NSR_14-START Review Paper Four -- Air Breathing Systems oe Purpose. To review U.S. positions on dealing with air breathing systems under START. . - : Background. A fundamental premise underlying the U.S. approach to START is that we must be capable of maintaining an adequate \u2018deterrent under a\u2019START regime. In order to do so, and-to improve stability, the U.S. has consistently opposed tight con- straints on ALCMs and other bomber weapons in: START. The ori",
+      "selected_for_body": true
+    },
+    {
+      "page": 53,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| . In \u00e9stablishing this position, the United States recognized that | the Soviets. would have an equal right to exploit the rules. The : United States judged, however, that protecting our ability to cover and damage targets was more important than constraining | | similar Soviet capabilities. . . | Discussion -- General. Because of the importance of this area | | and the close interrelationship of all heavy bomber/ALCM posi- tions, a comprehensive review is required. There is consensus - that t",
+      "selected_for_body": true
+    },
+    {
+      "page": 54,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018counting rule, could actually decrease the U.S. ability to deploy the necessary high number of bomber weapons. On the other hand, such a move would simplify U.S. obligations under the treaty, | since no distinctions would have to be made (or verified) re- garding conventionally-armed versus nuclear~armed ALCMs, or heavy : bombers equipped for ALCMs vice-those not so equipped. A less radical move would be to return to the earlier U.S. position that each heavy bomber equipped for ALCMs should cou",
+      "selected_for_body": true
+    },
+    {
+      "page": 55,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "over, the 1,500 km range better protects U.S. options for future cruise missiles pending resolution of how future nuclear and non- nuclear cruise missile are to be distinguished from each other. The U.S. has indicated some flexibility on the range issue in return for Soviet acceptance of the remainder of the U.S. ALCM- heavy bomber positions, although we have not specified what range we might accept. Some believe this flexibility should be with- drawn, either permanently or until satisfactory re",
+      "selected_for_body": true
+    },
+    {
+      "page": 56,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "United States. Others believe that the primary consideration is oo : protecting U.S. programs, not constraining Soviet ones. While NTM can distinguish physical features of different cruise missiles, it is not an effective means of determining whether those cruise missiles carry nuclear or conventional warheads. There may be operational penalties from designing. future conven- tional cruise missiles such\u2019 that they are physically distinguish- able. In addition, weapons carried internally in a bom",
+      "selected_for_body": true
+    },
+    {
+      "page": 57,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) ie Sebleev Tie of Document and Type 04c. Memo To Distibution List 8/20/88 (b)(1) s Re: Nondeployed Ballistic Missiles in START (3 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Co",
+      "selected_for_body": false
+    },
+    {
+      "page": 58,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". aes J Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document [Dae | Restriction Class. | and Type 04d. Extract Re: Extract from July 25, 1989 Arms Control Support Group (b)(1) Paper (7 pp.) Collection: | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-",
+      "selected_for_body": false
+    },
+    {
+      "page": 59,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a Withdrawal/Redaction Sheet (George Bush Library) and Type 04e. Report Re: Alternate Approaches (9 pp.) 7 (b)(1) - Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM | | Date Closed: 10/19/2009 OA/ID Number: 90010-011 FOIA",
+      "selected_for_body": false
+    },
+    {
+      "page": 60,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 04f. Report Re: Soviet Requirements for Non-Deployed Missiles (2 pp.) - (b)() Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files . Subseries: NSC/DC Meetings Files | WHORM Cat.: : | File Location: NSC/DC 032 ~ June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems : and Non-Deployed Missiles, Keywords: Start, Arms Control, ICBM . | | Date Closed: 10/19/2",
+      "selected_for_body": false
+    },
+    {
+      "page": 61,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; THE FOLLOWING INFORMATION IS PROVIDED FOR INCLUSION IN THE NEXT NDM PAPER (START REVIEW PAPER THREE) \u2018 For economic reasons, the US historically has produced all of its missiles of a single type ina \u201csurge\u201d during the early years of the lifecycle, while the Soviets maintain an active , production line throughout the lifecycle of the system, e.g. the Minuteman II production line was active from 1965 to 1970 and produced 648 missiles; the Minuteman III production line 7 was active from 1968 to 1",
+      "selected_for_body": true
+    },
+    {
+      "page": 62,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 . ar SReRE- 20272 Ao/2 \\ TALKING POINTS FOR MEETING TO REVIEW NSR 3 APRIL 5, 1989 3:15 p.m. Introductory Remarks == The purpose of this meeting is to review NSR 3 on U.S.- Soviet relations. =< First let me tu to Bill WebkSter who will gi us a brief cman f the, situation in the Sovi Union. bea Issue I: Overall Approach =< I recommend that we take a look first at the broad question of our overall approach to the Soviet Union. mie If we accept that this idXa period of military retrenchment for th",
+      "selected_for_body": true
+    },
+    {
+      "page": 63,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SRERET- RECORD ID: 8920609 NSC/S PROFILE RECEIVED: 08 JUN 89 20 TO: GATES | FROM: KANTER DOC DATE: 08 JUN 89 DAVIS. ; SOURCE REF: KEYWORDS: ARMS CONTROL START Dc . soc PERSONS: SUBJECT: DC MTG ON AIR BREATHING SYSTEMS & NONDEPLOYED BALLISTIC MISSILES ON JUN 7 ACTION: ACTION COMPLETED BY 8920871 DUE DATE: 28 APR 90 STATUS: C STAFF pepommmmgyv is oie, LOGREF: 8920247 8920385 FILES: IFM_C NSGP: pco32__ NSROO14 CODES: | DOCUMENT DISTRIBUTION | FOR ACTION FOR _CONCURRENCE FOR_INFO NSC CHRON | DECLAS",
+      "selected_for_body": true
+    },
+    {
+      "page": 64,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SEGREP RECORD ID: 8920609 ; ACTION DATA SUMMARY REPORT DOC ACTION CAO ASSIGNED ACTION REQUIRED. 001 GATES 2 89060820 FOR DECISION ; 001 DAVIS Z 89061011 FOR FURTHER ACTION 001 - X 90042614 OBE / STATUS ORIGINAL UNKNOWN : 001 . X 90081714 ACTION COMPLETED BY 8920871 ! | . DECLASSIFIED White House Guidelines E.0. \u20182358, SEC 3.4 (B) September 11,2006 ; : y caP__NARA, Date wia/og | | \u2018 | SECREE .",
+      "selected_for_body": true
+    },
+    {
+      "page": 65,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201d gpese , SEGRETF 20609 . NATIONAL SECURITY COUNCIL WASHINGTON, D.C, 20508 June 8, 1989 ACTION MEMORANDUM FOR ROBERT GATES THROUGH: ARNOLD ol. ye FROM: RICHARD! . s SUBJECT: Deputies Committee Meeting on Air Breathing : Systems and Nondeployed Ballistic Missiles Attached (Tab A) is the summary of conclusions from the June 7, 1989 Deputies Committee review of Air Breathing Systems and Nondeployed Ballistic Missiles. . RECOMMENDATION That you approve the summary of conclusions. Attachment . Tab A ",
+      "selected_for_body": true
+    },
+    {
+      "page": 66,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Class. and Type | 05. Summary Re: Summary of Conclusions for NSC Committee Meeting 6/7189 (b)(1) Ss (2 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles, Keywords: St",
+      "selected_for_body": false
+    }
+  ],
+  "draft_body": "\\ \u00a5; 7\n. -SEGREE-- RECORD IDH/8920871\na NSC/S PROFILE RECEIVED: 19 JUL 89 14\nTO: GATES\nFROM: DAVIS DOC DATE: 19 JUL 89\nKANTER SOURCE REF:\nKEYWORDS: START ARMS CONTROL\nICBM Dc\nsoc\nPERSONS:\nSUBJECT: SUMMARIES OF CONCLUSIONS OF JUN 7 DC MTG ON AIR BREATHING SYSTEMS\n& NONDEPLOYED MISSILES\nACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 24 JUL 89 STATUS: C\nSTAFF 0 R: DAVIS get LOGREF: 8920581\nFL lm J NSCP: DC032 _NSR0014 ODES:\ng x ii\nbay io,\nww, Do ENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap _ NARA, Date tolra/o7\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: NSAJC DOC 10F 1\n\noo 20871\n.: NATIONAL SECURITY COUNCIL\nWASHINGTON. OC 20806\nJuly 19, 1989\nACTION\nMEMORANDUM FCR RCBERT GATES\nTHROUGH: annoufh@tren\nFROM: RICHARD navi de\nSUBCECT: \u00a9 Deputies Committee Meetings on START:\n: Attached (Tabs A, B, and C) are copies for the record of the\nsummaries of conclusions from the June 7, 9, 12, 1989 Deputies:\nCommittee review of START. Initial drafts of these summaries\n: were forwarded prior to the NSC meetings on these issues, but\nwere not approved for the files..\n| RECOMMENDATIONS\nThat you approve the summary of conclusions on air breathing:\nsystems and nondeployed missiles at Tab A.\n; Approve: Disapprove:\nThat you approve the summary of conclusions on mobile ICBMs at\n, Approve Disapprove { i oa\nsome\nThat you approve the summary of conclusions on new initiatives at. i\ney\nApprove N Disapprove\nTab A Summary of Conclusions - Air Breathing Systems and\nNondeployed Missiles \u00b0:\nTab B Summary of Conclusions - Mobile ICBMs\nTab C Summary of Conclusions - New Initiatives\nSSCREE DECLASSIFIED\nDeclassify on: OADR PER E.0. 13526\n\u00b0: Blasfaery MM.\n\n. NATIONAL SECURITY COUNCIL Py\nWASHINGTON DC 20506.\nSSygEN lay,\nF\u00e9 Ge\n2 So0.0] BE\nSummary of Conclusions for =5 5=\nThe Deputies Commitree Meeting 2\u00a9@ Ss\nDATE: June 7, 1989 % =\nLOCATION: Situation Room ny <\nTIME: 3:00 PM - 4:00 PM Masry yw\nSUBJECT: Summary of Conclusions of DC Meeting on Air Breathing\nSystems and Nondeployed Missiles (sj\nPARTICIPANTS:\nThe Vice President's Office CIA:\nCarnes Lord Richard Kerr\nDouglas MacEachin\nstate:\nReginald Bartholomew JCS:\nEdward Rowny Thomas Fox\nAllen Holmes Eugene Daniel\nLinton Brooks\nACDA:\nDefense: George Murphy\nDonald Atwood William Fite\nStephen Hadley\nWhite House: 7\nEnergy: Robert Gates\nJohn Tuck\nVictor Alessi NSc:\nJohn Gordon\nOMB: Richard Davis\nWilliam Diefenderfer\nSummary of Conclusions\nThe Deputies discussed START NSR 14 options papers on Air\nBreathing Systems and Nondeployed Ballistic Missiles. Except as\nnoted below, there was consensus that the discussion and options\nin the papers accurately reflect agency positions. (83\n[ 5\nThere was consensus that this element was part of the current\nU.S. position. (8)\nSEGRET DECLASSIFIED IN PART\nDeclassify on: OADR SEGRET PER E.O. 13526\n2010-1995 -mA\n. wa gltlrotk\n\n2\nNO ee ee en ge Pee ee STR nee) ieee me ee\nEGS AA TaM oy TE an acceptable approach is developed, a\nproposal would then be made to the Soviets. (s%\npo\n\no. SEGRE: RECORD ID: 8920871\nNSC/S PROFILE RECEIVED: 19 JUL 89 14\nTO: GATES\nFROM: DAVIS DOC DATE: 19 JUL 89\nKANTER SOURCE REF:\nKEYWORDS: START ARMS CONTROL\nICBM DC\nsoc\nPERSONS:\nSUBJECT: SUMMARIES OF CONCLUSIONS OF JUN 7 DC MTG ON AIR BREATHING SYSTEMS\n& NONDEPLOYED MISSILES\nACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 24 JUL 89 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF: 8920581\nFILES: IFM Cae NSCP: DC032 NSRO014 CODES:\n: DOCUMENT DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR_INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap NARA, Date (]19l0q\nCOMMENTS: ss\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: NSAJC Doc 10F 1\n~SECREE-\n\n- 20871\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nJuly 19, 1989\nACTION\n. MEMORANDUM FOR ROBERT GATES,\nTHROUGH: annoud hf@ireR\nFROM: RICHARD oavrde\nSUBJECT: Deputies Committee Meetings on START\nAtzached (Tabs A, B, and C) are copies for the record of the\nsummaries of conclusions from the June 7, 9, 12, 1989 Deputies\nCemmittee review of START. Initial drafts of these summaries\nwere forwarded prior to the NSC meetings on these issues, but\nwere not approved for the files.\nRECOMMENDATIONS\nThat you approve the summary of conclusions on air breathing\nsystems and nondeployed missiles at Tab A.\nApprove Disapprove\nThat you approve the summary of conclusions on mobile ICBMs at\n. Tap B. oo.:,\n.. Cautd ba\nApprove Disapprove.\nsome het\nThat you approve the summary of conclusions on new initiatives at fr\nTab c. To!\nOey\nApprove Disapprove\nTabaA Summary of Conclusions - Air Breathing Systems and\nNondeployed Missiles\n\" Tab B Summary of Conclusions - Mobile ICBMs\nTab C Summary of Conclusions - New Initiatives\n-SECRED; DECLASSIFIED\nDeclassify on: OADR PER E.0. 13526\n. Bulzo13 MM\neee OE\n\n. NATIONAL SECURITY COUNCIL 2\nWASHINGTON DC 20506 O\nos)\nesi,\nSENDENTI 47 \"4,\nSs? 'Gio\nFe Fy Dz\nPe Olo) Be\nSummary of Conclusions for 22 <=\nThe Deputies Committee Meeting 2 =\nDATE: June 7, 1989 % =\nLOCATION: Situation Room Gy,\nTIME: 3:00 PM - 4:00 PM Mia yyw\nSUBJECT: Summary of Conclusions of DC Meeting on Air Breathing\nSystems and Nondeployed Missiles (%\nPARTICIPANTS:\nThe Vice President's Office CIA:\nCarnes Lord Richard Kerr\nDouglas MacEachin\nReginald Bartholomew Jes:\nEdward Rowny Thomas Fox\nAllen Holmes Eugene Daniel\nLinton Brooks\nACDA:\nDefense: George Murphy\nDonald Atwood William Fite\nStephen Hadley\nWhite House: -\nEnergy: Robert Gates\nJohn Tuck\nVictor Alessi Nsc:\nJohn Gordon\nOMB: Richard Davis\nWilliam Diefenderfer\nSummary of Conclusions\nThe Deputies discussed START NSR 14 options papers on Air\nBreathing Systems and Nondeployed Ballistic Missiles. Except as\nnoted below, there was consensus that the discussion and options\nin the papers accurately reflect agency positions. (%\nL\nThere was consensus that this element was part of the current -\nU.S. position. (3)\nSECRET DECLASSIFIED IN PART\n201 0~199S*MK\n. wa g/alreie\n\na SeCRET\n2\nOLE a ay ge Paetag avy ead\noxat ts || Tf an acceptable approach is developed, a\nproposal would then be made to the Soviets. (&\n\"SEGREF-.\n\n. -SEGRET- RECORD ID\u2122*6920581\"\"\n' NSC/S PROFILE RECEIVED: 06 JUN 89 08\nTO: AGENCIES\nFROM: HUGHES DOC DATE: 06 JUN 89\nSOURCE REF:\nKEYWORDS: START NSR\n. ove AGENDA\nPERSONS:\nSUBJECT: NOTIFICATION OF DC MTG ON 7 JUN RE NSR 14 / AIR BREATHING SYSTEMS &\nNON DEPLOYED MISSILES\nACTION: HUGHES SGD MEMO TO AGENCIES - DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICER; DAVIS; LOGREF: 8920871\nruss fi ) se am, NSROO14 CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR_INFO\nWhite House Guidelines\nE.O. 12958, SEC 3.4 (B) September 11, 2006\nBy cap _ NARA, Date wshalag\nCOMMENTS:: pi\nrs\neT\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: NSLMS Doc 20F 3\nSHORE\n\n' National Security Council\nThe White House\nPROOFED BY: LOG # 20597\nURGENT NOT PROOFED: - SYSTEM PRS L185) INT\nBYPASSED WW DESK: pocco\u20achA AlO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec a MD\nPhilip Hughes S _Mee\nBob Gates\nBrent Scowcroft __ ee a\nr--)\nPhilip Hughes..\nw\nSituation Room\nWest Wing Desk> 4 wWDk\nNSC Secretariat = 'a\nSika _ 2b eens\nSS MT\nce vp Sununu Other\nShould be seen by:\n| ee = (Dateline) eo cae or\nCOMMENTS i\nNOH] Onde D0 ee 7 att 3.0ypm\n\n\\ [wasurax RECEIPT || 1\" 1\" vl\n| af AN \u00a2 PW: ik THE WMETE MOU NE:\nMESSAGE HO. 0150 CLASSIFICATION a paces zt '\nmg. PHILIP MUGWes\n\u2122 (wan) (SxTEus 10\") (OCH SUNBER) Fi\nMESSAGE orscasrrion_ YC M6 \"2 dianp i\nTO _(acencr) DELIVEA Tor DgPT/ROOM wD, RTE TON,\nDeb _ Groene Cole GecSee sae\nSCS -- Armory nce GecAgr\nSite A (n-'pes Ack roukedgen eeeped\nI, Via f hon 6 (ants > DECLASSIFIED\n' White House Guidelines 4\n; E.0, 12958, SEC 3.4 (B) September 11, 2006- i\n\n'tae 'WASHFAX RECEIPT \\ are\nsy 8 PF: tt \"THE WHITE HOLGE ' wT\n\"tSSAGE wo. 0150 _ CLASSIFICATION Se Fi] cos\n(WANED; (R2TENS toOM) (ROOM YUMBER) a\nTO_taceney) oeLiven To: DEPT/ ROOK NO. CATENSTON:\nmre) oar boa\n; DECLASSIFIED \u00a9 --: wt oo\n: White House Guidelines ot ne\n. E.0. 12958, SEC 3.4 (B) September 11, 2006 _;\nBy car_ NARA, Date o)ralog an i\n\nSY 7) NY WOnTnY Sle\n_-- hE Sk eB) Idq\n' WOTsRITRS ON WOON7EESS a \"TOE WaATTaG TEmIgw) Ol\nner FO TT worseressze 2oNssm\ni (W3GKAK WOON) (MOI SNIzxI) (zen)\n\"PE steve ron avorarssvio \"OSLa = aovssaK\n4 | (a: Ne\n,. --W\\eo 1810H 1LIK and a 'fle Sup 0\nLdigoau xvansya||\n\n| WASHFAX RECEIPT 7\nTHE WHITE HOLSE\n7 5. J F | y Z |\nMESSAGE NO. CLASSIFICATION - PAGES 34\nFROM__G. PHILIP HUGHES a\n| (NAME) (EXTENSION) (ROOM NUMBER)\n| MESSAGE DESCRIPTION\n| a Loc # Dose!\nTO_(AGENCY) DELIVER TO: DEPT/ROOM NO. \u00a9 EXTENSION |\ned Ggoese Cole \u00a9 GecSee\nLnetgy Wilhain Vitale Cue fen\nSCS -- Pumowm Mave EecAter\nREMARKS\n: White House Guidelines\nE.0, 12958, SEC 3.4 (B) September 11, 2006\nBy car _ NARA, Date oheleg\n\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nJune 6, 1989\nMEMORANDUM FOR\nMR. CARNES LORD MR. FRANK HODSOLL\nAssistant to the Vice Executive Associate Director\nPresident for National Office of Management and\nSecurity Affairs Budget\nMR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL\nExecutive Secretary Executive Secretary\nDepartment of State Central Intelligence Agency\nCOLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS\nExecutive Secretary Executive Assistant to the\nDepartment of Defense Chairman\nJoint Chiefs of Staff\nMR. WILLIAM V. VITALE\nExecutive Secretary MS. BARBARA STARR\nDepartment of Energy Acting Executive Secretary\nArms Control and Disarmament\nAgency\nSUBJECT: Deputies Committee Meeting on NSR-14;\nWednesday, June 7, 1989, WHSR, 3:00 p.m. (%\nA meeting of the Deputies Committee will be held to discuss NSR-\n14 (Air Breathing Systems and Non-Deployed Missiles), on\nWednesday, June 7, at 3:00 p.m. to 4:00 p.m., in the White House\nSituation Room. This meeting will focus on alternatives for the\nU.S. proposal in START with regard to air breathing systems and\nnon-deployed ballistic missiles. An agenda for this meeting is\nattached. The two discussion papers for the meeting have been\ndistributed to Principals of the Arms Control Policy Coordinating\nCommittee and are attached. Attendance should be principals plus\none. In addition, Ambassadors Richard Burt and Edward Rowny are\ninvited to attend. (gf\nYy\nWIL Lae\n7 Patt ced\nExecutive S\u00e9sxr\u00a2tary\nTab A Agenda (3)\nTab B Discussion Papers (83 DECLASSIFIED\nPER E.O. 13526\nLojo- 1995-4\nSECRET wer BRIe1b\nDeclassify on: OADR Soret\n\n\"SEGRES 20581\nDEPUTIES COMMITTEE MEETING: |\nARMS CONTROL POLICY REVIEW\nWednesday, June 7, 1989 |\nWhite House Situation Room ~ |\n3:00 p.m. a\nNSR-14, U.S. START PROPOSAL:\nAIR BREATHING SYSTEMS AND\nNON-DEPLOYED MISSTLES\nAgenda\nI. Introductory Remarks by the Chairman\nII. START: U.S. Proposal on Air Breathing Systems\nIII. START: U.S. Proposal on Non-deployed Missiles\n; Iv. Recommendations for the NSC\n. White House Guidelines\n. E.O. 13526, SEC 3.4 (b), September 11, 2006\ngperna-:.; By.siat__NARA, Date 1441/2014\n. Declassify on: OADR SEGRE\n\nSEERES\nTHE FOLLOWING INFORMATION IS PROVIDED FOR INCLUSION IN THE NEXT\nNDM PAPER (START REVIEW PAPER THREE)\nFor economic reasons, the US historically has produced all of\nits missiles of a single type in a \"surge\" during the early\nyears of the lifecycle, while the Soviets maintain an active\nproduction line throughout the lifecycle of the system, e.g.\nthe Minuteman II production line was active from 1965 to 1970\n; and produced 648 missiles; the Minuteman III production line\nwas active from 1968 to 1978 and produced 820 missiles; and the\nPeacekeeper production line was to have produced 223 missiles\nin a five year period. As a result of the Congressionally\nmandated stretch-out of Peacekeeper procurement, the\nprocurement rate has been cut to 12 missiles per year, the 7\ntotal procurement extended to 14 years, and the cost per:\nmissile has increased from $16 million per missile to $60;\nmillion per missile.::\nPER E.0O. 13526\nLOlO~1995-4 PR\nmt Ba [r01h:\nSECREE\n. = _ a\n\n-SEGREP START 04C |\n.: 5/6/89\nNSR_14 T Revie x Four -- Air Bri i\nPurpose. To review U.S. positions on dealing with air breathing\nsystems under START.\nBackground. A fundamental premise underlying the U.S. approach\nto START is that we must be capable of maintaining an adequate\ndeterrent under a START regime. In order to do so, and to\nimprove stability, the U.S. has consistently opposed tight constraints on ALCMs and other bomber weapons in START. The original U.S. position did not directly limit these systems, constraining them only indirectly through an overall limit on the\nnumber of heavy bombers. If ALCMs and other bomber weapons are\nto count under the 6,000 warhead limit in START, as currently\nagreed, they must be heavily discounted in order to allow meeting\npresent and START projected U.S. military requirements.\nSignificant features of the current U.S. approach include:\n-- Counting bombers which carry only gravity bombs and SRAMs as\n\"one\" against both the 1600 SNDV and 6000 warhead limits.\n-- Counting ALCM-carrying heavy bombers as one unit against the\n1600 SNDV limit and 10 warheads against the 6000 warhead\nlimit regardless of actual load or capability.\n-- Considering \"ALCMs\" to include only nuclear-armed airlaunched cruise missiles with ranges in excess of.1500\nkilometers. Dn cee\n-- Rejecting any limits on long-range conventionally-armed we,\noa cruise missiles (LRCCM). Treating all currently existing ~\nlong-range air-to-surface cruise missiles as nuclear armed\nwhile distinguishing future LRCCMs from treaty accountable.. Lo:\nALCMs through NTM.: mo\n-- Rejecting any limits on nondeployed ALCMS or on total ALCM\ninventory.\n-- Providing for a limited number of former heavy bombers (i.e.\nconventional bombers) which would not count against either\nthe 1600 or 6000 limits.\n-- Providing separate basing for the three classes of bombers\n(ALCM-carrying heavy bombers, non-ALCM carrying heavy\nbombers, former heavy bombers), with a limited on-site\ninspection right for non-ALCM carrying heavy bombers of a\ntype tested with treaty accountable ALCMs.\nSECREE PER E.O. 13526\nDeclassify on: OADR Fe10-1993-ak\nvit 6/8 froit\n\n\"SEEREE 2\nIn establishing this position, the United States recognized that\nthe Soviets would have an equal right to exploit the rules. The\nUnited States judged, however, that protecting our ability to\ncover and damage targets was more important than constraining\nsimilar Soviet capabilities.\nDiscussion -- General. Because of the importance of this area\nand the close interrelationship of all heavy bomber/ALCM positions, a comprehensive review is required. There is consensus\nthat the United States should not alter its current rejection of\nSoviet attempts to place sublimits on bomber weapons or to constrain ALCMs, e.g., to limit nondeployed ALCMs.\nDiscussion -- Counting Rules. For many years the United States\nrejected placing any limits on ALCMs. The U.S. approach to ALCM\ncounting rules discounts ALCMs and heavily discounts non-ALCM\nnuclear weapons on bombers. Some have raised the question of\nwhether discounting bomber weapons would in fact favor the\nSoviets in the long run, given the asymmetries in air defenses.\nOthers believe that, while the Soviets appear to be well positioned to exploit these counting rules, encouraging greater\nSoviet reliance on air-breathing systems is a central goal of the\nU.S. START position. Moreover, the U.S. requires these systems\n| for target coverage, while the Soviets do not.\nThe most common alternative counting rule is the so-called \"as-\n| equipped\" approach, in which ALCM bombers are counted against the\n6000 limit based on the maximum number of ALCMs they are capable\nof carrying. This position, favored by the Soviets, would either\n(a) require substantial modifications to U.S. bombers to limit\nthe number of ALCMs they could carry or (b) lead to unrealis-\n| tically high attributions which would severely inhibit U.S.\n| flexibility. The Soviets claim that the U.S. attribution rule\n| provides the U.S. with an unfair advantage since future wide-\n| bodied aircraft could carry dozens of cruise missiles but would.\n| only be attributed with ten. Some favor attempting to meet this\n| stated Soviet concern by placing some upper limit on the ALCMcarrying capacity of individual aircraft. Others believe the\nloss of flexibility and verification problems make it imprudent\nto attempt to placate what they see as a spurious Soviet concern.\nTo move toward a more stabilizing defense posture, some believe\nthe U.S. could consider readopting its original position that\nALCMs and other bomber weapons will not be counted or limited\nunder START. This would entail having limits only on ballistic\nmissile warheads and on strategic nuclear delivery systems.\nHeavy bombers would continue to count against the latter limit\nonly. Others believe that this move would encourage competition\nin air-breathing systems and, because of the Soviet lead in air\ndefenses, therefore would not be stabilizing. Moreover, this\nmove could incite strong Soviet condemnation as backtracking on a\nkey U.S. concession and, by reopening the Reykjavik bomber\nan si i it--iCWW\u2122S\n\n\" BO\n\"SECREE 3\ncounting rule, could actually decrease the U.S. ability to deploy:\nthe necessary high number of bomber weapons. On the other hand,\nsuch a move would simplify U.S. obligations under the treaty,\nsince no distinctions would have to be made (or verified) regarding conventionally-armed versus nuclear~armed ALCMs, or heavy\nbombers equipped for ALCMs vice those not so equipped.\nA less radical move would be to return to the earlier U.S.\nposition that each heavy bomber equipped for ALCMs should count\nas six warheads (instead of ten), regardless of the number\nactually carried. While this position would not simplify the\ntreaty in any way, and could encounter Soviet opposition, it\ncould increase U.S. flexibility and confidence in meeting targeting requirements under START constraints.\nIn evaluating these options, a complicating factor is the reduced\nproduction rate for the B-2 and Congressional concern with B-2\ncosts. If the B-2 program is significantly delayed, ALCM options\nand flexibility could become more important for the United\nStates.\nOptions -- Counting Rules. The following options exist:\n-- Qption 1 -- Accept the Soviet demand for an \"as equipped\"\ncounting rule for ALCMs.\n-- Option 2 -- Retain the existing ALCM attribution rule of ten\nper bomber, but add a limit on the maximum ALCM carrying.\ncapability of individual bombers.\n-- Option 3 -- Make no change to the U.S. position on.counting ~~ -\n: rules; retain the existing ALCM attribution rule of ten per' =\nbomber. o Le\n-- Option 4 -- Return to the earlier U.S. position that each.\nheavy bomber equipped for ALCMs should count as six warheads, regardless of the number actually carried.. mo,\n-- Option 5 -- Eliminate all limits on ALCMs, retaining only an\"\noverall limit on heavy bombers.\nDiscussion -- ALCM Range. The U.S. has taken the position that\nnucliear-armed air-to-surface missiles with a range of less than\n. 1,500 km should not be counted in START. The Soviets would\nestablish the ALCM range threshold at 600 km. A range cut-off of\n: 1500 kilometers protects U.S. options to extend the range of\nmissiles on both heavy bombers and on tactical aircraft to offset\nimproved Soviet air defense, without having such missiles count\nas ALCMs under START. Although there are no current programs for\nnuclear armed cruise missiles with ranges between 600 and 1500\n- kilometers, some believe there is a clear military requirement to\nprotect the option to deploy such systems in the future. More-\nSEGREE gx f ei a +\ni. i aL Nat te\n: aoe\n\nOPT A Pry\nSECRSE 4 i\nover, the 1,500 km range better protects U.S. options for future\ncruise missiles pending resolution of how future nuclear and nonnuclear cruise missile are to be distinguished from each other.\nThe U.S. has indicated some flexibility on the range issue in\nreturn for Soviet acceptance of the remainder of the U.S. ALCMheavy bomber positions, although we have not specified what range\nwe might accept. Some believe this flexibility should be withdrawn, either permanently or until satisfactory resolution of the\nALCM distinguishability problem and definition of the military\nrequirements for theater standoff nuclear weapons in a post-CFE\nenvironment..\nOptions -- ALCM Range. The following options exist:\n. -- Option 1 -- Accept a 600 kilometer range cutoff, contingent ~\non resolution of:\n-- (Qption 1A) the ALCM distinguishability issue; or\n-- (Option 1B) all remaining ALCM issues.\n-- Option 2 -- Accept a 1000 kilometer range cutoff, contingent\non resolution of:\n-- (Option 2A) the ALCM distinguishability issue; or \\\n-- (Option 2B) all remaining ALCM issues.\n-- Option 3 -- Maintain the existing U.S. position of a 1500::.\nkilometer range cutoff, but continue to indicate flexibility o\nin return for Soviet acceptance of other elements of our\n. ALCM position.. sot ae.\n; -- Option 4 -- Maintain the existing U.S. position of a 1500 ae\nkilometer range cutoff; do not indicate any flexibility..\nDiscussion -- ALCM Distinguishability. This issue is related to.\nthe previous two. We have agreed with the Soviets that all\ncurrently existing long-range (with the range threshold still\nunresolved, as noted above) air-to-surface cruise missiles will\nbe considered to be nuclear armed, and that future conventionally\narmed long-range air-to-surface cruise missiles will either be\ndistinguishable from nuclear-armed cruise missiles by NTM or will\nbe considered to be nuclear armed.\nIn establishing this position, the United States recognized that\nit provided no assurance against supposed conventional cruise\nmissiles being illegally equipped with nuclear warheads. Some\nbelieve this is a serious problem, since it provides the Soviets\nwith an option for deploying \"conventional\" cruise missiles\n(which we could not reliably verify not to be nuclear armed) on a\nwide variety of aircraft, thus increasing the threat to the\nsee SEGRET\n\n\"SBEREP 5\nUnited States. Others believe that the primary consideration is\nprotecting U.S. programs, not constraining Soviet ones.\nWhile NTM can distinguish physical features of different cruise\nmissiles, it is not an effective means of determining whether\nthose cruise missiles carry nuclear or conventional warheads.\nThere may be operational penalties from designing future conventional cruise missiles such that they are physically distinguishable. In addition, weapons carried internally ina bomber\nweapons bay cannot be seen by NTM. Finally, the U.S. may find\nthe requirement to display systems to NTM onerous from a operational, security or logistics standpoint.\nOptions -- ALCM Distinguishability. The following options exist:\n-- Qption 1 -- Reconsider our basic position on ALCM distinguishability and agree to treat all cruise missiles over a\nspecified range (1500 kilometers) as nuclear armed.\n-- Qption 2 -- Reaffirm our existing approach to ALCM distinguishability, accepting the drawbacks indicated above as\nthe necessary price for avoiding constraints on conventional\ncruise missiles.\n-- Option 3 -- Reconsider our existing approach. Undertake a\nstudy of alternatives. If (as is probable) this study is\nnot complete when negotiations resume, inform the Soviets\nthat we have the ALCM distinguishability issue under review.\nsess SGEGREF\n\n~SECREE SEGREF 20581\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nJune 5, 1989\nACTION\nMEMORANDUM FOR G. PHILIP HUGHES\nTHROUGH: ARNOLD KANTER Ke\nFROM: RICHARD paves\nSUBJECT: Deputies Committee Meeting to Discuss NSR-14 (U.S.\nSTART Position on Air Breathing Systems and Non-\nDeployed Missiles)\nThe subject meeting is scheduled for 3:00 p.m. to 4:00 p.m., on\nWednesday, June 7, in the White House Situation Room. This DC\nwill focus on two papers from NSR-14.\n| The notification memorandum for the June 7 meeting is attached at\n| Tab I, the agenda at Tab A, and the discussion papers at Tab B.\n| RECOMMENDATION |\n| That you sign the memorandum at Tab I.\n| Tab I Memorandum to Executive Secretaries\nTab A Agenda\nTab B Discussion Papers\nWhite House Guidelines\n| E.0. 12958, SEC 3.4 (B) September 11, 2006\nBy ene __ NARA, Date yol.alo9\nSBEREE\nDeclassify on: OADR Shores\n\n~SEERET- RECORD 10: 6920581\nNSC/S PROFILE RECEIVED: 06 JUN 89 08\nTO: GATES\nFROM: DAVIS DOC DATE: 06 JUN 90\nKANTER SOURCE REF:\nKEYWORDS: START NSR\nDe AGENDA\nPERSONS:\nSUBJECT: BACKGROUND MATERIAL FOR DC MTG ON 7 JUN RE AIR BREATHING SYSTEMS &\nNON DEPLOYED MISSILES\nACTION: NOTED BY GATES DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF: 8920871\nrunes D> ssotifeo.D _) _NsRoo14 CODES:\ntail \" = a\nDOCUMENT DISTRIBUTION\nFOR_ACTION FOR _CONCURRENCE FOR_INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy ca\u00ae NARA, Date to)iqloq\nCOMMENTS: eS\nee\na\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: NSLMS Doc 30F 3\n-SEGREF\n\nNational Security Council\nThe White House\nPROOFED BY: LOG # 20881\nURGENT NOT PROOFED: SYSTEM | PRS T\nBYPASSED WW DESK: voc.oc YY AlO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec a Za A\nPhilip Hughes t Ki YY:\nBob Gates 2 ee pe\nBrent Scowcroft 5 cep <= ents\nPhilip Hughes er\n\" 7 &\nSituationRoom >\nWest Wing Desk \u00a9 S\n: f Rasy\nNSC Secretariat iy\nae ae Pes SR pe pe eT gp aaa SoS\nbo |\n> gs eae nae Lees 3 ae.\nClasaglon --Dintormation D=Dispatch R=Retain N=NoturtherAction |\nCC: vp Sununu Other\nShould be seen by:\nPal by atetime), << aaa\nCOMMENTS\nGe a avy\\ me 7 od 3:009m\n\n\"SECREP 20581\nAdd-on\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506 ae\n\"Yn,\ney\nfag Seo,\nJune 6, 1989 \"an Ny,\na) 00% 4,\nSheen Magn,\nACTION s\u00e9 Ge\nsz Foz Be\nMEMORANDUM FOR ROBERT GATES 32 ge\nTHROUGH: ARNOLD TER We % =\na \"My, we\nFROM: srounso hits Mes\nSUBJECT: Deputies Committee Meeting, Wednesday, June 7,\n1989, 3:00 p.m. -- START Limits on Air Breathing\nSystems and Nondeployed Missiles\nThis Deputies Meeting will be the second of three meetings to\nreview the specifics of our START position before the negotiations resume June 19. In all of the START papers, the PCC has\n| attempted to focus on issues where changes are necessary because\nwe could not take \"yes\" for an answer; or where we see an opportunity to put a Bush imprint on START. In certain cases, options\nnot meeting these standards have been included because an agency\nfavors the option. We recommend that you guide the meeting\nthrough the issues in the order they are presented in the papers.\n| Your goal should be to get the Deputies to winnow the options to\na more manageable number and ensure the remaining alternatives\nare fairly stated.\n| 3:3(b)(5); 3.3(b\\6)\noe\nWe agreed to limits on ALCMs and other bomber weapons under the\n6,000 warhead limit only on the understanding that they be\nheavily discounted. While we and the Soviets have agreed to\ncount all the bombs and short-range missiles on each bomber as\none warhead under 6000, we have not agreed on several ALCM\nprovisions. This liberal discounting approach to air breathing\nsystems ensures that we will have enough weapons to meet our\ndeterrence \"requirements\" notwithstanding the cuts mandated in\n| START.\n| DECLASSIFIED IN PART\nPER E.0. 13526\n\"SECRET Low~1995-mk\nDeclassify on: OADR\nin 40/25/2616\n\nSEGREF 3\na RSRTOTRETSR eaa e e\nThere are two complementary ways to protect conventional ALCMs\nfrom being captured in START: we can distinguish between nuclear\nand conventional ALCMs and limit only the nuclear missiles; or we\n. can set the minimum range for limited ALCMs high enough to\nexclude all conventional ALCMs. The U.S. position does both.\nWe have agreed with the Soviets that all currently existing long-\n. range ALCMs will be considered to be nuclear-armed and subject to\nthe treaty (all are in fact nuclear), and that future conventional ALCMs will' either be distinguishable from-nuclear-armed\ncruise missiles by NIM or will be considered to be nuclear-armed\n_(disting uishability details have. not been worked gut). me -- |\nIn establishing the U.S. position, we recognized that the\nnuclear~conventional distinction could not be verified. Also,\nthere is factor of two uncertainty in monitoring the range\ncapability of an ALCM. Verification can be improved if START\ntreats all ALCMs as though they are nuclear-armed. [MCL 7]\n. \"SEGREP\n\n' OCF SOONG TNT Sain eee UR RES, PS ON Sh oe SE ee Re Py\nee Gee tee ee eee Oe ee ae\nThere are four options on the range issue and three on\ndistinguishability. We recommend that you do not discuss the\noptions in detail, but use this meeting to:\n- hear out the JCS on the specific types of programmatic\nflexibility we need;:.\n- discuss the flexibility/verification tradeoff; and:\n- begin the discussion of what kinds of-tradeoffs between\n- range and distinguishability we should consider.\nj.\nboar tig ey Buea APR Ou Teg FS RRR REE oe eal os igs Ts AL oy a\n_ 2. __Nondeploved Missiles. PM Sy 7\n7\nNondeployed Limits. Limits on nondeployed missiles has long been\n. one of the most controversial parts of our proposal. In 1982,\nPresident Reagan decided to limit nondeployed ballistic missiles\n(NDM) in START, in order to deal with what some believe to have\nbeen one of the critical flaws of the SALT II Treaty -- its\nfailure to control missiles which could be used for refire, force;\nreconstitution, and ballistic missile breakout. In subsequent.\nyears the following considerations came to light::\nSEGREP:\n\nSEGREE 5\nSSNS SONOS TS ee Ee ee see WE aes Gen a ee ee\nEe ee \"Se ae CSOs Ua Se ee te\noe FSR BEN MOR nS STS URE oe COM ces ARR NN ACG ora eG See et tia tal\nPOO Tae a Ge a pee pe ROU ae Gop ee rea\nee\nsees oa ese a oe Bee Se\nPOE SGM se (AAR ET ANSE re ae ae te ca a eet en Goa\nDe te AA OS ips ce ee. ee eo ee a\nSAOMSF SHENG SR Te en a ee Pe eS TEER as OE EE ee,\nees a ee a ees es ee eee\nbal tia Dae) RAG eu eer cy ema an tes Tegmaetta. cot ee Rei ot Cee re ee\n! PA a SOA Gry Ee Clea ia te Aa A IO PO I ait, Eee See pele A are od:\nET oh ata e ere Va Ng ae GUS oe 1 EOS SEER i ge\nThe options reflect a wide range of agency views on the relative\nweight of the factors above. [*VPiSIOO CT ST Se ee eee\nOE GS aie see ae es he ee ee\nee ee a\na ee re eee ee\nEo SIN Ce Se\nYour objective on this issue is to confirm that 'the issues and options are fairly stated. Although it would greatly facilitate\nsubsequent consideration of this issue, we do not anticipate any\nnarrowing of views at this point.\n01 21 aa aa A Ma RR TE LA BMRA TG DUES\nSo Gee abandons op YRC PRCA! Oe AES IRE 2 oO pues Ae CLs eee Me aR Sot\nee ee a ae\nCe ree Be Hee eee ae ae a Dae\nA\nBao tie baie PE eo AE Ba on oe ee Sh Gace ee a nn\nphe SI Eg EIB ope RISE a BN a te\nee el ee ry eam eee re ne i re\nree ec beret ee er ie nen scan\nBis TE UCR i ee ie et ECO ee eRe cs adam a soa\n\n6\nSeances (nee a Oe ee No ae Set ee |\npee Ee AP, ERC Sa R eS, nee ie toe See eS ee ee\nLA ee OS os DBS a nee te oe ae eas\neo ae ee ee Ue ne as Pie SERIES ae\nPee ee ee se ee ue\npe SU ee ee ae es\nts ae RE a ee a ee aa ee ee |\nPSD ee SE ss 2 ee es |\ntere ee Lees ied a ee oo Oe ee oe me\noo as Se ge eee |\nae ee ee ee eee\nponte Gone Ea th eghes ee Pe et ie eran Bian Ngee He ste\n36 ele eae ee ee Bt SM, he ae BES\n66) IRNOPSAIBNOY TT cee ee eee\nee ee Ce en ee ee ie = -----\nJ eit Ue Bt ess Soke tae eek a ee nes\nesa! Sates eee See ae ee ee ee ee\n| Pes en gts PAO WHE SORES Se Se eee\nee ee ee ea\nPo ee oe ee\nRe he eT Ye bt cS Wess SORE gee eke ee mest Se as a\nee a ee ee, nae ee pees\nThe primary issue here i ee ee ee\nrequiring \u00a5 issue he e is whether the politi bof a\nrina ae missiles issile destructions is seth the peice\"\nvehicles, operational aces, flight voce boost rey space Ya\nopher ballistic missiles. U. eens Besting, or oc version to\nSlles (ex \"now s; ines for 3\nSect Ms -S. producti i existing\nmissiles f ) the pe \"ihe dest,\nex w clos ootian\nproduction Lines would'n pronipitiveny expen seen\n2 y ee y pensive\nssomiuensioarreneee be attractive. reopening of old\noe eae ee ee\nMERE, oe ES a Morais FURIES GE SCs a ae a\nae ee ee ee a ee\n\n| SECREE 7.\n} S9(6NG) SONG) Fee ey pe ee ee Te ne a a ee\n| Sep pay no ee ear een Ao temie ates eae\nRECOMMENDATION\nThat you read the papers at Tab A and B and use the points\noutlined above in guiding discussions at the Deputies Meeting on\nSTART Air breathers and Nondeployed limits.:\n| Approve: Disapprove:\n| Black Ler\n| Bob Blac! fang Condt ice concur.\n: Tab A START 04 -- Air Breathing Systems\nTab B START 03 -- Nondeployed Missiles\nSESRET:\n\n. SEGRE: START 04C |\n. -: 5/6/89 |\n-, NSR_14-START Review Paper Four -- Air Breathing Systems\noe Purpose. To review U.S. positions on dealing with air breathing\nsystems under START.. -\n: Background. A fundamental premise underlying the U.S. approach\nto START is that we must be capable of maintaining an adequate\n'deterrent under a'START regime. In order to do so, and-to\nimprove stability, the U.S. has consistently opposed tight constraints on ALCMs and other bomber weapons in: START. The original U.S. position did not directly limit these systems, constraining them only indirectly through an overall limit on the.\nnumber of heavy bombers.. If ALCMs and other bomber weapons are\nto count under the 6,000 warhead limit in START, as currently\nagreed, they must be heavily discounted in order to allow meeting\npresent and START projected U.S. military requirements.\nSignificant features of the current U.S. approach include:\n-- Counting bombers which carry only gravity bombs and SRAMs as\n|. \"one\" against both the 1600 SNDV and 6000 warhead limits.:\n: ---- Counting ALCM-carrying heavy bombers as one unit against the\n1600 SNDV limit and 10 warheads against the 6000 warhead\nlimit regardless of actual load or capability..\n-- Considering \"ALCMs\" to include only nuclear-armed air-\n. - launched cruise missiles with ranges in excess of 1500:\nkilometers....: Ds\n-- Rej\u00e9cting any limits on long-range conventionally-armed' _ -,\ncruise missiles (LRCCM). Treating all currently existing..\nlong-range air-to-surface cruise missiles as nuclear armed.\nwhile distinguishing future LRCCMs from treaty accountable.\nALCMs through NTM....\n: ted Rejecting any limits on nondeployed ALCMS or on total ALCM\n- inventory.:::\n-- Providing for a limited number of former heavy bombers (i.e.\nconventional bombers) which would not count against either\nthe 1600 or 6000 limits. -:..\n-- Providing separate basing for the three classes of bombers\n(ALCM-carrying heavy bombers, non-ALCM carrying heavy\n: bombers, former heavy bombers), with a limited on-site\ninspection right for non-ALCM carrying heavy bombers of a\ntype tested with treaty accountable ALCMs.\n-SECRER PER E.O. 13526\nDeclassify on: OADR Role ~ 1993-4\nwe blglroie\n\n|. In \u00e9stablishing this position, the United States recognized that\n| the Soviets. would have an equal right to exploit the rules. The\n: United States judged, however, that protecting our ability to\ncover and damage targets was more important than constraining |\n| similar Soviet capabilities... |\nDiscussion -- General. Because of the importance of this area |\n| and the close interrelationship of all heavy bomber/ALCM positions, a comprehensive review is required. There is consensus that the United States should not alter its current rejection of\n: Soviet attempts to place sublimits on bomber weapons or to constrain ALCMs, e.g., to limit nondeployed ALCMs. a\n. Discussion -- Counting Rules.. For many years the United States ~\nrejected placing any limits on ALCMs. The U.S. approach to ALCM\n. counting rules discounts ALCMs and heavily discounts non-ALCM\nae nuclear weapons on bombers. Some have raised the question of\n. whether discounting bomber weapons would in fact favor the\nSoviets in the long run, given the asymmetries in air defenses.\n: Others believe that, while the Soviets appear to be well posi-\n' tioned to exploit these counting rules, encouraging greater -\n- Soviet reliance on air-breathing systems is a central goal of the\nU.S. START position. Moreover, the U.S. requires these systems\n- for target coverage, while the Soviets do not.\n_ The most common alternative counting rule is the so-called \"asequipped\" approach, in which ALCM bombers are counted against the\n6000 limit based on the maximuin number of ALCMs they are capable\nof. carrying. This position, favored by the Soviets, would either\n. (a) require substantial modifications to U.S. bombers to limit\nthe number of ALCMs they could carry or (b) lead to unrealis-\n| tically high attributions which would severely inhibit U.S. = | ~*~\n| flexibility. The Soviets claim that the U.S. attribution rule..\n|. provides the U.S. with an unfair advantage since future wide-\n- bodied aircraft could carry doz\u00e9ns of cruise missiles but would an\nonly be attributed with ten. Some favor attempting to meet this.\nstated Soviet concern by placing some upper limit on the ALCMcarrying capacity of individual aircraft. Others believe the\nloss of flexibility and verification problems make it imprudent\n- to attempt. to placate what they see as a spurious Soviet concern.\n. To move toward a more stabilizing defense posture, some believe\nthe U.S. could consider readopting its original position that\nALCMs and other bomber weapons will not be counted or limited -:\n. under START. This would entail having limits only on ballistic\nmissile warheads and on strategic nuclear delivery systems.\n- Heavy bombers would continue to count against the latter limit\n. only. Others believe that this move would encourage competition:\nin air-breathing systems and, because of the Soviet lead in air\ndefenses, therefore would not be stabilizing. Moreover, this:\nmove could incite strong Soviet condemnation as backtracking on a\nkey U.S. concession and, by reopening the Reykjavik bomber\n'seanEs SEGREF\n\n'counting rule, could actually decrease the U.S. ability to deploy\nthe necessary high number of bomber weapons. On the other hand,\nsuch a move would simplify U.S. obligations under the treaty, |\nsince no distinctions would have to be made (or verified) regarding conventionally-armed versus nuclear~armed ALCMs, or heavy\n: bombers equipped for ALCMs vice-those not so equipped.\nA less radical move would be to return to the earlier U.S.\nposition that each heavy bomber equipped for ALCMs should count:\nas six warheads (instead of ten), regardless of the number\n|, actually carried. While this position would not simplify the 5\ntreaty in any way, and could encounter Soviet opposition, it.\n: could increase U.S. flexibility and confidence in meeting tar-\n| geting requirements under START constraints.\n|, In evaluating these options, a complicating factor is the reduced\nproduction rate for the B-2 and Congressional concern with B-2 _\n> costs. If the B-2 program is significantly delayed, ALCM options\nand flexibility could become more important for the United\nStates..:\nOptions -- Counting Rules. The following options exist:\n|:. -- Option 1 -- Accept the Soviet demand for an \"as equipped\"\ncounting rule for ALCMs.::\n|. -- Qption 2 -- Retain the existing ALCM attribution rule of ten -\n| per bomber, but add a limit on the maximum ALCM carrying\ncapability of individual bombers.::\n, -- Option 3 -- Make no change to the U.S. position on.counting ~\n| rules; retain the existing ALCM attribution rule of ten per\n: bomber.; oo\n| -- Option 4 --. Return to the earlier U.S. position that each heavy bomber equipped for ALCMs should count as six war-.\nheads, regardless of the number actually carried..\n-- Option 5 -- Eliminate all limits on ALCMs, retaining only an\n: overall limit on heavy bombers.\n'Discussion -- ALCM Range. The U.S. has taken the position that.\nnuclear-armed air-to-surface missiles with a range of less than\n1,500 km should not be counted in START. The Soviets would\nestablish the ALCM range threshold at 600 km. A range cut-off of\n1500 kilometers protects U.S. options to extend the range of\nmissiles on both heavy bombers and on tactical aircraft to offset\n. improved Soviet air defense, without having such missiles count\nas ALCMs under START. Although there are no current programs for\nnuclear armed cruise missiles with ranges between 600 and 1500\na kilometers, some believe there is a clear military requirement to\nprotect the option to deploy such systems in the future.. More-\n\nover, the 1,500 km range better protects U.S. options for future\ncruise missiles pending resolution of how future nuclear and nonnuclear cruise missile are to be distinguished from each other.\nThe U.S. has indicated some flexibility on the range issue in\nreturn for Soviet acceptance of the remainder of the U.S. ALCMheavy bomber positions, although we have not specified what range\nwe might accept. Some believe this flexibility should be withdrawn, either permanently or until satisfactory resolution of the\nALCM distinguishability problem and definition of the military\n. requirements for theater standoff nuclear weapons in a post-CFE\n~ environment...\n, Options -- ALCM Range. The following options exist:\n5 -- Option 1 -- Accept a 600 kilometer range cutoff, contingent\n-- on resolution of: -\n!. -- (Option 1A) the ALCM distinguishability issue; or.\n| -- {Option 1B) all remaining ALCM issues.:\n| -- Option 2 -- Accept a 1000 kilometer range cutoff, contingent.\npt: on resolution of:;\n-- (Qption 2A) the ALCM distinguishability issue; or\n| Loos (Option 2B) all remaining ALCM issues.\n-- Option 3 -- Maintain the existing U.S. position of a 1500\n. kilometer range cutoff, but continue to indicate flexibility\nin return for Soviet acceptance-of other elements of our\n. ALCM position.\n_-- Qption 4 -- Maintain the existing U.S. position of a 1500,,\n| kilometer range cutoff; do not indicate any flexibility.\n: Discussion -- ALCM Distinguishability. This issue is related to:\n| the previous two. We have agreed with the Soviets that all\ncurrently existing long-range (with the range threshold still\nunresolved, as noted above) air-to-surface cruise missiles will\nbe considered to be nuclear armed, and that future conventionally\narmed long-range air-to-surface cruise missiles will either be\ndistinguishable from nuclear-armed cruise missiles by NTM or will\nbe considered to be nuclear armed.:\nIn establishing this position, the United States recognized that\nit provided no assurance against supposed conventional cruise.\nmissiles being illegally equipped with nuclear warheads. Some\nbelieve this is a serious problem, since it provides the Soviets\nwith an option for deploying \"conventional\"' cruise missiles\n(which we could not reliably verify not to be nuclear armed) on a\nwide variety of aircraft, thus increasing the threat to the.\ncal SEGREF\na\n\nUnited States. Others believe that the primary consideration is oo\n: protecting U.S. programs, not constraining Soviet ones.\nWhile NTM can distinguish physical features of different cruise\nmissiles, it is not an effective means of determining whether\nthose cruise missiles carry nuclear or conventional warheads.\nThere may be operational penalties from designing. future conventional cruise missiles such' that they are physically distinguishable. In addition, weapons carried internally in a bomber.\n, weapons bay. cannot be seen by NIM. Finally, the U.S. may find\n|. the requirement to display systems to NIM onerous from a operational, security or logistics standpoint.\n; - Qptions -- ALCM Distinguishability. The following options 'exist:\n-- (Option 1 -- Reconsider our basic position on ALCM distin- ro\n' guishability and agree to treat all cruise missiles over aspecified range (1500 kilometers) as nuclear armed.\n-- Option 2 -- Reaffirm our existing approach to ALCM distinguishability, accepting the drawbacks indicated above as\n. the necessary price for avoiding constraints on conventional\n. cruise missiles.\n, -- Option 3 -- Reconsider our existing approach. Undertake a\nstudy of alternatives. If (as-is probable) this study is\nnot complete when negotiations resume, inform the Soviets\n: that we have the ALCM distinguishability issue under review.\n; yo oo\n\nTHE FOLLOWING INFORMATION IS PROVIDED FOR INCLUSION IN THE NEXT\nNDM PAPER (START REVIEW PAPER THREE) '\nFor economic reasons, the US historically has produced all of\nits missiles of a single type ina \"surge\" during the early\nyears of the lifecycle, while the Soviets maintain an active\n, production line throughout the lifecycle of the system, e.g.\nthe Minuteman II production line was active from 1965 to 1970\nand produced 648 missiles; the Minuteman III production line\n7 was active from 1968 to 1978 and produced 820 missiles; and the\nPeacekeeper production line was to have produced 223 missiles\n: in a five year period. As a result of 'the Congressionally\n* mandated stretch-out of Peacekeeper procurement, the,\nprocurement rate has been cut to 12 missiles per year, the\ntotal procurement extended to 14 years, and the cost per:\n| missile has increased from $16 million per missile to $60::,\n| million per missile.\nPER E.0. 13526\nL010 - 199 F-mr:\na 3lt/aoie\n| SECREE:\n: SEGRET\n\n4. ar\nSReRE- 20272 Ao/2\n\\ TALKING POINTS FOR MEETING TO REVIEW NSR 3\nAPRIL 5, 1989\n3:15 p.m.\nIntroductory Remarks\n== The purpose of this meeting is to review NSR 3 on U.S.-\nSoviet relations.\n=< First let me tu to Bill WebkSter who will gi us a brief\ncman f the, situation in the Sovi Union. bea\nIssue I: Overall Approach\n=< I recommend that we take a look first at the broad question\nof our overall approach to the Soviet Union.\nmie If we accept that this idXa period of military retrenchment\nfor the Soviet Union and chat they will be seeking a non-\n| confrontational atmosphere over the next three to five\n| years, we have to ask Ae \"How can we best use this\n| period of time to reach our objectives?\"\n=> There are arguments out there that we should bring maximum\npressure on the Soviets in this pexiod.\nid Others argue that we should take a joint problem solving\napproach.\n= I'd like to here the views around the table.\nIssue II: Leverage\n= This raises the question of our leverage to \\affect Soviet\nbehavior. \\\n7= We do make clear to Moscow that actions in one area can\naffect the overall relationship. DECLASSIFIED\nae PER E.0. 13526\n2005-0454-uR\nDeclassify on: OADR U2B/r013 may\n\n-SRERET- RECORD ID: 8920609\nNSC/S PROFILE RECEIVED: 08 JUN 89 20\nTO: GATES\n| FROM: KANTER DOC DATE: 08 JUN 89\nDAVIS.; SOURCE REF:\nKEYWORDS: ARMS CONTROL START\nDc. soc\nPERSONS:\nSUBJECT: DC MTG ON AIR BREATHING SYSTEMS & NONDEPLOYED BALLISTIC MISSILES\nON JUN 7\nACTION: ACTION COMPLETED BY 8920871 DUE DATE: 28 APR 90 STATUS: C\nSTAFF pepommmmgyv is oie, LOGREF: 8920247 8920385\nFILES: IFM_C NSGP: pco32__ NSROO14 CODES:\n| DOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR_INFO\nNSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy caP__ NARA, Date phgleg\nCOMMENTS: ee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: GD CLOSED BY: NSAJC poc 10F 1\nSEGREF-\n\nSEGREP RECORD ID: 8920609\n; ACTION DATA SUMMARY REPORT\nDOC ACTION CAO ASSIGNED ACTION REQUIRED.\n001 GATES 2 89060820 FOR DECISION;\n001 DAVIS Z 89061011 FOR FURTHER ACTION\n001 - X 90042614 OBE / STATUS ORIGINAL UNKNOWN:\n001. X 90081714 ACTION COMPLETED BY 8920871\nWhite House Guidelines\nE.0. '2358, SEC 3.4 (B) September 11,2006\n;: y caP__NARA, Date wia/og\nSECREE.\n\n\" gpese, SEGRETF 20609\n. NATIONAL SECURITY COUNCIL\nWASHINGTON, D.C, 20508\nJune 8, 1989\nACTION\nMEMORANDUM FOR ROBERT GATES\nTHROUGH: ARNOLD ol. ye\nFROM: RICHARD!. s\nSUBJECT: Deputies Committee Meeting on Air Breathing:\nSystems and Nondeployed Ballistic Missiles\nAttached (Tab A) is the summary of conclusions from the June 7,\n1989 Deputies Committee review of Air Breathing Systems and\nNondeployed Ballistic Missiles..\nRECOMMENDATION\nThat you approve the summary of conclusions.\nAttachment.\nTab A Summary of Conclusions 5\nDECLASSIFIED: rn\nWhite House Guidelines.;\nE.0. 12958, SEC 3.4 (B) September 11, 2006 '\nBy cae NARA, Date jolsqlo?.\n--SEeREE-\nDeclassify on: OADR SEGREF",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

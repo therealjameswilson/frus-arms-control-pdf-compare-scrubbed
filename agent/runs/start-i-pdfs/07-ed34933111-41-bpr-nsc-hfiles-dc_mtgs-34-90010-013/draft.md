@@ -1,0 +1,341 @@
+# NSC/DC 034 - June 12, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on New Initiatives, Keywords: Start, Arms Control
+
+- Agent: `FRUS_PUBLICATION_AGENT`
+- Run mode: `universal_source_draft`
+- Trained from: START I exact-source PDF/FRUS comparison set
+- Source: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-34-90010-013.pdf
+- Source SHA-256: `9b1f66cef264e4447f9e9f28398a65e2bd938fd0b9e23368b119265bd5305b26`
+- OCR required: `True`
+- Selected pages: 3, 5, 6, 7, 8, 10, 13, 14, 15, 16
+
+## Source Note Model
+
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, OA/ID 90010-013, NSC/DC 034-June 12, 1989-NSC/DC Meeting on NSR-14 re: U.S. START Positions on New Initiatives. Secret. The meeting took place in the Situation Room.
+
+
+## Human Review Warnings
+
+- OCR was required; proofread every body paragraph against the PDF image.
+- Universal deployment run without explicit page range; page span requires human confirmation.
+- START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.
+- Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication.
+
+## Draft Body
+
+P SEGRE RECORD 10 ge: «
+ree NSC/S PROFILE RECEIVED: 15
+TO: GATES
+FROM: DAVIS DOC DATE: 19 JUL 89
+KANTER: SOURCE REF:
+| KEYWORDS: ARMS CONTROL START
+pe soc
+PERSONS:
+| SUBJECT: SUMMARY OF CONCLUSIONS OF JUN 12 DC MTG ON NEW INITIATIVES IN START
+ACTION: GATES APPROVED RECOM DUE DATE: 30 JUL 90 STATUS: CD
+| STAFF OFFICER: DAVIS LOGREF: 8920612 8920675
+FL NSC CODES:
+Docu T DISTRIBUTION
+FOR ACTION FOR _CONCURRENCE FOR _INFO
+White House Guidelines
+E.0. 12958, SEC 3.4 (B) September 11, 2006
+By cap NARA, Date tofsleg
+COMMENTS:.
+DISPATCHED BY DATE BY HAND W/ATTCH
+OPENED BY: EN CLOSED BY: poc 10F 1
+ET
+
+rae > 20937
+. NATIONAL SECURITY COUNCIL:
+|. WASHINGTON, D.C. 20608.
+- July 19, 1989
+| ACTION
+MEMORANDUM FOR ROBERT GATES:
+THROUGH: anon hf@ireR _
+FROM: RICHARD navi de
+SUBJECT: Deputies Committee Meetings on START
+Attached (Tabs A, B, and C) are copies for the record of the
+summaries of conclusions from the June 7, 9, 12, 1989 Deputies
+Committee review of START. Initial drafts of these summaries.
+were forwarded prior to the NSC meetings on these issues, but
+| were not approved for the files.
+RECOMMENDATIONS
+That you approve the summary of conclusions on air breathing
+systems and nondeployed missiles at Tab A..
+| Approve Disapprove
+That you approve the summary of conclusions on mobile ICBMs at.
+- Tab B....
+:.. Aruba ha
+Approve Disapprove
+That you approve the summary of conclusions on new initiatives at f
+Tab C.;; Te.
+: Approve \ Disapprove
+Tab A Summary of Conclusions - Air Breathing Systems and
+Nondeployed Missiles.
+Tab B Summary of Conclusions - Mobile ICBMs
+Tab C Summary of Conclusions - New Initiatives
+exeran DECLASSIFIED
+Declassify on: OADR PER E.O, 13526
+210-1999. MR
+
+i:
+NATIONAL SECURITY COUNCIL 20937
+| WASHINGTON. D.C, 20506
+: Summary of Conclusions for
+DATE: June 12, 1989
+LOCATION: Situation Room
+TIME: 11:00 AM - NOON
+. SUBJECT:- Summary of Conclusions of DC Meeting on New Initiatives
+in START (8).
+PARTICIPANTS:
+The Vice President's Office CIA:
+Carnes Lord Richard. Kerr
+Douglas MacEachin
+State:
+Reginald Bartholomew JCS:
+. Edward Rowny John Baldwin
+Richard Burt. Thomas Fox
+Roger Harrison
+ACDA:
+Defense: George Murphy.
+- Donald Atwood William Fite
+Paul Wolfowitz
+Stephen Hadley White House:
+Robert Gates
+Energy:
+John Tuck NSC: ~.
+Victor Alessi Arnold Kanter
+Richard Davis
+William Diefenderfer
+Frank Hodsoll.
+Summary of Conclusions
+There was agreement that three categories of new initiatives:
+: should be examined. They include measures that: minimize the
+consequences of ICBM silo vulnerability, minimize the
+consequences of undetected cheating on mobile limits and, of
+: lesser importance, measures that increase warning time. (8)
+Reginald Bartholomew suggested that our primary problem is the
+threat to stability caused by MIRVed, vulnerable, fixed-silo
+ICBMs. From that problem flows our mobile program and our
+interest in deMIRVing. We need to ask how arms control fits into
+our programs on the Hill. (8)
+PER E.0. 13526
+| SEcREE To10. 19g Beane
+Declassify on: OADR
+wrens 3hhelb.
+
+_, SBGRES
+2
+| Robert Gates responded that the logical conclusion of Atwood's
+concern about the uncertain future of mobile ICBMs on the Hill is
+that you make no changes because you are afraid of what you will end
+up with. How do you devise new initiatives that account for
+uncertainty on the Hill? Does Hill uncertainty influence the new
+initiatives we can propose? (8f
+Reginald Bartholomew responded that we need not be passive vis-a-vis
+the Hill. The two approaches should be integrated. We have two
+programs that reflect a strategic rationale that mobility is good.
+Donald Atwood agreed and added that we should be leading the Congress
+on these issues. (8)
+Richard Burt suggested that we should go to the Congress with
+initiatives that will help establish a new consensus. We need to be
+more sophisticated in building a majority coalition. (ss
+Robert Gates asked if, aside from the politics, there is disagreement
+that deMIRVing mobile ICBMs is stabilizing? Richard Burt responded
+that we have to prevent a Soviet move to silo-based ICBMs. Douglas
+MacEachin agreed. Reginald Bartholomew added that we needed to avoid
+an outcome that banned a survivable basing mode and encouraged the
+Soviets to move their missiles to vulnerable silos. Steven Hadley
+- said another counterargument is that, to prevent breakout, you have
+to ban silo-based variants of mobile MIRVed missiles; that MX would.
+be banned; and that it will be 1997 before Midgetman enters the
+force. (6:9)
+Paul Wolfowitz suggested a ban on all MIRVed ICBMs. John Baldwin
+said that would move us to a dyad. Burt agreed that it may be a good
+long-term solution, but it was too tough now. Bartholomew added that
+the greater the burden we place on the Soviets the more we will
+stimulate counterproposals. (8)
+Robert Gates asked for views on the idea of installing portal
+monitoring systems now at mobile assembly facilities. Bartholomew
+said he favored it, and other measures such as a data exchange and a
+ban on telemetry encryption. (%.
+8
+
+wo -SBGREP RECORD 10; 9920612.
+; " NSC/S PROFILE RECEIVED: 89 21
+TO: HUGHES
+FROM: KANTER DOC DATE: 09 JUN 89
+| DAVIS: SOURCE REF:
+HUGHES
+KEYWORDS: START ARMS CONTROL
+NSR DC
+AGENDA
+PERSONS:
+SUBJECT: DC MTG TO DISCUSS NSR-14 / U S START POSITION ON NEW INITIATIVES /
+AGENDA / JUN 12
+ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 25 MAY 90 STATUS: C
+STAFF OFFICERe=DAVIS LOGREF: 8920675 8920937
+| FILES: VD, si how.) SROO14 CODES:
+vockig DISTRIBUTION
+FOR ACTION FOR CONCURRENCE FOR _INFO
+DAVIS
+KANTER
+White House Guidelines
+E.0. 12958, SEC 3.4 (B) September 11, 2006
+By cap__ NARA, Date so/a/og
+COMMENTS: i:
+a
+SSS ess
+DISPATCHED BY DATE BY HAND W/ATTCH
+OPENED BY: CM CLOSED BY: CM poc 10F 1
+
+National Security Council
+The White House
+PROOFED BY: LOG # Z ob / z.
+URGENT NOT PROOFED: SYSTEM LD Use) INT
+BYPASSED WW DESK: pococ Aa IO ee
+SEQUENCE TO HAS SEEN DISPOSITION
+Dep Exec Be Z 3
+Philip Hughes a
+a
+BobGates "? ER) Oi See
+Brent Scowcroff
+Philip Hughes oo
+Situation Rooms
+West Wing Desk? 2 CU, a
+NSC Secretariat
+cc: vp Sununu Other
+Should be seen by:
+Se ° "101 ) ee
+COMMENTS j
+De NON AGHAA_
+of i2 | 22)
+
+WASHFAX RECEIPT
+: THE WHITE HOLSE
+MESSAGE NO. CLASSIFICATION Sa? bee uy PAGES A
+FROM___G._ PHILIP HUGHES.
+(NAME) (EXTENSION) (ROOM NUMBER)
+MESSAGE Description__ DC UT, (2 TAN
+TO (AGENCY) DELIVER TO: DEPT/ROOM NO.; EXTENSION
+Dod Ge Yo _ ke
+lo - «. _
+--NEK: f PAT bx SEc oe
+A Lawrence Sawa Gee foc
+Ss Le
+Potty Hovess Gace Ye
+--__--_--_--_--_-- Se ee
+eee (ir
+REMARKS:. --
+; White House Guidelines
+E.0. 12058, SEC 3.4 (B) September 11, 2006
+| By cae _ NARA, Date jolyale9
+
+. 20612
+"SBeREE NATIONAL SECURITY COUNCIL.
+WASHINGTON, D.C. 20508
+June 9, 1989
+MEMORANDUM FOR:
+MR. CARNES LORD MR. FRANK HODSOLL
+Assistant to the Vice Executive Associate Director
+President for National Office of Management and
+Security Affairs Budget
+MR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL
+Executive Secretary Executive Secretary
+Department of State. Central Intelligence Agency
+COLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS
+Executive Secretary Executive Assistant to the
+Department of Defense Chairman.
+Joint Chiefs of Staff
+MR. WILLIAM V. VITALE
+Executive Secretary MS. BARBARA STARR
+Department of Energy Acting Executive Secretary
+Arms Control and Disarmament
+: Agency
+SUBJECT: Deputies Committee Meeting on NSR-14;
+Monday, June 12, 1989, WHSR, 11:00 a.m. (#
+A meeting of the Deputies Committee will be held to discuss NSR-
+14 (New Initiatives), on Monday, June 12, at 11:00 a.m., in the
+White House Situation Room. This meeting will focus on
+alternative new initiatives for the U.S. START proposal. An
+agenda for this meeting is attached. Discussion papers on New
+Initiatives have been distributed to the Arms Control Policy
+Coordinating Committee and the Deputies Committee. Attendance at
+this meeting should be principals plus one. In addition,
+Ambassadors Richard Burt and Edward Rowny are invited to attend.
+1-4) f SO"
+SS Ta
+WE fen
+7 y gl
+we A LEZ =
+Go Phila b
+, Executivé etary
+Attachment
+Tab A Agenda (3)
+| PER E.0. 13526
+SECRET Lore-1998- MR
+Declassify on: OADR Si Gi + 1 Baroy AM
+VW
+
+| Lo, ar ne
+Cs SEGRET
+> Sheppm 20612
+DEPUTIES COMMITTEE MEETING
+ARMS CONTROL POLICY REVIEW
+Monday, June 12, 1989
+White House Situation Room
+11:00 a.m.
+NSR-14, U.S. START PROPOSAL:
+NEW _ INITIATIVES
+Agenda
+I. Introductory Remarks by the Chairman
+II. START: _ New Initiatives:
+| III. Recommendations for the NSC
+White House Guidelines 44, 2008
+E.O. 13526, SEC 3.4 (b}, September 11,
+By_4S_NARA, Dates/all
+SEGRES
+Declassify on: OADR
+Witt,
+
+/ pera SEGREF 20612
+NATIONAL SECURITY COUNCIL
+WASHINGTON, D.C. 20506
+June 9, 1989
+ACTION
+MEMORANDUM FOR G. PHILIP HUGHES
+THROUGH: ARNOLD KANTER yi
+FROM: sicaOedr: s
+SUBJECT: Deputies Committee Meeting to Discuss NSR-14 (U.S.
+START Position on New Initiatives)
+The subject meeting is scheduled for 11:00 a.m., on Monday, June
+12, in the White House Situation Room. This DC will focus on the
+remaining agenda item from Friday's meeting.
+The notification memorandum for the June 12 meeting is attached
+at Tab I, and the agenda at Tab A.
+RECOMMENDATION
+That you sign the memorandum at Tab I.
+| Tab I Memorandum to Executive Secretaries
+| Tab A Agenda
+| White House Guidelines
+| E.0. 12958, SEC 3.4 (8) ae
+| By chP__ NARA, Date johialo}
+Declassify on: OADR
+
+## Page Inventory
+
+- Page 1: `administrative_marker`; score `0.0`; administrative marker; record group/collection; record group
+- Page 2: `administrative_marker`; score `0.0`; record group; oa/id number
+- Page 3: `source_document`; score `0.0`; subject:; summary of conclusions
+- Page 4: `routing_profile`; score `0.0`; action officer
+- Page 5: `source_document`; score `0.0`; memorandum for; subject:; summary of conclusions
+- Page 6: `source_document`; score `0.0`; subject:; summary of conclusions
+- Page 7: `source_document`; score `0.0`; substantial OCR text without administrative cues
+- Page 8: `source_document`; score `0.0`; subject:
+- Page 9: `routing_profile`; score `0.0`; action officer
+- Page 10: `source_document`; score `0.0`; the white house
+- Page 11: `distribution_record`; score `0.0`; distribution record; external distribution
+- Page 12: `distribution_record`; score `0.0`; distribution record; external distribution
+- Page 13: `source_document`; score `0.0`; substantial OCR text without administrative cues
+- Page 14: `source_document`; score `0.0`; the white house; department of state; memorandum for
+- Page 15: `source_document`; score `0.0`; substantial OCR text without administrative cues
+- Page 16: `source_document`; score `0.0`; the white house; memorandum for; subject:

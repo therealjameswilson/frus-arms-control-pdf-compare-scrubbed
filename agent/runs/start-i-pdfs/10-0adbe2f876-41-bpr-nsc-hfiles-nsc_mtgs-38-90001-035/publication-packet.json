@@ -1,0 +1,266 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-38-90001-035.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "e22e9ebc7a2f060c2ad2eddcf86632222d484d190187ff16f9f461c4daaa396a",
+    "page_count": 15,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "68",
+    "doc_key": null,
+    "title": "NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial",
+    "file_unit": "NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, OA/ID 90001-035, NSC0038-February 01, 1990-Arms Control Issues, Moscow Ministerial. Secret. The meeting took place in the Oval Office.\n",
+  "selected_pages": [
+    3,
+    6,
+    8,
+    9,
+    13,
+    15
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOTA(s): FOIA Number: 2005-1003-F; 2009-0857-F; S S | This is not a textual record. This is used as an | administrative marker by the George Bush Presidential | Library Staff. | Record Group/Collection: | George H.W. Bush Presidential Records | Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSC Meetings Files | OA/ID Number: 90001 Folder ID Number: 90001-035 Folder Title: NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Minist",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ns ; Withdrawal/Redaction Sheet . . (George Bush Library) , ; a en Doc. No. / Type Subject/Titie Date Restriction Classification \u201801. Minutes Meeting of the National Security Council : 2/1/90 (b)(1) Ss Re: START Issues (7 pp.) 02a. Memo John Gordon/Rich Davis to G. Philip Hughes 1/29/90 (b)(1) Ss Re: NSC Meeting (1 pp.) 02b. Memo G. Philip Hughes to Distribution List nd. (b)(1) Ss Re: National Security Council Meeting on Arms Control (1 pp.) . \u2018020. Agenda National Security Council Meeting 2/1/9",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "minutes of"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSEGRE? RECORD 1D: 9020314 , NSC/S PROFILE RECEIVED: 09 MAR 90 10 TO: MEMO FOR RECORD FROM: SCOWCROFT DOC DATE: 09 MAR 90 SOURCE REF: KEYWORDS: START CFE USSR ARMS CONTROL MINUTES NSC PERSONS: | | SUBJECT: MINUTES OF 1 FEB NSC MTG RE START ISSUES ON 1 FEB ACTION: FOR RECORD PURPOSES DUE DATE: 13 MAR 90 STATUS: C STAFF OFFICERs:NONE F LOGREF: 9020107 9020142 | FILES (ze. ) SCP: NS0038 CODES: | hen st a. DOC NT DISTRIBUTION | FOR ACTION FOR CONCURRENCE FOR _ INFO DECLASSIFIED White House Guideline",
+      "selected_for_body": true
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SheREE\u2014 RECORD ID: 9020314 . : ACTION DATA SUMMARY REPORT DOC ACTION OFFICER \u2019 GAO ASSIGNED ACTION REQUIRED | 001 : ; X 90030910 FOR RECORD PURPOSES | | ; 4 | DECLASSIFIED | : White House Guidelines | . . E.0. 12958, SEC 3.4 (B) September 11, 2006 : ; By cap__ NARA, Date 9/2s/a\u00a2 an",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Y o . . oe mee ee ' Withdrawal/Redaction Sheet (George Bush Library) \u2018Document No. Subject/Title of Document Date Restriction Class. jo. And Typed \u2014\u2014-\u2014- 01. Minutes Meeting of the National Security Council 2/1/90 (b)C) s | Re: START Issues (7 pp.) Collection: i | Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial Date Closed: 9/23",
+      "selected_for_body": false
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ij . ; \u201cSECRET RecorD 1D NSC/S PROFILE RECEIVED: 29 JAN 90 11 TO: HUGHES | | FROM: GORDON DOC DATE: 29 JAN 90 | DAVIS SOURCE REF: | KANTER | KEYWORDS: ARMS CONTROL USSR NSC AGENDA PERSONS: SUBJECT: NSC MIG 1 FEB TO REVIEW THE STATUS FO ARMS CONTROL ISSUES PRIOR TO UPCOMING MINITERIAL IN MOSCOW ACTION: NOTED BY HUGHES DUE DATE: 01 FEB 90 STATUS: C STAFF OFFIGER:, GORDON ; LOGREF: 9020107 9020314 FILES AP, SCP: Sin/ CODES: \\ DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR INFO DECLASSIFIED W",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; \u2018 ' SECREE- RECORD ID: 9020142 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED . 001 HUGHES ; , Z 90012919 FOR SIGNATURE 001 X 90020520 NOTED BY HUGHES ; DECLASSIFIED : . White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 2006 By cap NARA, Date 9/28/09 SECREP-",
+      "selected_for_body": false
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a me ae ak OS ee National Security Council The White House PROOFED BY: aca 106 #_2-O\\4 URGENT NOT PROOFED: ae. 4 scr BYPASSED WW DESK: DOCL AIG Se SEQUENCE TO HAS SEEN DISPOSITION Dep Exec eA Philip Hughes p Hug! val = i BobGates \u201cJ \" eat oe \u2018Sc Brent Scowcroft Philip Hughes \u00e9 oS ie alee | Sitypgion Room io West Wing Desk a A's po Cae fc a ed ce vP Sununu ~~ \u201c Other / Should be seen by: + COMMENTS s : NS 1) ection Wx",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u00bb r re) = - f od be ne att o we oe ao z 8 a \u201d a er ee tr re ce, ee ERE ee Te ete et Oe \u2018",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date Restriction cand Type | 02a. Memo John Gordon/Rich Davis to G. Philip Hughes 1/29/90 (b)(1) Re: NSC Meeting (1 pp.) Collection: Record Group: \u2014__ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial Date Closed: 9/23/2009 OA/ID Number: 90001-035 FOIA/SYS Ca",
+      "selected_for_body": false
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) ; _ Document No. Subject/Title of Document Class, . a aNd Type \u2014 02b. Memo G. Philip Hughes to Distribution List (b)(1) S Re: National Security Council Meeting on Arms Control (1 PP.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files \u2018 | Subseries: NSC Meetings Files | WHORM Cat.: File Location: NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial Date Closed: 9/23/2009 OAAD Numb",
+      "selected_for_body": false
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 \u00a2 Withdrawal/Redaction Sheet (George Bush Library) | Document No, Subject/Title of Document Date AMA Type t 02c. Agenda National Security Council Meeting 2/1/90 (b)(1) s Re: Arms Control Issues (1 pp.) | Collection: | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0038 - February 01, 1990 - Arms Control Issues, Moscow Ministerial Date Closed: 9/23/2009 OAAD Number: 90001-035 FOIA/SYS Case #: ",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ez 3 UNCLASSIFIED RECORD ID#/9020107. NSC/S PROFILE RECEIVED: 23 JAN 90 10 TO: SCOWCROFT FROM: HAGIN, J DOC DATE: 22 JAN 90 SOURCE REF: KEYWORDS: NSC PERSONS: SUBJECT: APPROVED PRES ACTIVITY RE NSC MTG 1 FEB ~ ACTION: FOR RECORD PURPOSES DUE DATE: 24 APR 90 STATUS: C STAFF OFF ONE LOGREF: 9020142 9020314 F an SCP soos 2 CODES: DOCUMENT DISTRIBUTION | FOR ACTION FOR_CONCURRENCE FOR_INFO COMMENTS : DISPATCHED BY DATE BY HAND W/ATTCH OPENED BY: CH CLOSED BY: CM poe 10F 1 UNCLASSIFIED |",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u00a9 ~s . \u2018 . . > UNCLASSIFIED RECORD ID: 9020107 ACTION DATA SUMMARY REPORT 7 DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 . ; X 90012310 FOR RECORD PURPOSES | . | + | : | | | , UNCLASSIFIED : .",
+      "selected_for_body": false
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON MEMORANDUM TO: Brent Scowcroft FROM: JOSEPH W. HAGIN SUBJECT: APPROVED PRESIDENTIAL ACTIVITY aa NSC Meeting DATE: February 1, 1990 ----- Thursday TIME: 2330 > p-m-; DURATION: 90 minutes LOCATION: Cabinet Room ATTIRE: Business suit REMARKS REQUIRED: NO MEDIA COVERAGE: White House Photographeronly FIRST LADY we PARTICIPATION: ADDITIONAL INFORMATION: CONTACT: TELEPHONE: OFFICE HOME NOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST Ed Rogers Marlin Fitzwater David Bates James ",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": "\"SEGRE? RECORD 1D: 9020314\n, NSC/S PROFILE RECEIVED: 09 MAR 90 10\nTO: MEMO FOR RECORD\nFROM: SCOWCROFT DOC DATE: 09 MAR 90\nSOURCE REF:\nKEYWORDS: START CFE\nUSSR ARMS CONTROL\nMINUTES NSC\nPERSONS:\n| SUBJECT: MINUTES OF 1 FEB NSC MTG RE START ISSUES ON 1 FEB\nACTION: FOR RECORD PURPOSES DUE DATE: 13 MAR 90 STATUS: C\nSTAFF OFFICERs:NONE F LOGREF: 9020107 9020142\n| FILES (ze. ) SCP: NS0038 CODES:\n| hen st a.\nDOC NT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR _ INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy caP__ NARA, Date 4/23/04\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSAJC CLOSED BY: NSAJC Doc 10F 1\n\nij\n.; \"SECRET RecorD 1D\nNSC/S PROFILE RECEIVED: 29 JAN 90 11\nTO: HUGHES\n| FROM: GORDON DOC DATE: 29 JAN 90\n| DAVIS SOURCE REF:\n| KANTER\n| KEYWORDS: ARMS CONTROL USSR\nNSC AGENDA\nPERSONS:\nSUBJECT: NSC MIG 1 FEB TO REVIEW THE STATUS FO ARMS CONTROL ISSUES PRIOR TO\nUPCOMING MINITERIAL IN MOSCOW\nACTION: NOTED BY HUGHES DUE DATE: 01 FEB 90 STATUS: C\nSTAFF OFFIGER:, GORDON; LOGREF: 9020107 9020314\nFILES AP, SCP: Sin/ CODES:\n\\ DOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy car__ NARA, Date s/asloy\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSCDM CLOSED BY: NSAMM Doc 10F 4\n-SRERE\n\na me ae ak OS ee\nNational Security Council\nThe White House\nPROOFED BY: aca 106 #_2-O\\4\nURGENT NOT PROOFED: ae. 4 scr\nBYPASSED WW DESK: DOCL AIG Se\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec eA\nPhilip Hughes\np Hug! val = i\nBobGates \"J \" eat oe\n'Sc\nBrent Scowcroft\nPhilip Hughes \u00e9 oS ie alee\n| Sitypgion Room\nio\nWest Wing Desk a A's\npo Cae\nfc a ed\nce vP Sununu ~~ \" Other\n/ Should be seen by: +\nCOMMENTS s:\nNS 1) ection Wx\n\nr re)\n= - f\nod be\nne\natt o\nwe\noe\nao\nz 8\na\n\" a\ner\nee tr re ce, ee ERE ee Te ete et Oe '\n\nez 3 UNCLASSIFIED RECORD ID#/9020107.\nNSC/S PROFILE RECEIVED: 23 JAN 90 10\nTO: SCOWCROFT\nFROM: HAGIN, J DOC DATE: 22 JAN 90\nSOURCE REF:\nKEYWORDS: NSC\nPERSONS:\nSUBJECT: APPROVED PRES ACTIVITY RE NSC MTG 1 FEB ~\nACTION: FOR RECORD PURPOSES DUE DATE: 24 APR 90 STATUS: C\nSTAFF OFF ONE LOGREF: 9020142 9020314\nF an SCP soos 2 CODES:\nDOCUMENT DISTRIBUTION |\nFOR ACTION FOR_CONCURRENCE FOR_INFO\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CH CLOSED BY: CM poe 10F 1\nUNCLASSIFIED |\n\nTHE WHITE HOUSE\nWASHINGTON\nMEMORANDUM\nTO: Brent Scowcroft\nFROM: JOSEPH W. HAGIN\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY\naa NSC Meeting\nDATE: February 1, 1990 ----- Thursday\nTIME: 2330 > p-m-;\nDURATION: 90 minutes\nLOCATION: Cabinet Room\nATTIRE: Business suit\nREMARKS REQUIRED: NO\nMEDIA COVERAGE: White House Photographeronly\nFIRST LADY we\nPARTICIPATION:\nADDITIONAL\nINFORMATION:\nCONTACT:\nTELEPHONE: OFFICE HOME\nNOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST\nEd Rogers Marlin Fitzwater David Bates\nJames Cicconi David Demarest David Valdez\nFred McClure Jean Lamb USSS - PPD\nSusan Porter Rose SigRogich - Gary Walters\nPatty Presock John Keller WHCA Audio/Visual\nChriss Winston Tim McBride WHCA Operations\nLaurie Firestone J. Bonnie Newman C. Boyden Gray\nWilliam Kristol Paul Bateman John Herrick\nJackie Kennedy\nLRF 1/22/90",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

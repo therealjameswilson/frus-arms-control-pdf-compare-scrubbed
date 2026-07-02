@@ -1,0 +1,567 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-36-90004-010.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "cba9b827ede0bbb99dadf011f6a895f38ce602f23886b2463335a96180fd9653",
+    "page_count": 39,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "69,70",
+    "doc_key": null,
+    "title": "NSD-36 - February 06, 1990 - United States Arms Control Policy",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSD-36 - February 06, 1990 - United States Arms Control Policy",
+    "file_unit": "NSD-36 - February 06, 1990 - United States Arms Control Policy"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, OA/ID 90004-010, NSD-36-February 06, 1990-United States Arms Control Policy. Secret. Sent for action. Sent through Kanter.\n\nSource: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, OA/ID 90004-010, NSD-36-February 06, 1990-United States Arms Control Policy. Secret.\n",
+  "selected_pages": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    17,
+    20,
+    29,
+    30,
+    31,
+    34,
+    36
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2010-1362-S 2010-1632-S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSD Files OA/ID Number: 90004 Folder ID Number: 90004-010 Folder Title: NSD-36 - February 06, 1990 - United States Arms Control Policy Stack: Row: Section: Shelf: ",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet | (George Bush Library) a Doe. No. / Type Subject/Title Date- Restriction Classification\u201c 01. NSD Re: National Security Directive 36 - United States Arms Control ~ 2/6/90 (b)1) Ss \u2018 Policy (7 pp.) 02a. Distribution Re: NSD 36 (1 pp.) 2/9/90 (b)(3) Record : ) 02b. Distribution. Re: NSD 36 (1 pp.) . ~ 2/9/90 (b)(3) Record . 03a. Memo Brent Scowcroft to POTUS . 2/7/90 (b)C1) ae Re: Proposed National Security Directive (NSD) on Arms Control (1 pp.) . | 03b. Memo John Gordo",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "access_control",
+      "cues": [
+        "attached document contains classified",
+        "access list"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "s = : es, 20183 \u00a2 No. sp 36 \u2014 \u00a2 COPY (oRIGINAL) Notice \u00e9 The attached document contains classified National Security Council Information. It is to be read and discussed only by persons authorized by law. Your signature acknowledges you are such a person and you promise you will show or discuss information contained in the document only with persons who are authorized by law to have access to this document. Persons handling this document acknowledge he or she knows and understands the security la",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Bush Library Photocopy THE WHITE HOUSE WASHINGTON February 6, 1990 NATIONAL SECURITY DIRECTIVE 36 MEMORANDUM FOR THE VICE PRESIDENT THE SECRETARY OF STATE THE SECRETARY OF DEFENSE THE SECRETARY OF ENERGY THE DIRECTOR, OFFICE OF MANAGEMENT AND BUDGET THE ASSISTANT TO THE PRESIDENT FOR NATIONAL SECURITY AFFAIRS THE DIRECTOR OF CENTRAL INTELLIGENCE THE CHAIRMAN, JOINT CHIEFS OF STAFF THE DIRECTOR, ARMS CONTROL AND DISARMAMENT AGENCY SUBJECT: United States Arms Control Policy (U) At our December Mal",
+      "selected_for_body": true
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Bush Library Photocopy seem , SEGREF ALCMs for which heavy bombers are equipped should be incorporated into the START Treaty as legally binding obligations that would be verified by measures to be agreed, to include short-notice on-site inspection of ALCM-carrying bombers. (8) c. Ban on Aircraft Conversion. The U.S. may offer a provision to ban the conversion of aircraft originally constructed as an aircraft other than a bomber into an ALCM- carrying heavy bomber. (Hh dad. Ban on Multiple-Warhea",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Bush Library Photocopy SEGRE+ aeRET 3 all tactical airbases would be excluded from such inspections. (sf (6) The sides would permit inspections of non-ALCM heavy bombers of a type that have been flight tested with nuclear ALCMs above the START range threshold (e.g., B-1B) to confirm that they are not equipped to carry such ALCMs. Non-ALCM heavy bombers of types that have not been flight-tested with nuclear ALCMs above the START range threshold (e.g., B-2) would not be subject to inspection for t",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Bush Library Photocopy SEGRE ~SECREE- 4 Sis Ban on Data Denial | a. The U.S. requires that a START Treaty include an effective ban on the denial of telemetric data during flights of ICBMs and SLBMs limited under START. The provisions to implement such a ban would also apply to Space Launch Vehicles that have been converted from ICBMs or SLBMs limited under START. The U.S. should seek to implement an early agreement on START data denial provisions. In the event that data denial provisions enter",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Bush Library Photocopy Seen SREREE 5 | ! (3) demonstrated throw-weight; (4) demonstrated range; (5) identification of specific telemetry channels that | transmit data on RV release commands, actual RV separations, and booster stage separations. e-9) d. START provisions on data denial would not apply to a category of missiles, \"Strategic R&D Boosters\", which includes any launch vehicle that uses the accountable stage of a type of ICBM or SLBM no longer deployed. START provisions on data denial al",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ee ee ee 0 gsSBeppe Sa: ee Se Hey Be . | , os regardl\u00e9ss: of missidn or range, \u201cSuch declarations would b\u00e9: | \u201c-\"\u201d wpdated.annually, \u201coh.a reciprocal. basis, The.U.S, may \u00b0\u00b0.\u201d a! \u00bb additionally \u2018offer that declarations :of the maximum:size of yHE Oe the..SLCM inventory for a given year not. be increased. in... | Sy aE subsequ\u00e9nt' declarations. (gf 220\u00b0 gE BS pg a 2 Bl The U.S. \u2018also may off\u00e9r t\u00e9 exchang\u00e9: information; \u00e9n\u2019 a Be vo. . reciprocal.basis, about plans related to the size of its..... ~",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Bush Library Photocopy \u2018SEGRET : 7 - | requirements related to the elimination of the Krasnoyarsk violation, and that they have made reasonable progress on the dismantling of the Krasnoyarsk radar. (sh 8. Thule and Fylingdales With the agreement of the Danish and British governments respectively, the U.S. may invite the Soviets to visit the radars at Thule and Fylingdales. Such an invitation is contingent on Soviet agreement to permit us to visit two similar Soviet radars. The invitation should ",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "soak - SEGRET\u2014 RECORD ID: _ NSC/S PROFILE RECEIVED: 05 FEB 90 08 TO: AGENCIES FROM: PRESIDENT DOC DATE: 06 FEB 90 SOURCE REF: KEYWORDS: ARMS CONTROL START USSR NsD PERSONS: SUBJECT: NSD 36 RE US ARMS CONTROL POLICY ACTION: PRES SGD NSD 36 DUE DATE: 08 FEB 90 STATUS: C STAFF OEFEGER;, GORDON LOGREF: E Pino] SCP: CODES: * DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO BLACKWILL DEAL GRIMES HAASS HUGHES ; JACKSON KANTER LAMPLEY MENAN MILLER | PRYCE RODMAN ROSTOW VAN ERON WORKING ; Docume",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "> 7 , \u00a5 oo . 2 -@ 7 : ~SECRET\u2014 . RECORD ID: 9020183 . . ACTION DATA SUMMARY REPORT . DOC ACTION OFFICER ~ CAO ASSIGNED ACT. REQUIRED 001 SCOWCROFT : Z 90020709 FWD TO PRES FOR SIG | 002 PRESIDENT |; | - 2 90020709 FOR SIGNATURE | 003 : o. X 90020916 PRES SGD NSD 36 - | mo | , ; : Document Originally | . Co Attached to - ; | . . . Following Page | . ; : cap Slaeho | -SEGRET- a",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "it . | Withdrawal/Redaction Sheet (George Bush Library) and Type 02a. Distribution | Re: NSD 36 (1 pp.) 2/9/90 (b)(3) Record Collection: Record Group: _ Bush Presidential Records . Office: National Security Council Series: H-Files Subseries: NSD Files WHORM Cat.: File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy Date Closed: 5/27/2010 OA/ID Number: 90004-010 FOIA/SYS Case #: 2010-1362-F Appeal Case #: Re-review Case #: Appeal Disposition: P-2/P-5 Review Case #: Dispos",
+      "selected_for_body": false
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "LNA EIUIVAL OCRUNIET RKUUNGIL tog Number gZolss \u201cDisTRisuTION Recorn * due 9 FER GO Subject: NSD 36 + +O eee: ey memmeememner OOCUMENT CLASSINCATION: O tor secret oheerer OCONFOENT ay DUNCLASSIFIED EXTERNAL DISTRIBUTION: Date Time _ Received/Signed for By: THE VICE PRESSOENT SER) 234 2O50_ THE SECRETARY OF TE TREASURY . Qi Main SidgRoom 1422 : + Geto eA menounos $< hap Lee. Loe dL EOAL bear ha oe of State C #7 G/Go 2k CHAIRMAN US START DELEGATION ; % ACOA, 5933 State eee ees CHAIRMAN US INF DELE",
+      "selected_for_body": false
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "directorate distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 ; \u2018 ~ . . > NATIONAL SECURITY COUNCIL DIRECTORATE DISTRIBUTION | SUBJECT Nsd 3G Loc numper 20 (83 DATE BUST ae DOCUMENT TOP SECRET ( ones ee CLASSIFICATION CODEWORD UNCLASSIFIED DIRECTORATE COPY/SENT RESTRICTED NATIONAL SECURITY ADVISOR = EXECUTIVE SECRETARY Cr, SECRETARIAT BV3T INFORMATION POLICY ck\u2019? LEGAL ADVISER rN INTELLIGENCE PROGRAMS Q COUNSELOR/PLANNING G7 LEGISLATIVE AFFAIRS S 2) EUROPEAN & SOVIET AFFAIRS ah NEAR EAST/SOUTH ASIAN arrares(z iy ( ? A ASIAN AFFAIRS x4 17} AFRICAN AFFAIRS",
+      "selected_for_body": false
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL . Log Number__20183 DisTRIBUTION RECORD Date _9 FEB 90 Subject: NSD 36 ee DOCUMENT CLASSIFICATION: (TOP SECRET yer COCONFIDENTIAL COUNCLASSIFIED INTERNAL DISTRIBUTION \u2014SC:*SCSsC SSS 46\u2014\u2014Scowcrott Haass Pacelli Gates Hayden Passage Hughes Hutchings Pilling Sittmann Jackson Pryce Basora Kanter Rice Beers Kitchen Rodman Blackwill LaMagna Rostow | Charles Levin Salvetti | Coulson Mahley Tobey | Davis Mandel Watson | Deal Melby Wilson Dorminey Menan Working i Dyke Miller Zel",
+      "selected_for_body": false
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018NATIONAL Security COUNCIL tognumber_ FF QolSS \u201cDisTRIBUTION Recoro Dae 9 FEB FO Subject: <b 3G THE VICE PRES-OENT id il HAG ABE ace THe SECRETARY OF STATE # 2 / Cree secfoom 1241 \u2014_\u2014-~ orm\" oo -::C THE SECRETARY OF ThE TREASURY Main \u00a5idghoon jauz : \u2014_\u2014_ ~~: erm THE SECRETARY OF DLFENSE The Pantego 2 Ow CHAIRMAN US START DELEGATION % ACDA, $933 State \u2014_\u2014_ -->-r- eroromnhne CHAIRMAN US INF DELEGATION % ACOA, $933 State See OMECTOR. CA Langiey VA il _ o_o CHAIRMAN, : \u2018The Pentagon Ee a Oe RSom S57",
+      "selected_for_body": true
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". \u2018NATIONAL SecuriTY COUNCIL Log Number Boles \u201cDisTRiBUTION REcoRD Date__ 7 FEB YO : . ee Subject: < bh 3G OOCUMENT CLASSIC TION: O '0P secagr egenes QCONFOENT ay OQ UNcuassiFi\u20aco EXTERNAL OIsTRIBUTION: acys Date Time Received/Signed for By: THE VICE PRES.OENT #!) or o> THE SECRETARY OF 57 i = THE SECRETARY OF ThE TREASURY Maia BidgRoom 3422 eee THE SECRETARY OF DEFENSE rhe Pantogon #3 \u2014_\u2014_- \u2014_\u2014_ eorooe oune Rsos S95 eunt of State Sic eek CHAIRMAN US START DELEGATION Se ACOA, $933 state _\u2014_\u2014\u2014\u2014 \u2014 ",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "|. NATIONAL SecuRITY COUNCIL lognumber_# QojBS | ~DistRiguTION RECORD \u00b0C Date 9 FEB YO | Subject: < h 36 OOCUMENT CLASSINCA nm: O'or secagr bregcner OCONF-OGNT ay DUNC UASSFIED. EXTERNAL DISTRIBUTION: acys Date Time Received/Signed for By: THE VICE PRES-OENT # ye TT_O_\u2014\u2014- lc e+ T ECRETAR me sec rary Or sratt # 2 \u2014\u2014\u2014____. THE SECRETARY OF THE TREASURY Main BidgRoom 3422 \u2014_\u2014=\u2014_ ro :CO -\u2014\u2014 , om CHAIRMAN US START DELEGATION % ACOA, 5933 State \u2014\u2014S eS CHAIRMAN US INF 0\u20ac: EGATION % ACDA.593) State =\u201d, ",
+      "selected_for_body": false
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "CABLE DIVISION (890 FEB -9 PH 8 08 < \u00a2 |",
+      "selected_for_body": true
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Ag) . \u00bb NATIONAL SecuRITY COUNCIL lognumber__ # QO/S3 SY, \u2014\u2014 ae e he \u2019 DisTRIBUTION RECORD Date__ 9 FEB 90 : a Subject: Sh 3G OOCUMENT CLASSINNCA TION: Ortop secagr Ofegcrer OCONFObNT ay OUNcussiti\u20aco EXTERNAL DISTRIBUTION: acys Date Time Received/Signed for By: THE VICE PRES-OENT #1 TT tT METAR i \u2018aero #4 Se ee TMG SECRETARY OF THE TREASURY Main Widghoos Naiz M eee Tue 7, \u2018 the Deruogua\u201d reMae #3 \u2014- CHAIRMAN US START DELEGATION u i We ACOA, $933 State <5 oe | At CHAIRMAN US INF DELEGATION % ACDA",
+      "selected_for_body": false
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Withdrawal/Redaction Sheet (George Bush Library) and Type _ 02b. Distribution | Re: NSD 36 (1 pp.) 2/9/90 (b)(3) Record Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSD Files WHORM Cat.: File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy Date Closed: 5/27/2010 OA/ID Number: 90004-010 FOIA/SYS Case #: 2010-1362-F Appeal Case #: Re-review Case #: Appeal Disposition: P-2/P-5 Review Case #: . Dispositi",
+      "selected_for_body": false
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\"-. DISTRIBUTION REcoRD , \u2014, Date 9 FER 9D Subject: \u2014NWsb 360 | OOCUMENT CUSSINCA THOM: O tor secetr Gyaceret QO CONF .OENT a OO UNCUAssiti\u20acD EXTERNAL DISTRIBUTION: acys Date Time Received/Signed for By: THE VICE PRES:OENT # | \u2014_\u2014S\u2014S ng a ou _ SSR EEN TATVETOUNITEO NATIONS a 4 cea ee sas, ys ES renee\u201d Pe a OES care ot state \u2014\u2014\u2014\u2014 ee OMRSOR IE oon Sentient ORS ES sw tom 800 eS TN depenence ET sn s00a ee Moon sence hee NE SSS Moet hemae \u2014S SSS OF RSOe HOT Hagen we TES Mn Stes oe ORTATION \u2014\u2014-\u2014s MANA",
+      "selected_for_body": false
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "_ NATIONAL SecurITY CoUNCIL \u201c Lognumber_ QO1S3 \u201cDISTRIBUTION RECORD Dae _ 9 FER FO ; a | Subject: NSb 3G OOCUMENT CLASSINICA nom: O 'OP secret Cyegerer\u2014 OCONFOENT ay DUNCUASS FIED EXTERNAL DisTRIBUTION: acys Date Time Received/Signed for By: THE VICE PRES-OENT # | eee THE SECRETARY OF State gues secteua viet i \u2014\u2014_\u2014\u2014\u2014\u2014_\u2014\u2014____ THE SE TARY OF TE TREASURY Maun Sidghoon Nekz \u2014_ eee THe 1 FENSE The Pentegon ao ou #7 He of State C\u2014O rr ee es CHAIRMAN US START DELEGATION Me ACOA, $933 State OC ene eS SS",
+      "selected_for_body": false
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "blank_or_noise",
+      "cues": [],
+      "model_match_score": 0.0,
+      "text_preview": "7",
+      "selected_for_body": false
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". NATIONAL SecuRITY COUNCIL lognumber_ BY 20/83 DistRiBution Record Date 9 FER YO ; Subject: S bh 3G EXTERNAL DISTRIBUTION: acys Date Time Received/Signed for By: THE VICE PRES-OENT #1 Ac: TE Stennett ' Ri me sec TARY OF stant #A 2 THE SECRETARY OF THE TREASURY. \u2018Main Uldghoos maa \u2014_\u2014_- OC Or - rmO THE SECRETARY OF DEFENSE The Pentagon oe Omni Room Si bept of tate AT = CHAIRMAN US START DELEGATION % ACOA, $933 State _ --r\u2014 OOo ees CHAIRMAN US INF DELEGATION % ACDA. 4933 Srate \u2014_\u2014_- efor Oe ees O",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "blank_or_noise",
+      "cues": [],
+      "model_match_score": 0.0,
+      "text_preview": "",
+      "selected_for_body": false
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "t _\u2014_\u2014es es | * DisTRIBUTION RECORD Date__ 9 FER Fo ; SN Subject: IS b 3G DOCUMENT CLASSIC OW: O tor secrer gener, OCONF.OF WT a OD Uncassiti\u20aco | EXTERNAL OisTRIBUTION: acys Date Time Received/Signed for By THE VICE PRES-OENT cid a Toe SECRETAR OF Star, Mtee sectooa hate a THE SECRETARY OF THE TREASURY Man sdghoos Maa? Ore eee THE SECRETARY OF DEFENSE The Pentagon en rs i Ou Room Sb )itept of State iii ee CHAIRMAN US START DELEGATION % ACDA, $933 State C\u2014O eee CHAIRMAN US INF DELEGATION SACD S93",
+      "selected_for_body": false
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "RECEIVED goFEB 12 ANI ol EEPARTMEN| OF ENERGY",
+      "selected_for_body": true
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 . \u00e9 National Security Council The White House PROOFED BY: LOG # | URGENT NOT PROOFED: SYSTEM = PRS INT | BYPASSED WW DESK: poco RE\u2014aio SEQUENCE TO HAS SEEN DISPOSITION Dep Exec = ae ee | Philip Hughes be A Px po ee Bob Gates ca et Brent Scowcroft eeeeeen Philip Hughes pig pete Se Situation Room clk Boag West Wing Desk q ior NSC Secretariat co ao eS OE eS SS \u201c w io | a ee ao cc vP. Sununu Other Should be seen by: Sel. COMMENTS oo DATES 2/70",
+      "selected_for_body": true
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "= National Security Council : The White House PROOFED BY: LOG # (a) / TS URGENT NOT PROOFED: SYSTEM INT BYPASSED WW DESK: DOCLQG A/O SEQUENCE TO HAS SEEN DISPOSITION Dep Exec | el ee Philip Hughe} basa fl ban + Bob Gates\u201d = fe! a4 <= ui Fe - Has Seen Brent Scowcroft... PhilipHughes | SS ili ee \u00a9 a Situation Room S> West Wing Desk g L NSC Secretariat ct vp Sununu Other Should be seen by: \u2018oy Wate/ ime) \\< COMMENTS \\ oe SS ne flees nice CanSoxa",
+      "selected_for_body": true
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet \u00bb | (George Bush Library) . and Type 03a. Memo Brent Scowcroft to POTUS 2/7/90 (b)(1) . Re: Proposed National Security Directive (NSD) on Arms : : Control (1 pp.) . . Collection: . : : Record Group: _ Bush Presidential Records Office: National Security Council _| Series: H-Files oa Subseries: NSD Files + WHORM Cat.: - File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy : : Date Closed: 5/27/2010 __ | OA/ID Number: 90004-010 : : FOIA/SYS Case #",
+      "selected_for_body": false
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". ; - Withdrawal/Redaction Sheet (George Bush Library) and Type . 03b. Memo John Gordon/Rich Davis to Brent Scowcroft 2/5/90 Ow \u2014 . Re: Proposed\u2018NSD on Arms Control Issues (3 pp.) : Collection: . Record Group: Bush Presidential Records . . Office: National Security Council , Series: H-Files : - . Subseries: NSD Files : WHORM Cat.:. , , : File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy Date Closed: 5/27/2010 : OA/ID Number: 90004-010 . FOIA/SYS Case #: 2010-1362-F Ap",
+      "selected_for_body": false
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 i SECRET RECORD ID: 8920413. ba 2 NSC/RMO PROFILE RECEIVED: 04 MAY 89 10 TO: SCOWCROFT FROM: BROOKS DOC DATE: 04 MAY 89 KANTER SOURCE REF: KEYWORDS: ARMS CONTROL USSR NSD START NATO NUCLEAR DEFENSE PERSONS: SUBJECT: DRAFT NSD RE BASIC US ARMS CONTROL POLICIES | ACTION: OBE PER GATES DUE DATE: 05 MAY 89 STATUS: C | STAFF OFFICER: BROOKS LOGREF: 9020183 FILES: TFD_O NSCP: NSD __NSROO14 CODES: \u2014\u2014 DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR_INFO BROOKS KANTER NSC CHRON Document Originall",
+      "selected_for_body": true
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "7 a / foo ; -SEERET\u2014 : RECORD ID: 8920413 en) - ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAQ ASSIGNED ACTION REQUIRED 001 SCOWCROFT Z 89050410 FOR DECISION 001 : X 89051816 OBE PER GATES Document Originally Attached to Following Page cap s[aelio SECRET \u2014",
+      "selected_for_body": false
+    },
+    {
+      "page": 36,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "National Security Council The White House PROOFED BY: a. tog#__ ACHIZ | URGENT NOT PROOFED: SYSTEM PRS (MISC) INT | BYPASSED WW DESK: pocios 24. ao SEQUENCETO =-HASSEEN _ DISPOSITION Dep Exec / = 2 Philip Hughes (ee Le Bob Gates 2 y neg i Brent Scowcroft \u00a9 Hf \u2014 ae Philip Hughes < Situation Room pas West Wing Desk 2> 5 CD Fee wv = ( NSC Secretariat 8 Bp RX LEX) foment es me aes iy een Eideuiah EN L_ oo i: vp Sununu (211) elles Ace ee Oe Should be seen by: \u2014 atertimey \u2014\u2014 COMMENTS Nena AOWALASO, RO",
+      "selected_for_body": true
+    },
+    {
+      "page": 37,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- 5 . - Withdrawal/Redaction Sheet _ (George Bush Library) Subject/Title of Document | Date Restriction and Type : it : 04a. Memo _| Linton Brooks to Brent Scowcroft 5/4/89 @(D Re: Arms Control NSD for the Baker Trip (3 pp.) Collection: \u2018 . . : Record Group: Bush Presidential Records , . Office: National Security Council . Series: H-Files . Subseries: NSD Files - \u2018WHORM Cat.: . : - File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy : Date Closed: : 5/27/2010 _ OA/AD Nu",
+      "selected_for_body": false
+    },
+    {
+      "page": 38,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date . \u201cand Type \u201804b. DraftNSD | Re: Basic United States Arms Control Policies (5 pp.) 7 (b)(1) Collection: Le : Record Group: Bush Presidential Records . . Office: National Security Council . Series: H-Files Subseries: NSD Files . WHORM Cat.: oo File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy . Date Closed: 5/27/2010 OAAD Number: 90004-010 FOIA/SYS Case #: 2010-1362-F . Appeal ",
+      "selected_for_body": false
+    },
+    {
+      "page": 39,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "7 Withdrawal/Redaction Sheet (George Bush Library) ~ and Type 04c. Draft NSD | Re: Basic United States Arms Control Policies (4 pp.) (6) . | Collection: : || Record Group: Bush Presidential Records Office: National Security Council Series: H-Files : Subseries: | NSD Files . . , WHORM Cat.: . . : File Location: NSD-36 - February 06, 1990 - United States Arms Control Policy Date Closed: 5/27/2010 OA/ID Number: 90004-010 FOIA/SYS Case #: 2010-1362-F Appeal Case #: . Re-review Case #: , Appeal Dispo",
+      "selected_for_body": false
+    }
+  ],
+  "draft_body": "THE WHITE HOUSE\nWASHINGTON\nFebruary 6, 1990\nNATIONAL SECURITY DIRECTIVE 36\nMEMORANDUM FOR THE VICE PRESIDENT\nTHE SECRETARY OF STATE\nTHE SECRETARY OF DEFENSE\nTHE SECRETARY OF ENERGY\nTHE DIRECTOR, OFFICE OF MANAGEMENT AND BUDGET\nTHE ASSISTANT TO THE PRESIDENT FOR NATIONAL\nSECURITY AFFAIRS\nTHE DIRECTOR OF CENTRAL INTELLIGENCE\nTHE CHAIRMAN, JOINT CHIEFS OF STAFF\nTHE DIRECTOR, ARMS CONTROL AND DISARMAMENT AGENCY\nSUBJECT: United States Arms Control Policy (U)\nAt our December Malta meeting, President Gorbachev and I agreed\nto intensify our mutual efforts to reach agreement on a series of\noutstanding arms control issues. The following decisions are\ndesigned to pursue that objective in a manner that leads to arms\ncontrol agreements which enhance our national security and\nstrengthen international stability. (U)\ni. ALCMs\nThe following provisions should be treated as part of a package\nthat the U.S. could accept to resolve the ALCM issue. vey\n| a. Counting Rules. The U.S. may propose a \"differential\nattribution\" approach for counting ALCMs on heavy bombers.\nUnder this approach, B-52H and B-1B bombers equipped for\nALCMs would count at 10 ALCMs each. The Blackjack would\ncount at 8 ALCMs each. The Bear-H would count at 6-8 ALCMs\neach. (gf\nb. Maximum Loading. The U.S. may offer a limit on the\n. maximum number of ALCMs for which a heavy bomber may be\nequipped, not to exceed twice the number attributed to it\nunder the counting rules described in para 1.a above. As an\nalternative, the U.S. may offer to set such a maximum limit\nat 20 ALCMs. Provisions related to the maximum number of\nSECREZ PER E.\u00a9. 12958,\nDeclassify on: OADR SECRET AS AMENDED\n2005-0590 -~-MR\n\nseem, SEGREF\nALCMs for which heavy bombers are equipped should be\nincorporated into the START Treaty as legally binding\nobligations that would be verified by measures to be agreed,\nto include short-notice on-site inspection of ALCM-carrying\nbombers. (8)\nc. Ban on Aircraft Conversion. The U.S. may offer a\nprovision to ban the conversion of aircraft originally\nconstructed as an aircraft other than a bomber into an ALCMcarrying heavy bomber. (Hh\ndad. Ban on Multiple-Warhead ALCMs. The U.S. may offer a\nprovision to ban multiple-warhead nuclear ALCMs. 9)\ne. ALCM Distinguishability. The U.S. requires that future\nnon-nuclear ALCMs not be subject to the numerical limits in\nSTART. To achieve this objective, the U.S. may offer the\nfollowing measures to help distinguish between future\nnuclear and non-nuclear ALCMs. (3h\n(1) ALCM-carrying heavy bombers, non-ALCM heavy\nbombers, and former (i.e., non-nuclear) heavy bombers\nia each be based at geographically separated bases.\n(2) All nuclear and non-nuclear ALCMs above the range\nthreshold for START-accountable ALCMs would have\nexternal differences that are visible to NTM, in\naddition to differences (e.g., shape, diameter,\nattachment point spacing) that are visible to on-site\ninspection. (84\n(3) For all nuclear ALCMs above the range threshold,\nthe sides would exchange information with respect to\nthese external differences and would exhibit the ALCMs\nin a way that confirms the information and\ndistinguishing features. (gf\n| (4) For all non-nuclear ALCMs above the range\nthreshold, the U.S. may agree to exchange information\nwith respect to these external differences and exhibit\nthe non-nuclear ALCMs in a way that confirms the\ninformation and distinguishing features, provided this\ninformation exchange is not treated as part of the data\nMOU in START. (8)\n| (5) The sides would permit access to designated\nweapons storage areas at all non-ALCM heavy bomber\n| bases and former heavy bomber bases for the purpose of\nselecting a small number of non-nuclear ALCMs (if any\nare present) and confirming (e.g., with a radiation\ndetector) that they are, in fact, non-nuclear. Other\n| parts of these airbases, other strategic airbases, and\n\nBush Library Photocopy SEGRE+\naeRET 3\nall tactical airbases would be excluded from such\ninspections. (sf\n(6) The sides would permit inspections of non-ALCM\nheavy bombers of a type that have been flight tested\nwith nuclear ALCMs above the START range threshold\n(e.g., B-1B) to confirm that they are not equipped to\ncarry such ALCMs. Non-ALCM heavy bombers of types that\nhave not been flight-tested with nuclear ALCMs above\nthe START range threshold (e.g., B-2) would not be\nsubject to inspection for this purpose. {af\n(7) The sides would permit inspections of former heavy\nbombers (e.g., B-52G) to confirm that they satisfy the\n| ne for conversion to former heavy bombers.\nf. Range Threshold. The U.S. may accept a range threshold\nof 1000 km for START-accountable ALCMs. (4\ng. Former Heavy Bombers. The U.S. requires a continuing\nright to convert heavy bombers to \"former heavy bombers\"\nthat would not be counted within the 1600/6000 START\naggregates, subject to an agreed numerical limit on such\nconverted heavy bombers between 100 and 115. {aj\nh. Other ALCM Issues. The U.S. position on other ALCM\nissues remains unchanged. ie-4)\n2s Non-Deployed Ballistic Missiles\na. The U.S. should continue to press its current position\non measures and constraints related to non-deployed\nballistic missiles, except as modified below. (8\nb. The U.S. should propose the establishment of numerical\nlimits on the inventory of non-deployed mobile ICBMs. The\nU.S. no longer should seek numerical limits on the inventory\nof non-deployed missiles for other types of ICBMs and SLBMs\nlimited under START. For these purposes, a mobile ICBM is a\ntype of ICBM that has been flight-tested from a mobile\nlauncher. (gs\nGe The U.S. should propose limits of 300-500 non-deployed\nmobile ICBMs and 1500 warheads that would be attributed to\nthose ICBMs under START RV counting rules. 17-3)\nSBGREP\n\n| Bush Library Photocopy SEGRE\n~SECREE- 4\nSis Ban on Data Denial\n| a. The U.S. requires that a START Treaty include an\neffective ban on the denial of telemetric data during\nflights of ICBMs and SLBMs limited under START. The\nprovisions to implement such a ban would also apply to Space\nLaunch Vehicles that have been converted from ICBMs or SLBMs\nlimited under START. The U.S. should seek to implement an\nearly agreement on START data denial provisions. In the\nevent that data denial provisions enter into force prior to\nentry into force of the START Treaty, the START JCIC should\nserve as the compliance forum for data denial. ws\nTo achieve these objectives, the U.S. should propose the\nfollowing measures, based on strict reciprocity. wi\nb. The U.S. should propose that the sides undertake a\npositive obligation to broadcast telemetry from ICBMs and\nSLBMs limited under START in a receivable form. To that\nend, the U.S. may offer to:\n(1) ban low-power transmission and directional beaming\nof telemetry signals;\n(2) exchange data on the frequency and method of\nmodulation used to transmit telemetry;\n(3) exchange \"bit maps\" to aid in verifying that the\ntelemetry is not encrypted;\n(4) subject to conditions to be mutually agreed,\nexchange tapes of the entire telemetry data stream from\n| a particular flight. {8\nc. The U.S. may offer to exchange data on each flight of an\nICBM or SLBM limited under START, as follows:\n(1) acceleration as a function of time, from launch\nthrough burn-up of the post-boost vehicle; acceleration\ndata on RVs would not be included. (The Arms Control\nPCC will develop recommendations about the precision of\ndata and time interval between successive data that may\nbe provided.);\n| (2) the time of boost-stage separations and RV\n| separations;\n\nBush Library Photocopy Seen\nSREREE 5\n(3) demonstrated throw-weight;\n(4) demonstrated range;\n(5) identification of specific telemetry channels that\n| transmit data on RV release commands, actual RV\nseparations, and booster stage separations. e-9)\nd. START provisions on data denial would not apply to a\ncategory of missiles, \"Strategic R&D Boosters\", which\nincludes any launch vehicle that uses the accountable stage\nof a type of ICBM or SLBM no longer deployed. START\nprovisions on data denial also would not apply to cruise\nmissiles. (8)\ne. For a specified number of years, two flight-tests per\nyear of the Minuteman II and SS-13 would be excluded from\nthe ban on encapsulation. \u00bb)\nf. In addition to the exemption of Minuteman II and SS~-13,\nthe U.S. may offer to permit the encapsulation of RV data\nmade during the plasma phase of reentry on flights, as\nfollows:\n(1) no more than three flights of each future type of\nICBM or SLBM, to be conducted prior to initial\naccountability of the type in START as a deployed\nmissile;\n(2) no more than three flights of a single existing\ntype of ICBM or SLBM;\n(3) telemetry would be broadcast from the same RV in\nwhich data is being encapsulated, including all\nmeasurements made prior to and subsequent to the plasma\nphase, and measurements made and recorded during the\nplasma phase;\n(4) copies of tapes of encapsulated data would be\nexchanged for all flights conducted under this\nprovision. (J)\n4. SLCMs\na. The U.S. may offer, on a reciprocal basis, a\n\"declaration of policy\" that would state the maximum size of\nour SLCM inventory in each of the next three years. These\nmutual declarations would encompass all nuclear SLCMs,\n\nee ee ee\n0 gsSBeppe Sa: ee Se Hey Be.\n|, os regardl\u00e9ss: of missidn or range, \"Such declarations would b\u00e9:\n| \"-\"\" wpdated.annually, \"oh.a reciprocal. basis, The.U.S, may \u00b0\u00b0.\"\na! \u00bb additionally 'offer that declarations:of the maximum:size of yHE\nOe the..SLCM inventory for a given year not. be increased. in...\n| Sy aE subsequ\u00e9nt' declarations. (gf 220\u00b0 gE BS\npg a 2 Bl The U.S. 'also may off\u00e9r t\u00e9 exchang\u00e9: information; \u00e9n' a Be\nvo.. reciprocal.basis, about plans related to the size of its..... ~*\noa nuclearSLCM inventory 'for twoy\u00e9ars beyond thos\u00e9 included\ncoset.in.the \"declaration of policy.\" Such. plans could be.changed\"\noat = at any time: \u00a2\"Information concerning 'changes in plans would:\n| oun be provided as part of the annual. update.\" YA: oe:\nre.g,) \u00abThe -UsS. may.agree to nformal \"discussions about. SLCM)\n|:: verification for the purpose of explaining to the 'Soviets ne.\n:.:, the reasons why we are:convinced:that all\" of the: proposed;\n\".)\" | approaches to SLCM verification are ineffective, unworkable,\n! wel or: bothy YByec 0 ene: Sod: Sheba. ee\nane a ee oe. oS: B, Moos\n| \u00b0\"\"5.\u00b0 Other START Issues | oe ne moe\npL EEG Dasei hb vdei i Soh HEid Lusi es\nanne \"US positiong 'related to inobile ICBM sublimits, Backfire, and ~~...\n{of ) 4 $8-18\u00a7 are: unchanged: ! (sf nd es gp\nbe 6. 'Defense and Space ==. oe Hs ses a\n| \"oa, th\u00e9.u.8.. shoula''seek Soviet reconfirmation of its.;\neg \u00bb position that:-conclusion: of a START Tr\u00e9aty is not contingent | -\n}. on the resolution of. issues covered inthe Defense and Space.\n\"> negotiations. (#) i ge 8 DES nope S\nee =by The U.S: Should reject any Soviet! propasals that' would es\na.. Constitute. U.S. agreement 'to the Soviet position.that they.....\npans are free to withdraw'from the START 'Treaty if; in their ==\" \u00b0re \"Judgment, the..ABM Treaty has: been violated. (a) ath: Cone:\ni097, Krasnoyarsk ee ae oa ae\nge ia.' The U.S. Should confirm Soviet plans to dismantie_\n\" 3>: 1 completely:the Krasnoyarsk radarithat they have: acknowledg\u00e9d ':\n| oS\". violates 'the ABM Tr\u00e9aty. We should make cl\u00e9ar that such\" _\neee. dismantling entails the cofiplete removal iof both the:: PF\nPood 'transmitter 'and receiver buildings. We do-not require that.\n, _ge7 \u00bb the building foundations be destroyed or demolished. (sf j:\u00b0~\nae ~ biel Phe U.S. will not postpone completion of a START Treaty 9s \u00a9\na 'that. is otherwise ready to.be signed, provided thatthe 90.\niio * Soviets have fully: accepted our: understanding:concerning: the\n\nBush Library Photocopy 'SEGRET\n: 7 - |\nrequirements related to the elimination of the Krasnoyarsk\nviolation, and that they have made reasonable progress on\nthe dismantling of the Krasnoyarsk radar. (sh\n8. Thule and Fylingdales\nWith the agreement of the Danish and British governments\nrespectively, the U.S. may invite the Soviets to visit the\nradars at Thule and Fylingdales. Such an invitation is\ncontingent on Soviet agreement to permit us to visit two\nsimilar Soviet radars. The invitation should be extended in\nsuch a way that makes clear that it is in no way related to\nSoviet actions concerning Krasnoyarsk. 569)\na fad \"nn\n'el = ~---\n\nsoak - SEGRET-- RECORD ID: _\nNSC/S PROFILE RECEIVED: 05 FEB 90 08\nTO: AGENCIES\nFROM: PRESIDENT DOC DATE: 06 FEB 90\nSOURCE REF:\nKEYWORDS: ARMS CONTROL START\nUSSR NsD\nPERSONS:\nSUBJECT: NSD 36 RE US ARMS CONTROL POLICY\nACTION: PRES SGD NSD 36 DUE DATE: 08 FEB 90 STATUS: C\nSTAFF OEFEGER;, GORDON LOGREF:\nE Pino] SCP: CODES:\n* DOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nBLACKWILL\nDEAL\nGRIMES\nHAASS\nHUGHES\n; JACKSON\nKANTER\nLAMPLEY\nMENAN\nMILLER\n| PRYCE\nRODMAN\nROSTOW\nVAN ERON\nWORKING;\nDocument Originally\nAttached to\nFollowing Page\nca\n| i ee ee\n| DISPATCHED BY D 3 4 DATE BY HAND W/ATTCH\n| OPENED BY: NSAJC CLOSED BY: NSBTM Doc 30F 3\n\n'NATIONAL Security COUNCIL tognumber_ FF QolSS\n\"DisTRIBUTION Recoro Dae 9 FEB FO\nSubject: <b 3G\nTHE VICE PRES-OENT id il HAG ABE ace\nTHe SECRETARY OF STATE # 2 /\nCree secfoom 1241 --_---~ orm\" oo -::C\nTHE SECRETARY OF ThE TREASURY\nMain \u00a5idghoon jauz: --_--_ ~~: erm\nTHE SECRETARY OF DLFENSE\nThe Pantego 2\nOw\nCHAIRMAN US START DELEGATION\n% ACDA, $933 State --_--_ -->-r- eroromnhne\nCHAIRMAN US INF DELEGATION\n% ACOA, $933 State See\nOMECTOR. CA\nLangiey VA il _ o_o\nCHAIRMAN,:\n'The Pentagon Ee a\nOe RSom S57 Oto8 BE --_--\nS. ENTATIVE TO UNITED NATIONS\nMart Ae SS\n\u2122 1, OMMERCE\naus 8 Cont See WA Roe 51 SS SSS\nSECRETARY OF ENERGY\na en BH\ncr\nESSE con ett ----- ------\nTHE ATTORNEY GENERAL\nGeogr of ustce. Room $119 Cc Oooo eS\nORECTOR OST?\nRoom 30 acon --_ -_--- >\nORECTOR Usa\n400 \u20ac Streets W. Room $00 OC oon eS\nTHE SECRETARY OF THE INTERIOR\nOth BE StreetN W. Room 6151 -- --------------\nTHE SECRETARY OF AGRICULTURE\nlndependence & 14th $ W Room 2008 ----_ -_- > OO\nMITEO STATES 1\nRoom TOF Hradec hing eA = SSS\nTHe '\nts00 \u20ac Sues hon aze --S\nOES eT ntagon o_o FO\n7 of\n\"dS ARLAR GY yororraron a\nMANAGER, NATL COMMUNICATIONS\nSYSTEM (NCS), Room 4125\n8th 8 $0 Courthouse Rg. Aitington, Va --- ooo > Oo\nTHE SECRETARY OF HHS '\n200 Independence Avenue, NW, Room 615F --- __- C - erm\nTHE SECRETARY '\nei Fa foes Pe Soom t0000 ---- ------------- er\nTHE SECRETARY OF EOUCAT:\n200 Marytand wncee AT hoo ain --_--__- ------_----- ---_------------\nSSMS WN seas a rigs\nOATE, TIME & SIN THIS RECLT & RETURN TO: WIST W NG DESK, SITUATION ROOM, WHITE HOUSE N ses\n\nCABLE DIVISION\n(890 FEB -9 PH 8 08\n\nRECEIVED\ngoFEB 12 ANI ol\nEEPARTMEN| OF ENERGY\n\n\u00e9 National Security Council\nThe White House\nPROOFED BY: LOG #\n| URGENT NOT PROOFED: SYSTEM = PRS INT\n| BYPASSED WW DESK: poco RE--aio\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec = ae ee\n| Philip Hughes be A Px po ee\nBob Gates ca et\nBrent Scowcroft eeeeeen\nPhilip Hughes pig pete Se\nSituation Room clk Boag\nWest Wing Desk\nq ior\nNSC Secretariat co ao eS OE eS SS\n\" w\nio | a\nee\nao\ncc vP. Sununu Other\nShould be seen by:\nSel.\nCOMMENTS oo\nDATES 2/70\n\n= National Security Council\n: The White House\nPROOFED BY: LOG # (a) / TS\nURGENT NOT PROOFED: SYSTEM INT\nBYPASSED WW DESK: DOCLQG A/O\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec | el ee\nPhilip Hughe} basa fl ban +\nBob Gates\" = fe!\na4 <=\nui Fe - Has Seen\nBrent Scowcroft...\nPhilipHughes | SS\nili\nee \u00a9 a\nSituation Room S>\nWest Wing Desk g L\nNSC Secretariat\nct vp Sununu Other\nShould be seen by:\n'oy Wate/ ime)\nCOMMENTS \\ oe SS ne\nflees nice CanSoxa\n\n' i SECRET RECORD ID: 8920413.\nba 2 NSC/RMO PROFILE RECEIVED: 04 MAY 89 10\nTO: SCOWCROFT\nFROM: BROOKS DOC DATE: 04 MAY 89\nKANTER SOURCE REF:\nKEYWORDS: ARMS CONTROL USSR\nNSD START\nNATO NUCLEAR DEFENSE\nPERSONS:\nSUBJECT: DRAFT NSD RE BASIC US ARMS CONTROL POLICIES\n| ACTION: OBE PER GATES DUE DATE: 05 MAY 89 STATUS: C\n| STAFF OFFICER: BROOKS LOGREF: 9020183\nFILES: TFD_O NSCP: NSD __NSROO14 CODES:\n---- DOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR_INFO\nBROOKS\nKANTER\nNSC CHRON\nDocument Originally\nAttached to\n. Following Page\ncap slaeho\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: 0/9 -- poc 10F 1\n\nNational Security Council\nThe White House\nPROOFED BY: a. tog#__ ACHIZ\n| URGENT NOT PROOFED: SYSTEM PRS (MISC) INT\n| BYPASSED WW DESK: pocios 24. ao\nSEQUENCETO =-HASSEEN _ DISPOSITION\nDep Exec / = 2\nPhilip Hughes (ee Le\nBob Gates 2 y neg\ni\nBrent Scowcroft \u00a9 Hf -- ae\nPhilip Hughes <\nSituation Room pas\nWest Wing Desk 2> 5 CD Fee wv\nNSC Secretariat 8 Bp RX\nLEX) foment es me aes iy een\nEideuiah\nEN\nL_ oo\ni: vp Sununu (211) elles Ace ee Oe\nShould be seen by:\n-- atertimey ----\nCOMMENTS\nNena AOWALASO,\nROMO Lrrurg Ceurratre ata\nDic dl\nAit",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

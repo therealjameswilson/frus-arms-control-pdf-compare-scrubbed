@@ -82,6 +82,17 @@ python3 agent/frus_publication_agent.py \
 - `draft.md`: copy-readable FRUS-style draft packet.
 - `draft.xml`: minimal TEI-like review stub.
 
+## START I Batch Run
+
+The full START I PDF batch output is in:
+
+```text
+runs/start-i-pdfs/batch-summary.md
+```
+
+That batch ran all 17 exact-source START I PDFs through the universal agent in
+full-PDF mode.
+
 ## Operating Spec
 
 The universal instruction file is:

@@ -1,0 +1,241 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-14_5-90006-029.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "70288a72978e78e89e7927ba4a75d8f47ca6f2fb3a6ca4857980c9ad83013885",
+    "page_count": 13,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "33",
+    "doc_key": null,
+    "title": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5]",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5]",
+    "file_unit": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5]"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, OA/ID 90006-029, NSR-14-April 03, 1989-Review of U.S. Arms Control Policies [5]. Secret. Copied to Quayle and Sununu. A stamped notation indicates Bush saw the memorandum; an unknown hand wrote \"6/20/89\" beneath the notation.\n",
+  "selected_pages": [
+    3,
+    5,
+    9,
+    11,
+    12
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2010-1905-S 2010-1905-S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSR Files OA/ID Number: 90006 Folder ID Number: 90006-029 | at! Folder Title: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5] Stack: Row: Sectio",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) __ ; Doe. No. / Type Subject/Title Date Restriction Classification Ola. Letter Brent Scowcroft to POTUS 6/19/89 (b)(1) Ss Re: [ICBM Modernization] (1 pp.) 0lb. Memo Secretary Dick Cheney to POTUS n.d. (b)(1) s Re: U.S. Positions in START and the Defense and Space Talks \u00ab _ @pp.) . | Olc. Summary Re: Summary of OSD Positions on DST/START (7 pp.) n.d. (b)(1) Ss 02. Paper Re: START and Defense and Space Other Issues for Decisions nd. (b)(1) Ss (19 pp",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 SECRET RECORD ID: 8920674 - NSC/RMO PROFILE RECEIVED: 19 JUN 89 08 TO: PRESIDENT FROM: SCOWCROFT DOC DATE: 19 JUN 89 SOURCE REF: KEYWORDS: START NST ARMS CONTROL SPACE POLICY NSR PERSONS: SUBJECT: US POSITIONS IN START & DST TALKS ACTION: NOTED BY PRES DUE DATE: 07 FEB 91 STATUS: C | STAFF E s LOGREF : | FI \\ ii, R ___NSCP: ree CODES: | | ge ocunent DISTRIBUTION | FOR ACTION FOR_CONCURRENCE FOR_INFO DAVIS NSC CHRON UNCLASSIFIED UPON REMOVAL OF CLASSIFIED ATTACHMENTS | cae -7/a)i0 | | COMMENTS ",
+      "selected_for_body": true
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": . \u201cSECRET\u2014 RECORD ID: 8920674 . . ACTION DATA SUMMARY REPORT DOC ACTION OFFICER . CAO ASSIGNED ACTION REQUIRED 001 SCOWCROFT Z 89061908 FWD TO PRES FOR DECISION 001 PRESIDENT Z 89061915 FOR DECISION 001 X 89062011 PRES APPROVED RECOMS 002 SCOWCROFT Z 89061909 ADD-ON / FOR DECISION 002 X 89062013 SCOWCROFT APPROVED #1 START LIMITS 002 X 89062013 SCOWCROFT APPROVED #2 HEAVY ICBMS 002 X 89062013 SCOWCROFT APPROVED #2 MISSILES 002 X 89062014 SCOWCROFT COMMENTED RE ACLM RANGE : 002 X 89062014 SCOWC",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 # % ; National Security Council The White House PROOFED BY: log#_ Doe 671 URGENT NOT PROOFED: SYSTEM PRS (NSO) INT BYPASSED WW DESK: DOCLOG ao BQ SEQUENCE TO HAS SEEN DISPOSITION @ Dep Exec vr Philip Hughes a Bob Gates ee scciealsiel Sic iaiinncis \" sigisDcalilataes eS) : Brent Scowcroft = => = PhilipHughes <, co Situation Room West Wing Desk \\ n) NSC Secretariat 2 (AE k cc: vp Sununu hie : Should be seen by: ase (\"4 0) COMMENTS",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Bn . ee Withdrawal/Redaction Sheet (George Bush Library) and Type Ola. Letter Brent Scowcroft to POTUS 6/19/89 | (b)(1) . Re: [ICBM Modernization] (1 pp.) | Collection: . . Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSR Files . WHORM Cat.; File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5] Date Closed: 7/8/2010 OAMD Number: 90006-029 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Dispos",
+      "selected_for_body": false
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet | (George Bush Library) and Type _ Olb. Memo Secretary Dick Cheney to POTUS (b)(1) Re: U.S. Positions in START and the Defense and Space Talks (2 pp.) Collection: Record Group: Bush Presidential Records . Office: National Security Council Series: H-Files Subseries: NSR Files WHORM Cat.: . File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5] Date Closed: 7/8/2010 OA/ID Number: 90006-029 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review C",
+      "selected_for_body": false
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | : and Type Olc. Summary Re: Summary of OSD Positions on DST/START (7 pp.) - (b)(1) - Collection: . Record Group: Bush Presidential Records Office: National Security Council : Series: H-Files Subseries: NSR Files WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5] Date Closed: 7/8/2010 OA/ID Number: 90006-029 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Disposition: P-2/P-5 Review ",
+      "selected_for_body": false
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2014SEERER- RECORD 1058920674 qe? NSC/RMO PROFILE RECEIVED: 19 JUN 89 08 TO: SCOWCROFT FROM: DAVIS DOC DATE: 17 JUN 89 KANTER SOURCE REF: KEYWORDS: START NST ARMS CONTROL SPACE POLICY NSR PERSONS: SUBJECT: NST DECISIONS | ACTION: SCOWCROFT APPROVED RECOM RE DST DUE DATE: 07 FEB 91 STATUS: C | | STAFF OFFICER: DAVIS LOGREF: | FILES: IFR_O NSCP: NSROO14 CODES: aa DOCUMENT DISTRIBUTION FOR_ACTION FOR_CONCURRENCE FOR_INFO DAVIS KANTER NSC CHRON UNCLASSIFIED UPON REMOVAL OF CLASSIFIED ATTACHMENTS car 7e",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 i - \u2014SEGRET\u2014 RECORD ID: 8920674 . \u2018 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED ; 001 SCOWCROFT Z 89061908 FWD TO PRES FOR DECISION 001 PRESIDENT Z 89061915 FOR DECISION 001 X 89062011 PRES APPROVED RECOMS . 002 SCOWCROFT Z -89061909 ADD-ON / FOR DECISION 002 X 89062013 SCOWCROFT APPROVED #1 START LIMITS 002 X 89062013 SCOWCROFT APPROVED #2 HEAVY ICBMS 002 X 89062013 SCOWCROFT APPROVED #2 MISSILES 002 X 89062014 SCOWCROFT COMMENTED RE ACLM RANGE 002 X 89062014 SC",
+      "selected_for_body": false
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201d = | t National Security Council i The White House PROOFED BY: wl LOG # 2 6 w { URGENT NOT PROOFED: SYSTEM PRS BYPASSED WW DESK: DOCLO! SEQUENCE TO HAS SEEN DISPOSITION Dep Exec \\ S Philip Hughes 2 i ney PER, Sirs Bob Gates 2 22 Brent Scowcroft \u00b0* ey PhilipHughes ~ g bb 2 & , . bk Situation Room => => West Wing Desk~> L a) NSC Secretariat sted ] = ; ETSI cs ees 2 eS Pts SE esses 7 \u2018cetenain nh eaten Actor cc: vp Sununu Other : Should be seen by: \u2014Datertime) ae COMMENTS",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- -SRERET\u2014 NATIONAL SECURITY COUNCIL 20674 WASHINGTON, D.C. 20506 add-on June 17, 1989 ACTION MEMORANDUM FOR BRENT SCOWCROFT THROUGH: ARNOLD KANTER|| eh FROM: RICHARD DAVISRW SUBJECT: NST Decisions At Tab I is a package of NST issues for decision that we did not include in our June 16 memorandum for you to send to the President. We recommend that you discuss these issues with the President in general terms, but not go through the package in detail. All issues have been reviewed by the Deputies C",
+      "selected_for_body": true
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 02. Paper Re: START and Defense and Space Other Issues for (b)(1) s : Decisions (19 pp.) . : | Collection: Record Group: Bush Presidential Records Office: National Security Council \u00b0 Series: H-Files Subseries: NSR Files WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [5] Date Closed: 7/8/2010 OA/D Number: 90006-029 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Disposition: P",
+      "selected_for_body": false
+    }
+  ],
+  "draft_body": "4 SECRET RECORD ID: 8920674\n- NSC/RMO PROFILE RECEIVED: 19 JUN 89 08\nTO: PRESIDENT\nFROM: SCOWCROFT DOC DATE: 19 JUN 89\nSOURCE REF:\nKEYWORDS: START NST\nARMS CONTROL SPACE POLICY\nNSR\nPERSONS:\nSUBJECT: US POSITIONS IN START & DST TALKS\nACTION: NOTED BY PRES DUE DATE: 07 FEB 91 STATUS: C\n| STAFF E s LOGREF:\n| FI \\ ii, R ___NSCP: ree CODES:\n| ge ocunent DISTRIBUTION\n| FOR ACTION FOR_CONCURRENCE FOR_INFO\nDAVIS\nNSC CHRON\ncae -7/a)i0 |\nCOMMENTS:\nDISPATCHED BY DAT! BY HAND W/ATTCH\n| OPENED BY: AC CLOSED BY: A poc oor\n\n4 # %\n; National Security Council\nThe White House\nPROOFED BY: log#_ Doe 671\nURGENT NOT PROOFED: SYSTEM PRS (NSO) INT\nBYPASSED WW DESK: DOCLOG ao BQ\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec vr\nPhilip Hughes\na\nBob Gates\nee scciealsiel Sic iaiinncis \" sigisDcalilataes\neS):\nBrent Scowcroft =\nPhilipHughes <,\nco\nSituation Room\nWest Wing Desk \\ n)\nNSC Secretariat 2 (AE k\ncc: vp Sununu hie:\nShould be seen by:\nase (\"4 0)\nCOMMENTS\n\n--SEERER- RECORD 1058920674\nqe? NSC/RMO PROFILE RECEIVED: 19 JUN 89 08\nTO: SCOWCROFT\nFROM: DAVIS DOC DATE: 17 JUN 89\nKANTER SOURCE REF:\nKEYWORDS: START NST\nARMS CONTROL SPACE POLICY\nNSR\nPERSONS:\nSUBJECT: NST DECISIONS\n| ACTION: SCOWCROFT APPROVED RECOM RE DST DUE DATE: 07 FEB 91 STATUS: C\n| STAFF OFFICER: DAVIS LOGREF:\n| FILES: IFR_O NSCP: NSROO14 CODES:\naa DOCUMENT DISTRIBUTION\nFOR_ACTION FOR_CONCURRENCE FOR_INFO\nDAVIS\nKANTER\nNSC CHRON\ncar 7elio\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: AC bp boc (20 3\n--SEERET--\n\nt National Security Council\ni The White House\nPROOFED BY: wl LOG # 2 6 w {\nURGENT NOT PROOFED: SYSTEM PRS\nBYPASSED WW DESK: DOCLO!\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec \\ S\nPhilip Hughes 2 i ney PER, Sirs\nBob Gates 2 22\nBrent Scowcroft \u00b0* ey\nPhilipHughes ~ g bb 2 &\n,. bk\nSituation Room =>\nWest Wing Desk~> L a)\nNSC Secretariat sted ]\n; ETSI cs ees 2 eS Pts SE\nesses 7 'cetenain nh eaten Actor\ncc: vp Sununu Other:\nShould be seen by:\n--Datertime) ae\nCOMMENTS\n\n- -SRERET-- NATIONAL SECURITY COUNCIL 20674\nWASHINGTON, D.C. 20506 add-on\nJune 17, 1989\nACTION\nMEMORANDUM FOR BRENT SCOWCROFT\nTHROUGH: ARNOLD KANTER|| eh\nFROM: RICHARD DAVISRW\nSUBJECT: NST Decisions\nAt Tab I is a package of NST issues for decision that we did not\ninclude in our June 16 memorandum for you to send to the\nPresident. We recommend that you discuss these issues with the\nPresident in general terms, but not go through the package in\ndetail.\nAll issues have been reviewed by the Deputies Committee who agree\nthat the interagency papers fairly present the options for\ndecision. This package and the June 16 decision package for the\nPresident include all of the decisions needed for Geneva.\nWe need decisions on these issues urgently, so we can send\ninstructions to our negotiators in Geneva.\nBob Blackwill snk rebar Rice concur.\nRECOMMENDATION\nThat you make decisions on the START and Defense & Space issues\npresented at Tab I.\nApprove Disapprove\nTab I Decision Paper DECLASSIFIED\n| White House Guidelines\nE.O. 12958, SEC 3.4 (B), September 11, 2006\nBy cap___ NARA, Date 7/8 [10\nDeclassify on: OADR SEGRET-",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-20_2-90001-005.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "06b2095044c0eda29a35e4ac6dab0118b784b6978b9710b0d8af763e47cc17ad",
+    "page_count": 35,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "23",
+    "doc_key": null,
+    "title": "NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defense Strategy [2]",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defense Strategy [2]",
+    "file_unit": "NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defense Strategy [2]"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, OA/ID 90001-005, NSC0020-May 25, 1989-Counter Narcotics in Peru, Review of National Security Review 12-Section IV Regarding Arms Control Implications of Defense Strategy [2]. Secret. Prepared by Davis. Copied to Quayle and Sununu. According to the President's Daily Diary, on May 25 Bush presided over a meeting of the National Security Council in the Cabinet Room lasting from 9:39-11:04 a.m. No minutes were found.\n",
+  "selected_pages": [
+    5,
+    7,
+    8,
+    9,
+    13,
+    19,
+    21,
+    24,
+    25,
+    26,
+    27,
+    32,
+    33,
+    35
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2005-1003-F; 2009-0857-F; S S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. | Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSC Meetings Files OA/ID Number: 90001 | Folder ID Number: 90001-005 Folder Title: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National S",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ee i . . Withdrawal/Redaction Sheet . (George Bush Library) ; | Doe. No./ Type . . | Subject/Title Date Restriction Classification | Ola. Agenda National Security Council Meeting 5/25/89 (by) s . Re: Counternarcotics Program in Peru (1 pp.) 01b. Outline From Brent Scowcroft * : 5/25/89 (6)(1) an) . Re: Meeting with the National Security Council (3 pp.) : Ole. Report Re: NSR-12, PartIV (44 pp.) 5/9189 . m1) Ss Old. Agenda National Security Council Meeting 5/25/89 oa) Ss . Re: National Security Re",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". Withdrawal/Redaction Sheet - ; a (George Bush Library) \u2014 - Doe. No. / Type , Subject/Title / \u2018 Date : Restriction Classification 02a. Memo G. Philip Hughes to Distribution List - 5/24/89 (b)(1) s Re: Additional Topic (1 pp.) . . . . 02b. Agenda National Security Council Meeting . : 5/25/89 (b)(1) Ss : Re: National Security Review 12, Part IV Security and Arms . . . Control (1 pp.) 02c. Memo Richard Davis to G. Philip Hughes : 5/24/89 \u00a9 (b)(1) s Re: NSC Meeting and List of Participants (1 pp.) ",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No, Subject/Title of Document Date Restriction bc amndType fo a Ola. Agenda National Security Council Meeting 5/25/89 (b)(1) Re: Counternarcotics Program in Peru (1 pp.) Collection: | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regardin",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET RECORD IDSS9Z0528y NSC/S PROFILE RECEIVED: 23 MAY 89 14 TO: PRESIDENT FROM: SCOWCROFT DOC DATE: 24 MAY 89 SOURCE REF: KEYWORDS: ARMS CONTROL DEFENSE POLICY START INF ICBM NSR | PERSONS: : SUBJECT: PRES TALKERS FOR NSC MTG ON 25 MAY RE NSR 12 PART IV / SECURITY & | ARMS CONTROL ACTION: NOTED BY PRES DUE DATE: 11 JUN 90 STATUS: C STAFF OFFICER; DAVIS LOGREF: 8920454 8920540 FILE Om oe s Prsoczegh SR0012 CODES: pL BNsoc DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO DECLASSIFIED W",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SEGREE RECORD ID: 8920528 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES ; - % 89052314 FOR SIGNATURE 002 HUGHES Z 89052413 DONLEY SGD MEMO TO AGENCIES 003 SCOWCROFT Z 89052315 FWD TO PRES FOR INFORMATION | 004 PRESIDENT % 89052418 FOR INFORMATION ; . | 004 ; X 89052509 NOTED BY PRES | DECLASSIFIED : White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 2006 : ; : 2 By cap__ NARA, Date ahaloy Oo",
+      "selected_for_body": false
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "I Gy ee \u201c\u2014 a | | \u00bb \u2122 National Security Council | The White House PROOFED BY: LOG # X OS URGENT NOT PROOFED: * SYSTEM PRS \u201chis INT BYPASSED WW DESK: DOCLOG ie) | SEQUENCE TO HAS SEEN DISPOSITION | Dep Exec { Z { Philip Hughes s Peni ieee Ry Bee Ses Sy Bob Gates oo a Brent Scowcroft Si Philip Hughes ~ = Situation Room 2 West Wing Desk Gap sie P) NSC Secretariat 4/92 P (Cero) toms osama tram econ cc: vP Sununu Other Should be seen by: oe OMROING) es COMMENTS",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "/ \u2018 :. THE WHITE HOUSE \u2014 : a a . WASHINGTON - : _\u00b0 DATE: ; . __ FRom Tue Present i To: . J= PM1tIF ED | i ; . [ . Bush cLiorary Photocopy George Bush Handwriting |",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "eno es \u2018 \u2018 \u00abTHE WHITE HOUSE WASHINGTON May 25, 1989 , YY | Mr. President: We will almost certainly not get | past a very introductory discussion of this issue at the meetint today. Therefore you can simply listen and need not attack this huge package. Brent Scowcroft | Bush Library Photocopy George Bust Handwriting",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \u2018Document No. Subject/Title of Document Date Restriction Bo amd Type - O1b. Outline From Brent Scowcroft 5/25/89 (b)(1) Re: Meeting with the National Security Council (3 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files : Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Ar",
+      "selected_for_body": false
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. | Se Olc. Report Re: NSR-12, Part IV (44 pp.) 5/9/89 (b)(1) s Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files | WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defense Strategy [2] ",
+      "selected_for_body": false
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No, Subject/Title of Document Date Restriction . Class. jo Amd Type ee Old. Agenda National Security Council Meeting 5/25/89 (b)(1) s Re: National Security Review 12, Part IV Security and Arms Control (1 pp.) Collection: Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: | File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of Nation",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "7] Participants The President | The Vice President The Secretary of State ~ | The Secretary of Treasury The Secretary of Defense The Secretary of Energy . The Director, Office of Management and Budget .- The Director of Central Intelligence Chief of Staff to the.President \u2014 . | Assistant to the President for National Security Affairs | Chairman, Joint Chiefs of Staff Head of Delegation on Nuclear and Space Talks Director, Arms Control and: Disarmament Agency Deputy Assistant to the President for",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) {Document No. Subject/Title of Document Date Class. pnd Type | Ole. Talking Re: Points To Be Made for Meeting with the National (b)(1) Ss Points Security Council (2 pp.) | Collection: | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms ",
+      "selected_for_body": false
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | and Type fT Olf. Talking Re: Points To Be Made for Meeting with the National (b)(1) | Points Security Council (1 pp.) Collection: | Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defense Strategy [2] | | D",
+      "selected_for_body": false
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Class. | |___and Type | ___\u2014 _ | 01g. Memo Richard Davis to Brent Scowcroft 2/23/89 (\u00ae)(1) s Re: NSC Meeting on NSR-12, PartIV (6 pp.) Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding ",
+      "selected_for_body": false
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No, Subject/Title of Document Restriction and Type Olh. Talking Re: APNSA Introductory Points May 25 NSC Meeting (2 (b)(1) Points pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defens",
+      "selected_for_body": false
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) ; Document No. Subject/Title of Document Date Restriction Class. a and Type rns _ Oli. Report Re: NSR-12, PartIV (44 pp.) 5/9/89 (b)(1) s | | | Collection: | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defe",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 SECRET RECORD 1p sl@OBOSzRN\u201d NSC/S PROFILE RECEIVED: 23 MAY 89 14 TO: AGENCIES FROM: HUGHES DOC DATE: 24 MAY 89 SOURCE REF: KEYWORDS: ARMS CONTROL DEFENSE POLICY START INF ICBM NSR PERSONS: SUBJECT: DISCUSSION PAPERS FOR NSC MTG ON 25 MAY RE NSR 12 PART IV ACTION: ; DUE DATE: 11 JUN 90 STATUS: C STAFF OFELGERs\u00bbDAVIS LOGREF: 8920454 8920540 FILE On og scpgNs0020 _NSROO1 CODES: ae NSO DOCUMENT DISTRIBUTION FOR _ACTION FOR _CONCURRENCE FOR_INFO DECLASSIFIED White House Guidelines E.0. 12958, SEC ",
+      "selected_for_body": true
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ee a ee er a Speen ee SEGRE RECORD ID: 8920528 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES Z 89052314 FOR SIGNATURE 002 HUGHES Z 89052413 DONLEY SGD MEMO TO AGENCIES 003 SCOWCROFT Z 89052315 FWD TO PRES FOR INFORMATION 004 PRESIDENT Z 89052418 FOR INFORMATION 004 X 89052509 NOTED BY PRES DECLASSIFIED White House Guidelines E.O. 12958, SEC 3.4 (B) September 11, 2006 By cae NARA, Date 9))8/09 | SHEET",
+      "selected_for_body": false
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "=, e. 4 s es Sn 4 National Security Council The White House PROOFED BY: L0G #_ LOS 2\u201d URGENT NOT PROOFED: SYSTEM PRS INT BYPASSED WW DESK: DOCLO. AIO _S_ \" SEQUENCE TO HAS SEE! DISPO: | Dep Exec == Z, L } | Lui = fa) PhilipHughes \u201c? fo) | = ci: | Bob Gates rg cae SLRS tA ae a Brent Scoweroft + \u2014=r\u00ab _ | Philip Hughes = =] > ra \u2014 | SituationRoom 5 a West Wing Desk Qe NSC Secretariat 3 | 06 Fakio | | | SIRES AE SESE a ep eco Ens Te Yc FD cc: vp Sununu Other Should be seen by: Wate/Time| COMMENTS |",
+      "selected_for_body": true
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SecuRITY COUNCIL LogNumber_20528 7 4 DistTRIBUTION RECORD Date__24 Mav 1969 : NSC MTG ON NSR-12 25 MAY Subject: LL | DOCUMENT CLASSIFICATION: (TOP SECRET \u201ceisecrer- COCONFIDENTIAL QUNCLASSIFIED LL EXTERNAL DISTRIBUTION: mrs Date Time Received/Signed for By: | 7 | THE VICE PRESIDENT \u2014\u2014 Pg L670 THE SECRETARY OF STATE * s wt Exec. se~Room 7241 oe. so OLE? THE SECRETARY OF THE TREASURY \u2014 | Main BldgRoom 3422 pe nee eee THE SECRETARY OF DEFENSE The Pentagon \u2014 eS DIRECTOR, ACDA i ar?\u201d Ms LZ o",
+      "selected_for_body": false
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SecurITY COUNCIL togNumber_20528 7 4M 89 DisTRIBUTION RECORD Oate_24\u00b0 May 196) . NSC MTG ON NSR-12 25 MAY AS nc i ine a aa a LT DOCUMENT CLASSIFICATION: CTOP SECRET peSECRET CO CONFIDENTIAL OOUNCLASSIFIED Se \u2014\u2014\u2014 RNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: XTE L Dis U THE VICE PRESIDENT = a PGF THE SECRETARY OF STATE be Exec. sevRoom 7241 \u2018 <<? aE. 2O\u201d THE SECRETARY OF THE TREASURY \u2014 / Main BldgRoom 3422 SC THE SECRETARY OF DEFENSE The Pentagon ee DIRECTOR, ACDA 1 ' Room $9",
+      "selected_for_body": false
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "PO | an. \u00ae P WHITE HOUSE _. ' LES ened pth: | WASHFAX RECEIPT) _ THE \u201cSMITE HOUSE , DECLASSIFIED 4. a Deri. White House Guidelines ; 0. 12958, SEC 3.4 (B) September 11, 2006 2 5 OCOD By cae NARA, Date ahelog = MAY nresnce @ \u2018EG9 Juastrercarron \u2018 \u201c Ace wt 8 PASE FONG, PHILIP puGngs ee 7 (wane) (EXTEMS Lom) tROOM SUNAE . MESSAGE OESCRIPTION NSC MIC ON NSR-12 25 May : LOG @; 20578 tH TO_LIAGENCY) _=\u2014-- OELIVER Tor QEPT/eoot HO, == EXTENST: vent W.OSTAPLETON ROW, EXEC SPC eee Te ASURY EMILY WALKER E",
+      "selected_for_body": true
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "=- % DECLASSIFIED . White House Guidelines . : E.O. 12958, SEC 3.4 (B) September 11, 2006 , By cap__ NARA, Date /iglea_ Wf F- esr : - : . WASHFAX RECEIPT|| < ti PP ag: 28 . : THE WHITE HOUSE on ; raw hE Gokib vig , . . ? {\u20acSSAGE NO. 07 ae CLASS IEACATION PASES \u201cROM I UGHES. \u2014 \u2014__ , (NAME) (EXTENSION) {ROOM NUMBER) ESSAGE DESCRIPTION NSC MTG ON NSR-12 25 way a ; : | ; - LOG #: 20528 ee Aah i 20_(AGENCY) DELIVER TO: DEPT/ROOM NO, = EXTENSION, SPATE J. STAPLETON ROY \u2014 EXEC SEC a TREASURY EMILY WALK",
+      "selected_for_body": true
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; ee: & oe Po ~! . t . : ig i White House Guidelines ye ae ; E.0. 12958, SEC 3.4 (B) September 11, 2006 ee ror \u201cWe \u2018i . . By cae_ NARA, Date a/)a/eg Oe rs, ate bypk wy, [| Wastrax Recker i id an SAB: ae Sat on adap Oe af 4 f \u2014\u2014 artal Be wtesace we. 0 702. cragst arin _-SEGREF _ vases 7 } i Chon pire mors ee: a ae (WARY 7 - $SRTENSTOND CHOON UNDEAD a Bvaao orscagerrom NSC MT!) ON NSR-12 25 rarN _ a \u201cTATE J. STAPLI on poy \u201cEXEC SRC p F 7PEAS. LBMILY WALRED exc sec ~f* 200 GEORGE sit _\u20acIEC sec er B",
+      "selected_for_body": true
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| 7 . t + ; oo, MESSAGE NO. CLASSTEICATION SEG RE I PAGES FROM__G. PHILIP HUGHES (NAME) (EXTENSION) (ROOM NUMBER) MESSAGE DESCRIPTION NSC MTG ON NSR-12 25 way\\ ee ; . LOG #: 20528 eee 20528 TO_(AGENCY) DELIVER TO: DEPT/ROOM NO. \u00a9 EXTENSION STATE J. STAPLETON ROY EXEC SEC . eee TREASURY EMILY WALKER . EXEC SEC \u00b0 . = EO EC*EXEC SEC; DOD GEORGE COLE EXEC SEC - = FO SO \u2014\u2014- JCS ANTHONY MANESS EXEC ASST I a CLEXEC ASST | ENERGY WILLIAM VITALE | EXEC SEC . ee ees CIA H. LAWRENCE, SANDALL EXEC SEC ee ee",
+      "selected_for_body": true
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No, Subject/Title of Document Restriction Class, | i____and Type ence | 02a. Memo G. Philip Hughes to Distribution List 5/24/89 (b)(1) Ss Re: Additional Topic (1 pp.) Collection: | | Record Group: \u2014_ Bush Presidential Records | Office: National Security Council | Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: | File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section I",
+      "selected_for_body": false
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No, Subject/Title of Document Restriction Class. and Type \u2014\u2014| 02b. Agenda National Security Council Meeting 5/25/89 (b)1) Ss Re: National Security Review 12, Part IV Security and Arms Control (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security R",
+      "selected_for_body": false
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. woe AMO Type \u2014 \u2014 \u2014 02c. Memo Richard Davis to G. Philip Hughes 5/24/89 (b)(1) Ss Re: NSC Meeting and List of Participants (1 pp.) Collection: Record Group: \u2014 Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Sec",
+      "selected_for_body": false
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "1 Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. a | 02d. Report Re: NSR-12, PartIV (44 pp.) 5/9/89 (b)(1) s Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0020 - May 25, 1989 - Counter Narcotics in Peru, Review of National Security Review 12 - Section IV Regarding Arms Control Implications of Defense Strategy {2] | ",
+      "selected_for_body": false
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Participants The President The Vice President The Secretary of State The Secretary of Treasury The Secretary of Defense The Secretary of Energy The Director, Office of Management and Budget The Director of Central Intelligence Chief of Staff to the President Assistant to the President for National Security Affairs Chairman, Joint Chiefs of Staff Head of Delegation for the Nuclear and Space Talks Director, Arms Control and Disarmament Agency Deputy Assistant to the President for National Security",
+      "selected_for_body": true
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "t s tiaie fe UNCLASSIFIED RECORD IDSMGSZ005a07 NSC/S PROFILE RECEIVED: 10 MAY 89 12 TO: SCOWCROFT FROM: HAGIN, J DOC DATE: 10 MAY 89 SOURCE REF: KEYWORDS: NSC SYSTEM PERSONS: | SUBJECT: APPROVED PRESIDENTIAL ACTIVITY RE NSC MTG 25 MAY ACTION: FOR RECORD PURPOSES DUE DATE: 11 JUN 90 STATUS: C STAFF OFFICER: NONE LOGREF: 8920528 8920540 FILES: @1FM_0 scp wW$0020 | CODES: eel a | DOCUMENT DISTRIBUTION | FOR ACTION FOR CONCURRENCE FOR_INFO COMMENTS : DISPATCHED BY DATE BY HAND W/ATTCH OPENED BY: LF ",
+      "selected_for_body": true
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Pe UNCLASSIFIED RECORD ID: 8920454 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 , X 89051012 FOR RECORD PURPOSES | | UNCLASSIFIED ey ee a ae",
+      "selected_for_body": false
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 a Ww 5/10/89 THE WHITE HOUSE s Qo4Sy WASHINGTON MEMORANDUM TO: General Scowcroft FROM: JOSEPH W. HAGIN SUBJECT: APPROVED PRESIDENTIAL ACTIVITY EVENT: NSC Meeting DATE: May 25, 1989 TIME: 9:30 a.m. DURATION: 60 minutes t LOCATION: Cabinet Room ATTIRE: Business Suit REMARKS REQUIRED: No | MEDIACOVERAGE: Closed FIRST LADY PARTICIPATION: No ADDITIONAL INFORMATION: CONTACT: TELEPHONE: OFFICE HOME NOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST Ed Rogers Marlin Fitzwater David Bates James Cicconi Davi",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": "SECRET RECORD IDSS9Z0528y\nNSC/S PROFILE RECEIVED: 23 MAY 89 14\nTO: PRESIDENT\nFROM: SCOWCROFT DOC DATE: 24 MAY 89\nSOURCE REF:\nKEYWORDS: ARMS CONTROL DEFENSE POLICY\nSTART INF\nICBM NSR\n| PERSONS::\nSUBJECT: PRES TALKERS FOR NSC MTG ON 25 MAY RE NSR 12 PART IV / SECURITY &\n| ARMS CONTROL\nACTION: NOTED BY PRES DUE DATE: 11 JUN 90 STATUS: C\nSTAFF OFFICER; DAVIS LOGREF: 8920454 8920540\nFILE Om oe s Prsoczegh SR0012 CODES:\npL BNsoc\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap NARA, Date alip/oy\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: LF Doc 40F 4\nes.\n\nI Gy ee\n\"-- a\n| \u00bb \u2122 National Security Council\n| The White House\nPROOFED BY: LOG # X OS\nURGENT NOT PROOFED: * SYSTEM PRS \"his INT\nBYPASSED WW DESK: DOCLOG ie)\n| SEQUENCE TO HAS SEEN DISPOSITION\n| Dep Exec { Z {\nPhilip Hughes s Peni ieee Ry Bee Ses Sy\nBob Gates oo\na\nBrent Scowcroft\nSi\nPhilip Hughes ~\nSituation Room 2\nWest Wing Desk Gap sie P)\nNSC Secretariat 4/92 P\n(Cero) toms osama tram econ\ncc: vP Sununu Other\nShould be seen by:\noe OMROING) es\nCOMMENTS\n\n/ ':. THE WHITE HOUSE --\n: a a. WASHINGTON -:\n_\u00b0 DATE:;.\n__ FRom Tue Present\ni To:\n. J= PM1tIF ED |\ni;.\nBush cLiorary Photocopy\n\neno es\n' ' \u00abTHE WHITE HOUSE\nWASHINGTON\nMay 25, 1989,\nYY\n| Mr. President:\nWe will almost certainly not get\n| past a very introductory discussion\nof this issue at the meetint today.\nTherefore you can simply listen and\nneed not attack this huge package.\nBrent Scowcroft\n\n7]\nParticipants\nThe President\n| The Vice President\nThe Secretary of State ~\n| The Secretary of Treasury\nThe Secretary of Defense\nThe Secretary of Energy.\nThe Director, Office of Management and Budget.-\nThe Director of Central Intelligence\nChief of Staff to the.President --. |\nAssistant to the President for National Security Affairs |\nChairman, Joint Chiefs of Staff\nHead of Delegation on Nuclear and Space Talks\nDirector, Arms Control and: Disarmament Agency\nDeputy Assistant to the President for National Security Affairs\n\n' SECRET RECORD 1p sl@OBOSzRN\"\nNSC/S PROFILE RECEIVED: 23 MAY 89 14\nTO: AGENCIES\nFROM: HUGHES DOC DATE: 24 MAY 89\nSOURCE REF:\nKEYWORDS: ARMS CONTROL DEFENSE POLICY\nSTART INF\nICBM NSR\nPERSONS:\nSUBJECT: DISCUSSION PAPERS FOR NSC MTG ON 25 MAY RE NSR 12 PART IV\nACTION:; DUE DATE: 11 JUN 90 STATUS: C\nSTAFF OFELGERs\u00bbDAVIS LOGREF: 8920454 8920540\nFILE On og scpgNs0020 _NSROO1 CODES:\nae NSO\nDOCUMENT DISTRIBUTION\nFOR _ACTION FOR _CONCURRENCE FOR_INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap NARA, Date 4/ialog\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: LF Doc 20F 4\nSECRER\n\n=, e. 4\ns es Sn 4\nNational Security Council\nThe White House\nPROOFED BY: L0G #_ LOS 2\"\nURGENT NOT PROOFED: SYSTEM PRS INT\nBYPASSED WW DESK: DOCLO. AIO _S_\nSEQUENCE TO HAS SEE! DISPO:\n| Dep Exec == Z, L }\n| Lui = fa)\nPhilipHughes \"? fo)\n| = ci:\n| Bob Gates rg cae SLRS tA ae a\nBrent Scoweroft + --=r\u00ab _\n| Philip Hughes = =]\n> ra --\n| SituationRoom 5 a\nWest Wing Desk Qe\nNSC Secretariat 3 | 06 Fakio\nSIRES AE SESE a ep eco Ens Te Yc FD\ncc: vp Sununu Other\nShould be seen by:\nWate/Time|\nCOMMENTS\n\nPO\n| an. \u00ae\nP WHITE HOUSE _. ' LES\nened pth: | WASHFAX RECEIPT) _\nTHE \"SMITE HOUSE,\nDECLASSIFIED 4. a Deri.\nWhite House Guidelines;\n0. 12958, SEC 3.4 (B) September 11, 2006 2 5 OCOD\nBy cae NARA, Date ahelog\n= MAY\nnresnce @ 'EG9 Juastrercarron ' \" Ace wt 8 PASE\nFONG, PHILIP puGngs ee 7\n(wane) (EXTEMS Lom) tROOM SUNAE\n. MESSAGE OESCRIPTION NSC MIC ON NSR-12 25 May:\nLOG @; 20578\ntH\nTO_LIAGENCY) _=---- OELIVER Tor QEPT/eoot HO, == EXTENST:\nvent W.OSTAPLETON ROW, EXEC SPC\neee\nTe ASURY EMILY WALKER EXEG SEC\nTS\n| a GEORGE COLE EXKC SEC\n\" PS TS eee eed LE nena ~_--_----_\neye 48 ANTHONY MANESS EXEC ASST\n: i\" ENERCY WILLIAM VITALE PXEC SEC.\na CIA H. LAWRENCE SANDALL EXEC Sec\nee--e-- ees\n. \" p.\nState \"Eve Athinadlledsed Recey~e Fryar\n' e\ntoot: | ' ' song..\n\n. White House Guidelines.\n: E.O. 12958, SEC 3.4 (B) September 11, 2006,\nBy cap__ NARA, Date /iglea_\nWf F- esr: -:\n. WASHFAX RECEIPT|| <\nti PP ag: 28.\n: THE WHITE HOUSE\non; raw hE Gokib vig\n{\u20acSSAGE NO. 07 ae CLASS IEACATION PASES\n\"ROM I UGHES. -- --__,\n(NAME) (EXTENSION) {ROOM NUMBER)\nESSAGE DESCRIPTION NSC MTG ON NSR-12 25 way a;:\n|; - LOG #: 20528\nee Aah\ni\n20_(AGENCY) DELIVER TO: DEPT/ROOM NO, = EXTENSION,\nSPATE J. STAPLETON ROY -- EXEC SEC\na\nTREASURY EMILY WALKER FXEC SEC ~\nOE,\n'o0p GEORGE COLE EXEC SEC oo\n| ses ANTHONY MANESS EXEC ASST\nENERGY WILLIAM, VITALE. EXEC SEC.\n{cw H. LAWRENCE SANDALL EXEC SEC\nTY ES --------e\ni\n| a -----hale\nver ASAP! 09 at Gner!\nDeliver ASAP! Foe Meeting at G04:\n\n; ee: & oe Po ~!. t.: ig\ni White House Guidelines ye ae\n; E.0. 12958, SEC 3.4 (B) September 11, 2006 ee ror \"We 'i\n.. By cae_ NARA, Date a/)a/eg Oe rs, ate\nbypk wy, [| Wastrax Recker i id an\nSAB: ae Sat on adap Oe af 4 f\n---- artal Be\nwtesace we. 0 702. cragst arin _-SEGREF _ vases 7 } i\nChon pire mors ee: a ae\n(WARY 7 - $SRTENSTOND CHOON UNDEAD a\nBvaao orscagerrom NSC MT!) ON NSR-12 25 rarN _ a\n\"TATE J. STAPLI on poy \"EXEC SRC p F\n7PEAS. LBMILY WALRED exc sec ~f*\n200 GEORGE sit _\u20acIEC sec er Be\nANTHONY MANESS EXC ASST bee\nNERY WILLIAS VIALE PxeC sec 7.\ncta W. LAWRENCE SAND hI '\u00a5eec sac a8.\nREPARRS... wile. noes Rese saan\n\u00ab siit. oe oe.\n. ' >: @. 4.\nDelwwer ASAP) Fem Meetutg at gussen!\n\n7. t +\n; oo,\nMESSAGE NO. CLASSTEICATION SEG RE I PAGES\nFROM__G. PHILIP HUGHES\n(NAME) (EXTENSION) (ROOM NUMBER)\nMESSAGE DESCRIPTION NSC MTG ON NSR-12 25 way\\\nee\n;. LOG #: 20528\neee 20528\nTO_(AGENCY) DELIVER TO: DEPT/ROOM NO. \u00a9 EXTENSION\nSTATE J. STAPLETON ROY EXEC SEC.\neee\nTREASURY EMILY WALKER. EXEC SEC \u00b0. =\nEO EC*EXEC SEC;\nDOD GEORGE COLE EXEC SEC - =\nFO SO -----\nJCS ANTHONY MANESS EXEC ASST\nI a CLEXEC ASST\n| ENERGY WILLIAM VITALE | EXEC SEC.\nee ees\nCIA H. LAWRENCE, SANDALL EXEC SEC\nee eeO-ees' '(UW\nREMARKS\nSt\n7, DECLASSIFIED;\n| White House Guidelines\nE.0, 12958, SEC 3.4 (B) September 11, 2006\nBy cae__ NARA, Date 9/18/09\n\nParticipants\nThe President\nThe Vice President\nThe Secretary of State\nThe Secretary of Treasury\nThe Secretary of Defense\nThe Secretary of Energy\nThe Director, Office of Management and Budget\nThe Director of Central Intelligence\nChief of Staff to the President\nAssistant to the President for National Security Affairs\nChairman, Joint Chiefs of Staff\nHead of Delegation for the Nuclear and Space Talks\nDirector, Arms Control and Disarmament Agency\nDeputy Assistant to the President for National Security Affairs\n\nt s\ntiaie fe UNCLASSIFIED RECORD IDSMGSZ005a07\nNSC/S PROFILE RECEIVED: 10 MAY 89 12\nTO: SCOWCROFT\nFROM: HAGIN, J DOC DATE: 10 MAY 89\nSOURCE REF:\nKEYWORDS: NSC SYSTEM\nPERSONS: |\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY RE NSC MTG 25 MAY\nACTION: FOR RECORD PURPOSES DUE DATE: 11 JUN 90 STATUS: C\nSTAFF OFFICER: NONE LOGREF: 8920528 8920540\nFILES: @1FM_0 scp wW$0020 | CODES:\neel a\nDOCUMENT DISTRIBUTION |\nFOR ACTION FOR CONCURRENCE FOR_INFO\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: LF Doc 10F 1\nUNCLASSIFIED\n\n' a Ww 5/10/89\nTHE WHITE HOUSE\ns Qo4Sy\nWASHINGTON\nMEMORANDUM\nTO: General Scowcroft\nFROM: JOSEPH W. HAGIN\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY\nEVENT: NSC Meeting\nDATE: May 25, 1989\nTIME: 9:30 a.m.\nDURATION: 60 minutes t\nLOCATION: Cabinet Room\nATTIRE: Business Suit\nREMARKS REQUIRED: No\n| MEDIACOVERAGE: Closed\nFIRST LADY\nPARTICIPATION: No\nADDITIONAL\nINFORMATION:\nCONTACT:\nTELEPHONE: OFFICE HOME\nNOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST\nEd Rogers Marlin Fitzwater David Bates\nJames Cicconi David Demarest David Valdez\nFred McClure Jean Lamb USSS - PPD\nSusan Porter Rose Steve Studdert Gary Walters\nPatty Presock John Keller WHCA Audio/Visual\nChriss Winston Tim McBride WHCA Operations\nLaurie Firestone J. Bonnie Newman Amy Louisa Buckley\nRobert Guttman Tony Lopez C. Boyden Gray\nBruce Zanca",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}
