@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FRUS Arms Control PDF Compare</title>
+    <meta name="description" content="Side-by-side comparison of declassified source PDFs and official FRUS document text.">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body class="page-frus-compare">
+    <header class="masthead">
+      <div class="layout">
+        <p class="eyebrow">FRUS Source Comparison</p>
+        <div class="masthead-row">
+          <div class="title-lockup">
+            <h1>FRUS Arms Control PDF Compare</h1>
+            <p class="masthead-note">Side-by-side inspection of declassified source PDFs and the corresponding official FRUS document text.</p>
+          </div>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="./index.html" aria-current="page">PDF Compare</a>
+            <a href="https://history.state.gov/historicaldocuments/frus1981-88v44p1">FRUS 1981-1988 XLIV/1</a>
+            <a href="https://history.state.gov/historicaldocuments/frus1989-92v31">FRUS 1989-1992 XXXI</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="layout">
+      <section class="card hero-card">
+        <p class="eyebrow">FRUS Source Comparison</p>
+        <h2>Inspect exact source PDFs beside the printed FRUS document</h2>
+        <p class="lede">This workbench only shows declassified PDF scans that pass an exact-source evidence check against the FRUS source note.</p>
+        <div class="action-row">
+          <a class="button-link button-link-secondary" href="./assets/data/frus-pdf-compare.json">Open comparison JSON</a>
+          <a class="button-link button-link-secondary" href="https://history.state.gov/historicaldocuments/frus1981-88v44p1">FRUS 1981-1988 XLIV/1</a>
+          <a class="button-link button-link-secondary" href="https://history.state.gov/historicaldocuments/frus1989-92v31">FRUS 1989-1992 XXXI</a>
+        </div>
+      </section>
+      <section class="card compare-controls-card">
+        <div class="tool-grid">
+          <div class="tool-pane">
+            <label for="compare-filter" class="field-label">Search title, source note, PDF title, document number</label>
+            <input id="compare-filter" type="search" placeholder="Try: NSDD 178, START, doc 9, Scowcroft">
+          </div>
+          <div class="tool-pane tool-pane-compact">
+            <label for="compare-volume" class="field-label">Volume</label>
+            <select id="compare-volume">
+              <option value="all">Both volumes</option>
+            </select>
+          </div>
+          <div class="tool-pane tool-pane-compact">
+            <label for="compare-source" class="field-label">PDF source</label>
+            <select id="compare-source">
+              <option value="all">All sources</option>
+            </select>
+          </div>
+        </div>
+        <p id="compare-status" class="status-pill">Loading comparison data...</p>
+      </section>
+      <section class="frus-compare-workbench">
+        <aside class="card compare-list-card" aria-label="Comparison rows">
+          <div class="section-heading">
+            <h2>Matched files</h2>
+            <p id="compare-count">Loading rows...</p>
+          </div>
+          <div id="compare-list" class="compare-list"></div>
+        </aside>
+        <section class="compare-reader">
+          <article class="card compare-meta-card">
+            <p class="eyebrow" id="selected-volume">No row selected</p>
+            <h2 id="selected-title">Select a matched file</h2>
+            <div class="compare-link-row">
+              <a id="selected-pdf-link" class="button-link" href="#" target="_blank" rel="noopener">Open PDF</a>
+              <a id="selected-frus-link" class="button-link button-link-secondary" href="#" target="_blank" rel="noopener">Open FRUS</a>
+              <a id="selected-record-link" class="button-link button-link-secondary" href="#" target="_blank" rel="noopener">Archive record</a>
+            </div>
+            <dl id="selected-metadata" class="metadata-list compact-metadata"></dl>
+          </article>
+          <div class="compare-pane-grid">
+            <article class="card compare-pane">
+              <div class="pane-heading">
+                <h2>Source PDF</h2>
+                <p id="pdf-caption">PDF scan</p>
+              </div>
+              <iframe id="pdf-frame" title="Source PDF preview"></iframe>
+            </article>
+            <article class="card compare-pane">
+              <div class="pane-heading">
+                <h2>FRUS Version</h2>
+                <p id="frus-caption">Official FRUS text</p>
+              </div>
+              <div id="frus-document" class="frus-document-view"></div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="layout">
+        <p>Rows are limited to exact-source matches. Reagan NSDD reference PDFs appear only when the FRUS document is the directive itself; Bush PDFs appear only when source-identifier or specific file-unit evidence supports the match.</p>
+      </div>
+    </footer>
+    <script src="./assets/js/site.js" defer></script>
+    <script src="./assets/js/frus-pdf-compare.js" defer></script>
+  </body>
+</html>
