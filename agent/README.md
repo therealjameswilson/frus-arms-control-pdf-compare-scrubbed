@@ -1,67 +1,96 @@
-# START I FRUS Publication Agent
+# Universal FRUS Publication Agent
 
-This package reverse-engineers the local workflow from the matched Bush Library
-PDFs and published FRUS START I documents in this repository.
+This package reverse-engineers the publication workflow from the exact-source
+Bush Library PDF / FRUS START I document pairs, then exposes that workflow as a
+universal PDF-to-FRUS drafting agent.
 
-It is intentionally review-first. The runner can OCR an image-only Bush file-unit
-PDF, classify its pages, locate the selected document, and draft a FRUS-shaped
-publication packet. It does not claim the draft is ready for publication without
+START I is the training set, not the deployment boundary. For other volumes or
+archive families, the agent accepts a PDF plus compiler-supplied metadata,
+source-note evidence, and page-span instructions, then emits a reviewable
+FRUS-style publication packet.
+
+The agent is intentionally review-first. It can extract embedded text or OCR an
+image-only PDF, classify pages, select the requested document span, and draft a
+FRUS-shaped packet. It does not claim the draft is ready for publication without
 human correction, source-note control, declassification review, and TEI review.
 
 ## Inputs
 
-- `../assets/data/frus-pdf-compare.json`: the 25 exact-source START I PDF/FRUS
-  pairs.
-- A known `doc_no`, `doc_key`, or comparison `row_id`; or a new PDF plus
-  editor-supplied metadata.
+- `../assets/data/frus-pdf-compare.json`: START I training pairs used as the
+  process model.
+- `patterns/start_i_publication_process.json`: learned page classes, source
+  families, and publication transforms.
+- A known START I `doc_no`, `doc_key`, or comparison `row_id`; or any new PDF
+  plus editor-supplied metadata.
 - Poppler (`pdfinfo`, `pdftotext`, `pdftoppm`) and Tesseract for image-only PDFs.
 
-The Bush Library PDFs in the matched START I set are image-only, so OCR is a
-normal part of the process.
+## Run A START I Training Pair
 
-## Run A Known Pair
+Use this mode to audit the learned process against a known published FRUS
+document.
 
-Use a page range when you already know the selected document pages. This is much
-faster than OCRing an entire file-unit PDF.
+```bash
+python3 agent/frus_publication_agent.py \
+  --doc-no 10 \
+  --page-range 5-8 \
+  --output-dir /tmp/frus-training-d10
+```
+
+The older command remains valid:
 
 ```bash
 python3 agent/start_i_frus_publication_agent.py \
   --doc-no 10 \
   --page-range 5-8 \
-  --output-dir /tmp/frus-start-agent-d10
+  --output-dir /tmp/frus-training-d10
 ```
 
-The output directory will contain:
+## Run A Universal Source PDF
 
-- `publication-packet.json`: evidence ledger, page inventory, source-note model,
-  draft body, and human-review warnings.
-- `draft.md`: copy-readable FRUS-style draft packet.
-- `draft.xml`: minimal TEI-like review stub.
-
-## Run A New Source PDF
+Use this mode for PDFs outside the START I corpus.
 
 ```bash
-python3 agent/start_i_frus_publication_agent.py \
-  --pdf path-or-url-to-bush-file-unit.pdf \
+python3 agent/frus_publication_agent.py \
+  --pdf path-or-url-to-source.pdf \
+  --volume-id frusXXXX \
+  --doc-no 1 \
   --title "Memorandum From ..." \
   --source-note "Source: ..." \
   --page-range 12-15 \
-  --output-dir /tmp/frus-start-agent-new-doc
+  --output-dir /tmp/frus-universal-doc
 ```
 
-For a new document, the page range and source note should come from the compiler
-or source register. If they are missing, the agent will still inventory the PDF,
-but it will mark the run as insufficient for a publication draft.
+Optional metadata can be supplied with `--date`, `--place`, `--sender`,
+`--recipient`, `--classification`, `--archive-title`, and `--file-unit`.
+
+If an existing transcript or published model is available, pass it only as a
+page-locator aid:
+
+```bash
+python3 agent/frus_publication_agent.py \
+  --pdf path-or-url-to-source.pdf \
+  --model-text-file reference-transcript.txt \
+  --page-range 12-15 \
+  --source-note-file source-note.txt \
+  --output-dir /tmp/frus-universal-doc
+```
+
+## Outputs
+
+- `publication-packet.json`: evidence ledger, training profile, page inventory,
+  source-note model, draft body, and human-review warnings.
+- `draft.md`: copy-readable FRUS-style draft packet.
+- `draft.xml`: minimal TEI-like review stub.
 
 ## Operating Spec
 
-The instruction file for using this as a closed-network agent is:
+The universal instruction file is:
 
 ```text
-START_I_FRUS_PUBLICATION_AGENT.md
+FRUS_PUBLICATION_AGENT.md
 ```
 
-The reverse-engineered process data is:
+The START I training profile is:
 
 ```text
 patterns/start_i_publication_process.json

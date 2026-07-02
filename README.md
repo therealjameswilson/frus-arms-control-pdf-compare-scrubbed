@@ -12,9 +12,9 @@ The site is generated from the local FRUS declassified PDF register and cached o
 
 The deployable site is published from the `gh-pages` branch.
 
-## Publication Agent
+## Universal Publication Agent
 
-The `agent/` directory contains a START I FRUS Publication Agent built from the
-matched Bush PDF / FRUS document pairs. It can OCR an image-only Bush file-unit
-PDF, classify archival scaffolding pages, select a document span, and emit a
-reviewable FRUS-style publication packet.
+The `agent/` directory contains a universal FRUS Publication Agent trained from
+the matched START I Bush PDF / FRUS document pairs. It can take other source
+PDFs with compiler-supplied metadata, classify archival scaffolding pages,
+select a document span, and emit a reviewable FRUS-style publication packet.

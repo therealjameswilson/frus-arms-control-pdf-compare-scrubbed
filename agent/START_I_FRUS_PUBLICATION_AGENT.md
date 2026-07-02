@@ -1,13 +1,13 @@
-# START I FRUS Publication Agent
+# START I Training Profile For The Universal FRUS Agent
 
 Version: 2026-07-02
 
-Purpose: turn one Bush Library source PDF, or one document inside a Bush Library
-file-unit PDF, into a reviewable FRUS publication packet modeled on the matched
-`frus1989-92v31` START I examples.
+Purpose: document the START I training corpus used by the universal FRUS
+Publication Agent. This profile explains how the matched Bush Library source
+PDFs and published `frus1989-92v31` documents teach the agent's page classes,
+document-span logic, and publication transforms.
 
-This agent is not a replacement for FRUS editorial authority. It executes a
-document-preparation workflow and makes the evidence trail visible.
+For deployment instructions, use `FRUS_PUBLICATION_AGENT.md`.
 
 ## Governing Evidence
 

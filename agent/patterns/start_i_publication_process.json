@@ -1,6 +1,8 @@
 {
-  "agent": "START_I_FRUS_PUBLICATION_AGENT",
+  "agent": "FRUS_PUBLICATION_AGENT",
   "version": "2026-07-02",
+  "trained_from": "START I exact-source PDF/FRUS comparison set",
+  "deployment_scope": "Universal FRUS source PDFs with compiler-supplied metadata and review gates",
   "training_scope": {
     "volume_id": "frus1989-92v31",
     "volume_title": "START I, 1989-1991",
@@ -18,8 +20,8 @@
     "George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files"
   ],
   "observed_pdf_properties": {
-    "embedded_text": "none in sampled Bush Library S3 PDFs; OCR required",
-    "file_unit_pattern": "one PDF can contain multiple archival documents, withdrawal sheets, access records, distribution sheets, routing sheets, and selected source-document pages",
+    "embedded_text": "none in sampled Bush Library S3 PDFs; OCR required for that corpus, but universal deployment first checks for embedded text",
+    "file_unit_pattern": "one PDF can contain multiple archival documents, withdrawal sheets, access records, distribution sheets, routing sheets, catalog scaffolding, and selected source-document pages",
     "selected_documents_per_pdf": "1 to 3 in the matched START I set"
   },
   "page_classes": [
@@ -27,13 +29,13 @@
       "class": "administrative_marker",
       "body_text": false,
       "evidence_use": "source-family and file-unit provenance only",
-      "cues": ["administrative marker", "Record Group/Collection", "Folder Title", "OA/ID Number"]
+      "cues": ["administrative marker", "Record Group/Collection", "Record Group", "Folder Title", "OA/ID Number", "Container ID", "Box Number"]
     },
     {
       "class": "withdrawal_sheet",
       "body_text": false,
       "evidence_use": "withheld-item, restriction, attachment, and document-boundary evidence",
-      "cues": ["Withdrawal/Redaction Sheet", "Doc. No.", "Restriction", "Classification", "FOIA/SYS Case"]
+      "cues": ["Withdrawal/Redaction Sheet", "Withdrawal Sheet", "Doc. No.", "Restriction", "Classification", "FOIA/SYS Case", "Released in Part", "Sanitized"]
     },
     {
       "class": "access_control",
@@ -45,22 +47,23 @@
       "class": "routing_profile",
       "body_text": false,
       "evidence_use": "routing, action, seen-by, and signature evidence when legible",
-      "cues": ["NSC PROFILE", "SOURCE DATA PAGE", "ACTION", "DUE", "STATUS"]
+      "cues": ["NSC PROFILE", "SOURCE DATA PAGE", "ACTION", "DUE", "Routing and Transmittal"]
     },
     {
       "class": "distribution_record",
       "body_text": false,
       "evidence_use": "distribution evidence only when needed for a source note",
-      "cues": ["NATIONAL SECURITY COUNCIL", "DISTRIBUTION RECORD", "DIRECTORATE DISTRIBUTION"]
+      "cues": ["NATIONAL SECURITY COUNCIL", "DISTRIBUTION RECORD", "DIRECTORATE DISTRIBUTION", "Distribution List"]
     },
     {
       "class": "source_document",
       "body_text": true,
       "evidence_use": "candidate body text for FRUS publication",
-      "cues": ["THE WHITE HOUSE", "MEMORANDUM FOR", "SUBJECT:", "National Security Review", "National Security Directive", "Summary of Conclusions"]
+      "cues": ["THE WHITE HOUSE", "Department of State", "Embassy", "MEMORANDUM FOR", "MEMORANDUM FROM", "Memorandum of Conversation", "SUBJECT:", "Telegram", "Message From", "Letter From", "Paper Prepared", "Minutes of", "National Security Review", "National Security Directive", "Summary of Conclusions"]
     }
   ],
   "publication_transform": [
+    "use START I matches to classify page roles, not to infer facts for unrelated PDFs",
     "omit non-document archival scaffolding from body text",
     "move source-family, file-unit, classification, routing, seen-by, and attachment facts into source note or editorial notes only when supported",
     "normalize title, place, date, subject, paragraphing, and list structure",
