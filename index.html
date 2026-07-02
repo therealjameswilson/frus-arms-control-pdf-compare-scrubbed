@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FRUS Arms Control PDF Compare</title>
-    <meta name="description" content="Side-by-side comparison of declassified source PDFs and official FRUS document text.">
+    <title>FRUS START I PDF Compare</title>
+    <meta name="description" content="Side-by-side comparison of START I source PDFs and official FRUS document text for 1989-1991.">
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body class="page-frus-compare">
@@ -13,12 +13,11 @@
         <p class="eyebrow">FRUS Source Comparison</p>
         <div class="masthead-row">
           <div class="title-lockup">
-            <h1>FRUS Arms Control PDF Compare</h1>
-            <p class="masthead-note">Side-by-side inspection of declassified source PDFs and the corresponding official FRUS document text.</p>
+            <h1>FRUS START I PDF Compare</h1>
+            <p class="masthead-note">Side-by-side inspection of exact-source START I PDFs and the corresponding official FRUS document text, 1989-1991.</p>
           </div>
           <nav class="site-nav" aria-label="Primary">
             <a href="./index.html" aria-current="page">PDF Compare</a>
-            <a href="https://history.state.gov/historicaldocuments/frus1981-88v44p1">FRUS 1981-1988 XLIV/1</a>
             <a href="https://history.state.gov/historicaldocuments/frus1989-92v31">FRUS 1989-1992 XXXI</a>
           </nav>
         </div>
@@ -27,11 +26,10 @@
     <main class="layout">
       <section class="card hero-card">
         <p class="eyebrow">FRUS Source Comparison</p>
-        <h2>Inspect exact source PDFs beside the printed FRUS document</h2>
-        <p class="lede">This workbench only shows declassified PDF scans that pass an exact-source evidence check against the FRUS source note.</p>
+        <h2>Inspect START I source PDFs beside the printed FRUS document</h2>
+        <p class="lede">This workbench only shows declassified PDF scans from the START I volume that pass an exact-source evidence check against the FRUS source note.</p>
         <div class="action-row">
           <a class="button-link button-link-secondary" href="./assets/data/frus-pdf-compare.json">Open comparison JSON</a>
-          <a class="button-link button-link-secondary" href="https://history.state.gov/historicaldocuments/frus1981-88v44p1">FRUS 1981-1988 XLIV/1</a>
           <a class="button-link button-link-secondary" href="https://history.state.gov/historicaldocuments/frus1989-92v31">FRUS 1989-1992 XXXI</a>
         </div>
       </section>
@@ -39,12 +37,12 @@
         <div class="tool-grid">
           <div class="tool-pane">
             <label for="compare-filter" class="field-label">Search title, source note, PDF title, document number</label>
-            <input id="compare-filter" type="search" placeholder="Try: NSDD 178, START, doc 9, Scowcroft">
+            <input id="compare-filter" type="search" placeholder="Try: START, doc 117, Scowcroft, June 1991">
           </div>
           <div class="tool-pane tool-pane-compact">
             <label for="compare-volume" class="field-label">Volume</label>
             <select id="compare-volume">
-              <option value="all">Both volumes</option>
+              <option value="all">START I volume</option>
             </select>
           </div>
           <div class="tool-pane tool-pane-compact">
@@ -96,7 +94,7 @@
     </main>
     <footer class="site-footer">
       <div class="layout">
-        <p>Rows are limited to exact-source matches. Reagan NSDD reference PDFs appear only when the FRUS document is the directive itself; Bush PDFs appear only when source-identifier or specific file-unit evidence supports the match.</p>
+        <p>Rows are limited to exact-source matches from the START I volume. Bush Library PDFs appear only when source-identifier or specific file-unit evidence supports the match.</p>
       </div>
     </footer>
     <script src="./assets/js/site.js" defer></script>

@@ -31,7 +31,7 @@ jobs:
         run: |
           mkdir -p dist
           cp index.html README.md .nojekyll dist/
-          cp -R assets frus-pdfs dist/
+          cp -R assets dist/
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
