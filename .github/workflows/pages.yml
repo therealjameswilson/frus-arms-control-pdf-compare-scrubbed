@@ -32,6 +32,7 @@ jobs:
           mkdir -p dist
           cp index.html README.md .nojekyll dist/
           cp -R assets dist/
+          cp -R agent dist/
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3

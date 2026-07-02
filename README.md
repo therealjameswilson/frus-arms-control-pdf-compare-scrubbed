@@ -11,3 +11,10 @@ Scope:
 The site is generated from the local FRUS declassified PDF register and cached official FRUS EPUB text, then scrubbed to exact-source rows only. Bush/NARA PDFs load from official public S3 URLs.
 
 The deployable site is published from the `gh-pages` branch.
+
+## Publication Agent
+
+The `agent/` directory contains a START I FRUS Publication Agent built from the
+matched Bush PDF / FRUS document pairs. It can OCR an image-only Bush file-unit
+PDF, classify archival scaffolding pages, select a document span, and emit a
+reviewable FRUS-style publication packet.
