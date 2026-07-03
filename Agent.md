@@ -238,6 +238,8 @@ Every run must emit:
 - `accuracy-report.json`
 - `source-completeness.json`
 - `source-support-gaps.json`
+- `ocr-editorial-cleanup.json`
+- `frus-style-transform.json`
 - `human-certification.json`
 - `review-checklist.md`
 
@@ -255,6 +257,17 @@ names a metric is not sufficient.
 `source-completeness.json` must state whether visible PDF text can support a
 99% claim, and when it cannot, whether matching withdrawal/redaction sheets or
 other file-unit evidence probably accounts for the missing FRUS text.
+
+`ocr-editorial-cleanup.json` must record every line dropped as scan scaffolding
+or declassification/classification artifact, plus every deterministic OCR
+repair applied before FRUS-style drafting. The raw `ocr_body` must remain in
+`publication-packet.json`; cleanup is allowed only as a traceable draft layer,
+not as a silent rewrite of the source evidence.
+
+`frus-style-transform.json` must record source-header-to-FRUS-opener transforms,
+including the source lines removed, the generated opener, and the title, date,
+place, and time evidence used. If the source header cannot be established, the
+transform must say it was not applied and leave the draft in review status.
 
 `transcript-lines.json` must preserve page and source-line provenance for every
 non-noise line used in the OCR transcript, so a human reviewer can certify the

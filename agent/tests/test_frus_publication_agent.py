@@ -141,16 +141,65 @@ class FrusPublicationAgentTests(unittest.TestCase):
             gaps = (output_dir / "source-support-gaps.json").read_text(encoding="utf-8")
             completeness = (output_dir / "source-completeness.json").read_text(encoding="utf-8")
             transcript = (output_dir / "transcript-lines.json").read_text(encoding="utf-8")
+            cleanup = (output_dir / "ocr-editorial-cleanup.json").read_text(encoding="utf-8")
+            style = (output_dir / "frus-style-transform.json").read_text(encoding="utf-8")
             human = (output_dir / "human-certification.json").read_text(encoding="utf-8")
             checklist = (output_dir / "review-checklist.md").read_text(encoding="utf-8")
 
         self.assertIn("sampled_missing_benchmark_phrases", gaps)
         self.assertIn("source_incomplete_or_ocr_uncertain", completeness)
         self.assertIn("source_line_no", transcript)
+        self.assertIn("removed_line_count", cleanup)
+        self.assertIn("applied", style)
         self.assertIn("requires_correction_or_source_review", human)
         self.assertIn("Source Completeness", checklist)
         self.assertIn("Sample benchmark phrases not supported", checklist)
+        self.assertIn("OCR Editorial Cleanup", checklist)
+        self.assertIn("FRUS Style Transform", checklist)
         self.assertIn("Human Certification", checklist)
+
+    def test_frus_editorial_cleanup_removes_scan_scaffolding_with_audit_trail(self) -> None:
+        cleaned, report = agent.frus_editorial_cleanup(
+            "NATIONAL SECURITY COUNCIL 20937\n"
+            "| WASHINGTON, D.C. 20506\n"
+            "Substantive sentence. (3)\n"
+            "7 PER E.0. 13526\n"
+            "Declassify on: OADR\n"
+            "- * gaid another point. (8%\n"
+            "= 4\n"
+        )
+
+        self.assertNotIn("NATIONAL SECURITY COUNCIL", cleaned)
+        self.assertNotIn("Declassify on", cleaned)
+        self.assertIn("Substantive sentence. (S)", cleaned)
+        self.assertIn("said another point. (S)", cleaned)
+        self.assertEqual(report["removed_line_count"], 5)
+        self.assertEqual(report["replacement_count"], 2)
+
+    def test_frus_opener_transform_builds_heading_from_source_header(self) -> None:
+        cleaned = "\n".join(
+            [
+                "Summary of Conclusions for",
+                "The Deputies Committee Meeting",
+                "DATE: June 12, 1989",
+                "LOCATION: Situation Room",
+                "TIME: 11:00 AM - NOON",
+                "SUBJECT: Summary of Conclusions",
+                "Body starts here.",
+            ]
+        )
+
+        transformed, report = agent.frus_opener_transform(
+            cleaned,
+            "WASHINGTON, D.C. 20506",
+            {"title": "31. Summary of Conclusions for a Deputies Committee Meeting 1"},
+        )
+
+        self.assertTrue(report["applied"])
+        self.assertIn("31. Summary of Conclusions for a Deputies Committee Meeting", transformed.splitlines()[0])
+        self.assertIn("Washington, June 12, 1989, 11 a.m.-noon", transformed.splitlines()[0])
+        self.assertNotIn("DATE:", transformed)
+        self.assertIn("SUBJECT: Summary of Conclusions", transformed)
 
     def test_transcript_line_entries_flags_uncertain_lines(self) -> None:
         entries = agent.transcript_line_entries(
@@ -261,7 +310,7 @@ class FrusPublicationAgentTests(unittest.TestCase):
                     1: "MEMORANDUM FOR\nalpha beta gamma delta",
                     2: "Withdrawal/Redaction Sheet. 03a. Memo Brent Scowcroft to POTUS Re: Arms Control Review.",
                 }
-            elif dpi == 300 and psm == 6:
+            elif dpi == 300 and psm in {3, 6}:
                 text_by_page = {1: "MEMORANDUM FOR\nalpha beta gamma delta"}
             else:
                 support_calls.append((dpi, psm, tuple(pages)))
