@@ -200,6 +200,34 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertNotIn("Attachment", cleaned)
         self.assertEqual(report["removed_line_count"], 7)
 
+    def test_frus_editorial_cleanup_repairs_directive_ocr_markers(self) -> None:
+        cleaned, report = agent.frus_editorial_cleanup(
+            "the issues that they address. (¢€)\n"
+            "dh ALCMs and SLCMs. Building on current areas of agreement\n"
+            "nucleararmed ALCMs will be counted. (PX)\n"
+            "As an alternative to subparagraph (da), the U.S. may\n"
+            "CG. A statement that no more than 875-1000 nuclear-armed\n"
+            "di. Information about which types of surface ships\n"
+            "Bs Verifying Non-Deployed Mobile Missile Production.\n"
+            "lor Up to approximately four facilities in each country may\n"
+            "om The Soviet facilities at which PPCM should be\n"
+            "3s Limits on Heavy ICBMs.\n"
+            "ole Such limitations on the modernization of existing types\n"
+        )
+
+        self.assertIn("the issues that they address. (C)", cleaned)
+        self.assertIn("1. ALCMs and SLCMs", cleaned)
+        self.assertIn("nuclear-armed ALCMs will be counted. (S)", cleaned)
+        self.assertIn("subparagraph (d)", cleaned)
+        self.assertIn("c. A statement", cleaned)
+        self.assertIn("d. Information", cleaned)
+        self.assertIn("2. Verifying", cleaned)
+        self.assertIn("a. Up to", cleaned)
+        self.assertIn("b. The Soviet", cleaned)
+        self.assertIn("3. Limits", cleaned)
+        self.assertIn("d. Such limitations", cleaned)
+        self.assertGreaterEqual(report["replacement_count"], 10)
+
     def test_frus_opener_transform_builds_heading_from_source_header(self) -> None:
         cleaned = "\n".join(
             [
