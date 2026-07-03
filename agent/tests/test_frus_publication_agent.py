@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""Deterministic tests for the FRUS publication agent gate logic."""
+
+from __future__ import annotations
+
+import tempfile
+import unittest
+from pathlib import Path
+from unittest import mock
+
+import sys
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+import frus_publication_agent as agent  # noqa: E402
+
+
+APPROVED_TRANSCRIPT = "alpha beta gamma delta epsilon zeta eta theta"
+
+
+def test_payload() -> dict:
+    return {
+        "summary": {},
+        "comparisons": [
+            {
+                "id": "row-1",
+                "doc_key": "frus-test-d1",
+                "volume_id": "frus-test",
+                "doc_no": "1",
+                "doc_title": "1. Test Document",
+                "frus_url": "https://example.test/frus/d1",
+                "pdf_url": "https://example.test/source.pdf",
+                "archive_title": "Test file unit",
+                "source_note": "Source: Test file unit.",
+                "match_basis": "unit-test",
+            }
+        ],
+        "documents": {
+            "frus-test-d1": {
+                "title": "1. Test Document",
+                "url": "https://example.test/frus/d1",
+                "source_note": "Source: Test file unit.",
+                "html": APPROVED_TRANSCRIPT,
+            }
+        },
+    }
+
+
+def args_for_packet(*extra: str):
+    parser = agent.build_arg_parser()
+    return parser.parse_args(
+        [
+            "--doc-key",
+            "frus-test-d1",
+            "--page-range",
+            "1",
+            "--support-ocr-psms",
+            "3",
+            "--cache-dir",
+            "/tmp/frus-agent-test-cache",
+            "--output-dir",
+            "/tmp/frus-agent-test-output",
+            *extra,
+        ]
+    )
+
+
+class FrusPublicationAgentTests(unittest.TestCase):
+    def build_packet_with_ocr(self, *, support_text: str) -> dict:
+        def fake_get_page_texts(_pdf_path, pages, _cache_dir, dpi, psm):
+            if dpi == 300 and psm == 3:
+                text = support_text
+            else:
+                text = "MEMORANDUM FOR\nalpha beta gamma delta"
+            return [
+                {
+                    "page": page,
+                    "text": text,
+                    "method": "ocr",
+                    "ocr_dpi": dpi,
+                    "ocr_psm": psm,
+                }
+                for page in pages
+            ], True
+
+        with (
+            mock.patch.object(agent, "load_payload", return_value=test_payload()),
+            mock.patch.object(agent, "load_process_profile", return_value={}),
+            mock.patch.object(agent, "resolve_pdf", return_value=(Path("/tmp/fake.pdf"), "fake.pdf")),
+            mock.patch.object(agent, "pdf_page_count", return_value=1),
+            mock.patch.object(agent, "sha256_file", return_value="abc123"),
+            mock.patch.object(agent, "get_page_texts", side_effect=fake_get_page_texts),
+        ):
+            return agent.build_packet(args_for_packet())
+
+    def test_approved_transcript_is_used_only_after_source_support_passes(self) -> None:
+        packet = self.build_packet_with_ocr(
+            support_text=f"MEMORANDUM FOR\n{APPROVED_TRANSCRIPT}"
+        )
+
+        support = packet["approved_transcript_support"]
+        self.assertEqual(packet["body_text_mode"], "approved_transcript_supported_by_selected_span")
+        self.assertTrue(support["used_for_draft_body"])
+        self.assertTrue(support["report"]["passed_source_support_gate"])
+        self.assertTrue(packet["accuracy_report"]["passed_99_accuracy_gate"])
+        self.assertEqual(packet["draft_body"], APPROVED_TRANSCRIPT)
+        self.assertIn("ocr_body", packet)
+
+    def test_unsupported_transcript_blocks_instead_of_overclaiming(self) -> None:
+        packet = self.build_packet_with_ocr(
+            support_text="MEMORANDUM FOR\nalpha beta gamma delta"
+        )
+
+        support = packet["approved_transcript_support"]
+        self.assertEqual(packet["body_text_mode"], "ocr_transcript_requires_review")
+        self.assertFalse(support["used_for_draft_body"])
+        self.assertFalse(support["report"]["passed_source_support_gate"])
+        self.assertFalse(packet["accuracy_report"]["passed_99_accuracy_gate"])
+        self.assertIn("source_token_recall_below_threshold", support["report"]["source_support_blocking_reasons"])
+        self.assertNotEqual(packet["draft_body"], APPROVED_TRANSCRIPT)
+
+    def test_ocr_cache_is_keyed_by_dpi_and_psm(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ocr_dir = Path(tmp) / "ocr"
+            cached = ocr_dir / "dpi-0300-psm-4" / "page-0002.txt"
+            cached.parent.mkdir(parents=True)
+            cached.write_text("cached psm 4 text", encoding="utf-8")
+
+            with mock.patch.object(agent, "require_tool", return_value="tool"):
+                text = agent.render_and_ocr_page(Path("/tmp/fake.pdf"), 2, ocr_dir, 300, 4)
+
+            self.assertEqual(text, "cached psm 4 text")
+            self.assertFalse((ocr_dir / "page-0002.txt").exists())
+
+
+if __name__ == "__main__":
+    unittest.main()

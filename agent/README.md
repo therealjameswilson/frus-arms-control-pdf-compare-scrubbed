@@ -119,6 +119,19 @@ OCR cache entries are keyed by PDF checksum, page, DPI, and Tesseract page
 segmentation mode so changing `--ocr-dpi`, `--ocr-psm`, `--final-ocr-dpi`, or
 `--final-ocr-psm` cannot silently reuse incompatible text.
 
+## Tests
+
+Run the deterministic gate tests with:
+
+```bash
+python3 -m unittest discover -s agent/tests -v
+```
+
+These tests mock the PDF/OCR boundary so they run without network access,
+Poppler, or Tesseract. They verify that the agent emits an approved transcript
+only when source support passes, blocks unsupported transcripts instead of
+overclaiming, and keeps OCR cache entries separated by DPI and PSM.
+
 ## START I Certification Batch
 
 Run the per-document 99% certification batch with:
