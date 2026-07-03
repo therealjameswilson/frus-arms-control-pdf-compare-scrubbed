@@ -123,6 +123,161 @@ def support_gap_report(source_text: str, approved_transcript: str, *, max_items:
     }
 
 
+SOURCE_COMPLETENESS_STOPWORDS = {
+    "about",
+    "after",
+    "agency",
+    "all",
+    "also",
+    "and",
+    "appeal",
+    "are",
+    "bush",
+    "case",
+    "class",
+    "closed",
+    "collection",
+    "council",
+    "date",
+    "document",
+    "each",
+    "files",
+    "foia",
+    "for",
+    "from",
+    "george",
+    "group",
+    "had",
+    "has",
+    "library",
+    "location",
+    "may",
+    "national",
+    "not",
+    "number",
+    "office",
+    "other",
+    "page",
+    "presidential",
+    "record",
+    "records",
+    "restriction",
+    "security",
+    "series",
+    "sheet",
+    "source",
+    "subject",
+    "subseries",
+    "that",
+    "the",
+    "their",
+    "there",
+    "this",
+    "type",
+    "was",
+    "were",
+    "white",
+    "will",
+    "with",
+    "would",
+}
+
+
+def notable_tokens(value: str) -> set[str]:
+    return {
+        token
+        for token in normalized_tokens(value)
+        if len(token) >= 3 and token not in SOURCE_COMPLETENESS_STOPWORDS
+    }
+
+
+def source_completeness_report(
+    page_records: list[dict[str, Any]],
+    approved_transcript: str,
+    source_support: dict[str, Any],
+    target: dict[str, Any],
+    source_note: str,
+) -> dict[str, Any]:
+    """Diagnose whether the visible PDF can support the approved FRUS text."""
+    if not approved_transcript:
+        return {
+            "status": "unknown_without_approved_transcript",
+            "can_claim_99_from_pdf": False,
+            "blocking_reasons": ["approved_transcript_missing"],
+            "withdrawal_page_count": sum(1 for record in page_records if record.get("page_class") == "withdrawal_sheet"),
+            "matching_withdrawal_pages": [],
+        }
+
+    support_passed = approved_transcript_supported(
+        source_support,
+        recall_threshold=source_support.get("source_support_recall_threshold") or 0.99,
+        phrase_threshold=source_support.get("source_support_phrase_threshold") or 0.8,
+    )
+    withdrawal_records = [
+        record
+        for record in page_records
+        if record.get("page_class") == "withdrawal_sheet"
+    ]
+    if support_passed:
+        return {
+            "status": "source_complete_supported",
+            "can_claim_99_from_pdf": True,
+            "blocking_reasons": [],
+            "withdrawal_page_count": len(withdrawal_records),
+            "matching_withdrawal_pages": [],
+        }
+
+    anchor_text = " ".join(
+        str(part or "")
+        for part in [
+            target.get("title"),
+            target.get("document_type"),
+            target.get("date"),
+            target.get("sender"),
+            target.get("recipient"),
+            source_note,
+            approved_transcript[:4000],
+        ]
+    )
+    anchors = notable_tokens(anchor_text)
+    matching_withdrawal_pages = []
+    for record in withdrawal_records:
+        preview = str(record.get("text_preview") or record.get("text") or "")
+        page_tokens = notable_tokens(preview)
+        overlap = sorted(page_tokens & anchors)
+        if len(overlap) >= 4:
+            matching_withdrawal_pages.append({
+                "page": record.get("page"),
+                "anchor_tokens": overlap[:12],
+                "text_preview": compact_ws(preview)[:300],
+            })
+
+    blockers = list(source_support.get("source_support_blocking_reasons") or [])
+    if not blockers:
+        blockers.append("approved_transcript_not_supported_by_visible_pdf_text")
+    if matching_withdrawal_pages:
+        status = "source_incomplete_likely_withdrawn_or_redacted"
+        blockers.append("matching_withdrawal_or_redaction_sheet_present")
+    elif withdrawal_records:
+        status = "source_incomplete_with_withdrawal_sheets_present"
+        blockers.append("withdrawal_or_redaction_sheets_present")
+    else:
+        status = "source_incomplete_or_ocr_uncertain"
+
+    return {
+        "status": status,
+        "can_claim_99_from_pdf": False,
+        "blocking_reasons": blockers,
+        "withdrawal_page_count": len(withdrawal_records),
+        "matching_withdrawal_pages": matching_withdrawal_pages,
+        "source_support_recall": source_support.get("normalized_token_recall"),
+        "source_support_phrase_coverage": source_support.get("phrase_coverage"),
+        "sampled_missing_benchmark_phrase_count": (
+            (source_support.get("gap_report") or {}).get("sampled_missing_benchmark_phrase_count")
+        ),
+    }
+
+
 def accuracy_report(candidate: str, benchmark: str, *, threshold: float = 0.99) -> dict[str, Any]:
     if not benchmark:
         return {
@@ -406,8 +561,8 @@ def get_page_texts(
 
 
 PAGE_CLASS_PATTERNS: list[tuple[str, list[str]]] = [
+    ("withdrawal_sheet", ["withdrawal/redaction sheet", "withdrawal sheet", "subject/title of document", "foia/sys case", "released in part", "sanitized", "redaction sheet"]),
     ("administrative_marker", ["administrative marker", "record group/collection", "record group", "folder title", "oa/id number", "container id", "box number"]),
-    ("withdrawal_sheet", ["withdrawal/redaction sheet", "withdrawal sheet", "restriction", "foia/sys case", "released in part", "sanitized", "redaction"]),
     ("access_control", ["attached document contains classified", "access list"]),
     ("routing_profile", ["nsc profile", "source data page", "action officer", "routing and transmittal"]),
     ("distribution_record", ["distribution record", "directorate distribution", "external distribution", "distribution list"]),
@@ -630,6 +785,7 @@ def build_markdown(packet: dict[str, Any]) -> str:
         f"- OCR required: `{packet['source_pdf'].get('ocr_required')}`",
         f"- Selected pages: {', '.join(str(p) for p in packet['selected_pages']) or 'not selected'}",
         f"- Body text mode: `{packet.get('body_text_mode')}`",
+        f"- Source completeness: `{packet.get('source_completeness', {}).get('status')}`",
         "",
         "## Source Note Model",
         "",
@@ -674,6 +830,7 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
     (output_dir / "page-inventory.json").write_text(json.dumps(packet["page_inventory"], indent=2) + "\n", encoding="utf-8")
     (output_dir / "transcript-lines.json").write_text(json.dumps(packet["transcript_lines"], indent=2) + "\n", encoding="utf-8")
     (output_dir / "accuracy-report.json").write_text(json.dumps(packet["accuracy_report"], indent=2) + "\n", encoding="utf-8")
+    (output_dir / "source-completeness.json").write_text(json.dumps(packet.get("source_completeness", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "source-support-gaps.json").write_text(
         json.dumps(packet.get("approved_transcript_support", {}).get("report", {}).get("gap_report", {}), indent=2) + "\n",
         encoding="utf-8",
@@ -690,6 +847,7 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         f"- Benchmark available: `{report.get('benchmark_available')}`",
         f"- Selected pages: {', '.join(str(p) for p in packet.get('selected_pages', [])) or 'none'}",
         f"- Body text mode: `{packet.get('body_text_mode')}`",
+        f"- Source completeness: `{packet.get('source_completeness', {}).get('status')}`",
         f"- Transcript lines: {len(packet.get('transcript_lines', []))}",
         "",
         "## Required Human Checks",
@@ -708,6 +866,18 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         lines.extend(f"- `{blocker}`" for blocker in blockers)
     else:
         lines.append("- None recorded.")
+    source_completeness = packet.get("source_completeness") or {}
+    lines.extend(["", "## Source Completeness", ""])
+    lines.append(f"- Status: `{source_completeness.get('status')}`")
+    lines.append(f"- Can claim 99% from visible PDF: `{source_completeness.get('can_claim_99_from_pdf')}`")
+    for blocker in source_completeness.get("blocking_reasons") or []:
+        lines.append(f"- `{blocker}`")
+    matching_withdrawals = source_completeness.get("matching_withdrawal_pages") or []
+    if matching_withdrawals:
+        lines.extend(["", "Matching withdrawal/redaction pages:"])
+        for match in matching_withdrawals[:6]:
+            anchors = ", ".join(match.get("anchor_tokens") or [])
+            lines.append(f"- Page {match.get('page')}: {anchors}")
     support = packet.get("approved_transcript_support", {}).get("report", {})
     support_blockers = support.get("source_support_blocking_reasons") or []
     gap_report = support.get("gap_report") or {}
@@ -900,6 +1070,13 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         recall_threshold=args.source_support_recall_threshold,
         phrase_threshold=args.source_support_phrase_threshold,
     )
+    source_completeness = source_completeness_report(
+        page_records,
+        approved_transcript,
+        source_support,
+        target,
+        source_note,
+    )
     use_approved_transcript = bool(
         approved_transcript
         and args.approved_transcript_mode != "never"
@@ -927,6 +1104,10 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         warnings.append("99% accuracy gate did not pass; see accuracy-report.json before using as FRUS output.")
     if approved_transcript and not support_passed:
         warnings.append("Approved transcript was not used as draft body because the selected PDF span did not meet source-support thresholds.")
+    if source_completeness.get("status") == "source_incomplete_likely_withdrawn_or_redacted":
+        warnings.append("Visible PDF text appears source-incomplete; matching withdrawal/redaction sheets may account for missing FRUS text.")
+    elif source_completeness.get("status", "").startswith("source_incomplete"):
+        warnings.append("Visible PDF text does not support the approved FRUS transcript; treat this as a blocked source packet.")
     warnings.append("Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication.")
 
     return {
@@ -965,11 +1146,12 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
             "variant_reports": support_ocr_variants,
             "report": source_support,
         },
+        "source_completeness": source_completeness,
         "accuracy_report": report,
         "evidence_classes": {
             "title": "proved_by_published_frus_model" if known_row else "heuristic_requires_review",
             "source_note": "proved_by_published_frus_model" if known_row else "proved_by_source_register" if source_note else "unsupported_do_not_use",
-            "body_text": "approved_transcript_supported_by_selected_pdf_span" if use_approved_transcript else "proved_by_pdf_ocr_requires_review",
+            "body_text": "approved_transcript_supported_by_selected_pdf_span" if use_approved_transcript else "source_incomplete_do_not_publish" if source_completeness.get("status", "").startswith("source_incomplete") else "proved_by_pdf_ocr_requires_review",
             "page_span": "proved_by_editor_supplied_page_range" if requested_pages else "proved_by_benchmark_guided_span" if span_selection.get("strategy") == "benchmark_guided_contiguous_pdf_span" else "heuristic_requires_review",
         },
         "reverse_engineered_process": [
@@ -1048,6 +1230,7 @@ def main(argv: list[str] | None = None) -> int:
         "agent": packet["agent"],
         "selected_pages": packet["selected_pages"],
         "passed_99_accuracy_gate": packet["accuracy_report"].get("passed_99_accuracy_gate"),
+        "source_completeness": packet.get("source_completeness", {}).get("status"),
         "warnings": packet["human_review_warnings"],
     }, indent=2))
     return 0

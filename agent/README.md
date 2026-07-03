@@ -152,6 +152,18 @@ python3 agent/run_start_i_certification_batch.py \
   --output-dir agent/runs/start-i-certified
 ```
 
+The batch writes `batch-summary.json` and `batch-summary.md` after each
+document, so interrupted runs still leave a usable partial calibration record.
+Use `--resume` to continue from existing packets and `--agent-timeout-seconds`
+to keep one slow OCR job from blocking the whole calibration.
+
+The summary includes `source_completeness` status for each document. A
+`source_complete_supported` packet can use an approved transcript for the 99%
+gate. A `source_incomplete_*` packet is blocked because the visible PDF text
+does not support the published FRUS transcript, often because the file unit
+contains withdrawal/redaction sheets for tabs, attachments, or source pages that
+FRUS later printed.
+
 For a quick smoke test:
 
 ```bash

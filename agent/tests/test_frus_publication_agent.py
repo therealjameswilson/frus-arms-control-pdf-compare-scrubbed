@@ -110,6 +110,8 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertEqual(packet["transcript_lines"][0]["page"], 1)
         self.assertEqual(packet["transcript_lines"][0]["source_line_no"], 1)
         self.assertEqual(support["report"]["gap_report"]["sampled_missing_benchmark_phrase_count"], 0)
+        self.assertEqual(packet["source_completeness"]["status"], "source_complete_supported")
+        self.assertTrue(packet["source_completeness"]["can_claim_99_from_pdf"])
 
     def test_unsupported_transcript_blocks_instead_of_overclaiming(self) -> None:
         packet = self.build_packet_with_ocr(
@@ -126,6 +128,7 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertTrue(gap_report["sampled_missing_benchmark_phrases"])
         self.assertIn("epsilon", {item["token"] for item in gap_report["top_missing_tokens"]})
         self.assertNotEqual(packet["draft_body"], APPROVED_TRANSCRIPT)
+        self.assertEqual(packet["source_completeness"]["status"], "source_incomplete_or_ocr_uncertain")
 
     def test_gap_report_is_written_for_review(self) -> None:
         packet = self.build_packet_with_ocr(
@@ -136,12 +139,40 @@ class FrusPublicationAgentTests(unittest.TestCase):
             output_dir = Path(tmp)
             agent.output_packet(packet, output_dir)
             gaps = (output_dir / "source-support-gaps.json").read_text(encoding="utf-8")
+            completeness = (output_dir / "source-completeness.json").read_text(encoding="utf-8")
             transcript = (output_dir / "transcript-lines.json").read_text(encoding="utf-8")
             checklist = (output_dir / "review-checklist.md").read_text(encoding="utf-8")
 
         self.assertIn("sampled_missing_benchmark_phrases", gaps)
+        self.assertIn("source_incomplete_or_ocr_uncertain", completeness)
         self.assertIn("source_line_no", transcript)
+        self.assertIn("Source Completeness", checklist)
         self.assertIn("Sample benchmark phrases not supported", checklist)
+
+    def test_source_completeness_flags_matching_withdrawal_sheet(self) -> None:
+        source_support = agent.source_support_report(
+            "alpha beta gamma delta",
+            "memorandum from scowcroft to president bush arms control review",
+            recall_threshold=0.99,
+            phrase_threshold=0.8,
+        )
+        completeness = agent.source_completeness_report(
+            [
+                {
+                    "page": 2,
+                    "page_class": "withdrawal_sheet",
+                    "text_preview": "03a. Memo Brent Scowcroft to POTUS Re: Arms Control Review (2 pp.)",
+                }
+            ],
+            "memorandum from scowcroft to president bush arms control review",
+            source_support,
+            {"title": "Memorandum From Scowcroft to President Bush"},
+            "Source: Secret. Sent for action.",
+        )
+
+        self.assertEqual(completeness["status"], "source_incomplete_likely_withdrawn_or_redacted")
+        self.assertFalse(completeness["can_claim_99_from_pdf"])
+        self.assertEqual(completeness["matching_withdrawal_pages"][0]["page"], 2)
 
     def test_benchmark_span_uses_true_contiguous_pdf_pages(self) -> None:
         page_records = [
@@ -169,6 +200,23 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertEqual(span["pages"], [1, 2, 3])
         self.assertEqual(span["body_pages"], [1, 3])
         self.assertEqual(span["crossed_non_body_pages"], [2])
+
+    def test_withdrawal_sheet_classification_precedes_generic_admin(self) -> None:
+        label, cues = agent.classify_page(
+            "Withdrawal/Redaction Sheet (George Bush Library) "
+            "Document No. Subject/Title of Document Record Group: Bush Presidential Records"
+        )
+
+        self.assertEqual(label, "withdrawal_sheet")
+        self.assertIn("withdrawal/redaction sheet", cues)
+
+    def test_substantive_restrictions_do_not_make_withdrawal_sheet(self) -> None:
+        label, _ = agent.classify_page(
+            "Memorandum for the Secretary of State. Restrictions on future systems "
+            "should be reviewed by the Arms Control Policy Coordinating Committee."
+        )
+
+        self.assertEqual(label, "source_document")
 
     def test_ocr_cache_is_keyed_by_dpi_and_psm(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

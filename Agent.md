@@ -1,6 +1,6 @@
 # FRUS Document Reconstruction Agent
 
-Version: 2026-07-02
+Version: 2026-07-03
 
 Purpose: produce a FRUS-style document from a PDF scan of a single source
 document with a verified 99% accuracy gate against the expected FRUS output.
@@ -48,9 +48,13 @@ check may combine multiple OCR page-segmentation passes over the selected span,
 but it must retain the per-pass evidence. When source support fails, the agent
 must identify sampled benchmark phrases and tokens missing from the selected
 source span, plus sampled source OCR phrases outside the approved transcript.
-This is not a universal shortcut: without a published benchmark or approved
-transcript, the agent must produce an OCR/image-grounded draft and require human
-certification before claiming the 99% gate.
+It must also decide whether the failure looks like OCR uncertainty or a
+source-completeness failure, such as a withdrawal/redaction sheet for a memo,
+paper, tab, or attachment that FRUS later printed. A source-incomplete packet is
+a blocked evidence packet, not a FRUS output. This is not a universal shortcut:
+without a published benchmark or approved transcript, the agent must produce an
+OCR/image-grounded draft and require human certification before claiming the 99%
+gate.
 
 Normalization may remove HTML tags, FRUS page-break markers, superscript
 footnote reference anchors, repeated whitespace, purely typographic dash/quote
@@ -225,6 +229,7 @@ Every run must emit:
 - `page-inventory.json`
 - `transcript-lines.json`
 - `accuracy-report.json`
+- `source-completeness.json`
 - `source-support-gaps.json`
 - `review-checklist.md`
 
@@ -238,6 +243,10 @@ include sampled approved-transcript phrases missing from selected source OCR,
 sampled selected-source OCR phrases outside the approved transcript, and the
 highest-count missing or extra normalized tokens. A failure report that only
 names a metric is not sufficient.
+
+`source-completeness.json` must state whether visible PDF text can support a
+99% claim, and when it cannot, whether matching withdrawal/redaction sheets or
+other file-unit evidence probably accounts for the missing FRUS text.
 
 `transcript-lines.json` must preserve page and source-line provenance for every
 non-noise line used in the OCR transcript, so a human reviewer can certify the
