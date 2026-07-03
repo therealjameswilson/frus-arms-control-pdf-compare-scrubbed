@@ -238,6 +238,7 @@ Every run must emit:
 - `accuracy-report.json`
 - `source-completeness.json`
 - `source-support-gaps.json`
+- `human-certification.json`
 - `review-checklist.md`
 
 When an approved transcript is used, `publication-packet.json` must also retain
@@ -258,6 +259,14 @@ other file-unit evidence probably accounts for the missing FRUS text.
 `transcript-lines.json` must preserve page and source-line provenance for every
 non-noise line used in the OCR transcript, so a human reviewer can certify the
 draft against page images without reverse-engineering the draft body.
+
+`human-certification.json` must state whether the run is
+`certified_by_benchmark`, `ready_for_human_99_percent_review`,
+`pending_review_image_render`, `requires_page_images_for_human_certification`,
+or `requires_correction_or_source_review`. When no approved transcript or
+benchmark is available, it must list the selected review-image pages, the
+rendered image files under `page-images/`, transcript-line counts, flagged
+uncertain lines, and the human actions still required before any 99% claim.
 
 `accuracy-report.json` must include:
 
