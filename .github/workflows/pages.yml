@@ -30,7 +30,7 @@ jobs:
       - name: Build publish directory
         run: |
           mkdir -p dist
-          cp index.html README.md .nojekyll dist/
+          cp index.html README.md Agent.md .nojekyll dist/
           cp -R assets dist/
           cp -R agent dist/
 

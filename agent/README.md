@@ -81,6 +81,23 @@ python3 agent/frus_publication_agent.py \
   source-note model, draft body, and human-review warnings.
 - `draft.md`: copy-readable FRUS-style draft packet.
 - `draft.xml`: minimal TEI-like review stub.
+- `accuracy-report.json`: 99% gate report when a benchmark or approved
+  transcript is available.
+
+## Accuracy Verification
+
+Use the verifier to compare a candidate packet or draft against a known FRUS
+benchmark:
+
+```bash
+python3 agent/verify_frus_accuracy.py \
+  --candidate path/to/publication-packet.json \
+  --doc-no 31 \
+  --output path/to/accuracy-report.json
+```
+
+The verifier exits nonzero unless token recall, token precision, character
+similarity, and required structure checks all pass the configured threshold.
 
 ## START I Batch Run
 
@@ -94,6 +111,12 @@ That batch ran all 17 exact-source START I PDFs through the universal agent in
 full-PDF mode.
 
 ## Operating Spec
+
+The root-level 99% accuracy contract is:
+
+```text
+../Agent.md
+```
 
 The universal instruction file is:
 
