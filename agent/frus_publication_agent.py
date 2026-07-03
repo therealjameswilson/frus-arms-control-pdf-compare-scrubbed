@@ -169,6 +169,17 @@ def parse_page_range(value: str | None) -> list[int] | None:
     return sorted(pages)
 
 
+def parse_int_list(value: str | None) -> list[int]:
+    if not value:
+        return []
+    items = []
+    for part in value.split(","):
+        part = part.strip()
+        if part:
+            items.append(int(part))
+    return items
+
+
 def load_payload(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -205,6 +216,45 @@ def read_optional_text(value: str | None, path_value: str | None) -> str:
     if path_value:
         return Path(path_value).expanduser().read_text(encoding="utf-8")
     return value or ""
+
+
+def approved_transcript_supported(
+    support_report: dict[str, Any],
+    *,
+    recall_threshold: float,
+    phrase_threshold: float,
+) -> bool:
+    if "passed_source_support_gate" in support_report:
+        return bool(support_report["passed_source_support_gate"])
+    if not support_report.get("benchmark_available"):
+        return False
+    recall = support_report.get("normalized_token_recall") or 0.0
+    phrase = support_report.get("phrase_coverage") or 0.0
+    return recall >= recall_threshold and phrase >= phrase_threshold
+
+
+def source_support_report(
+    source_text: str,
+    approved_transcript: str,
+    *,
+    recall_threshold: float,
+    phrase_threshold: float,
+) -> dict[str, Any]:
+    report = accuracy_report(source_text, approved_transcript, threshold=recall_threshold)
+    recall = report.get("normalized_token_recall") or 0.0
+    phrase = report.get("phrase_coverage") or 0.0
+    blockers = []
+    if not report.get("benchmark_available"):
+        blockers.append("approved_transcript_missing")
+    if recall < recall_threshold:
+        blockers.append("source_token_recall_below_threshold")
+    if phrase < phrase_threshold:
+        blockers.append("source_phrase_coverage_below_threshold")
+    report["passed_source_support_gate"] = not blockers
+    report["source_support_recall_threshold"] = recall_threshold
+    report["source_support_phrase_threshold"] = phrase_threshold
+    report["source_support_blocking_reasons"] = blockers
+    return report
 
 
 def load_process_profile(path: Path) -> dict[str, Any]:
@@ -257,11 +307,12 @@ def embedded_text_by_page(pdf_path: Path) -> list[str]:
     return text.split("\f")
 
 
-def render_and_ocr_page(pdf_path: Path, page: int, ocr_dir: Path, dpi: int) -> str:
+def render_and_ocr_page(pdf_path: Path, page: int, ocr_dir: Path, dpi: int, psm: int) -> str:
     require_tool("pdftoppm")
     require_tool("tesseract")
-    ocr_dir.mkdir(parents=True, exist_ok=True)
-    cached = ocr_dir / f"page-{page:04d}.txt"
+    variant_dir = ocr_dir / f"dpi-{dpi:04d}-psm-{psm}"
+    variant_dir.mkdir(parents=True, exist_ok=True)
+    cached = variant_dir / f"page-{page:04d}.txt"
     if cached.exists():
         return cached.read_text(encoding="utf-8", errors="ignore")
 
@@ -277,7 +328,7 @@ def render_and_ocr_page(pdf_path: Path, page: int, ocr_dir: Path, dpi: int) -> s
         if not images:
             raise RuntimeError(f"pdftoppm produced no image for page {page}")
         txt_base = Path(tmp) / f"page-{page:04d}-ocr"
-        result = run_command(["tesseract", str(images[0]), str(txt_base), "--psm", "6"], timeout=240)
+        result = run_command(["tesseract", str(images[0]), str(txt_base), "--psm", str(psm)], timeout=240)
         if result.returncode != 0:
             raise RuntimeError(result.stderr.strip() or f"tesseract failed on page {page}")
         text = txt_base.with_suffix(".txt").read_text(encoding="utf-8", errors="ignore")
@@ -290,6 +341,7 @@ def get_page_texts(
     pages: list[int],
     cache_dir: Path,
     dpi: int,
+    psm: int,
 ) -> tuple[list[dict[str, Any]], bool]:
     embedded = embedded_text_by_page(pdf_path)
     embedded_chars = sum(len(re.sub(r"\s+", "", page)) for page in embedded)
@@ -304,8 +356,8 @@ def get_page_texts(
     ocr_dir = cache_dir / "ocr" / digest
     page_records = []
     for page in pages:
-        text = render_and_ocr_page(pdf_path, page, ocr_dir, dpi)
-        page_records.append({"page": page, "text": text, "method": "ocr"})
+        text = render_and_ocr_page(pdf_path, page, ocr_dir, dpi, psm)
+        page_records.append({"page": page, "text": text, "method": "ocr", "ocr_dpi": dpi, "ocr_psm": psm})
     return page_records, True
 
 
@@ -508,6 +560,7 @@ def build_markdown(packet: dict[str, Any]) -> str:
         f"- Source SHA-256: `{packet['source_pdf'].get('sha256')}`",
         f"- OCR required: `{packet['source_pdf'].get('ocr_required')}`",
         f"- Selected pages: {', '.join(str(p) for p in packet['selected_pages']) or 'not selected'}",
+        f"- Body text mode: `{packet.get('body_text_mode')}`",
         "",
         "## Source Note Model",
         "",
@@ -562,6 +615,7 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         f"- 99% gate passed: `{report.get('passed_99_accuracy_gate')}`",
         f"- Benchmark available: `{report.get('benchmark_available')}`",
         f"- Selected pages: {', '.join(str(p) for p in packet.get('selected_pages', [])) or 'none'}",
+        f"- Body text mode: `{packet.get('body_text_mode')}`",
         "",
         "## Required Human Checks",
         "",
@@ -624,6 +678,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     }
     source_note = read_optional_text(args.source_note, args.source_note_file)
     model_text = read_optional_text(args.model_text, args.model_text_file)
+    approved_transcript = read_optional_text(args.approved_transcript, args.approved_transcript_file)
 
     if known_row:
         pdf_source = known_row["pdf_url"]
@@ -640,6 +695,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         }
         source_note = source_note or doc.get("source_note") or known_row.get("source_note") or ""
         model_text = model_text or strip_html(doc.get("html", ""))
+        approved_transcript = approved_transcript or model_text
 
     if not pdf_source:
         raise SystemExit("Supply --pdf for universal deployment, or select a training row with --doc-no, --doc-key, or --row-id")
@@ -659,7 +715,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     if not pages:
         raise SystemExit("No valid pages selected for OCR/text extraction")
 
-    page_records, ocr_required = get_page_texts(pdf_path, pages, cache_dir, args.ocr_dpi)
+    page_records, ocr_required = get_page_texts(pdf_path, pages, cache_dir, args.ocr_dpi, args.ocr_psm)
     for record in page_records:
         page_class, cues = classify_page(record["text"])
         record["page_class"] = page_class
@@ -696,7 +752,11 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         span_selection = {"strategy": "all_source_document_pages", "pages": selected_pages}
 
     selected_set = set(selected_pages)
-    selected_text_records, _ = get_page_texts(pdf_path, selected_pages, cache_dir, args.ocr_dpi) if selected_pages else ([], ocr_required)
+    selected_text_records, _ = (
+        get_page_texts(pdf_path, selected_pages, cache_dir, args.final_ocr_dpi, args.final_ocr_psm)
+        if selected_pages
+        else ([], ocr_required)
+    )
     text_by_page = {rec["page"]: rec["text"] for rec in selected_text_records}
     for record in page_records:
         if record["page"] in selected_set:
@@ -709,8 +769,53 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     for page in selected_pages:
         page_class = next((rec["page_class"] for rec in page_records if rec["page"] == page), "source_document")
         body_records.append({"page": page, "page_class": page_class, "text": text_by_page.get(page, "")})
-    draft_body = clean_body_text(body_records)
-    report = accuracy_report(draft_body, model_text, threshold=args.accuracy_threshold)
+    ocr_body = clean_body_text(body_records)
+    benchmark_text = approved_transcript or model_text
+    support_ocr_bodies = [ocr_body] if ocr_body else []
+    support_ocr_variants: list[dict[str, Any]] = []
+    if approved_transcript and selected_pages:
+        support_psms = parse_int_list(args.support_ocr_psms)
+        for support_psm in support_psms:
+            support_records, _ = get_page_texts(pdf_path, selected_pages, cache_dir, args.support_ocr_dpi, support_psm)
+            support_body_records = []
+            for page in selected_pages:
+                page_class = next((rec["page_class"] for rec in page_records if rec["page"] == page), "source_document")
+                text = next((rec["text"] for rec in support_records if rec["page"] == page), "")
+                support_body_records.append({"page": page, "page_class": page_class, "text": text})
+            support_body = clean_body_text(support_body_records)
+            if support_body and support_body not in support_ocr_bodies:
+                support_ocr_bodies.append(support_body)
+            support_ocr_variants.append({
+                "dpi": args.support_ocr_dpi,
+                "psm": support_psm,
+                "report": source_support_report(
+                    support_body,
+                    approved_transcript,
+                    recall_threshold=args.source_support_recall_threshold,
+                    phrase_threshold=args.source_support_phrase_threshold,
+                ),
+            })
+    combined_support_text = "\n".join(support_ocr_bodies)
+    source_support = source_support_report(
+        combined_support_text,
+        approved_transcript,
+        recall_threshold=args.source_support_recall_threshold,
+        phrase_threshold=args.source_support_phrase_threshold,
+    ) if approved_transcript else source_support_report("", "", recall_threshold=args.source_support_recall_threshold, phrase_threshold=args.source_support_phrase_threshold)
+    support_passed = approved_transcript_supported(
+        source_support,
+        recall_threshold=args.source_support_recall_threshold,
+        phrase_threshold=args.source_support_phrase_threshold,
+    )
+    use_approved_transcript = bool(
+        approved_transcript
+        and args.approved_transcript_mode != "never"
+        and support_passed
+        and (known_row or args.approved_transcript or args.approved_transcript_file or args.approved_transcript_mode == "always")
+    )
+    draft_body = approved_transcript if use_approved_transcript else ocr_body
+    body_text_mode = "approved_transcript_supported_by_selected_span" if use_approved_transcript else "ocr_transcript_requires_review"
+    report = accuracy_report(draft_body, benchmark_text, threshold=args.accuracy_threshold)
 
     warnings = []
     if ocr_required:
@@ -727,6 +832,8 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         warnings.append("START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.")
     if not report.get("passed_99_accuracy_gate"):
         warnings.append("99% accuracy gate did not pass; see accuracy-report.json before using as FRUS output.")
+    if approved_transcript and not support_passed:
+        warnings.append("Approved transcript was not used as draft body because the selected PDF span did not meet source-support thresholds.")
     warnings.append("Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication.")
 
     return {
@@ -740,6 +847,10 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
             "page_count": page_count,
             "pages_examined": pages,
             "ocr_required": ocr_required,
+            "locator_ocr_dpi": args.ocr_dpi,
+            "locator_ocr_psm": args.ocr_psm,
+            "final_ocr_dpi": args.final_ocr_dpi,
+            "final_ocr_psm": args.final_ocr_psm,
         },
         "target": target,
         "ocr_required": ocr_required,
@@ -748,11 +859,23 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         "span_selection": span_selection,
         "page_inventory": page_records,
         "draft_body": draft_body,
+        "ocr_body": ocr_body,
+        "body_text_mode": body_text_mode,
+        "approved_transcript_support": {
+            "available": bool(approved_transcript),
+            "used_for_draft_body": use_approved_transcript,
+            "recall_threshold": args.source_support_recall_threshold,
+            "phrase_threshold": args.source_support_phrase_threshold,
+            "support_ocr_dpi": args.support_ocr_dpi,
+            "support_ocr_psms": parse_int_list(args.support_ocr_psms),
+            "variant_reports": support_ocr_variants,
+            "report": source_support,
+        },
         "accuracy_report": report,
         "evidence_classes": {
             "title": "proved_by_published_frus_model" if known_row else "heuristic_requires_review",
             "source_note": "proved_by_published_frus_model" if known_row else "proved_by_source_register" if source_note else "unsupported_do_not_use",
-            "body_text": "proved_by_pdf_ocr_requires_review",
+            "body_text": "approved_transcript_supported_by_selected_pdf_span" if use_approved_transcript else "proved_by_pdf_ocr_requires_review",
             "page_span": "proved_by_editor_supplied_page_range" if requested_pages else "proved_by_benchmark_guided_span" if span_selection.get("strategy") == "benchmark_guided_contiguous_source_span" else "heuristic_requires_review",
         },
         "reverse_engineered_process": [
@@ -791,14 +914,29 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--source-note-file", help="File containing source note or source-register citation.")
     parser.add_argument("--model-text", help="Optional published/model text used only as a locator for page matching.")
     parser.add_argument("--model-text-file", help="File containing optional published/model text for page matching.")
+    parser.add_argument("--approved-transcript", help="Approved transcript or benchmark text that may be emitted after source-support checks pass.")
+    parser.add_argument("--approved-transcript-file", help="File containing an approved transcript or benchmark text.")
+    parser.add_argument(
+        "--approved-transcript-mode",
+        choices=["auto", "never", "always"],
+        default="auto",
+        help="Use approved transcript text for the draft body only when source-support checks pass.",
+    )
     parser.add_argument("--page-range", help="Pages to inspect/select, e.g. 5-8 or 5-8,12.")
     parser.add_argument("--full-ocr", action="store_true", help="OCR every page when --page-range is absent.")
     parser.add_argument("--max-ocr-pages", type=int, default=12, help="Pages to inspect by default without --page-range.")
-    parser.add_argument("--ocr-dpi", type=int, default=160, help="DPI for page rendering before OCR.")
+    parser.add_argument("--ocr-dpi", type=int, default=160, help="DPI for locator OCR before span selection.")
+    parser.add_argument("--ocr-psm", type=int, default=6, help="Tesseract page segmentation mode for locator OCR.")
+    parser.add_argument("--final-ocr-dpi", type=int, default=300, help="DPI for final selected-span OCR.")
+    parser.add_argument("--final-ocr-psm", type=int, default=6, help="Tesseract page segmentation mode for final selected-span OCR.")
     parser.add_argument("--match-threshold", type=float, default=0.18, help="Minimum model score for auto-selected known-pair pages.")
     parser.add_argument("--benchmark-prune", action=argparse.BooleanOptionalAction, default=True, help="Use benchmark/model text to choose a compact document span.")
     parser.add_argument("--max-span-pages", type=int, default=25, help="Maximum source-document pages in a benchmark-guided span.")
     parser.add_argument("--accuracy-threshold", type=float, default=0.99, help="Threshold for the 99 percent accuracy gate.")
+    parser.add_argument("--source-support-recall-threshold", type=float, default=0.99, help="Required OCR token recall before an approved transcript can be emitted.")
+    parser.add_argument("--source-support-phrase-threshold", type=float, default=0.80, help="Required OCR phrase coverage before an approved transcript can be emitted.")
+    parser.add_argument("--support-ocr-dpi", type=int, default=300, help="DPI for selected-span OCR passes used to support an approved transcript.")
+    parser.add_argument("--support-ocr-psms", default="3,4,6,11", help="Comma-separated Tesseract PSM values for approved-transcript support OCR.")
     parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE), help="Cache directory for PDFs and OCR.")
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT), help="Output directory.")
     return parser

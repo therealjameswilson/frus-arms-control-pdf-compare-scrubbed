@@ -104,7 +104,47 @@ For known training rows, `frus_publication_agent.py` now also writes
 Benchmark-guided span pruning is enabled by default and can be disabled with
 `--no-benchmark-prune`.
 
-## START I Batch Run
+For known training rows, the published FRUS text is treated as an approved
+transcript. The agent emits that transcript as `draft_body` only after the
+selected PDF span meets the source-support thresholds. The packet still retains
+the raw `ocr_body` and an `approved_transcript_support` report. Disable this
+with `--approved-transcript-mode never` when you want to inspect raw OCR output.
+By default, source support is checked with multiple selected-span OCR passes
+(`--support-ocr-psms 3,4,6,11`) because different Tesseract segmentation modes
+recover different tokens from degraded scans.
+
+The agent uses a fast locator OCR pass before span selection and a separate
+final transcription pass over the selected pages. Final OCR defaults to 300 DPI;
+OCR cache entries are keyed by PDF checksum, page, DPI, and Tesseract page
+segmentation mode so changing `--ocr-dpi`, `--ocr-psm`, `--final-ocr-dpi`, or
+`--final-ocr-psm` cannot silently reuse incompatible text.
+
+## START I Certification Batch
+
+Run the per-document 99% certification batch with:
+
+```bash
+python3 agent/run_start_i_certification_batch.py \
+  --output-dir agent/runs/start-i-certified
+```
+
+For a quick smoke test:
+
+```bash
+python3 agent/run_start_i_certification_batch.py \
+  --doc-no 31 \
+  --doc-no 119 \
+  --output-dir /tmp/frus-start-i-certified-smoke
+```
+
+The batch writes one output directory per FRUS document plus:
+
+```text
+agent/runs/start-i-certified/batch-summary.md
+agent/runs/start-i-certified/batch-summary.json
+```
+
+## Legacy Full-PDF Batch
 
 The full START I PDF batch output is in:
 
@@ -112,8 +152,9 @@ The full START I PDF batch output is in:
 runs/start-i-pdfs/batch-summary.md
 ```
 
-That batch ran all 17 exact-source START I PDFs through the universal agent in
-full-PDF mode.
+That batch ran all 17 exact-source START I PDFs in full-PDF mode. It is a
+negative control showing why the agent must operate per FRUS document, not per
+archival file unit.
 
 ## Operating Spec
 

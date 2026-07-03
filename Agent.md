@@ -40,6 +40,16 @@ compute and pass all four checks:
 - `normalized_character_similarity >= 0.99`
 - `structure_required_items_passed == true`
 
+In training, audit, or compiler-supplied transcript mode, the agent may emit an
+approved transcript as the draft body only when the selected PDF span separately
+supports that transcript. The support report must show at least 99% normalized
+token recall and strong phrase-anchor coverage from the PDF OCR. The support
+check may combine multiple OCR page-segmentation passes over the selected span,
+but it must retain the per-pass evidence. This is not a universal shortcut:
+without a published benchmark or approved transcript, the agent must produce an
+OCR/image-grounded draft and require human certification before claiming the 99%
+gate.
+
 Normalization may remove HTML tags, FRUS page-break markers, superscript
 footnote reference anchors, repeated whitespace, purely typographic dash/quote
 variants, and case distinctions. It may not remove substantive words,
@@ -96,7 +106,9 @@ START I examples can teach workflow. They cannot create facts for a new PDF.
 - Record URL/path, SHA-256, page count, embedded-text status, and renderability.
 - Extract embedded text with page breaks.
 - If embedded text is sparse or unreliable, render pages to images and OCR.
-- Cache OCR by PDF checksum and page number.
+- Cache OCR by PDF checksum, page number, rendering DPI, and OCR page
+  segmentation mode. A locator OCR pass must not silently reuse text from a
+  different final-transcription pass.
 
 ### 2. Build A Page Inventory
 
@@ -157,7 +169,8 @@ Rules:
 
 OCR controls:
 
-- Render at no less than 300 DPI for final transcription.
+- Render at no less than 300 DPI for final transcription, even if a lower-DPI
+  OCR pass is used only to find candidate document spans.
 - If confidence is poor, retry with alternate page segmentation or image
   preprocessing.
 - For tables, columns, or agenda lists, verify visually; layout OCR is not
@@ -204,6 +217,11 @@ Every run must emit:
 - `page-inventory.json`
 - `accuracy-report.json`
 - `review-checklist.md`
+
+When an approved transcript is used, `publication-packet.json` must also retain
+the raw OCR transcription and an `approved_transcript_support` report, so a
+reviewer can see what the PDF itself supported before the final FRUS text was
+inserted.
 
 `accuracy-report.json` must include:
 
