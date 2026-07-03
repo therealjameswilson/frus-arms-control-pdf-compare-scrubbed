@@ -85,6 +85,10 @@ python3 agent/frus_publication_agent.py \
   transcript lines.
 - `accuracy-report.json`: 99% gate report when a benchmark or approved
   transcript is available.
+- `ocr-editorial-cleanup.json`: dropped scan-scaffold lines and deterministic
+  OCR repairs applied to the draft layer while preserving raw `ocr_body`.
+- `frus-style-transform.json`: source-header-to-FRUS-opener transforms, with
+  the generated opener and title/date/place/time evidence used.
 - `human-certification.json`: benchmark/no-benchmark status, review-image
   pages, flagged transcript lines, and remaining human certification actions.
 - `source-support-gaps.json`: sampled missing approved-transcript phrases,
@@ -132,7 +136,9 @@ packet also records `body_pages` and `crossed_non_body_pages` so reviewers can
 see whether the candidate span is really one document or a file-unit crossing.
 
 The agent uses a fast locator OCR pass before span selection and a separate
-final transcription pass over the selected pages. Final OCR defaults to 300 DPI;
+final transcription pass over the selected pages. Final OCR defaults to 300 DPI
+and Tesseract PSM 3 because START I calibration recovered more complete body
+text with automatic page segmentation than with a single-block assumption;
 OCR cache entries are keyed by PDF checksum, page, DPI, and Tesseract page
 segmentation mode so changing `--ocr-dpi`, `--ocr-psm`, `--final-ocr-dpi`, or
 `--final-ocr-psm` cannot silently reuse incompatible text.

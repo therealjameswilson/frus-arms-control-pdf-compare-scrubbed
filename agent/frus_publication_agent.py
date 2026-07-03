@@ -822,6 +822,151 @@ def clean_body_text(page_records: list[dict[str, Any]]) -> str:
     return text.strip()
 
 
+FRUS_SCAFFOLD_LINE_PATTERNS = [
+    r"^national security council(?:\s+\d+)?$",
+    r"^the white house$",
+    r"^washington d c \d+$",
+    r"^\d+$",
+    r"^\d+\s+per e [0o] ?\d+$",
+    r"^per e [0o] ?\d+$",
+    r"^per e [0o] ?13526$",
+    r"^declassified(?:\s+.*)?$",
+    r"^declassify on oadr$",
+    r"^secret(?:ed|d)?(?:\s+.*)?$",
+    r"^secr[ee][dt](?:\s+.*)?$",
+    r"^segret(?:\s+.*)?$",
+    r"^confidential(?:\s+.*)?$",
+    r"^unclassified(?:\s+.*)?$",
+    r"^lolo\s+\d+.*$",
+    r"^m+h\s+.*relb$",
+]
+
+
+def frus_editorial_cleanup(raw_body: str) -> tuple[str, dict[str, Any]]:
+    """Remove OCR-only scan scaffolding while preserving an audit trail."""
+    kept: list[str] = []
+    removed: list[dict[str, Any]] = []
+    replacements: list[dict[str, Any]] = []
+    for line_no, raw_line in enumerate((raw_body or "").splitlines(), start=1):
+        line = repair_ocr_line(raw_line)
+        line = re.sub(r"^[|;:.,\-\s]+", "", line).strip()
+        line = re.sub(r"^[\"'*\s]+(?=[A-Za-z])", "", line).strip()
+        norm = normalize_for_match(line)
+        if not norm:
+            kept.append("")
+            continue
+        if any(re.search(pattern, norm, flags=re.I) for pattern in FRUS_SCAFFOLD_LINE_PATTERNS):
+            removed.append({
+                "line_no": line_no,
+                "text": raw_line,
+                "reason": "scan_or_declassification_scaffold",
+            })
+            continue
+        if len(normalized_tokens(line)) <= 1 and re.search(r"[=~|{}<>/\\]", line):
+            removed.append({
+                "line_no": line_no,
+                "text": raw_line,
+                "reason": "ocr_artifact_line",
+            })
+            continue
+
+        before = line
+        line = re.sub(r"\((?:3|8|af|%|35|8%|3%)\)\s*[;:,.'\"]*$", "(S)", line)
+        line = re.sub(r"\((?:af|%|35|8%|3%|3|8)\s*[;:,.'\"]*$", "(S)", line)
+        line = re.sub(r"\bgaid\b", "said", line)
+        line = re.sub(r"\bSECRED\b", "SECRET", line)
+        line = re.sub(r"\s*\|\s*", " ", line)
+        line = re.sub(r":\s*;+$", ":", line)
+        line = re.sub(r"\s+([,.;:])", r"\1", line)
+        line = re.sub(r"\s{2,}", " ", line).strip()
+        if line != before:
+            replacements.append({
+                "line_no": line_no,
+                "before": before,
+                "after": line,
+            })
+        kept.append(line)
+
+    cleaned = "\n".join(kept)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    cleaned = cleaned.strip()
+    return cleaned, {
+        "applied": True,
+        "removed_line_count": len(removed),
+        "replacement_count": len(replacements),
+        "removed_lines": removed[:200],
+        "replacements": replacements[:200],
+    }
+
+
+def strip_title_footnote_marker(title: str) -> str:
+    return re.sub(r"\s+\d+\s*$", "", compact_ws(title or ""))
+
+
+def normalize_frus_time(value: str) -> str:
+    text = compact_ws(value)
+    text = re.sub(r"\bNOON\b", "noon", text, flags=re.I)
+    text = re.sub(r"\bMIDNIGHT\b", "midnight", text, flags=re.I)
+    text = re.sub(r"\b(\d{1,2}):00\s*AM\b", r"\1 a.m.", text, flags=re.I)
+    text = re.sub(r"\b(\d{1,2}):00\s*PM\b", r"\1 p.m.", text, flags=re.I)
+    text = re.sub(r"\b(\d{1,2}):(\d{2})\s*AM\b", r"\1:\2 a.m.", text, flags=re.I)
+    text = re.sub(r"\b(\d{1,2}):(\d{2})\s*PM\b", r"\1:\2 p.m.", text, flags=re.I)
+    text = re.sub(r"\s*[-–]\s*", "-", text)
+    return text
+
+
+def frus_opener_transform(cleaned_body: str, raw_body: str, target: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    lines = (cleaned_body or "").splitlines()
+    title = strip_title_footnote_marker(str(target.get("title") or ""))
+    date = str(target.get("date") or "").strip()
+    source_time = ""
+    source_place = str(target.get("place") or "").strip()
+    for line in lines[:16]:
+        date_match = re.match(r"DATE:\s*(.+)", line, flags=re.I)
+        if date_match and not date:
+            date = compact_ws(date_match.group(1))
+        time_match = re.match(r"TIME:\s*(.+)", line, flags=re.I)
+        if time_match and not source_time:
+            source_time = normalize_frus_time(time_match.group(1))
+        place_match = re.match(r"PLACE:\s*(.+)", line, flags=re.I)
+        if place_match and not source_place:
+            source_place = compact_ws(place_match.group(1))
+    if not source_place and re.search(r"\bWASHINGTON,\s*D\.?C\.?", raw_body or "", flags=re.I):
+        source_place = "Washington"
+
+    subject_index = next(
+        (index for index, line in enumerate(lines[:16]) if re.match(r"SUBJECT\b", line, flags=re.I)),
+        None,
+    )
+    if not title or not date or subject_index is None:
+        return cleaned_body, {
+            "applied": False,
+            "reason": "title_date_or_subject_header_missing",
+            "title": title,
+            "date": date,
+            "place": source_place,
+            "time": source_time,
+        }
+
+    opener_parts = [title]
+    place_date = ", ".join(part for part in [source_place, date] if part)
+    if place_date:
+        opener_parts.append(place_date)
+    if source_time:
+        opener_parts[-1] = f"{opener_parts[-1]}, {source_time}"
+    opener = " ".join(opener_parts)
+    transformed = "\n".join([opener, *lines[subject_index:]]).strip()
+    return transformed, {
+        "applied": True,
+        "source_header_lines_removed": subject_index,
+        "opener": opener,
+        "title": title,
+        "date": date,
+        "place": source_place,
+        "time": source_time,
+    }
+
+
 def paragraphs_from_text(text: str) -> list[str]:
     chunks = [compact_ws(chunk) for chunk in re.split(r"\n\s*\n", text or "")]
     return [chunk for chunk in chunks if chunk]
@@ -977,6 +1122,8 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
         json.dumps(packet.get("approved_transcript_support", {}).get("report", {}).get("gap_report", {}), indent=2) + "\n",
         encoding="utf-8",
     )
+    (output_dir / "ocr-editorial-cleanup.json").write_text(json.dumps(packet.get("ocr_editorial_cleanup", {}), indent=2) + "\n", encoding="utf-8")
+    (output_dir / "frus-style-transform.json").write_text(json.dumps(packet.get("frus_style_transform", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "human-certification.json").write_text(json.dumps(packet.get("human_certification", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "review-checklist.md").write_text(build_review_checklist(packet), encoding="utf-8")
 
@@ -1039,6 +1186,25 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
     if extra_phrases:
         lines.extend(["", "Sample selected-source OCR phrases outside the approved transcript:"])
         lines.extend(f"- {phrase}" for phrase in extra_phrases[:8])
+    cleanup = packet.get("ocr_editorial_cleanup") or {}
+    lines.extend(["", "## OCR Editorial Cleanup", ""])
+    lines.append(f"- Applied: `{cleanup.get('applied')}`")
+    lines.append(f"- Removed lines: {cleanup.get('removed_line_count', 0)}")
+    lines.append(f"- Line replacements: {cleanup.get('replacement_count', 0)}")
+    removed_lines = cleanup.get("removed_lines") or []
+    if removed_lines:
+        lines.extend(["", "Removed line sample:"])
+        for entry in removed_lines[:8]:
+            text = compact_ws(entry.get("text") or "")[:160]
+            lines.append(f"- Line {entry.get('line_no')}: `{entry.get('reason')}` - {text}")
+    style_transform = packet.get("frus_style_transform") or {}
+    lines.extend(["", "## FRUS Style Transform", ""])
+    lines.append(f"- Applied: `{style_transform.get('applied')}`")
+    if style_transform.get("applied"):
+        lines.append(f"- Opener: {style_transform.get('opener')}")
+        lines.append(f"- Source header lines removed: {style_transform.get('source_header_lines_removed')}")
+    else:
+        lines.append(f"- Reason: `{style_transform.get('reason')}`")
     human = packet.get("human_certification") or {}
     flagged = human.get("flagged_lines_sample") or []
     lines.extend(["", "## Human Certification", ""])
@@ -1190,6 +1356,8 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         body_records.append({"page": page, "page_class": page_class, "text": text_by_page.get(page, "")})
     transcript_lines = transcript_line_entries(body_records)
     ocr_body = clean_body_text(body_records)
+    frus_clean_body, ocr_editorial_cleanup = frus_editorial_cleanup(ocr_body)
+    frus_style_body, frus_style_transform = frus_opener_transform(frus_clean_body, ocr_body, target)
     benchmark_text = approved_transcript or model_text
     support_ocr_bodies = [ocr_body] if ocr_body else []
     support_ocr_variants: list[dict[str, Any]] = []
@@ -1279,7 +1447,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         and support_passed
         and (known_row or args.approved_transcript or args.approved_transcript_file or args.approved_transcript_mode == "always")
     )
-    draft_body = approved_transcript if use_approved_transcript else ocr_body
+    draft_body = approved_transcript if use_approved_transcript else frus_style_body
     body_text_mode = "approved_transcript_supported_by_selected_span" if use_approved_transcript else "ocr_transcript_requires_review"
     report = accuracy_report(draft_body, benchmark_text, threshold=args.accuracy_threshold)
     render_review_pages = args.render_review_images if args.render_review_images is not None else not bool(approved_transcript)
@@ -1343,6 +1511,10 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         "page_inventory": page_records,
         "draft_body": draft_body,
         "ocr_body": ocr_body,
+        "frus_clean_body": frus_clean_body,
+        "frus_style_body": frus_style_body,
+        "ocr_editorial_cleanup": ocr_editorial_cleanup,
+        "frus_style_transform": frus_style_transform,
         "transcript_lines": transcript_lines,
         "body_text_mode": body_text_mode,
         "approved_transcript_support": {
@@ -1417,7 +1589,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--ocr-dpi", type=int, default=160, help="DPI for locator OCR before span selection.")
     parser.add_argument("--ocr-psm", type=int, default=6, help="Tesseract page segmentation mode for locator OCR.")
     parser.add_argument("--final-ocr-dpi", type=int, default=300, help="DPI for final selected-span OCR.")
-    parser.add_argument("--final-ocr-psm", type=int, default=6, help="Tesseract page segmentation mode for final selected-span OCR.")
+    parser.add_argument("--final-ocr-psm", type=int, default=3, help="Tesseract page segmentation mode for final selected-span OCR.")
     parser.add_argument("--match-threshold", type=float, default=0.18, help="Minimum model score for auto-selected known-pair pages.")
     parser.add_argument("--benchmark-prune", action=argparse.BooleanOptionalAction, default=True, help="Use benchmark/model text to choose a compact document span.")
     parser.add_argument("--max-span-pages", type=int, default=25, help="Maximum source-document pages in a benchmark-guided span.")
