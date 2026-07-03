@@ -45,10 +45,12 @@ approved transcript as the draft body only when the selected PDF span separately
 supports that transcript. The support report must show at least 99% normalized
 token recall and strong phrase-anchor coverage from the PDF OCR. The support
 check may combine multiple OCR page-segmentation passes over the selected span,
-but it must retain the per-pass evidence. This is not a universal shortcut:
-without a published benchmark or approved transcript, the agent must produce an
-OCR/image-grounded draft and require human certification before claiming the 99%
-gate.
+but it must retain the per-pass evidence. When source support fails, the agent
+must identify sampled benchmark phrases and tokens missing from the selected
+source span, plus sampled source OCR phrases outside the approved transcript.
+This is not a universal shortcut: without a published benchmark or approved
+transcript, the agent must produce an OCR/image-grounded draft and require human
+certification before claiming the 99% gate.
 
 Normalization may remove HTML tags, FRUS page-break markers, superscript
 footnote reference anchors, repeated whitespace, purely typographic dash/quote
@@ -216,12 +218,19 @@ Every run must emit:
 - `draft.xml`
 - `page-inventory.json`
 - `accuracy-report.json`
+- `source-support-gaps.json`
 - `review-checklist.md`
 
 When an approved transcript is used, `publication-packet.json` must also retain
 the raw OCR transcription and an `approved_transcript_support` report, so a
 reviewer can see what the PDF itself supported before the final FRUS text was
 inserted.
+
+`source-support-gaps.json` must remain useful when the gate fails. It should
+include sampled approved-transcript phrases missing from selected source OCR,
+sampled selected-source OCR phrases outside the approved transcript, and the
+highest-count missing or extra normalized tokens. A failure report that only
+names a metric is not sufficient.
 
 `accuracy-report.json` must include:
 

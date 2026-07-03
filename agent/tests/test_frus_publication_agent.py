@@ -106,6 +106,7 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertTrue(packet["accuracy_report"]["passed_99_accuracy_gate"])
         self.assertEqual(packet["draft_body"], APPROVED_TRANSCRIPT)
         self.assertIn("ocr_body", packet)
+        self.assertEqual(support["report"]["gap_report"]["sampled_missing_benchmark_phrase_count"], 0)
 
     def test_unsupported_transcript_blocks_instead_of_overclaiming(self) -> None:
         packet = self.build_packet_with_ocr(
@@ -113,12 +114,29 @@ class FrusPublicationAgentTests(unittest.TestCase):
         )
 
         support = packet["approved_transcript_support"]
+        gap_report = support["report"]["gap_report"]
         self.assertEqual(packet["body_text_mode"], "ocr_transcript_requires_review")
         self.assertFalse(support["used_for_draft_body"])
         self.assertFalse(support["report"]["passed_source_support_gate"])
         self.assertFalse(packet["accuracy_report"]["passed_99_accuracy_gate"])
         self.assertIn("source_token_recall_below_threshold", support["report"]["source_support_blocking_reasons"])
+        self.assertTrue(gap_report["sampled_missing_benchmark_phrases"])
+        self.assertIn("epsilon", {item["token"] for item in gap_report["top_missing_tokens"]})
         self.assertNotEqual(packet["draft_body"], APPROVED_TRANSCRIPT)
+
+    def test_gap_report_is_written_for_review(self) -> None:
+        packet = self.build_packet_with_ocr(
+            support_text="MEMORANDUM FOR\nalpha beta gamma delta"
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            output_dir = Path(tmp)
+            agent.output_packet(packet, output_dir)
+            gaps = (output_dir / "source-support-gaps.json").read_text(encoding="utf-8")
+            checklist = (output_dir / "review-checklist.md").read_text(encoding="utf-8")
+
+        self.assertIn("sampled_missing_benchmark_phrases", gaps)
+        self.assertIn("Sample benchmark phrases not supported", checklist)
 
     def test_ocr_cache_is_keyed_by_dpi_and_psm(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

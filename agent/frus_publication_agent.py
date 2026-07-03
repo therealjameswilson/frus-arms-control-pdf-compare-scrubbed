@@ -69,15 +69,58 @@ def bag_overlap(left: list[str], right: list[str]) -> int:
 
 
 def phrase_coverage(benchmark_tokens: list[str], candidate_norm: str, *, n: int = 8, stride: int = 8) -> tuple[float, int, int]:
-    phrases = []
-    for start in range(0, max(0, len(benchmark_tokens) - n + 1), stride):
-        phrase = " ".join(benchmark_tokens[start : start + n])
-        if len(phrase) >= 20:
-            phrases.append(phrase)
+    phrases = sampled_phrases(benchmark_tokens, n=n, stride=stride)
     if not phrases:
         return 0.0, 0, 0
     hits = sum(1 for phrase in phrases if phrase in candidate_norm)
     return hits / len(phrases), hits, len(phrases)
+
+
+def sampled_phrases(tokens: list[str], *, n: int = 8, stride: int = 8) -> list[str]:
+    phrases = []
+    for start in range(0, max(0, len(tokens) - n + 1), stride):
+        phrase = " ".join(tokens[start : start + n])
+        if len(phrase) >= 20:
+            phrases.append(phrase)
+    return phrases
+
+
+def support_gap_report(source_text: str, approved_transcript: str, *, max_items: int = 12) -> dict[str, Any]:
+    """Summarize why selected source text does or does not support a transcript."""
+    if not approved_transcript:
+        return {
+            "available": False,
+            "sampled_missing_benchmark_phrases": [],
+            "sampled_extra_source_phrases": [],
+            "top_missing_tokens": [],
+            "top_extra_tokens": [],
+        }
+
+    source_tokens = normalized_tokens(source_text)
+    transcript_tokens = normalized_tokens(approved_transcript)
+    source_norm = " ".join(source_tokens)
+    transcript_norm = " ".join(transcript_tokens)
+    missing_phrases = [
+        phrase
+        for phrase in sampled_phrases(transcript_tokens)
+        if phrase not in source_norm
+    ]
+    extra_phrases = [
+        phrase
+        for phrase in sampled_phrases(source_tokens)
+        if phrase not in transcript_norm
+    ]
+    missing_tokens = (Counter(transcript_tokens) - Counter(source_tokens)).most_common(max_items)
+    extra_tokens = (Counter(source_tokens) - Counter(transcript_tokens)).most_common(max_items)
+    return {
+        "available": True,
+        "sampled_missing_benchmark_phrase_count": len(missing_phrases),
+        "sampled_extra_source_phrase_count": len(extra_phrases),
+        "sampled_missing_benchmark_phrases": missing_phrases[:max_items],
+        "sampled_extra_source_phrases": extra_phrases[:max_items],
+        "top_missing_tokens": [{"token": token, "count": count} for token, count in missing_tokens],
+        "top_extra_tokens": [{"token": token, "count": count} for token, count in extra_tokens],
+    }
 
 
 def accuracy_report(candidate: str, benchmark: str, *, threshold: float = 0.99) -> dict[str, Any]:
@@ -254,6 +297,7 @@ def source_support_report(
     report["source_support_recall_threshold"] = recall_threshold
     report["source_support_phrase_threshold"] = phrase_threshold
     report["source_support_blocking_reasons"] = blockers
+    report["gap_report"] = support_gap_report(source_text, approved_transcript)
     return report
 
 
@@ -604,6 +648,10 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
     (output_dir / "draft.xml").write_text(build_tei_stub(packet), encoding="utf-8")
     (output_dir / "page-inventory.json").write_text(json.dumps(packet["page_inventory"], indent=2) + "\n", encoding="utf-8")
     (output_dir / "accuracy-report.json").write_text(json.dumps(packet["accuracy_report"], indent=2) + "\n", encoding="utf-8")
+    (output_dir / "source-support-gaps.json").write_text(
+        json.dumps(packet.get("approved_transcript_support", {}).get("report", {}).get("gap_report", {}), indent=2) + "\n",
+        encoding="utf-8",
+    )
     (output_dir / "review-checklist.md").write_text(build_review_checklist(packet), encoding="utf-8")
 
 
@@ -633,6 +681,23 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         lines.extend(f"- `{blocker}`" for blocker in blockers)
     else:
         lines.append("- None recorded.")
+    support = packet.get("approved_transcript_support", {}).get("report", {})
+    support_blockers = support.get("source_support_blocking_reasons") or []
+    gap_report = support.get("gap_report") or {}
+    lines.extend(["", "## Source Support Gaps", ""])
+    if support_blockers:
+        lines.append("Source-support blockers:")
+        lines.extend(f"- `{blocker}`" for blocker in support_blockers)
+    else:
+        lines.append("- No source-support blockers recorded.")
+    missing_phrases = gap_report.get("sampled_missing_benchmark_phrases") or []
+    if missing_phrases:
+        lines.extend(["", "Sample benchmark phrases not supported by selected source OCR:"])
+        lines.extend(f"- {phrase}" for phrase in missing_phrases[:8])
+    extra_phrases = gap_report.get("sampled_extra_source_phrases") or []
+    if extra_phrases:
+        lines.extend(["", "Sample selected-source OCR phrases outside the approved transcript:"])
+        lines.extend(f"- {phrase}" for phrase in extra_phrases[:8])
     return "\n".join(lines).rstrip() + "\n"
 
 
