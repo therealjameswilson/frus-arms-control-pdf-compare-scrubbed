@@ -967,6 +967,219 @@ def frus_opener_transform(cleaned_body: str, raw_body: str, target: dict[str, An
     }
 
 
+PARTICIPANT_GROUP_PATTERNS: list[tuple[str, str]] = [
+    ("The Vice President's Office", r"the vice president(?:'|’)?s office"),
+    ("State", r"state"),
+    ("Defense", r"defen[sc]e"),
+    ("Energy", r"energy"),
+    ("OMB", r"omb"),
+    ("CIA", r"cia"),
+    ("JCS", r"jcs"),
+    ("ACDA", r"acda"),
+    ("White House", r"white house"),
+    ("NSC", r"nsc"),
+    ("Treasury", r"treasury"),
+    ("Commerce", r"commerce"),
+    ("Justice", r"justice"),
+]
+PARTICIPANT_LEFT_GROUPS = {"The Vice President's Office", "State", "Defense", "Energy", "OMB", "Treasury", "Commerce", "Justice"}
+PARTICIPANT_RIGHT_GROUPS = {"CIA", "JCS", "ACDA", "White House", "NSC"}
+PARTICIPANT_GROUP_ORDER = [
+    "The Vice President's Office",
+    "State",
+    "Defense",
+    "Energy",
+    "OMB",
+    "CIA",
+    "JCS",
+    "ACDA",
+    "White House",
+    "NSC",
+    "Treasury",
+    "Commerce",
+    "Justice",
+]
+
+
+def participant_group_occurrences(line: str) -> list[dict[str, Any]]:
+    occurrences: list[dict[str, Any]] = []
+    for label, pattern in PARTICIPANT_GROUP_PATTERNS:
+        for match in re.finditer(rf"(?<![A-Za-z]){pattern}(?:\s*:)?(?![A-Za-z])", line, flags=re.I):
+            occurrences.append({
+                "label": label,
+                "start": match.start(),
+                "end": match.end(),
+                "text": match.group(0),
+            })
+    occurrences.sort(key=lambda item: (item["start"], -(item["end"] - item["start"])))
+    filtered: list[dict[str, Any]] = []
+    occupied: list[tuple[int, int]] = []
+    for occurrence in occurrences:
+        span = (occurrence["start"], occurrence["end"])
+        if any(not (span[1] <= start or span[0] >= end) for start, end in occupied):
+            continue
+        filtered.append(occurrence)
+        occupied.append(span)
+    return filtered
+
+
+def participant_group_side(label: str, start: int) -> str:
+    if label in PARTICIPANT_RIGHT_GROUPS:
+        return "right"
+    if label in PARTICIPANT_LEFT_GROUPS:
+        return "left"
+    return "right" if start >= 18 else "left"
+
+
+def split_participant_names(text: str) -> list[str]:
+    cleaned = compact_ws(text)
+    cleaned = re.sub(r"[|]", " ", cleaned)
+    cleaned = re.sub(r"\bRichard\.\s+Kerr\b", "Richard Kerr", cleaned)
+    cleaned = re.sub(r"[^A-Za-z.'’\-\s]", " ", cleaned)
+    cleaned = compact_ws(cleaned)
+    if not cleaned:
+        return []
+    names = re.findall(r"\b[A-Z][A-Za-z.'’\-]+\s+[A-Z][A-Za-z.'’\-]+\b", cleaned)
+    return [compact_ws(name.replace("’", "'").replace(".", "")) for name in names]
+
+
+def frus_participant_column_transform(styled_body: str) -> tuple[str, dict[str, Any]]:
+    lines = (styled_body or "").splitlines()
+    start_index = next(
+        (index for index, line in enumerate(lines) if re.match(r"PARTICIPANTS\s*:?", line, flags=re.I)),
+        None,
+    )
+    if start_index is None:
+        return styled_body, {"applied": False, "reason": "participants_block_missing"}
+
+    end_index = None
+    for index in range(start_index + 1, len(lines)):
+        norm = normalize_for_match(lines[index])
+        if norm in {"summary of conclusions", "discussion", "conclusions", "decisions", "recommendations"}:
+            end_index = index
+            break
+    if end_index is None:
+        return styled_body, {"applied": False, "reason": "participants_block_end_missing", "start_line": start_index + 1}
+
+    block = lines[start_index + 1 : end_index]
+    if sum(len(participant_group_occurrences(line)) for line in block) < 3:
+        return styled_body, {"applied": False, "reason": "insufficient_participant_group_cues", "start_line": start_index + 1, "end_line": end_index}
+
+    groups: dict[str, list[str]] = {}
+    seen_order: list[str] = []
+    entry_counts: dict[str, int] = {}
+    active_left: str | None = None
+    active_right: str | None = None
+    assignments: list[dict[str, Any]] = []
+    unparsed_lines: list[dict[str, Any]] = []
+
+    def activate(label: str, side: str) -> None:
+        nonlocal active_left, active_right
+        groups.setdefault(label, [])
+        entry_counts.setdefault(label, 0)
+        if label not in seen_order:
+            seen_order.append(label)
+        if side == "left":
+            active_left = label
+        else:
+            active_right = label
+
+    def add_names(label: str | None, names: list[str], line_no: int, side: str) -> None:
+        if not label or not names:
+            return
+        groups.setdefault(label, [])
+        entry_counts.setdefault(label, 0)
+        if label not in seen_order:
+            seen_order.append(label)
+        for name in names:
+            if name not in groups[label]:
+                groups[label].append(name)
+                entry_counts[label] += 1
+                assignments.append({"line_no": line_no, "side": side, "group": label, "name": name})
+
+    def next_heading_side(relative_index: int) -> str | None:
+        for next_line in block[relative_index + 1 :]:
+            if not compact_ws(next_line):
+                continue
+            occurrences = participant_group_occurrences(next_line)
+            if not occurrences:
+                return None
+            return participant_group_side(occurrences[0]["label"], occurrences[0]["start"])
+        return None
+
+    for relative_index, line in enumerate(block):
+        line_no = start_index + 2 + relative_index
+        occurrences = participant_group_occurrences(line)
+        if occurrences:
+            if len(occurrences) >= 2:
+                left_occurrence, right_occurrence = occurrences[0], occurrences[1]
+                activate(left_occurrence["label"], "left")
+                activate(right_occurrence["label"], "right")
+                between_names = split_participant_names(line[left_occurrence["end"] : right_occurrence["start"]])
+                after_names = split_participant_names(line[right_occurrence["end"] :])
+                add_names(active_left, between_names, line_no, "left")
+                add_names(active_right, after_names, line_no, "right")
+                continue
+
+            occurrence = occurrences[0]
+            side = participant_group_side(occurrence["label"], occurrence["start"])
+            before_names = split_participant_names(line[: occurrence["start"]])
+            after_names = split_participant_names(line[occurrence["end"] :])
+            if side == "right":
+                add_names(active_left, before_names, line_no, "left")
+                activate(occurrence["label"], "right")
+                add_names(active_right, after_names, line_no, "right")
+            else:
+                if before_names:
+                    add_names(active_left, before_names, line_no, "left")
+                activate(occurrence["label"], "left")
+                if after_names and active_right and entry_counts.get(active_right, 0) == 0:
+                    add_names(active_right, after_names, line_no, "right")
+                else:
+                    add_names(active_left, after_names, line_no, "left")
+            continue
+
+        names = split_participant_names(line)
+        if len(names) >= 2 and active_left and active_right:
+            add_names(active_left, [names[0]], line_no, "left")
+            add_names(active_right, [names[1]], line_no, "right")
+        elif len(names) == 1:
+            side = "left"
+            upcoming_side = next_heading_side(relative_index)
+            if active_right and upcoming_side == "left":
+                side = "right"
+            target = active_right if side == "right" else active_left
+            add_names(target, names, line_no, side)
+        elif compact_ws(line):
+            unparsed_lines.append({"line_no": line_no, "text": line})
+
+    ordered_labels = [label for label in PARTICIPANT_GROUP_ORDER if groups.get(label)]
+    ordered_labels.extend(label for label in seen_order if label not in ordered_labels and groups.get(label))
+    if len(ordered_labels) < 2:
+        return styled_body, {
+            "applied": False,
+            "reason": "participant_groups_not_reconstructed",
+            "start_line": start_index + 1,
+            "end_line": end_index,
+            "unparsed_lines": unparsed_lines,
+        }
+
+    rebuilt = [lines[start_index]]
+    for label in ordered_labels:
+        rebuilt.append(f"{label}:")
+        rebuilt.extend(groups[label])
+    transformed_lines = [*lines[:start_index], *rebuilt, *lines[end_index:]]
+    return "\n".join(transformed_lines).strip(), {
+        "applied": True,
+        "start_line": start_index + 1,
+        "end_line": end_index,
+        "group_count": len(ordered_labels),
+        "groups": [{"label": label, "names": groups[label]} for label in ordered_labels],
+        "assignments": assignments[:300],
+        "unparsed_lines": unparsed_lines[:100],
+    }
+
+
 def paragraphs_from_text(text: str) -> list[str]:
     chunks = [compact_ws(chunk) for chunk in re.split(r"\n\s*\n", text or "")]
     return [chunk for chunk in chunks if chunk]
@@ -1124,6 +1337,7 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
     )
     (output_dir / "ocr-editorial-cleanup.json").write_text(json.dumps(packet.get("ocr_editorial_cleanup", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "frus-style-transform.json").write_text(json.dumps(packet.get("frus_style_transform", {}), indent=2) + "\n", encoding="utf-8")
+    (output_dir / "frus-participants-transform.json").write_text(json.dumps(packet.get("frus_participants_transform", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "human-certification.json").write_text(json.dumps(packet.get("human_certification", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "review-checklist.md").write_text(build_review_checklist(packet), encoding="utf-8")
 
@@ -1205,6 +1419,15 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         lines.append(f"- Source header lines removed: {style_transform.get('source_header_lines_removed')}")
     else:
         lines.append(f"- Reason: `{style_transform.get('reason')}`")
+    participants_transform = packet.get("frus_participants_transform") or {}
+    lines.extend(["", "## FRUS Participants Transform", ""])
+    lines.append(f"- Applied: `{participants_transform.get('applied')}`")
+    if participants_transform.get("applied"):
+        lines.append(f"- Reconstructed groups: {participants_transform.get('group_count')}")
+        for group in (participants_transform.get("groups") or [])[:10]:
+            lines.append(f"- {group.get('label')}: {', '.join(group.get('names') or [])}")
+    else:
+        lines.append(f"- Reason: `{participants_transform.get('reason')}`")
     human = packet.get("human_certification") or {}
     flagged = human.get("flagged_lines_sample") or []
     lines.extend(["", "## Human Certification", ""])
@@ -1358,6 +1581,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     ocr_body = clean_body_text(body_records)
     frus_clean_body, ocr_editorial_cleanup = frus_editorial_cleanup(ocr_body)
     frus_style_body, frus_style_transform = frus_opener_transform(frus_clean_body, ocr_body, target)
+    frus_participants_body, frus_participants_transform = frus_participant_column_transform(frus_style_body)
     benchmark_text = approved_transcript or model_text
     support_ocr_bodies = [ocr_body] if ocr_body else []
     support_ocr_variants: list[dict[str, Any]] = []
@@ -1447,7 +1671,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         and support_passed
         and (known_row or args.approved_transcript or args.approved_transcript_file or args.approved_transcript_mode == "always")
     )
-    draft_body = approved_transcript if use_approved_transcript else frus_style_body
+    draft_body = approved_transcript if use_approved_transcript else frus_participants_body
     body_text_mode = "approved_transcript_supported_by_selected_span" if use_approved_transcript else "ocr_transcript_requires_review"
     report = accuracy_report(draft_body, benchmark_text, threshold=args.accuracy_threshold)
     render_review_pages = args.render_review_images if args.render_review_images is not None else not bool(approved_transcript)
@@ -1513,8 +1737,10 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         "ocr_body": ocr_body,
         "frus_clean_body": frus_clean_body,
         "frus_style_body": frus_style_body,
+        "frus_participants_body": frus_participants_body,
         "ocr_editorial_cleanup": ocr_editorial_cleanup,
         "frus_style_transform": frus_style_transform,
+        "frus_participants_transform": frus_participants_transform,
         "transcript_lines": transcript_lines,
         "body_text_mode": body_text_mode,
         "approved_transcript_support": {
