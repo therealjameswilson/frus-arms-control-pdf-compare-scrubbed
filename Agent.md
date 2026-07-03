@@ -56,6 +56,13 @@ without a published benchmark or approved transcript, the agent must produce an
 OCR/image-grounded draft and require human certification before claiming the 99%
 gate.
 
+The agent should run source-completeness preflight before expensive support OCR
+variants. If the selected-span OCR is below configured source-support thresholds
+and matching withdrawal/redaction sheets explain the missing text, the agent
+must skip further support OCR, emit the blocked packet, and preserve the
+preflight report as evidence. It must not spend minutes trying to certify text
+that the visible PDF cannot support.
+
 Normalization may remove HTML tags, FRUS page-break markers, superscript
 footnote reference anchors, repeated whitespace, purely typographic dash/quote
 variants, and case distinctions. It may not remove substantive words,
@@ -271,6 +278,12 @@ The agent may set `passed_99_accuracy_gate` to `true` only when the evidence
 supports it. Otherwise it must leave the value false and explain the blockers.
 
 ## Failure Lessons From START I
+
+The current per-document certification summary is in
+`agent/runs/start-i-certified/`. In the latest full START I run, all 25
+documents completed without timeouts: 5 visible-source cases passed the 99% gate
+and 20 were blocked as source-incomplete because the visible PDF packet could
+not support the published FRUS transcript.
 
 The existing START I batch in `agent/runs/start-i-pdfs/` is a negative control.
 It showed:

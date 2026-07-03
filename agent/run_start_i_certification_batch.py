@@ -243,4 +243,8 @@ def main(argv: list[str] | None = None) -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except KeyboardInterrupt:
+        print("Interrupted; partial batch summary is available for completed documents.", file=sys.stderr)
+        raise SystemExit(130)

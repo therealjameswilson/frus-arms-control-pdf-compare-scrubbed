@@ -641,6 +641,10 @@ def choose_benchmark_span(
     sorted_records = sorted(page_records, key=lambda record: int(record["page"]))
     if not any(record.get("page_class") == "source_document" for record in sorted_records):
         return None
+    model_tokens = normalized_tokens(model_text)
+    model_phrases = sampled_phrases(model_tokens)
+    if not model_tokens:
+        return None
 
     best: dict[str, Any] | None = None
     for start in range(len(sorted_records)):
@@ -657,13 +661,19 @@ def choose_benchmark_span(
                 for record in span_records
             ]
             body = clean_body_text(candidate_records)
-            report = accuracy_report(body, model_text)
-            recall = report.get("normalized_token_recall") or 0.0
-            precision = report.get("normalized_token_precision") or 0.0
-            char_similarity = report.get("normalized_character_similarity") or 0.0
+            candidate_tokens = normalized_tokens(body)
+            overlap = bag_overlap(model_tokens, candidate_tokens)
+            recall = overlap / max(1, len(model_tokens))
+            precision = overlap / max(1, len(candidate_tokens))
+            candidate_norm = " ".join(candidate_tokens)
+            if model_phrases:
+                phrase_hits = sum(1 for phrase in model_phrases if phrase in candidate_norm)
+                phrase_score: float | None = phrase_hits / len(model_phrases)
+            else:
+                phrase_score = None
             # Selection favors balanced recall/precision first. Character
-            # similarity remains in diagnostics because OCR order/style can be
-            # poor before final transcription.
+            # similarity is intentionally reserved for final verification;
+            # running SequenceMatcher for every long candidate span is too slow.
             if recall + precision == 0:
                 f1 = 0.0
             else:
@@ -679,11 +689,11 @@ def choose_benchmark_span(
                 "crossed_non_body_pages": crossed_non_body_pages,
                 "score": round(selection_score, 6),
                 "text_match_score": round(f1, 6),
-                "normalized_token_recall": recall,
-                "normalized_token_precision": precision,
-                "normalized_character_similarity": char_similarity,
-                "phrase_coverage": report.get("phrase_coverage"),
-                "candidate_token_count": report.get("candidate_token_count"),
+                "normalized_token_recall": round(recall, 6),
+                "normalized_token_precision": round(precision, 6),
+                "normalized_character_similarity": None,
+                "phrase_coverage": round(phrase_score, 6) if phrase_score is not None else None,
+                "candidate_token_count": len(candidate_tokens),
             }
             if best is None:
                 best = candidate
@@ -1036,7 +1046,37 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     benchmark_text = approved_transcript or model_text
     support_ocr_bodies = [ocr_body] if ocr_body else []
     support_ocr_variants: list[dict[str, Any]] = []
-    if approved_transcript and selected_pages:
+    preflight_source_support = (
+        source_support_report(
+            ocr_body,
+            approved_transcript,
+            recall_threshold=args.source_support_recall_threshold,
+            phrase_threshold=args.source_support_phrase_threshold,
+        )
+        if approved_transcript
+        else source_support_report("", "", recall_threshold=args.source_support_recall_threshold, phrase_threshold=args.source_support_phrase_threshold)
+    )
+    preflight_source_completeness = source_completeness_report(
+        page_records,
+        approved_transcript,
+        preflight_source_support,
+        target,
+        source_note,
+    )
+    preflight_recall = preflight_source_support.get("normalized_token_recall") or 0.0
+    preflight_phrase = preflight_source_support.get("phrase_coverage") or 0.0
+    skip_support_ocr_variants = bool(
+        args.source_incomplete_preflight
+        and approved_transcript
+        and selected_pages
+        and preflight_source_completeness.get("status") == "source_incomplete_likely_withdrawn_or_redacted"
+        and (
+            preflight_recall < args.source_incomplete_preflight_recall_threshold
+            or preflight_phrase < args.source_incomplete_preflight_phrase_threshold
+        )
+    )
+
+    if approved_transcript and selected_pages and not skip_support_ocr_variants:
         support_psms = parse_int_list(args.support_ocr_psms)
         for support_psm in support_psms:
             support_records, _ = get_page_texts(pdf_path, selected_pages, cache_dir, args.support_ocr_dpi, support_psm)
@@ -1058,13 +1098,22 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
                     phrase_threshold=args.source_support_phrase_threshold,
                 ),
             })
-    combined_support_text = "\n".join(support_ocr_bodies)
-    source_support = source_support_report(
-        combined_support_text,
-        approved_transcript,
-        recall_threshold=args.source_support_recall_threshold,
-        phrase_threshold=args.source_support_phrase_threshold,
-    ) if approved_transcript else source_support_report("", "", recall_threshold=args.source_support_recall_threshold, phrase_threshold=args.source_support_phrase_threshold)
+    if skip_support_ocr_variants:
+        combined_support_text = ocr_body
+        source_support = preflight_source_support
+        source_support["source_incomplete_preflight_used"] = True
+        source_support["skipped_support_ocr_variants"] = True
+        source_support["skip_reason"] = "matching_withdrawal_or_redaction_sheet_with_low_selected_span_support"
+    else:
+        combined_support_text = "\n".join(support_ocr_bodies)
+        source_support = source_support_report(
+            combined_support_text,
+            approved_transcript,
+            recall_threshold=args.source_support_recall_threshold,
+            phrase_threshold=args.source_support_phrase_threshold,
+        ) if approved_transcript else preflight_source_support
+        source_support["source_incomplete_preflight_used"] = False
+        source_support["skipped_support_ocr_variants"] = False
     support_passed = approved_transcript_supported(
         source_support,
         recall_threshold=args.source_support_recall_threshold,
@@ -1104,6 +1153,8 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         warnings.append("99% accuracy gate did not pass; see accuracy-report.json before using as FRUS output.")
     if approved_transcript and not support_passed:
         warnings.append("Approved transcript was not used as draft body because the selected PDF span did not meet source-support thresholds.")
+    if skip_support_ocr_variants:
+        warnings.append("Skipped expensive support OCR variants because source-completeness preflight found matching withdrawal/redaction evidence and low selected-span support.")
     if source_completeness.get("status") == "source_incomplete_likely_withdrawn_or_redacted":
         warnings.append("Visible PDF text appears source-incomplete; matching withdrawal/redaction sheets may account for missing FRUS text.")
     elif source_completeness.get("status", "").startswith("source_incomplete"):
@@ -1144,6 +1195,9 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
             "support_ocr_dpi": args.support_ocr_dpi,
             "support_ocr_psms": parse_int_list(args.support_ocr_psms),
             "variant_reports": support_ocr_variants,
+            "preflight_report": preflight_source_support,
+            "source_incomplete_preflight_used": skip_support_ocr_variants,
+            "skipped_support_ocr_variants": skip_support_ocr_variants,
             "report": source_support,
         },
         "source_completeness": source_completeness,
@@ -1213,6 +1267,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--source-support-phrase-threshold", type=float, default=0.80, help="Required OCR phrase coverage before an approved transcript can be emitted.")
     parser.add_argument("--support-ocr-dpi", type=int, default=300, help="DPI for selected-span OCR passes used to support an approved transcript.")
     parser.add_argument("--support-ocr-psms", default="3,4,6,11", help="Comma-separated Tesseract PSM values for approved-transcript support OCR.")
+    parser.add_argument("--source-incomplete-preflight", action=argparse.BooleanOptionalAction, default=True, help="Skip expensive support OCR when low selected-span support and matching withdrawal sheets show the visible PDF is source-incomplete.")
+    parser.add_argument("--source-incomplete-preflight-recall-threshold", type=float, default=0.95, help="Maximum selected-span token recall for source-incomplete preflight skipping.")
+    parser.add_argument("--source-incomplete-preflight-phrase-threshold", type=float, default=0.65, help="Maximum selected-span phrase coverage for source-incomplete preflight skipping.")
     parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE), help="Cache directory for PDFs and OCR.")
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT), help="Output directory.")
     return parser

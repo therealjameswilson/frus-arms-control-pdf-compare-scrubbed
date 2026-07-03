@@ -174,6 +174,66 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertFalse(completeness["can_claim_99_from_pdf"])
         self.assertEqual(completeness["matching_withdrawal_pages"][0]["page"], 2)
 
+    def test_source_incomplete_preflight_skips_expensive_support_ocr(self) -> None:
+        payload = test_payload()
+        payload["documents"]["frus-test-d1"]["html"] = (
+            "memorandum from scowcroft to president bush arms control review omega final"
+        )
+        support_calls: list[tuple[int, int, tuple[int, ...]]] = []
+
+        def fake_get_page_texts(_pdf_path, pages, _cache_dir, dpi, psm):
+            if dpi == 160:
+                text_by_page = {
+                    1: "MEMORANDUM FOR\nalpha beta gamma delta",
+                    2: "Withdrawal/Redaction Sheet. 03a. Memo Brent Scowcroft to POTUS Re: Arms Control Review.",
+                }
+            elif dpi == 300 and psm == 6:
+                text_by_page = {1: "MEMORANDUM FOR\nalpha beta gamma delta"}
+            else:
+                support_calls.append((dpi, psm, tuple(pages)))
+                raise AssertionError("support OCR should be skipped by source-incomplete preflight")
+            return [
+                {
+                    "page": page,
+                    "text": text_by_page.get(page, ""),
+                    "method": "ocr",
+                    "ocr_dpi": dpi,
+                    "ocr_psm": psm,
+                }
+                for page in pages
+            ], True
+
+        parser = agent.build_arg_parser()
+        args = parser.parse_args(
+            [
+                "--doc-key",
+                "frus-test-d1",
+                "--full-ocr",
+                "--support-ocr-psms",
+                "3",
+                "--cache-dir",
+                "/tmp/frus-agent-test-cache",
+                "--output-dir",
+                "/tmp/frus-agent-test-output",
+            ]
+        )
+        with (
+            mock.patch.object(agent, "load_payload", return_value=payload),
+            mock.patch.object(agent, "load_process_profile", return_value={}),
+            mock.patch.object(agent, "resolve_pdf", return_value=(Path("/tmp/fake.pdf"), "fake.pdf")),
+            mock.patch.object(agent, "pdf_page_count", return_value=2),
+            mock.patch.object(agent, "sha256_file", return_value="abc123"),
+            mock.patch.object(agent, "get_page_texts", side_effect=fake_get_page_texts),
+        ):
+            packet = agent.build_packet(args)
+
+        support = packet["approved_transcript_support"]
+        self.assertEqual(support_calls, [])
+        self.assertTrue(support["source_incomplete_preflight_used"])
+        self.assertTrue(support["skipped_support_ocr_variants"])
+        self.assertEqual(support["variant_reports"], [])
+        self.assertEqual(packet["source_completeness"]["status"], "source_incomplete_likely_withdrawn_or_redacted")
+
     def test_benchmark_span_uses_true_contiguous_pdf_pages(self) -> None:
         page_records = [
             {
@@ -200,6 +260,19 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertEqual(span["pages"], [1, 2, 3])
         self.assertEqual(span["body_pages"], [1, 3])
         self.assertEqual(span["crossed_non_body_pages"], [2])
+        self.assertIsNone(span["normalized_character_similarity"])
+
+    def test_benchmark_span_selection_avoids_full_accuracy_report(self) -> None:
+        page_records = [
+            {"page": 1, "page_class": "source_document", "text": "alpha beta gamma delta"},
+            {"page": 2, "page_class": "source_document", "text": "epsilon zeta eta theta"},
+        ]
+
+        with mock.patch.object(agent, "accuracy_report", side_effect=AssertionError("too slow for span search")):
+            span = agent.choose_benchmark_span(page_records, APPROVED_TRANSCRIPT, max_span_pages=2)
+
+        self.assertIsNotNone(span)
+        self.assertEqual(span["pages"], [1, 2])
 
     def test_withdrawal_sheet_classification_precedes_generic_admin(self) -> None:
         label, cues = agent.classify_page(

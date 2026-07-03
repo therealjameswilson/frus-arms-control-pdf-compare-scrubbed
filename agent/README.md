@@ -164,6 +164,12 @@ does not support the published FRUS transcript, often because the file unit
 contains withdrawal/redaction sheets for tabs, attachments, or source pages that
 FRUS later printed.
 
+The agent also runs a source-incomplete preflight before multi-pass support OCR.
+When selected-span OCR is below configured source-support thresholds and
+matching withdrawal/redaction sheets explain the gap, it skips expensive support
+OCR variants and writes the blocked packet immediately. Disable with
+`--no-source-incomplete-preflight` only when testing OCR behavior itself.
+
 For a quick smoke test:
 
 ```bash
@@ -179,6 +185,11 @@ The batch writes one output directory per FRUS document plus:
 agent/runs/start-i-certified/batch-summary.md
 agent/runs/start-i-certified/batch-summary.json
 ```
+
+Current START I calibration in `agent/runs/start-i-certified/` completed all 25
+documents with no timeouts: 5 passed the 99% gate and 20 were blocked as
+`source_incomplete_likely_withdrawn_or_redacted`. The passing documents are 31,
+70, 119, 140, and 146.
 
 ## Legacy Full-PDF Batch
 
