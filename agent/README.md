@@ -116,6 +116,11 @@ By default, source support is checked with multiple selected-span OCR passes
 (`--support-ocr-psms 3,4,6,11`) because different Tesseract segmentation modes
 recover different tokens from degraded scans.
 
+Benchmark-guided span selection records a true contiguous PDF page range in
+`span_selection.pages`. When administrative pages sit inside that range, the
+packet also records `body_pages` and `crossed_non_body_pages` so reviewers can
+see whether the candidate span is really one document or a file-unit crossing.
+
 The agent uses a fast locator OCR pass before span selection and a separate
 final transcription pass over the selected pages. Final OCR defaults to 300 DPI;
 OCR cache entries are keyed by PDF checksum, page, DPI, and Tesseract page

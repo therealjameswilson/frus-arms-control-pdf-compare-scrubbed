@@ -138,6 +138,33 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertIn("sampled_missing_benchmark_phrases", gaps)
         self.assertIn("Sample benchmark phrases not supported", checklist)
 
+    def test_benchmark_span_uses_true_contiguous_pdf_pages(self) -> None:
+        page_records = [
+            {
+                "page": 1,
+                "page_class": "source_document",
+                "text": "alpha beta gamma delta",
+            },
+            {
+                "page": 2,
+                "page_class": "administrative_marker",
+                "text": "routing slip",
+            },
+            {
+                "page": 3,
+                "page_class": "source_document",
+                "text": "epsilon zeta eta theta",
+            },
+        ]
+
+        span = agent.choose_benchmark_span(page_records, APPROVED_TRANSCRIPT, max_span_pages=3)
+
+        self.assertIsNotNone(span)
+        self.assertEqual(span["strategy"], "benchmark_guided_contiguous_pdf_span")
+        self.assertEqual(span["pages"], [1, 2, 3])
+        self.assertEqual(span["body_pages"], [1, 3])
+        self.assertEqual(span["crossed_non_body_pages"], [2])
+
     def test_ocr_cache_is_keyed_by_dpi_and_psm(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             ocr_dir = Path(tmp) / "ocr"

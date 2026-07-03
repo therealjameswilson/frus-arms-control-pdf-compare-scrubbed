@@ -483,20 +483,23 @@ def choose_benchmark_span(
 ) -> dict[str, Any] | None:
     if not model_text:
         return None
-    source_records = [record for record in page_records if record.get("page_class") == "source_document"]
-    if not source_records:
+    sorted_records = sorted(page_records, key=lambda record: int(record["page"]))
+    if not any(record.get("page_class") == "source_document" for record in sorted_records):
         return None
 
     best: dict[str, Any] | None = None
-    for start in range(len(source_records)):
-        for end in range(start, min(len(source_records), start + max_span_pages)):
+    for start in range(len(sorted_records)):
+        for end in range(start, min(len(sorted_records), start + max_span_pages)):
+            span_records = sorted_records[start : end + 1]
+            if not any(record.get("page_class") == "source_document" for record in span_records):
+                continue
             candidate_records = [
                 {
                     "page": record["page"],
-                    "page_class": "source_document",
+                    "page_class": record.get("page_class"),
                     "text": record.get("text", ""),
                 }
-                for record in source_records[start : end + 1]
+                for record in span_records
             ]
             body = clean_body_text(candidate_records)
             report = accuracy_report(body, model_text)
@@ -510,11 +513,17 @@ def choose_benchmark_span(
                 f1 = 0.0
             else:
                 f1 = (2 * recall * precision) / (recall + precision)
-            pages = [record["page"] for record in source_records[start : end + 1]]
+            pages = [record["page"] for record in span_records]
+            body_pages = [record["page"] for record in span_records if record.get("page_class") == "source_document"]
+            crossed_non_body_pages = [record["page"] for record in span_records if record.get("page_class") != "source_document"]
+            selection_score = f1 - (0.01 * len(crossed_non_body_pages)) - (0.001 * max(0, len(pages) - 1))
             candidate = {
-                "strategy": "benchmark_guided_contiguous_source_span",
+                "strategy": "benchmark_guided_contiguous_pdf_span",
                 "pages": pages,
-                "score": round(f1, 6),
+                "body_pages": body_pages,
+                "crossed_non_body_pages": crossed_non_body_pages,
+                "score": round(selection_score, 6),
+                "text_match_score": round(f1, 6),
                 "normalized_token_recall": recall,
                 "normalized_token_precision": precision,
                 "normalized_character_similarity": char_similarity,
@@ -941,7 +950,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
             "title": "proved_by_published_frus_model" if known_row else "heuristic_requires_review",
             "source_note": "proved_by_published_frus_model" if known_row else "proved_by_source_register" if source_note else "unsupported_do_not_use",
             "body_text": "approved_transcript_supported_by_selected_pdf_span" if use_approved_transcript else "proved_by_pdf_ocr_requires_review",
-            "page_span": "proved_by_editor_supplied_page_range" if requested_pages else "proved_by_benchmark_guided_span" if span_selection.get("strategy") == "benchmark_guided_contiguous_source_span" else "heuristic_requires_review",
+            "page_span": "proved_by_editor_supplied_page_range" if requested_pages else "proved_by_benchmark_guided_span" if span_selection.get("strategy") == "benchmark_guided_contiguous_pdf_span" else "heuristic_requires_review",
         },
         "reverse_engineered_process": [
             "inventory supplied source PDF and source-register evidence",

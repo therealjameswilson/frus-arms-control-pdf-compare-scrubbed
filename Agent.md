@@ -155,6 +155,12 @@ Choose the smallest span that accounts for the target document. If adding a
 page increases recall but lowers precision below the 99% gate, the page must be
 split, partially transcribed, or excluded with a note.
 
+Recorded span `pages` must be a true contiguous PDF page range. If a range
+crosses administrative or non-body pages, the packet must record `body_pages`
+and `crossed_non_body_pages` separately. The agent must never describe
+non-adjacent source-document pages as a contiguous span merely because intervening
+file-unit pages were filtered out.
+
 ### 4. Transcribe Before Styling
 
 Produce a literal transcript before producing FRUS style.
