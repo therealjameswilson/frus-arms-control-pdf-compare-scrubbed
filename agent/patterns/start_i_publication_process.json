@@ -1,0 +1,104 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "version": "2026-07-02",
+  "trained_from": "START I exact-source PDF/FRUS comparison set",
+  "deployment_scope": "Universal FRUS source PDFs with compiler-supplied metadata and review gates",
+  "training_scope": {
+    "volume_id": "frus1989-92v31",
+    "volume_title": "START I, 1989-1991",
+    "comparison_rows": 25,
+    "frus_documents": 25,
+    "unique_pdf_urls": 17,
+    "direct_pdf_candidates_in_volume": 331,
+    "excluded_direct_pdf_candidates_in_volume": 306
+  },
+  "source_families": [
+    "George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files",
+    "George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files",
+    "George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files",
+    "George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files",
+    "George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files"
+  ],
+  "observed_pdf_properties": {
+    "embedded_text": "none in sampled Bush Library S3 PDFs; OCR required for that corpus, but universal deployment first checks for embedded text",
+    "file_unit_pattern": "one PDF can contain multiple archival documents, withdrawal sheets, access records, distribution sheets, routing sheets, catalog scaffolding, and selected source-document pages",
+    "selected_documents_per_pdf": "1 to 3 in the matched START I set"
+  },
+  "page_classes": [
+    {
+      "class": "administrative_marker",
+      "body_text": false,
+      "evidence_use": "source-family and file-unit provenance only",
+      "cues": ["administrative marker", "Record Group/Collection", "Record Group", "Folder Title", "OA/ID Number", "Container ID", "Box Number"]
+    },
+    {
+      "class": "withdrawal_sheet",
+      "body_text": false,
+      "evidence_use": "withheld-item, restriction, attachment, and document-boundary evidence",
+      "cues": ["Withdrawal/Redaction Sheet", "Withdrawal Sheet", "Doc. No.", "Restriction", "Classification", "FOIA/SYS Case", "Released in Part", "Sanitized"]
+    },
+    {
+      "class": "access_control",
+      "body_text": false,
+      "evidence_use": "handling and classified-attachment evidence",
+      "cues": ["The attached document contains classified National Security Council Information", "Access List"]
+    },
+    {
+      "class": "routing_profile",
+      "body_text": false,
+      "evidence_use": "routing, action, seen-by, and signature evidence when legible",
+      "cues": ["NSC PROFILE", "SOURCE DATA PAGE", "ACTION", "DUE", "Routing and Transmittal"]
+    },
+    {
+      "class": "distribution_record",
+      "body_text": false,
+      "evidence_use": "distribution evidence only when needed for a source note",
+      "cues": ["NATIONAL SECURITY COUNCIL", "DISTRIBUTION RECORD", "DIRECTORATE DISTRIBUTION", "Distribution List"]
+    },
+    {
+      "class": "source_document",
+      "body_text": true,
+      "evidence_use": "candidate body text for FRUS publication",
+      "cues": ["THE WHITE HOUSE", "Department of State", "Embassy", "MEMORANDUM FOR", "MEMORANDUM FROM", "Memorandum of Conversation", "SUBJECT:", "Telegram", "Message From", "Letter From", "Paper Prepared", "Minutes of", "National Security Review", "National Security Directive", "Summary of Conclusions"]
+    }
+  ],
+  "publication_transform": [
+    "use START I matches to classify page roles, not to infer facts for unrelated PDFs",
+    "omit non-document archival scaffolding from body text",
+    "move source-family, file-unit, classification, routing, seen-by, and attachment facts into source note or editorial notes only when supported",
+    "normalize title, place, date, subject, paragraphing, and list structure",
+    "preserve substantive classification markers inside source text",
+    "separate original source PDF page boundaries from printed FRUS page breaks",
+    "emit human-review warnings for OCR, page-span, source-note, attachment, and declassification decisions"
+  ],
+  "known_multi_document_pdfs": [
+    {
+      "doc_nos": ["9", "10"],
+      "file_unit": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1]"
+    },
+    {
+      "doc_nos": ["25", "26"],
+      "file_unit": "NSC0021 - June 07, 1989 - Strategic Arms Reduction Talks, Defense Policy, Space Issues"
+    },
+    {
+      "doc_nos": ["27", "28"],
+      "file_unit": "NSC/DC 032 - June 07, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on Air Breathing Systems and Non-Deployed Missiles"
+    },
+    {
+      "doc_nos": ["69", "70"],
+      "file_unit": "NSD-36 - February 06, 1990 - United States Arms Control Policy"
+    },
+    {
+      "doc_nos": ["115", "133", "140"],
+      "file_unit": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (May 1990)"
+    },
+    {
+      "doc_nos": ["117", "119"],
+      "file_unit": "NSD-40 - May 14, 1990 - Decisions on START Issues"
+    },
+    {
+      "doc_nos": ["219", "220"],
+      "file_unit": "NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks"
+    }
+  ]
+}

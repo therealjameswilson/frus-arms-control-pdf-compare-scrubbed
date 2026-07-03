@@ -1,0 +1,1050 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-22-90001-007.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "ed21d69fdbfd4ecd899be1659191aa4714ea648e68c1b01570bec3169a17e11d",
+    "page_count": 77,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "32",
+    "doc_key": null,
+    "title": "NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control",
+    "file_unit": "NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meeting Files, OA/ID 90001-007, NSC0022-June 15, 1989-Strategic Arms Reduction Talks, Arms Control. Secret. Drafted by Davis. Copied to Quayle and Sununu. Gates initialed for Scowcroft. A stamped notation indicates Bush saw the memorandum. Bush wrote at the top of the memorandum: \" PATTY -A must : weekend reading for 6-16. GB.\" Bush drew two slashes and wrote below it: \"GB 6-30.\" Gates sent the memorandum to Bush under cover of a June 14 note: \"Attached is your briefing paper for the NSC on START issues on Thursday afternoon. Attached to it is a 17 page single space analysis of the issues. You should consider this long paper your equivalent of Dick Cheney's 100 hour short course on strategic arms control. Brent assures you that you need not feel compelled to read the long paper before the meeting.\" Bush initialed Gates's note. (Ibid.) (no classification marking) According the President's Daily Diary on June 15, Bush convened a meeting of the National Security Council from 3:05-4:09 p.m. in the Oval Office. No minutes were found.\n",
+  "selected_pages": [
+    6,
+    8,
+    15,
+    30,
+    32,
+    33,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    51,
+    52,
+    53,
+    54,
+    56,
+    58,
+    60,
+    61,
+    64,
+    70,
+    74
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOTA(s): FOIA Number: 2005-1003-F; 2009-0857-F; S S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSC Meetings Files OA/ID Number: 90001 Folder ID Number: 90001-007 Folder Title: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Stack",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": 1 : Withdrawal/Redaction Sheet ; . - (George Bush Library) : ee Doc. No. / Type Subject/Title : _ Date Restriction Classification jn ceed ttyEESStStStstt ass sntnnsnEnnnnS Ola. Note Robert M. Gates to POTUS : 6/14/89 (b)) . Re: NSC Meeting on START (J pp.) ; . . 01b. Talking Points Re: Points To Be Made on START (2 pp.) n.d. (b)(1) s Ole. Note Robert M. Gates to POTUS 6/14/89 (b)(1) Re: NSC Meeting on START (1 pp.) Old. Outline From Brent Scowcroft 6/14/89 (b)(1) s Re: Meeting with the Nationa",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". \\ Withdrawal/Redaction Sheet ; (George Bush Library) ee - \"Doc. No. / Type , ; Subject/Title \u00b0 Date Restriction Classification Q1k. Report Re: The greater difficulty (3 pp.) 5/5/89 (b)(1) Ss Oll. Paper ~ Re: NSR 14 START Review Paper Three -- Nondeployed : 5/2189 * (b)(1) Ss Missiles (5 pp.) : an 01m. Memo John D. Negroponte to Distribution List 8/20/88 (b)(1) Ss . Re: Nondeployed Ballistic Missiles in START (3 pp.) : Oln. Extract Re: Extract from July 25, 1988 Arms Control Support Group ~ nd.",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \u2018 Doc. No. / Type : Subject/Title ; Date Restriction Classification . . . . > 02b. Agenda National Security Council Meeting 6/15/89 (b)(1) Ss Re: START and Defense & Space Issues (1 pp.) 02c. Memo Richard Davis to G. Philip Hughes 6/12/89 (b)(1) Ss 7 Re: NSC Meeting (1 pp.) . 02d. Memo G. Philip Hughes to Distribution List n.d. ; (b)(1) Ss . Re: National Security Council Meeting on START and Defense & . Space Issues (1 pp.) 02e. Agenda National Se",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Withdrawal/Redaction Sheet oe | ; __ (George Bush Library) * Doe. No. / Type + Subject/Title \u2018 Date Restriction Classification 04c. Memo. Richard Davis to Brent Scowcroft \u2018 6/13/89 (b)(1) Ss | Re: NSC Meeting on NSR - 14 Arms Control Review -- Defense \u2018 & Space and START Issues (9 pp.) . 04d. Outline From Brent Scowcroft 1\" 6/14/89 (b)(1) Ss Re: Meeting with the National Security Council (3 pp.) | 04e. Report : Re: Issues in the Nuclear and Space Talks (17 pp.) n.d. . (b)(1) Ss . . 04f. Agenda",
+      "selected_for_body": false
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET RECORD ID jguQ9206200% a : NSC/S PROFILE RECEIVED: 12 JUN 89 17 TO: PRESIDENT FROM: SCOWCROFT DOC DATE: 14 JUN 89 SOURCE REF: KEYWORDS: START ARMS CONTROL DEFENSE POLICY SPACE POLICY NSC SYSTEM AGENDA PERSONS: SUBJECT: PRES TALKERS FOR NSC MTG 15 JUN RE START & DEFENSE ISSUES ACTION: NOTED BY PRES DUE DATE: 27 MAR 90 STATUS: C | i ay J ooo) LOGREF: 8920458 8920595 TILES. CODES: | - a\u201d 7, DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR_INFO DAVIS KANTER | | | DECLASSIFIED White House Guideline",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSEEREE RECORD ID: 8920620 20 ACTION DATA SUMMARY REPORT ; DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED. 001 HUGHES . \u2018 Z 89061217 FOR DECISION . : . | 002 X 89061216 HUGHES SGD MEMO TO AGENCIES J 003 SCOWCROFT Z 89061416 FWD TO PRES FOR INFORMATION .. 004 PRESIDENT Z 89061416 FOR INFORMATION 004 X 89070516 NOTED BY PRES . DECLASSIFIED , , ; White House Guidelines E.O, 12958, SEC 3.4 (B) September 11, 2006 : By cap _ NARA, Date a/oe/oa SEGREE .",
+      "selected_for_body": false
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "+ ae od ? National Security Council ; The White House PROOFED BY: toc#__QOLAO URGENT NOT PROOFED: SYSTEM PRS. Cis) INT BYPASSED WW DESK: DOCLOG AIO ol SEQUENCE TO HAS $\u00a7EN ce Dep Exec ! \u2018 Philip Hughes a Soe Bob Gates ] ~ Brent Scowcroft , ee . co Philip Hughes Situation Room=. \u2018 = West Wing Desk> | GA\u00bb Sit- ron | o> NSC Secretariatoo cc: vp Sununu Other Should be seen by: Date7 ime) COMMENTS",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \u201cDocument No. Subject/Title of Document Restriction \u2014. andT ype Ola. Note Robert M. Gates to POTUS 6/14/89 (6)(1) Re; NSC Meeting on START (1 pp.) Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: | File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOIA/SYS Case #: 2005-1",
+      "selected_for_body": false
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) . | Document No. Subject/Title of Document Restriction Class. | pam Type 01b. Talking Re: Points To Be Made on START (2 pp.) (by) Ss Points | Collection: | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOIA/SYS Case #: 2005-1003-F A",
+      "selected_for_body": false
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction De _ Olc. Note Robert M. Gates to POTUS 6/14/89 (b)(1) Re: NSC Meeting on START (1 pp.) | Collection: Record Group: \u2014 Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOIA/SYS Case #: 2005-10",
+      "selected_for_body": false
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \"~~ Document No. Subject/Title of Document Date Restriction Class. i ee ee cane Old. Outline From Brent Scowcroft 6/14/89 (b)C1) Ss Re: Meeting with the National Security Council (3 pp.) | . Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Nu",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date Restriction Class. 2 amd Type ___| Ole. Report Re: Issues in the Nuclear and Space Talks (17 pp.) n.d, (b)(1) Ss Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAD Number: 90001-007 FOIA/SYS Case #:",
+      "selected_for_body": false
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) a Document No. Subject/Title of Document Date Restriction Class. A ee ee ccc acne Sean Olf. Agenda National Security Council Meeting 6/15/89 (b)(1) Ss Re; START and Defense & Space Talks (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: | File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control | Date Closed: 9/21/2009",
+      "selected_for_body": false
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "PARTICIPANTS , The President : The Vice President The Secretary of State The Secretary of the Treasury The Secretary of Defense The Secretary of Energy The Director, Office of Management and Budget The Director of Central Intelligence Chief of Staff to the President Assistant to the President for National Security Affairs Chairman, Joint Chiefs of Staff Head of Delegation for the Nuclear and Space Talks Director, Arms Control and Disarmament Agency Deputy Assistant to the President for National ",
+      "selected_for_body": true
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. \u2018o., And Type Olg. Talking Re: Points To Be Made on START (1 pp.) n.d. (b)(1) s Points Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOIA/SYS Case #: 2005-",
+      "selected_for_body": false
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Restriction Class. , and Type | cr \u2014__. Olh. Memo Richard Davis to Brent Scowcroft 6/14/89 (b)(1) s Re: NSC Meeting on NSR-14 Arms Control Review (6 pp.) Collection: | Record Group: Bush Presidential Records | Office: National Security Council | Series: H-Files | Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control | Date Closed: 9/2",
+      "selected_for_body": false
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date [__Restrietion | Class. | | |_.__. and Type ae Oli. Paper Re: NSR 14 START Review Paper Six -- Mobile ICBMs (9 6/1/89 (b)(1) Ss pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Number: 90001-",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date Restriction Class. and Type __| ne po \u2014 01j. Table Re: Acquisition Cost Estimates for Mobile ICBM Options n.d. (b)(1) Ss ! (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007",
+      "selected_for_body": false
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) boo amd Type | 01k. Report Re: The greater difficulty (3 pp.) 5/5/89 (b)(1) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Number: 90001-007 FOIA/SYS Case #: 2005-1003-F Appeal Case #: Re-review Case #: Appeal Disposition: P-2/P-5 Review Ca",
+      "selected_for_body": false
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet | (George Bush Library) | : Document No. Subject/Title of Document Restriction Class. : and Type | Oll. Paper Re: NSR 14 START Review Paper Three -- Nondeployed 5/27/89 (b)(1) s Missiles (5 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 F",
+      "selected_for_body": false
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date Restriction Class, y and Type | 01m. Memo John D. Negroponte to Distribution List 8/20/88 (b)(1) Ss Re: Nondeployed Ballistic Missiles in START (3 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: : File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 ",
+      "selected_for_body": false
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | | ; Document No. Subject/Title of Document Restriction . yan Type | Olin, Extract Re: Extract from July 25, 1988 Arms Control Support Group (b)(1) Paper - Nondeployed Ballistic Missiles (7 pp.) Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 ",
+      "selected_for_body": false
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Restriction | ___and Type ! Olo. Report Re: Alternate Approaches (9 pp.) - (b)(1) - Collection: Record Group: Bush Presidential Records Office: National Security Council : Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAD Number: 90001-007 FOIA/SYS Case #: 2005-1003-F Appeal Case #: Re-re",
+      "selected_for_body": false
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) sand Type Olp. Report Re: Soviet Requirements for Non-Deployed Missiles (2 pp.) - (b)(1) Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAMD Number: 90001-007 FOIA/SYS Case #: 2005-1003-F Appeal Case #: Re-review Case #: Appeal Disposition: P-",
+      "selected_for_body": false
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date yen -nd Type __| |. Olq. Paper Re: Information is Provided for Inclusion in the Next NDM n.d, (b)(1) Paper (START Review Paper Three) (7 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Number:",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. Sh \u2014 Olr. Paper Re: NSR 14 START Review Paper Four -- Air Breathing 5/6/89 (b)(1) s Systems (5 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council . Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: r File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOIA/",
+      "selected_for_body": false
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) andType | Ols. Outline Re: Defense & Space Objectives (3 pp.) - (by) - Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files . WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control | Date Closed: 9/21/2009 OAD Number: 90001-007 FOIA/SYS Case #: 2005-1003-F Appeal Case #: Re-review Case #: Appeal Disposition: P-2/P-5 Review Case",
+      "selected_for_body": false
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No, Subject/Title of Document Restriction j\u2014\u2014and Type | 02a. Memo G. Philip Hughes to Distribution List 6/12/89 (b)(1) s Re: National Security Council Meeting on START and Defense & Space Issues (1 pp.) Collection: Record Group: _ Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Dat",
+      "selected_for_body": false
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": \u2018 -SECREP RECORD NSC/S PROFILE RECEIVED: FAT TO: AGENCIES | FROM: HUGHES DOC DATE: 12 JUN 89 SOURCE REF: | KEYWORDS: START ARMS CONTROL | DEFENSE POLICY SPACE POLICY | NSC SYSTEM AGENDA PERSONS: | SUBJECT: NOTIFICATION OF NSC MTG ON 15 JUN RE START & DEFENSE & SPACE ISSUES | ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 27 MAR 90 STATUS: C STAFF OEP DAVIS LOGREF: 8920458 8920595 | : FILES! IFM 0 P: NS0022 CODES: D dic DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR_INFO DAVIS KANTER DECLASSIFIED W",
+      "selected_for_body": true
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": \u2018 SECRET RECORD ID: 8920620 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER \u2014 CAO ASSIGNED ACTION REQUIRED 001 HUGHES =~ ; ; Z 89061217 FOR DECISION ; 002 : X 89061216 HUGHES SGD MEMO TO AGENCIES 003 SCOWCROFT X 89061416 FWD TO PRES FOR INFORMATION ; DECLASSIFIED White House Guldelines E.0. 12958, SEC 3.4 (B) September 11, 2006 By cap__ NARA, Date afarlog SECREE ; |",
+      "selected_for_body": false
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "iy See ey Se National Security Council The White House PROOFED BY: LOG # BMewZo URGENT NOT PROOFED: SYSTEM PRS @NSCD INT BYPASSED WW DESK: pococl af aio SEQUENCE TO HAS KEEN DISPQSITION Dep Exec 8 4 Philip Hughes tr zx a Bob Gates bed * Brent Scowcroft= S Philip Hughes \u2014, co Situation Room West Wing Desk R 3 CH > ID NSC Secretariat eccieiuaiicl i comadia: sae ES LSE TE RES (sisi) onions oatinns Act nna tora cht vp Sununu Other Should be seen by: Date/ ime) COMMENTS 15 NOU \u00a2 eae 49 ene he OS ae",
+      "selected_for_body": true
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Pe : \u00ae- aad . cee ay , | _ || WASHFAX RECEIPT | THE WHITE HOL SE F | | , ale \u2018 MESSAGE NO. CLASSIFICATION COGRET PAGES a FROM G. PHILIP HUGHES (NAME) (EXTENSION) (ROOM NUMBER) MESSAGE vescrrptron_ A/SC MS, If Tund : Los # 20620 TO (AGENCY) DELIVER TO: DEPT/ROOM NO. ; EXTENSION : Encety ps Visa Yobude Lik hutence bee fee Store Chern) Bre non Shoe Gre So REMARKS - DECLASSIFIED White House Guidelines E.0, 12058, SEC 3.4 (B) September 11, 2006",
+      "selected_for_body": true
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": a 20620 NATIONAL SecuRITY COUNCIL logNumber_ . 1 DisTRIBUTION RECORD Date 22 JUN 89 Subject: NSC MTG 15 JUN an | EXTERNAL DISTRIBUTION: HENS Date Time Receiwed/Signedjfor By:_ | THE VICE PRESIDENT _\u2014_ oft oo 7 | THE SECRETARY OF STATE \u2014 f ) Vyjitieg i yp) ZZ | | Exec. se~Room 7241 i tl QZ 2232 \u201c CLP Le Z Le | THE SECRETARY OF THE TREASURY : | Main BidgRoom 3422 a | THE SECRETARY OF DEFENSE The Pentagon es | ' \u2018. | OIRECTOR, ACDA . a] | CHAIRMAN US START DELEGATION | % ACDA, 5933 State i ___ CH",
+      "selected_for_body": false
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". . 20620 NATIONAL SECURITY COUNCIL LogNumber 12 DisTRIBUTION RECORD Date 34 JUN 89 Subject: NSC MTG 15 JUN ee EXTERNAL DISTRIBUTION: #CYS S&S Received/Signed for By: | THE VICE PRESIOENT 7 YRS RS x 2 Be eS THE SECRETARY OF THE TREASURY Main BidgRoom 3422 ee THE SECRETARY OF DEFENSE The Pentagon Penn DIRECTOR, ACDA \u2018 Room 39 9370ept of State ee CHAIRMAN US START DELEGATION % ACDA, 5933 State nner ee nnn nr US CHAIRMAN US INF DELEGATION : % ACDA, 5933 State ee OIRECTOR, CIA Langley, VA a __ CHAIR",
+      "selected_for_body": false
+    },
+    {
+      "page": 36,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Date Restriction eS cr 02b. Agenda National Security Council Meeting 6/15/89 (bl) Re: START and Defense & Space Issues (1 pp.) | Collection: | | Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAD Number: 90001-007 FO",
+      "selected_for_body": false
+    },
+    {
+      "page": 37,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) {Document No. Subject/Title of Document Date Restriction je ee tnd Type | ee 02c. Memo Richard Davis to G. Philip Hughes 6/12/89 (b)(1) Re: NSC Meeting (1 pp.) : | | Collection: | Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files | Subseries: NSC Meetings Files \u2018WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Number: 90001-007 | ",
+      "selected_for_body": false
+    },
+    {
+      "page": 38,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Withdrawal/Redaction Sheet (George Bush Library) | | Document No. Subject/Title of Document | Dae | Restriction | | and Type __ | . 02d. Memo G. Philip Hughes to Distribution List ()d) s Re: National Security Council Meeting on START and Defense & Space Issues (1 pp.) Collection: Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC Meetings Files | WHORM Cat.: | File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms C",
+      "selected_for_body": false
+    },
+    {
+      "page": 39,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \"Document No, Subject/Title of Document Restriction andType | fo 02e. Agenda National Security Council Meeting 6/14/89 (b)(1) Ss Re: START and Defense & Space Issues (1 pp.) Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-0",
+      "selected_for_body": false
+    },
+    {
+      "page": 40,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; ? EGRET RECORD 1) -_jainenant NSC/S PROFILE RECEIVED: 12 JUN 89 17 TO: AGENCIES FROM: HUGHES DOC DATE: 12 JUN 89 SOURCE REF: KEYWORDS: START ARMS CONTROL DEFENSE POLICY SPACE POLICY NSC SYSTEM AGENDA PERSONS: SUBJECT: NOTIFICATION OF NSC MTG 14 JUN RE START & DEFENSE ISSUES ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 14 JUN 89 STATUS: C STAFF Of R: DAVIS LOGREF: 8920458 8920595 FILE Fn \u00a2 F vs0022 ) CODES: . 4 poc bina visrersurion FOR ACTION FOR CONCURRENCE FOR INFO | : DAVIS. KANTER DECLASS",
+      "selected_for_body": true
+    },
+    {
+      "page": 41,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". . SECRET RECORD ID: 8920619 . ACTION DATA SUMMARY REPORT . DOG ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES : ; Z 89061217 FOR DECISION 002 X 89061211 HUGHES SGD MEMO TO AGENCIES DECLASSIFIED : White House Guidelines ; . E.0. 12958, SEC 3.4 (B) September 11, 2006 By cap __ NARA, Date alatlep",
+      "selected_for_body": false
+    },
+    {
+      "page": 42,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "bs be ? ae , National Security Council The White House PROOFED BY: LOG # 206 \u20189 URGENT NOT PROOFED: SYSTEM _ PRS Cu? INT BYPASSED WW DESK: conolhd. AIO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec c~J es ~- aaa Philip Hughes \u00ab+ x pe | wn Bob Gates ~ NS Brent Scowcroft NOE Se Sg eee 5 Philip Hughes \u2014> 7) Situation Room West Wing Desk <5 NSC Secretariat a ee eee (ass tennion osoipns Renta | cc: vp Sununu Other Should be seen by: Date? ime) COMMENTS A NOM & Ognde om ae",
+      "selected_for_body": true
+    },
+    {
+      "page": 43,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "WHihe neues, 23-29 | WASHFAX RECEIPT a | THE MITE MOL gg : , | wssace a A Cuasstercarion aa i\u201d \"gore mms \u2018i mer (ExTENs tom) (2008 NUKEER, 4 sense Secnervon NSC MTB UY Ju \" 21AGEwSY) QELEVER tor partys . eh FAM hg Emily witere a i 7 DECLASSIFIED | ' White House Guidelines ; E.O. 12958, SEC 3.4 (B) September 11, 2006 By cae __ NARA, Date d/ailot",
+      "selected_for_body": true
+    },
+    {
+      "page": 44,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "hie ave 7 1 og: 19 [| | WASHFAX RECEIPT Ss THE WHITE HOLSE MESSAGE WO. a7 CLASSIFICATION _ racts 2 (wae) (ExTens tow (ROOM NUMBER: sESSAcE oescarotton_NSC MTB, 1Y Juv TO (crvcy) _\u2014\u201cpeLiven 1) DEPT/POON NO. \u2014 EXTENSTOW itenmes Ladity watere Exec See ow fe \u2014\u2014\u2014\u2014\u2014 ee ee Se a oec.asse> . - on Ts White House Guidelin To, oo ber 11, 2006",
+      "selected_for_body": true
+    },
+    {
+      "page": 45,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "HP Huches SUASSTFECATIOW er 6 3/ SAGE O\u20acscatotiog Ns \u201c(OteNs tow a. 7 to intemeyy CMT 14 Ju (ROOM Stwpea, | 4 digje Uh A it [lel face \u2014 | wz (bess) Bret ! DECLASSIFIED . White House Guidelines | #.0, 12968, SEC 3.4 (B) September 11,2006 BC By cae. NARA, Date 121109 aad",
+      "selected_for_body": true
+    },
+    {
+      "page": 46,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "en | WASHFAR nzceipy) -Sae TM = : \"atu MITE MOC Se - \u2014 f : MOM Gu Pt LIP mucins sts _ =: (wae Ten SS | PMY EMily Wier = | \u00a2 /, \u00a2 ie == i le = ~~ boy c.0,t2850 96034 6) September 11,2008 Ge | a L oe Bycae__ NARA, Date alavlet 2 . == my 4 Rog. =",
+      "selected_for_body": true
+    },
+    {
+      "page": 47,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": . 39412 PB: 10 WASHFAX RECEIPT \u201cee THE WHITE HOLSE = MESSAGE NO. a7t CLASSIFICATION SiG! = | paces_9 FROM G. PHILIP HUGHES (NAME) (EXTENSION) (ROOM NUMBER) MESSAGE DESCRIPTION Nec MTG, LY Tun . LOG # 20019 TO_(AGENCY) DELIVER 701 DEPT/ROOM NO. \u00abEXTENSION STATE T_stepeton Boy Quec Teauls Loaty water Googe _- REMARKS a DECLASSIFIE\u00ae White House Guidelines | E.0, 12958, SEC 3.4 (B) September 11, 2006 By @ap__ NARA, Date aJo1lo9",
+      "selected_for_body": true
+    },
+    {
+      "page": 48,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "so 20619 NATIONAL SECURITY COUNCIL LogNumber_ DisTRIBUTION RECORD Date 22 JUN 89 . NSC MTG 14 JUN Subjects ios cen RRR DOCUMENT CLASSIFICATION: Doe secret Meccrer COCONFIDENTIAL CUNCLASSIFIED en a EEE EXTERNAL DISTRIBUTION: \u201c#0YS sate Time Receiyed/Signed for By: THE VICE PRESIDENT Seomtoe\u2122 bf3 2ter THE SECRETARY OF STATE 13 2 LED \u00a2 Exec. se/Room 7241 \u2014\u2014 \u2014\u2014 \u2014 - THE SECRETARY OF THE TREASURY : Main BidgRoom 3422 Nene nnn ee od THE SECRETARY OF DEFENSE Room $933 /Dept. of State \u2014\u2014_ ies Qp-l CHAIRM",
+      "selected_for_body": false
+    },
+    {
+      "page": 49,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 : 20619 NATIONAL SecurITY COUNCIL LogNumber__ 9 DisTRIBUTION RECORD Date 22 SUN 89 NSC MTG 14 JUN Subjects ee RR RR DOCUMENT CLASSIFICATION: D10F secret Mace OO CONFIDENT aL COUNCLASSIFIED ener pr PS EXTERNAL DISTRIBUTION: #cys Date Time \u00bb) Received/Signed for By: THE VICE PRESIOENT _ 6/(2289 x jn THE SECRETARY OF THE TREASURY Main BidgRoom 3422 ee ee a THE SECRETARY OF DEFENSE The Pentagon NN DIRECTOR, ACOA \u2018 | Room $933/Dept. of State 1 Se CHAIRMAN US START DELEGATION | % ACDA, $933 State eS",
+      "selected_for_body": false
+    },
+    {
+      "page": 50,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) ; Document No. Subject/Title of Document Date Restriction Class. Cand Type \u2014 02f. Memo Richard Davis to G. Philip Hughes 6/12/89 (b)(1) Ss Re: NSC Meeting (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOTA/SYS Ca",
+      "selected_for_body": false
+    },
+    {
+      "page": 51,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "t > UNCLASSIFIED RECORD &Dse89206070005, NSC/S PROFILE RECEIVED: 12 JUN 89 10 TO: SCOWCROFT FROM: HAGIN, J DOC DATE: 06 JUN 89 SOURCE REF: KEYWORDS: NSC | PERSONS: SUBJECT: PRES APPROVED ACTIVITY RE NSC MTG 14 JUN ACTION: FOR RECORD PURPOSES DUE DATE: 11 JUN 90 STATUS: C STAFF OBBIGER: NONE LOGREF: 8920458 8920595 FILE *> so fsom2 CODES: FOR ACTION OR\u2019 CONCURRENCE FOR INFO COMMENTS : DISPATCHED BY DATE BY HAND W/ATTCH OPENED BY: LF CLOSED BY: LF Doc 10F 1 UNCLASSIFIED",
+      "selected_for_body": true
+    },
+    {
+      "page": 52,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "c 18 . UNCLASSIFIED RECORD ID: 8920617 ACTION DATA SUMMARY REPORT 001 ; ; X 89061210 FOR RECORD PURPOSES UNCLASSIFIED a",
+      "selected_for_body": true
+    },
+    {
+      "page": 53,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a 6/6/89 J \u00a5 PAB THE WHITE HOUSE 20617 ; WASHINGTON MEMORANDUM TO; GENERAL SCOWCROFT FROM: JOSEPH W. HAGIN SUBJECT: APPROVED PRESIDENTIAL ACTIVITY EVENT: National Security Council Meeting DATE: June 14, 1989 | TIME: 11:00 a.m. | DURATION: 60 minutes | LOCATION: Cabinet Room ATTIRE: Business Suit REMARKS REQUIRED: Talking Points MEDIACOVERAGE: Closed FIRST LADY PARTICIPATION: No ADDITIONAL INFORMATION: | | CONTACT: : TELEPHONE: OFFICE HOME | NOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST Ed Rogers",
+      "selected_for_body": true
+    },
+    {
+      "page": 54,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; \u201cSEGRET- RECORD ID: 8920595\" | NSC/S PROFILE RECEIVED: 05 JUN 89 19 TO: SCOWCROFT FROM: KANTER DOC DATE: 05 JUN 89 | GORDON SOURCE REF: KEYWORDS: START SPACE POLICY ICBM DEFENSE POLICY PERSONS: | SUBJECT: PLAN FOR NSC MTG ON START & DEFENSE & SPACE ACTION: NOTED BY SCOWCROFT DUE DATE: 11 JUN 90. STATUS: C STAFF OFFICER: KANTER LOGREF: 8920458 8920617 | FILES& | Bod scp E. CODES: | = roc Wak ug4oisteizution FOR ACTION FOR _CONCURRENCE FOR INFO DAVIS | GORDON KANTER DECLASSIFIED White House Guid",
+      "selected_for_body": true
+    },
+    {
+      "page": 55,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ps CO SBGREE RECORD ID: 8920595 ; ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 SCOWCROFT ; , Z% 89060519 FOR INFORMATION 001 X 89060810 NOTED BY SCOWCROFT | DECLASSIFIED White House Guidelines : E.0. 12958, SEC 3.4 (B) September 11, 2006 my By cap _ NARA, Date \u00a2/ailoy . SECRET",
+      "selected_for_body": false
+    },
+    {
+      "page": 56,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "i oy oe ee ee eae ; National Security Council The White House PROOFED BY: C40 LOG # Zz 6) Si St URGENT NOT PROOFED: SYSTEM PRS (NSC) INT BYPASSED WW DESK: DOCLOGG#D_ AIO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec L po Se Philip Hughes Ps Bt Se Bob Gates ms S ro Sat pea A + Brent Scowcroft | 4 . F N o PhilipHughes a. as Seen Situation Room Pid West Wing Desk > = = tented \u2014 = ao NSC Secretariat co cc: vp Sununu Other : Should be seen by: Wate/Time) ae : \u2014$_\u2014\u2014 COMMENTS TSH Me eLiaga rene eel Ota",
+      "selected_for_body": true
+    },
+    {
+      "page": 57,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \"Document No. Subject/Title of Document Date ae pene AME Type 03. Memo John Gordon/Rich Davis to Brent Scowcroft 6/5/89 (b)(1) Re: NSC Meetings on START and Defense and Space (2 PP.) Collection: Record Group: Bush Presidential Records Office: National Security Council | Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAD Number: 9",
+      "selected_for_body": false
+    },
+    {
+      "page": 58,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "aie UNCLASSIFIED RECORD ID: \u201c@920@5S09 NSC/S PROFILE RECEIVED: 10 MAY 89 13 TO: SCOWCROFT FROM: HAGIN, J DOC DATE: 09 MAY 89 SOURCE REF: KEYWORDS: NSC SYSTEM PERSONS: SUBJECT: APPROVED PRESIDENTIAL ACTIVITY RE NSC MTG 15 JUN ACTION: FOR RECORD PURPOSES DUE DATE: 11 JUN 90 STATUS: C STAFF OFFICER: NONE LOGREF: 8920595 8920617 FILES fom oN GP xs0022 \\ CODES: wr, Doc Kentforstersurron FOR ACTION FOR CONCURRENCE FOR_INFO COMMENTS : a DISPATCHED BY DATE BY HAND W/ATTCH OPENED BY: LF CLOSED BY: LF Doc",
+      "selected_for_body": true
+    },
+    {
+      "page": 59,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ne UNCLASSIFIED RECORD ID: 8920458 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER GAO ASSIGNED ACTION REQUIRED 001 . X 89051013 FOR RECORD PURPOSES . UNCLASSIFIED |",
+      "selected_for_body": false
+    },
+    {
+      "page": 60,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Co a KBK 5/9/89 cee \u2018 : THE WHITE HOUSE a 2 : WASHINGTON Q04EB MEMORANDUM TO: General Scowcroft FROM: JOSEPH W. HAGIN SUBJECT: APPROVED PRESIDENTIAL ACTIVITY EVENT: NSC Meeting DATE: June 15, 1989 | TIME: 3200 p.m. DURATION: 60 minutes LOCATION: Cabinet Room ATTIRE: Business Suit REMARKS REQUIRED: No MEDIACOVERAGE: Closed FIRST LADY PARTICIPATION: No ADDITIONAL INFORMATION: CONTACT: TELEPHONE: OFFICE HOME NOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST Ed Rogers Marlin Fitzwater David Bates James ",
+      "selected_for_body": true
+    },
+    {
+      "page": 61,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET RECORD 10: jagBiBF NSC/S PROFILE RECEIVED: JUN 89 17 TO: AGENCIES | | FROM: HUGHES DOC DATE: 12 JUN 89 | SOURCE REF: KEYWORDS: START ARMS CONTROL DEFENSE POLICY SPACE POLICY NSC SYSTEM AGENDA PERSONS: | SUBJECT: NOTIFICATION OF NSC MTG 14 JUN RE START & DEFENSE ISSUES | ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 14 JUN 89 STATUS: C | STAFF OFBE@ER'\\ DAVIS f LOGREF: 8920458 8920595 FILES hh...) scpf CODES: ee ae pe\u2019 DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR_INFO DAVIS KANTER NSC CHRON",
+      "selected_for_body": true
+    },
+    {
+      "page": 62,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET RECORD ID: 8920619 | ACTION DATA SUMMARY REPORT . DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES : Z 89061217 FOR DECISION 002 X. 89061211 HUGHES SGD MEMO TO AGENCIES . Sole Whi EGLASSIFIED | \u2018e House Guidelines E.0, 12958, SEC 3.4 (B) September 11, 2006 By cae__ NARA, Date Saslog |",
+      "selected_for_body": false
+    },
+    {
+      "page": 63,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | a , _ Document No, Subject/Title of Document Date Restriction 04a. Agenda National Security Council Meeting 6/15/89 (b)(1) Ss Re: START and Defense & Space Issues (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council : Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007",
+      "selected_for_body": false
+    },
+    {
+      "page": 64,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- rr. | National Security Council The White House. | PROOFED BY: LOG s20 S l 7 URGENT NOT PROOFED: + system prs (sc) nr | BYPASSED WW DESK: ooc.ocG4d a0 Of | : | SEQUENCE TO HAS SEEN DISPOSITION - | . Dep Exec J) . 4A | Philip Hughes ; ys : ; | _ Bob Gates o . : a | Brent Scowcroft 5 2. Philip Hughes S \u2014\u2014\u2014\u2014_\u2014___-:\u00abSC Oo er . Situation Room - t ee . eS . West Wing Desk \u2014__ : NSC Secretariat | ce: vp Sununu Other : Should be seen by: \u201cWate? ime) COMMENTS ;",
+      "selected_for_body": true
+    },
+    {
+      "page": 65,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". . Withdrawal/Redaction Sheet | (George Bush Library) | | | | Document No. Subject/Title of Document Date Restriction Class. : aa td Type | \u2014 \u2014 | 04b. Memo Richard Davis to Brent Scowcroft 6/13/89 (b)(1) Ss | Re: NSC Meeting on NSR - 14 Arms Control Review -- Defense & Space and START Issues (1 pp.) | Collection: | | | | Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Str",
+      "selected_for_body": false
+    },
+    {
+      "page": 66,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. we AMO Type | . 04\u00a2c. Memo Richard Davis to Brent Scowcroft 6/13/89 (b)(1) Ss Re: NSC Meeting on NSR - 14 Arms Control Review -- Defense & Space and START Issues (9 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks,",
+      "selected_for_body": false
+    },
+    {
+      "page": 67,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Doew ment No, Subject/Title of Document Date Restriction Class, poe ANT ype ee an 04d. Outline From Brent Scowcroft 6/14/89 (b)(1) Ss Re: Meeting with the National Security Council (3 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAD Num",
+      "selected_for_body": false
+    },
+    {
+      "page": 68,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) {Document No, Subject/Title of Document Restriction Class. | LS en O4e. Report Re: Issues in the Nuclear and Space Talks (17 pp.) (b)(1) s Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 FOIA/SYS Case #: 2005-1003-F Appeal",
+      "selected_for_body": false
+    },
+    {
+      "page": 69,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document | Dae | Restriction amd Type} 04f. Agenda National Security Council Meeting 6/14/89 (b)(1) Re: START and Defense & Space Issues (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat,: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Number: 90001-007 ",
+      "selected_for_body": false
+    },
+    {
+      "page": 70,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": N PARTICIPANTS , The President - : The Vice President The Secretary of State The Secretary of the Treasury . The Secretary of Defense . The Secretary of Energy / . The Director, Office of Management and Budget The Director of Central Intelligence Chief of Staff to the President Assistant to the President for National Security Affairs | Chairman, Joint Chiefs of Staff | . Head of Delegation for the Nuclear and Space Talks Director, Arms Control and Disarmament Agency | Deputy Assistant to the P",
+      "selected_for_body": true
+    },
+    {
+      "page": 71,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet . (George Bush Library) \u201cDocument No, Subject/Title of Document Date [__Restricion | Class. | _ and Type __ ee | 04g. Talking Re: Points To Be Made for Start and Defense and Space (1 nd, (b)(), Points pp.) Collection: | Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 \u00ab June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/TD Numb",
+      "selected_for_body": false
+    },
+    {
+      "page": 72,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Withdrawal/Redaction Sheet | (George Bush Library) | Document No. Subject/Title of Document Date i and'Type \u2014 04h. Outline From Brent Scowcroft 6/15/89 (b)(1) Re: Meeting with the National Security Council (4 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID Number: 90001-007 : FOIA/",
+      "selected_for_body": false
+    },
+    {
+      "page": 73,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "(George Bush Library) . | Document No, Subject/Title of Document Date Restriction Class. 7 |. ..and Type ee See eee \u2014 | 04i. Agenda National Security Council Meeting 6/15/89 (b)(1) Ss | Re: START and Defense & Space Issues (1 pp.) | | Collection: | Record Group: Bush Presidential Records . Office: National Security Council Series: H-Files Subseries: NSC Meetings Files | WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OA/ID ",
+      "selected_for_body": false
+    },
+    {
+      "page": 74,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "i i PARTICIPANTS | The President The Vice President The Secretary of State : The Secretary of the Treasury The Secretary of Defense ( The Secretary of Energy The Director, Office of Management and Budget | The Director of Central Intelligence . | Chief of Staff to the President | | Assistant to the President for National Security Affairs | Chairman, Joint Chiefs of Staff 4 | Head of Delegation for the Nuclear and Space Talks : : Director, Arms Control and Disarmament Agency : Deputy Assistant to",
+      "selected_for_body": true
+    },
+    {
+      "page": 75,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet . (George Bush Library) Document No. Subject/Title of Document Restriction Class. pan Type | 04j. Talking Re: Points To Be Made on START and Defense and Space (b)(L) Ss Points (1 pp.) Collection: Record Group: Bush Presidential Records Office: Nationa! Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAMD Number: 90001-007 FOIA/SYS Case",
+      "selected_for_body": false
+    },
+    {
+      "page": 76,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet | (George Bush Library) | | : ee | | Document No. Subject/Title of Document Restriction Class, | ieee po 04k. Report Re: Issues in the Nuclear and Space Talks (17 pp.) (b)(1) s | Collection: | Record Group: Bush Presidential Records Office: National Security Council | Series: H-Files | Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 QA/ID Number: 90001-007 FOIA/SYS Ca",
+      "selected_for_body": false
+    },
+    {
+      "page": 77,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 | Withdrawal/Redaction Sheet . (George Bush Library) ; Document No. Subject/Title of Document Date Restriction Class, and Type \u2014 r Outline Re: Defense & Space Objectives (3 pp.) n.d. (b)(1) Ss Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0022 - June 15, 1989 - Strategic Arms Reduction Talks, Arms Control Date Closed: 9/21/2009 OAAD Number: 90001-007 FOITA/SYS Case #: 2005-1003",
+      "selected_for_body": false
+    }
+  ],
+  "draft_body": "SECRET RECORD ID jguQ9206200%\na: NSC/S PROFILE RECEIVED: 12 JUN 89 17\nTO: PRESIDENT\nFROM: SCOWCROFT DOC DATE: 14 JUN 89\nSOURCE REF:\nKEYWORDS: START ARMS CONTROL\nDEFENSE POLICY SPACE POLICY\nNSC SYSTEM AGENDA\nPERSONS:\nSUBJECT: PRES TALKERS FOR NSC MTG 15 JUN RE START & DEFENSE ISSUES\nACTION: NOTED BY PRES DUE DATE: 27 MAR 90 STATUS: C\n| i ay J ooo) LOGREF: 8920458 8920595\nTILES. CODES:\n| - a\" 7, DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR_INFO\nDAVIS\nKANTER\nWhite House Guidelines\nE.O. 12958, SEC 3.4 (B) September 11, 2006\nBy cap __ NARA, Date 9/21/09\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CM CLOSED BY: AC poc 40F 4\n\n+ ae od ?\nNational Security Council;\nThe White House\nPROOFED BY: toc#__QOLAO\nURGENT NOT PROOFED: SYSTEM PRS. Cis) INT\nBYPASSED WW DESK: DOCLOG AIO ol\nSEQUENCE TO HAS $\u00a7EN ce\nDep Exec ! '\nPhilip Hughes a Soe\nBob Gates ]\nBrent Scowcroft, ee.\nco\nPhilip Hughes\nSituation Room=. '\nWest Wing Desk> | GA\u00bb Sit- ron\n| o>\nNSC Secretariatoo\ncc: vp Sununu Other\nShould be seen by:\nDate7 ime)\nCOMMENTS\n\nPARTICIPANTS\n, The President:\nThe Vice President\nThe Secretary of State\nThe Secretary of the Treasury\nThe Secretary of Defense\nThe Secretary of Energy\nThe Director, Office of Management and Budget\nThe Director of Central Intelligence\nChief of Staff to the President\nAssistant to the President for National Security Affairs\nChairman, Joint Chiefs of Staff\nHead of Delegation for the Nuclear and Space Talks\nDirector, Arms Control and Disarmament Agency\nDeputy Assistant to the President for National Security Affairs\n\n: ' -SECREP RECORD\nNSC/S PROFILE RECEIVED: FAT\nTO: AGENCIES\nFROM: HUGHES DOC DATE: 12 JUN 89\nSOURCE REF:\n| KEYWORDS: START ARMS CONTROL\n| DEFENSE POLICY SPACE POLICY\n| NSC SYSTEM AGENDA\nPERSONS:\n| SUBJECT: NOTIFICATION OF NSC MTG ON 15 JUN RE START & DEFENSE & SPACE ISSUES\nACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 27 MAR 90 STATUS: C\nSTAFF OEP DAVIS LOGREF: 8920458 8920595\nFILES! IFM 0 P: NS0022 CODES:\nD dic DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR_INFO\nDAVIS\nKANTER\nWhite House Guidelines\nE.O. 12958, SEC 3.4 (B) September 11, 2006\nBy cae _ NARA, Date q/ajlo4\n| COMMENTS:\n| a\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CM CLOSED BY: AC poc 20F 3\n\niy See ey Se\nNational Security Council\nThe White House\nPROOFED BY: LOG # BMewZo\nURGENT NOT PROOFED: SYSTEM PRS @NSCD INT\nBYPASSED WW DESK: pococl af aio\nSEQUENCE TO HAS KEEN DISPQSITION\nDep Exec 8 4\nPhilip Hughes tr zx\na\nBob Gates\nbed *\nBrent Scowcroft=\nS\nPhilip Hughes --,\nco\nSituation Room\nWest Wing Desk R 3 CH > ID\nNSC Secretariat\neccieiuaiicl i comadia: sae ES LSE TE RES\n(sisi) onions oatinns Act nna tora\ncht vp Sununu Other\nShould be seen by:\nDate/ ime)\nCOMMENTS\n15\nNOU \u00a2 eae 49 ene he OS ae\n\nPe:\n\u00ae- aad. cee ay,\n| _ || WASHFAX RECEIPT\n| THE WHITE HOL SE\nF |\n, ale '\nMESSAGE NO. CLASSIFICATION COGRET PAGES a\nFROM G. PHILIP HUGHES\n(NAME) (EXTENSION) (ROOM NUMBER)\nMESSAGE vescrrptron_ A/SC MS, If Tund\n: Los # 20620\nTO (AGENCY) DELIVER TO: DEPT/ROOM NO.; EXTENSION:\nEncety ps Visa Yobude\nLik hutence bee fee\nStore Chern) Bre non Shoe Gre So\nREMARKS -\nWhite House Guidelines\nE.0, 12058, SEC 3.4 (B) September 11, 2006\n\n; ? EGRET RECORD 1) -_jainenant\nNSC/S PROFILE RECEIVED: 12 JUN 89 17\nTO: AGENCIES\nFROM: HUGHES DOC DATE: 12 JUN 89\nSOURCE REF:\nKEYWORDS: START ARMS CONTROL\nDEFENSE POLICY SPACE POLICY\nNSC SYSTEM AGENDA\nPERSONS:\nSUBJECT: NOTIFICATION OF NSC MTG 14 JUN RE START & DEFENSE ISSUES\nACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 14 JUN 89 STATUS: C\nSTAFF Of R: DAVIS LOGREF: 8920458 8920595\nFILE Fn \u00a2 F vs0022 ) CODES:\n. 4 poc bina visrersurion\nFOR ACTION FOR CONCURRENCE FOR INFO\n|: DAVIS.\nKANTER\nWhite House Guidelines\nE.0, 12958, SEC 3.4 (B) September 11, 2006\nBy cap__ NARA, Date 9/alo9\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CM CLOSED BY: NSAJC Doc 20F 2\nSEERET-\n\nbs be ? ae,\nNational Security Council\nThe White House\nPROOFED BY: LOG # 206 '9\nURGENT NOT PROOFED: SYSTEM _ PRS Cu? INT\nBYPASSED WW DESK: conolhd. AIO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec c~J es\n~- aaa\nPhilip Hughes \u00ab+ x pe\n| wn\nBob Gates ~\nNS\nBrent Scowcroft NOE Se Sg eee\n5\nPhilip Hughes -->\n7)\nSituation Room\nWest Wing Desk <5\nNSC Secretariat\na ee eee\n(ass tennion osoipns Renta |\ncc: vp Sununu Other\nShould be seen by:\nDate? ime)\nCOMMENTS A\nNOM & Ognde om ae\n\nWHihe neues,\n23-29 | WASHFAX RECEIPT a |\nTHE MITE MOL gg:, |\nwssace a A Cuasstercarion aa i\"\n\"gore mms 'i\nmer (ExTENs tom) (2008 NUKEER, 4\nsense Secnervon NSC MTB UY Ju \"\n21AGEwSY) QELEVER tor partys. eh\nFAM hg Emily witere a i\n7 DECLASSIFIED |\n' White House Guidelines\n; E.O. 12958, SEC 3.4 (B) September 11, 2006\nBy cae __ NARA, Date d/ailot\n\nhie ave 7\n1 og: 19 [| | WASHFAX RECEIPT Ss\nTHE WHITE HOLSE\nMESSAGE WO. a7 CLASSIFICATION _ racts 2\n(wae) (ExTens tow (ROOM NUMBER:\nsESSAcE oescarotton_NSC MTB, 1Y Juv\nTO (crvcy) _--\"peLiven 1) DEPT/POON NO. -- EXTENSTOW\nitenmes Ladity watere Exec See ow\nfe ---------- ee ee\nSe a oec.asse>. - on\nTs White House Guidelin To,\noo ber 11, 2006\n\nHP Huches SUASSTFECATIOW er 6 3/\nSAGE O\u20acscatotiog Ns \"(OteNs tow a. 7\nto intemeyy CMT 14 Ju (ROOM Stwpea, |\n4 digje Uh A\nit [lel face -- |\nwz (bess) Bret !\nWhite House Guidelines |\n#.0, 12968, SEC 3.4 (B) September 11,2006\nBC By cae. NARA, Date 121109 aad\n\nen | WASHFAR nzceipy) -Sae TM\n=: \"atu MITE MOC Se - -- f\n: MOM Gu Pt LIP mucins sts _\n=: (wae Ten SS\n| PMY EMily Wier =\n| \u00a2 /, \u00a2 ie ==\ni le = ~~\nboy c.0,t2850 96034 6) September 11,2008 Ge\n| a L oe Bycae__ NARA, Date alavlet 2. ==\nmy 4 Rog. =\n\n39412 PB: 10 WASHFAX RECEIPT\n\"ee THE WHITE HOLSE\nMESSAGE NO. a7t CLASSIFICATION SiG! = | paces_9\nFROM G. PHILIP HUGHES\n(NAME) (EXTENSION) (ROOM NUMBER)\nMESSAGE DESCRIPTION Nec MTG, LY Tun\n. LOG # 20019\nTO_(AGENCY) DELIVER 701 DEPT/ROOM NO. \u00abEXTENSION\nSTATE T_stepeton Boy Quec\nTeauls Loaty water Googe _-\nREMARKS\na\nDECLASSIFIE\u00ae\nWhite House Guidelines\n| E.0, 12958, SEC 3.4 (B) September 11, 2006\nBy @ap__ NARA, Date aJo1lo9\n\nt >\nUNCLASSIFIED RECORD &Dse89206070005,\nNSC/S PROFILE RECEIVED: 12 JUN 89 10\nTO: SCOWCROFT\nFROM: HAGIN, J DOC DATE: 06 JUN 89\nSOURCE REF:\nKEYWORDS: NSC\n| PERSONS:\nSUBJECT: PRES APPROVED ACTIVITY RE NSC MTG 14 JUN\nACTION: FOR RECORD PURPOSES DUE DATE: 11 JUN 90 STATUS: C\nSTAFF OBBIGER: NONE LOGREF: 8920458 8920595\nFILE *> so fsom2 CODES:\nFOR ACTION OR' CONCURRENCE FOR INFO\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: LF Doc 10F 1\nUNCLASSIFIED\n\nc 18\n. UNCLASSIFIED RECORD ID: 8920617\nACTION DATA SUMMARY REPORT\n001;; X 89061210 FOR RECORD PURPOSES\nUNCLASSIFIED a\n\na 6/6/89\nJ \u00a5 PAB\nTHE WHITE HOUSE 20617\n; WASHINGTON\nMEMORANDUM\nTO; GENERAL SCOWCROFT\nFROM: JOSEPH W. HAGIN\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY\nEVENT: National Security Council Meeting\nDATE: June 14, 1989\n| TIME: 11:00 a.m.\n| DURATION: 60 minutes\n| LOCATION: Cabinet Room\nATTIRE: Business Suit\nREMARKS REQUIRED: Talking Points\nMEDIACOVERAGE: Closed\nFIRST LADY\nPARTICIPATION: No\nADDITIONAL\nINFORMATION:\n| CONTACT::\nTELEPHONE: OFFICE HOME\n| NOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST\nEd Rogers Marlin Fitzwater David Bates\nJames Cicconi Sek sel David Valdez\nFred McClure Jean Lamb USSS - PPD\n| Susan Porter Rose Steve Studdert \u00b0 Gary Walters\nPatty Presock John Keller WHCA Audio/Visual\nChriss Winston Tim McBride WHCA Operations\nLaurie Firestone J. Bonnie Newman Amy Louisa Buckley\nRobert Guttman Tony Lopez C. Boyden Gray\ni Bruce Zanca\nt\n\n; \"SEGRET- RECORD ID: 8920595\"\n| NSC/S PROFILE RECEIVED: 05 JUN 89 19\nTO: SCOWCROFT\nFROM: KANTER DOC DATE: 05 JUN 89\n| GORDON SOURCE REF:\nKEYWORDS: START SPACE POLICY\nICBM DEFENSE POLICY\nPERSONS:\n| SUBJECT: PLAN FOR NSC MTG ON START & DEFENSE & SPACE\nACTION: NOTED BY SCOWCROFT DUE DATE: 11 JUN 90. STATUS: C\nSTAFF OFFICER: KANTER LOGREF: 8920458 8920617\n| FILES& | Bod scp E. CODES:\n| = roc Wak ug4oisteizution\nFOR ACTION FOR _CONCURRENCE FOR INFO\nDAVIS\n| GORDON\nKANTER\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cae NARA, Date ajaileq\nCOMMENTS: ----------e\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: GD CLOSED BY: AC Doc 10F 1\n| SECREE-\n\ni oy oe ee ee eae\n; National Security Council\nThe White House\nPROOFED BY: C40 LOG # Zz 6) Si St\nURGENT NOT PROOFED: SYSTEM PRS (NSC) INT\nBYPASSED WW DESK: DOCLOGG#D_ AIO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec L po Se\nPhilip Hughes Ps Bt Se\nBob Gates ms S ro Sat pea A\nBrent Scowcroft | 4. F N o\nPhilipHughes a. as Seen\nSituation Room Pid\nWest Wing Desk > = = tented --\n= ao\nNSC Secretariat co\ncc: vp Sununu Other:\nShould be seen by:\nWate/Time)\nae:\nCOMMENTS TSH Me eLiaga rene eel Ota\n\naie UNCLASSIFIED RECORD ID: \"@920@5S09\nNSC/S PROFILE RECEIVED: 10 MAY 89 13\nTO: SCOWCROFT\nFROM: HAGIN, J DOC DATE: 09 MAY 89\nSOURCE REF:\nKEYWORDS: NSC SYSTEM\nPERSONS:\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY RE NSC MTG 15 JUN\nACTION: FOR RECORD PURPOSES DUE DATE: 11 JUN 90 STATUS: C\nSTAFF OFFICER: NONE LOGREF: 8920595 8920617\nFILES fom oN GP xs0022 \\ CODES:\nwr, Doc Kentforstersurron\nFOR ACTION FOR CONCURRENCE FOR_INFO\nCOMMENTS: a\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: LF Doc 10F 1\nUNCLASSIFIED\neee\n\nCo a KBK 5/9/89\ncee '\n: THE WHITE HOUSE a\n2: WASHINGTON\nQ04EB\nMEMORANDUM\nTO: General Scowcroft\nFROM: JOSEPH W. HAGIN\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY\nEVENT: NSC Meeting\nDATE: June 15, 1989\n| TIME: 3200 p.m.\nDURATION: 60 minutes\nLOCATION: Cabinet Room\nATTIRE: Business Suit\nREMARKS REQUIRED: No\nMEDIACOVERAGE: Closed\nFIRST LADY\nPARTICIPATION: No\nADDITIONAL\nINFORMATION:\nCONTACT:\nTELEPHONE: OFFICE HOME\nNOTE: PROJECT OFFICER, SEE ATTACHED CHECKLIST\nEd Rogers Marlin Fitzwater David Bates\nJames Cicconi David Demarest David Valdez\nFred McClure Jean Lamb USSS - PPD\nSusan Porter Rose Steve Studdert Gary Walters\nPatty Presock John Keller WHCA Audio/Visual\nChriss Winston Tim McBride WHCA Operations\nLaurie Firestone J. Bonnie Newman Amy Louisa Buckley\nRobert Guttman Tony Lopez s C. Boyden Gray\nBruce Zanca\nf fs\nESE OA EAE TEE EE DL ee\n\nSECRET RECORD 10: jagBiBF\nNSC/S PROFILE RECEIVED: JUN 89 17\nTO: AGENCIES\n| FROM: HUGHES DOC DATE: 12 JUN 89\n| SOURCE REF:\nKEYWORDS: START ARMS CONTROL\nDEFENSE POLICY SPACE POLICY\nNSC SYSTEM AGENDA\nPERSONS:\n| SUBJECT: NOTIFICATION OF NSC MTG 14 JUN RE START & DEFENSE ISSUES\n| ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 14 JUN 89 STATUS: C\n| STAFF OFBE@ER'\\ DAVIS f LOGREF: 8920458 8920595\nFILES hh...) scpf CODES:\nee ae pe' DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR_INFO\nDAVIS\nKANTER\nNSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBycap__ NARA, Date 9/3) Je9\nCOMMENTS: $$\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CM CLOSED BY: NSAJC poc 20F 2\n| BECKER\n\n- rr.\nNational Security Council\nThe White House. |\nPROOFED BY: LOG s20 S l 7\nURGENT NOT PROOFED: + system prs (sc) nr |\nBYPASSED WW DESK: ooc.ocG4d a0 Of |\nSEQUENCE TO HAS SEEN DISPOSITION - |\n. Dep Exec J). 4A\n| Philip Hughes; ys:;\n| _ Bob Gates o.\n: a\n| Brent Scowcroft\n5 2.\nPhilip Hughes\nS --------_--___-:\u00abSC Oo er.\nSituation Room t ee\n. eS\n. West Wing Desk --__\n: NSC Secretariat\nce: vp Sununu Other\n: Should be seen by:\n\"Wate? ime)\nCOMMENTS;\n\n: N\nPARTICIPANTS,\nThe President -:\nThe Vice President\nThe Secretary of State\nThe Secretary of the Treasury.\nThe Secretary of Defense.\nThe Secretary of Energy /\n. The Director, Office of Management and Budget\nThe Director of Central Intelligence\nChief of Staff to the President\nAssistant to the President for National Security Affairs\n| Chairman, Joint Chiefs of Staff\n|. Head of Delegation for the Nuclear and Space Talks\nDirector, Arms Control and Disarmament Agency\n| Deputy Assistant to the President for National Security Affairs\n\ni\ni\nPARTICIPANTS\nThe President\nThe Vice President\nThe Secretary of State\n: The Secretary of the Treasury\nThe Secretary of Defense\n( The Secretary of Energy\nThe Director, Office of Management and Budget\n| The Director of Central Intelligence.\n| Chief of Staff to the President |\n| Assistant to the President for National Security Affairs |\nChairman, Joint Chiefs of Staff 4\n| Head of Delegation for the Nuclear and Space Talks:\n: Director, Arms Control and Disarmament Agency:\nDeputy Assistant to the President for National Security Affairs i",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

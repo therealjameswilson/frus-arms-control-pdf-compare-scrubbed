@@ -1,0 +1,697 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-14_1-90006-025.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "38baa5a5b0f2f55e2f1b8e32f954070ed22d9a72eeabce921c2a2b1c6853b028",
+    "page_count": 48,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "9,10",
+    "doc_key": null,
+    "title": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1]",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1]",
+    "file_unit": "NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1]"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, OA/ID 90006-025, NSR-14-April 03, 1989-Review of U.S. Arms Control Policies [1]. Secret. Sent for action. Prepared by Brooks. Copied to Quayle and Sununu. A stamped notation indicates Bush saw the memorandum. Bush wrote in the upper right-hand corner: \"signed GB 4-2.\"\n\nSource: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, OA/ID 90006-025, NSR-14-April 03, 1989-Review of U.S. Arms Control Policies [1]. Secret.\n",
+  "selected_pages": [
+    5,
+    6,
+    7,
+    8,
+    11,
+    12,
+    19,
+    20,
+    21,
+    24,
+    27,
+    28,
+    30,
+    34,
+    37,
+    38,
+    40,
+    41,
+    43,
+    46
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2010-1905-S 2010-1905-S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSR Files OA/ID Number: 90006 Folder ID Number: 90006-025 Folder Title: | NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Stack: Row: Section: S",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet \u2018 (George Bush Library) . a \u2014 De Doc. No. / Type Subject/Title Date Restriction Classification me . Ola. NSR Re: National Security Review 14 - Review of United States Arms 4/3/89 (b)(1), Ss Control Policies (4 pp.) O1b. Paper Re: Tab A -- START Policy Review (4 pp.) n.d. (b)@) S Ole. Paper Re: Tab B -- US Start Position (1 pp.) nd. | (1) 8 02. Distribution Re: NSR 14 (1 pp.) 413/89 (b)(3) [50 U.S.C. Record 403g, Sec.6] 03a. Memo Brent Scowcroft to POTUS 3/31/89 (b)(1) ",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) = Doe. No. / Type Subject/Title , Date Restriction Classification a ec 04d. Memo H. Allen Holmes to Arnold Kanter 8/3/89 (b)(1) Ss Re: Options for Partial Measures to Reduce Threats to Key Satellites (1 pp.) 04e. Paper Re: Options for Partial ASAT Arms Control Measures (34 pp.) 8/1/89 (b)(1) s. * : v - \u2019 . | . a ) . . : Page 2 of 2 Collection: \u00a9 : Record Group: \u2014_ Bush Presidential Records y . . Office: National Security Council Series: H-Files . ",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "access_control",
+      "cues": [
+        "attached document contains classified",
+        "access list"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "No.NSR_14 CopyORIGINAL Notice \u00a2 The attached document contains classified National Security Council Information. It is to be read and discussed only by persons authorized by law. Your signature acknowledges you are such a person and you promise you \u00a2 will show or discuss information contained in the document only with Persons who are authorized by law to have access to this document. Persons handling this document acknowledge he or she knows and . understands the security law relating thereto an",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": THE WHITE HOUSE . | WASHINGTON April 3, 1989 a. : : . ot A payee | DECLASSIFIED . NATIONAL SECURITY REVIEW 14 | 1 SECURITY REVIEW 14 . PER E.0. 13526 | LPILM 2614-004 MEMORANDUM FOR THE VICE PRESIDENT 5\u00a25 Gas his : THE SECRETARY OF STATE , THE SECRETARY OF DEFENSE | THE SECRETARY OF ENERGY Lo THE DIRECTOR, OFFICE OF MANAGEMENT AND BUDGET : . THE DIRECTOR OF CENTRAL INTELLIGENCE THE ASSISTANT TO THE PRESIDENT FOR NATIONAL SECURITY AFFAIRS THE CHAIRMAN, JOINT CHIEFS OF STAFF | THE DIRECTOR, ARMS",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| . Satellite weapons, either in.the Defense and Space Talks or else- . where. Where relevant, the review should make explicit the assumptions used concerning interpretation of and adherence to the ABM Treaty. Draft instructions for resumption of negotia- tions should be submitted on or before June 1, 1989, following my decisions on options developed during the review. (2) START. The review of the U.S. START position should encompass the following elements: (1) Review of elements of the existing",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- -- Supervise a thorough and complete interagency technical review of the existing Joint Draft T\u00e9xt. The review should be completed by April 21, 1989. By June 2, 1989, a second : review should be completed resulting in recommended treaty text changes to accommodate decisions resulting from the defense strategy review and the arms control review. (Z) | -- Forward not later than June 7, 1989, draft START . instructions for my review. () : Conventional Arms Control. By April 14, 1989, the Arms Con",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". . The verification of chemical weapons arms control agreements, . whether a global ban or any other formal limit, remains dif- ficult. No later than June 10, 1989, the Arms Control PCC should complete a review of verification requirements for chemical weapons arms control, identifying those requirements specifically . applicable to a global ban and establishing, if possible, a means | of certifying the sufficiency of criteria for such a ban. (J) Nuclear Testing. Guidance for the review of issu",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a & \u00bb > t aie Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document , | Date Restriction | Class. Pang Type ee eee . Olb. Paper Re: Tab A -- START Policy Review (4 pp.) n.d. (b)(1) S , Collection: ; : Record Group: \u2014_ Bush Presidential Records Office: National Security Council . . Series: H-Files : , Subseries: NSR Files . WHORM Cat.: File Location: NSR-14 - Apri] 03, 1989 - Review of U.S. Arms Control Policies [1] \u2018 2 Date Closed: . 7/8/2010 . OAAD Number: 90",
+      "selected_for_body": false
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "(George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. i and Type. \u2014\u2014\u2014. Olc. Paper Re: Tab B -- US Start Position (1 pp.) r ond. (b)(1) Ss Collection: : : Record Group: Bush Presidential Records Office: - National Security Council Series: H-Files Subseries: NSR Files , WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 OA/ID Number: 90006-025 : FOIA/SYS Case #: 2010-1905-S Appeal Case #: | . Re-revie",
+      "selected_for_body": false
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "DS a ee a eee ee SS ee ee : s LDF PROFILE See ID 892 x aS Seat: RECEIVED 28 MAR 89 20 Ta SCOWCROFT FROM KANTER DOCDATE 27 MAR 89 BROOKS 27 MAR 89 SCOWCROFT 31 MAR 89 KEYWORDS: ARMS CONTROL START NST DST CRW NUCLEAR TESTING SUBJECT: NSRK 44 REVIEW OF US ARMS CONTROL POLICIES ACTION: FWD TO FRES FOR SIG DUE: @3 APR 89 STATUS CD D>, FOR ACTION FOR CONCURRENCE FOR INFO | SCOUCROFT , UNCLASSIFIED UPON REMOVAL OF CLASSIFIED ATTACHMENTS car ene | COMMENTS REFS LOG CA cvs BR) | CTION OFFICER (S$) ASSIGN",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ctr PAGE BOG | KANTER Bose? BRECK S Beogay | SCOMCROFT BPOSRi PRES T DENT BPO4O8 | FOR COMMENT FOR INFORMATION | | ser OFFICER CAQ ASST GHED ACTION REGUIRED | SCOMCROE T & Seg a2e29 FWD TO PRES FOR SiG . CENITTAL | PRESTDENT z Poss is FOR SLGNATURE (UPDATES) 2 x BPH4osis PRES S60 MSR 14 | | DUEDATE 890403 STATUS CD FINDATE 996403 (0) B FILE IFR O NSCIF NEReOT4 S/O KAaNTER INFO DDOEDATE NSC DISTRIBUTION DISPATCH FOR ACTION DISPATCH FOR IMFO | a90331 VICE PRESIDENT \u2014 SUMUNU, BeO4os HUGHES QUAYLE, ",
+      "selected_for_body": true
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "rc 2 ; | Withdrawal/Redaction Sheet (George Bush Library) and Type 02. Distribution | Re: NSR 14 (I pp.) 4/3/89 (b)(3) [50 U.S.C. Record . 403g, Sec.6] : Collection: : Record Group: \u2014_ Bush Presidential Records : Office: National Security Council | Series: H-Files | Subseries: NSR Files WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 OA/ID Number: 90006-025 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Dis",
+      "selected_for_body": false
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "7 7 . . | NATIGNA\u00aeSECURITY COUNCIL LegNumber__20241 00 _ DISTRIBUTION RECORD : Date__03 APRIL 1989 | : Subject: __ NSR DOCUMENT CLASSIFICATION: COTOPSECRET ioe TICONFIDENTIAL CUUNCLASSIFIED =) EXTERNAL DISTRIBUTION: #CYS te Time eceived/Signed for By: THE VICE PRESIDENT a1 GS THE SECRETARY OF STATE #2 / Exec. seyRoom 7241 aS ; THE SECRETARY OF THE TREASURY Main Bidg/Room 3422 zs oO CO OUTS THE SECRETARY OF DEFENSE : 3 =; Y f rhb 9 The Pentagon 3 4 S56 IAAP AS frp OAD DIRECTOR, ACDA { #9 and Aadl",
+      "selected_for_body": false
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "directorate distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "* mw cas NATIONAL SECURITY COUNCIL DIRECTORATE DISTRIBUTION suBgEcTt NSR 14 LOG NUMBER 20241 paTE 9? APRIL 89 DOCUMENT TOP SECRET C \u2014\u2014 CONFIDENTIAL CLASSIFICATION CODEWORD UNCLASSIFIED ee DIRECTORATE COPY/SENT RESTRICTED NATIONAL SECURITY ADVISOR (1) /n\u2014 EXECUTIVE SECRETARY 7n y SECRETARIAT 5) INFORMATION POLICY \u00a2 | LEGAL ADVISER D INTELLIGENCE PROGRAMS S| \u201cppt : COUNSELOR/PLANNING gf LEGISLATIVE AFFAIRS Z) Hf 7 EUROPEAN & SOVIET AFFAIRS H/) 5 | NEAR EAST/SOUTH ASIAN nf) ASIAN AFFAIRS LA AFRICAN",
+      "selected_for_body": false
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAc:SECURITY COUNCIL LogNumber__20241 000 DisTRIBUTION RECORD Date__03 APRIL 1989 Subject! SR 4 DOCUMENT CLASSIFICATION: OTOP SECRET Gane COCONFIDENTIAL QUNcuassiFied EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT lle a, \u2018ATI . , >) THE SECRETARY OF THE TREASURY ae Main Bidg/Room 3422 a THE SECRETARY OF DEFENSE #3 The Pentagon eT DIRECTOR, ACDA #9 Room 5933/Dept. of State ee CHAIRMAN US START DELEGATION % ACDA, 5933 State ss CHAIRMAN US INF DELEGATION % ACD",
+      "selected_for_body": false
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "FCO EEE LLLlUllUl NATIONA\u00ae SECURITY COUNCIL LogNumber__20241 DIsTRIBUTION RECORD Date__03 APRIL 1989 | Subject: _____NSR 1 DOCUMENT CLASSIFICATION: OTOP SECRET or COCONFIDENTIAL COUNCLASSIFIED EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: \"THE VICE PRESIDENT ft THE SECRETARY OF STATE #2 | Exec. se/Room 7241 \u2014 eee THE Hoey Mia oF THE TREASURY y Main toom \u2014\u2014eee eee \u2014_ 4 f. ' THE SECRETARY OF DEFENSE ors ee < ) 4 _ | The Pereagon \u2014\u2014 MH O750 Bn hn \u2014 DIRECTOR, ACDA + \u2018 X 4 8 Room $933",
+      "selected_for_body": false
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ee a eee | \u00e9 \u2018 NATIONA\u00ae SECURITY COUNCIL Lognumber__2024. - DISTRIBUTION RECORD Date__03 APRIL 1989 | Subject: ____NSR 4 DOCUMENT CLASSIFICATION: CO TOP secret or COCONFIDENTIAL QUNCLASSIFIED EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT $2 THE SECRETARY OF STATE #2 Exec. sec/Room 7241 SS \u2014\u2014\u2014 THE SECRETARY OF THE TREASURY Main Bidg/Room 3422 _\u2014\u2014 a THE SECRETARY OF DEFENSE #3 The Pentagon COC err \u2014 eh OT DIRECTOR, ACDA #9 Room 5933/Dept. of State eee eee _ CHAIR",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "6cTes ey Br Mekint Sutiation Koon | LUM ire. house | |",
+      "selected_for_body": true
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "fe - Bee \u2018 Fe { . 7 - i \"National Security Council The White House PROOFED Brig Pe fog Oe (is URGENT NOTPROOFED: ___________ SYSTEM PRS (SQ INT BYPASSED WW:DESK> 2 DOCLOG: ae AO SEQUENCE TO HAS SEEN DISPOSITION Bob Perito Philip Hughes eh. Vive Koyeeys Bob Gates Brent Scowcroft Philip Hughes Situation Room eh West Wing Desk Ly, t D NSC Secretariat fe 5 ce: vp Sununu Other COMMENTS Should be seen by: (Date/Time)",
+      "selected_for_body": true
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "eee Ue ~~ f National Security Council The White House a); a 202d) PROOFED BY: LOG # URGENTNOTPROOFED: ___________ SYSTEM PRS, CSO INT BYPASSEDAGWY DESKS DOCLOG CA yah? a } q l ] SEQUENCE TO HAS SEEN DISPOSITION Philip Hughes Ss Cy Provide Bob Gates 2. % A \u2014___. ~~ Sih Brent Scowcroft, Ver oo Philip Hughes ,, oc Situation Roome- 24 3, sy West Wing DesI FES, ws ox NSC Secretariat = | 2 | Br ee Uae a es gl as | vp Sununu Other COMMENTS Should be seen by: 2 eB F (Date/Time) As preiousl, MWdicotag by",
+      "selected_for_body": true
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Class. | and Type i 03a. Memo Brent Scowcroft to POTUS 3/31/89 (b)(1) Re: Arms Control Review (2 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSR Files WHORM Cat.: ) File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 ~ OA/D Number: 90006-025 FOIA/SYS Case #: 2010-1905-S Appeal Case #: ",
+      "selected_for_body": false
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03b. Memo Linton Brooks to Brent Scowcroft 3/27/89 (by) Re: Arms Control Review (2 pp.) Collection: . Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: _NSR Files WHORM Cat.: , File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 OA/ID Number: 90006-025 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Disposition: P-",
+      "selected_for_body": false
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON / MEMORANDUM FOR THE VICE PRESIDENT THE SECRETARY OF STATE THE SECRETARY OF DEFENSE THE SECRETARY OF ENERGY THE DIRECTOR, OFFICE OF/ MANAGEMENT AND BUDGET THE DIRECTOR OF CENT. INTELLIGENCE THE ASSISTANT TO THE PRESIDENT FOR NATIONAL SECURITY FAIRS THE CHAIRMAN, JOINT/CHIEFS OF STAFF THE DIRECTOR, ARMS /CONTROL AND DISARMAMENT AGENCY SUBJECT: Review of United States Arms Control Policies (U) In directing the review of defense strategy mandated by NSR-12, I stated that ",
+      "selected_for_body": true
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "s NATIONAL SECURITY COUNCIL =, |, LogNumber__2024. DisTRISUTION RECORD Date 03 APRIL 1989 Subject: ___NSR 14 DOCUMENT CLASSIFICATION: COTOP secrET cca COCONFIDENTIAL COUNCLASSIFIED EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT #1 a THE SECRETARY OF STATE #2 Exec. se/Room 7241 i | THE SECRETARY OF THE TREASURY | Main Bidg/Room 3422 \u2014\u2014\u00a7 SSeS _ THE SECRETARY OF DEFENSE #3 | The Pentagon SSS DIRECTOR, ACDA #9 Room 5933/Dept. of State a ee. CHAIRMAN US START DELEGAT",
+      "selected_for_body": false
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a. NATIONAL SECURITY COUNCIL LogNumber__20242 DisTRISUTION RECORD Date 03 APRIL 1989 Subjects NS DOCUMENT CLASSIFICATION: COTOP SECRET eo COCONFIDENTIAL COUNCLASSIFIED EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT jh THE SECRETARY OF STATE #2 Exec. sec/Room 7241 a a a ea ee eae ee ee THE SECRETARY OF THE TREASURY Main Bidg/Room 3422 eS \u2014\u2014 eee eee eee THE SECRETARY OF DEFENSE #3 The Pentagon Se ee DIRECTOR, ACDA #9 Room 5933/Dept. of State \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014S \u2014\u2014\u2014\u2014\u2014\u2014_\u2014_ \u2014\u2014",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "t - . | | | wgwana yo NBME Agia avo AAVEWELE gn OW te ell 68 aaiao3e |",
+      "selected_for_body": true
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "at is 5 il i re \u2014SEGREE\u2014 RECORD 1D, geeenie F \u2018 . NSC/RMO PROFILE RECEIVED: 09 JUN 89 20 TO: AGENCIES FROM: HUGHES DOC DATE: 10 JUN 89 : SOURCE REF: KEYWORDS: START ARMS CONTROL NSR PERSONS: SUBJECT: AGENCY POSITIONS ON NSR-14 RE START & DEFENSE & SPACE ISSUES ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 27 NOV 92 STATUS: C STAFF OFFICER: KANTER LOGREF: 8920241 EILES: IFR_O_ NSCP: NSROO14 CODES: es DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR_INFO DAVIS | KANTER NSC CHRON UNCLASSIFIED ",
+      "selected_for_body": true
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2014SEGRET\u2014 RECORD ID: 8920613 . i . ACTION DATA SUMMARY REPORT . DOC ACTION OFFICER , CAO ASSIGNED. ACTION REQUIRED 001 SCOWCROFT \u00b0 Z > 89060920 FOR DECISION : 001 X 89061014-GATES APPROVED RECOM 002 X 89061014 HUGHES SGD MEMO TO AGENCIES DISPATCH DATA SUMMARY REPORT DOC DATE JISPATCH FOR ACTION DISPATCH FOR INFO 002 890610 LORD, C . 002 890610 ROY, J . - ; . 002 890610 COLE, G 002 890610 VITALE, W 002 890610 HODSOLL, F 002 890610 SANDALL, H . 002 890610 MANESS, A : . 002 890610 STARR, B ; \\ UNCLA",
+      "selected_for_body": false
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201ca FF Soe. f National Security Council The White House PROOFED BY: LOG # zZ 0G 3 URGENT NOT PROOFED: SYSTEM sew BYPASSED WW DESK: DOCLO! AIO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec ao ee f ; Philip Hughes Za Mz 7 Bob Gates - 3 f = | \"Cocos See eee Brent Scowcroft \u00a2\u00b0 fe phllisnghes Situation Roo bd ituation Room 5 West Wing Desk\u201d > me) co NSC Secretariat : 5 : c sine. ice ee ira ae Rede cna EEE ce nc Sate 3 Pee, Foran) omion Orbis fotenn/s=aatr ac ce: vp Sununu Other Should be seen by: (Wate/ i",
+      "selected_for_body": true
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "fn SO | : | 4\u00b0 . Withdrawal/Redaction Sheet | (George Bush Library) Document No. Subject/Title of Document Class. and Type . 04a. Memo G. Philip Hughes to Distribution List 6/10/89 (b)(1) Re: Agency Positions on NSR-14 (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSR Files WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] | Date Closed: 7/8/2010 OA/ID Number: 90006-025 . | FOIA",
+      "selected_for_body": false
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) .___and Type 04b. Table of Re: NSR 14 START and Defense & Space Papers (1 pp.) (b)(1) Contents Collection: Record Group: _ Bush Presidential Records - Office: National Security Council : Series: H-Files Subseries: NSR Files . WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 OA/ID Number: 90006-025 | FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Disposition: P",
+      "selected_for_body": false
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": 20613 NATIONAL SecuriTY COUNCIL logNumbe DisTRIBUTION RECORD Date June 10, 1989 Subject: START & DEFENSE eae DOCUMENT CLASSIFICATION: (TOP SECRET Pees O CONFIDENT AL QUUNCLASSIFIED ee ere i li EXTERNAL DISTRIBUTION: #CYS Ogte Time, Received/Signed for By: a Fa : 6 I he o7M7 7 : THE SECRI : a <A DBA ee E Mi Zed 2254 fw THE SECRETARY OF THE TREASURY Main BidgRoom 3422 Neen nn en nn EEE THE SECRETARY OF DEFENSE DIRECTOR, ACDA \u2014 E / Room AER Eo State ee ie Oboe CHAIRMAN US START DELEGATION % ACDA,",
+      "selected_for_body": false
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "i . oo. , MESSAGE NO. CLASSIFICATION S EG E paces? FROM___G._ PHILIP HUGHES <4 : - (NAME) (EXTENSION) < (ROOM NUMBER) MESSAGE vescription ART & DEFENSE J 5 Log #; 20613 eee to a OPTS TO_(AGENCY) DELIVER TO: DEPT/ROOM NO. = EXTENSION STATE J. STAPLETON ROY EXEC SEC Oe ee a SS DOD COL GEORGE P. COLE, JR. EXEC SEC en cee \u2014_\u2014 = DOE WILLIAM V. VITALE EXEC SEC - . = Sed \u2014\u2014\u2014S a \u2014 \u2014_\u2014_\u2014\u2014\u2014\u2014\u2014 . | CIA H. LAWRENCE SANDALL EXEC SEC EXEC ASSISTANT JCS CAPT ANTHONY MANESS TO CHAIRMAN EO ES _\u2014\u2014 NS \u2014\u2014 \u2014\u2014\u2014 . \u2014 ee",
+      "selected_for_body": true
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| 20613 NATIONAL SecuRITY COUNCIL LogNumber DISTRIBUTION RECORD Dae June 10, 1989 Subject: START & DEFENSE ee \u2014_\u2014_\u2014\u2014_\u2014\u2014\u2014\u2014\u2014s\u2014:??? Rh =e ns = eee EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT i \u2014\u2014\u2014\u2014S. S\u00a7s \u2014\u2014\u2014\u2014\u2014- SO ?\u2014 THE SECRETAR\u2019 \u20ac F o/lo/9 2 BY 20 THE SECRETARY OF THE TREASURY Main BidgRoom 3422 ee THE SECRETARY OF DEFENSE The Pentagon ae OIRECTOR, ACDA 1 \u2018 Room $933/Dept of State eee SSS CHAIRMAN US START DELEGATION \u2018% ACOA, 5933 State ee CHAIRMAN US INF DELE",
+      "selected_for_body": false
+    },
+    {
+      "page": 36,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "20613 NATIONAL SecuRITY COUNCIL LogNumber DisTRIBUTION RECORD Date June 10, 1989 Subject: START & DEFENSE _ _ | . DOCUMENT CLASSIFICATION: O10? Secret Pheer OOCONFOEN aL O UNCLASSIFIED cc en soe EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: | THE VICE PRESIDENT 1 a | THE SECRETARY OF STATE 1 ' Exec. secRoom 7241 NN | THE SECRETARY OF THE TREASURY Main BidgRoom 3422 a ee ee THE SECRETARY OF DEFENSE The Pentagon Se DIRECTOR, ACDA 1 , Room $933/Dept. of State ee CHAIRMAN US START DE",
+      "selected_for_body": false
+    },
+    {
+      "page": 37,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "memorandum from",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL \u201cSECRET WASHINGTON, D.C. 20506 20plS June 9, 1989 \u201cBo b: L vecanmend ne ACTION outherr 3\u00a2 Fhe MEMORANDUM FOR BRENT SCOWCROFT attathed. THROUGH: ARNOLD KANTER ye Arne FROM: RICHARD(BAVIS SUBJECT: Executive Secretary Memorandum on START and Defense & Space The attached memorandum from Philip Hughes to Executive Secretaries calls for agency positions on all of the issues in the NSR-14 START and Defense & Space papers, by 5:00 p.m., Monday. This tasking will allow us to com",
+      "selected_for_body": true
+    },
+    {
+      "page": 38,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2014SEGRET/NO\u2014-FORN-DIS- RECORD ID: 8920674 NSC/S PROFILE RECEIVED: 19 JUN 89 08 TO: SCOWCROFT | FROM: DAVIS DOC DATE: 16 JUN 89 | TOBEY SOURCE REF: | GORDON | KEYWORDS: START DEFENSE POLICY | SPACE POLICY ARMS CONTROL | NSR NSC SYSTEM | | PERSONS: | SUBJECT: NST DECISIONS / ADDITIONAL NSC DECISIONS / POSITIONS IN SPACE & DEFENSE TALKS | ACTION: SCOWCROFT DISAPPROVED RECOM 2 DUE DATE: 07 FEB 91 STATUS: C STAFF OFFICER: DAVIS LOGREF : | FILES: IFR 0 SCP: NSROO14 CODES: Ne DOCUMEN DISTRIBUTION | FOR ",
+      "selected_for_body": true
+    },
+    {
+      "page": 39,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". -SEGRET/NO-FORN-BIS\u2014 RECORD ID: 8920674 : ACTION DATA SUMMARY REPORT ; DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED : 001 SCOWCROFT Z 89061908 FWD TO PRES FOR DECISION 001 SCOWCROFT % 89061909 ADD-ON / FOR DECISION 001 PRESIDENT Z 89061915 ADD-ON / FOR INFORMATION 001 PRESIDENT Z 89061915 FOR DECISION . 001 X 89062011 PRES APPROVED RECOM 001 ; ; X 89062012 NOTED BY PRES 001 X 89062013 SCOWCROFT APPROVED RECOM 1/2/3 7 001 X 89062013 SCOWCROFT APPROVED RECOM 1 & 3 | 001 X 89062013 SCOWCROFT D",
+      "selected_for_body": false
+    },
+    {
+      "page": 40,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "P PD & _ National Security Council 5 The White House PROOFED BY: ook noert URGENT NOT PROOFED: SYSTEM = PRS INT BYPASSED WW DESK: DOCLOG AIO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec as) a ee PhilipHughes <> : Bob Gates sS a Brent Scowcroft__ Ny! Philip Hughes So | bd Situation Room, [Sy West Wing Desk Be Secretariat ce vP Sununu O Should be seen by: Wate? ime) af 2074. Amie ps aMendiy Compleye Bb. Adf fo Fiz -",
+      "selected_for_body": true
+    },
+    {
+      "page": 41,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Document Originally | Attached to Following Page",
+      "selected_for_body": true
+    },
+    {
+      "page": 42,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "rs \u00b0 Withdrawal/Redaction Sheet (George Bush Library) and Type 04c. Paper Re: Issues for Decision START and Defense and Space (10 (b)(1) pp.) Collection: : . Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSR Files . , | WHORM Cat.: \u2018 | File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] . Date Closed: 1/8/2010 OA/ID Number: 90006-025 FOIA/SYS Case #: 2010-1905-S Appeal Case #: Re-review Case #: Appeal Dispositio",
+      "selected_for_body": false
+    },
+    {
+      "page": 43,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SECGRET/SENSETIVE\u2014 RECORD ID: 8920966 * \u2018 . NSC/S PROFILE RECEIVED: 05 AUG 89 10 TO: KANTER FROM: HOLMES, H DOC DATE: 03 AUG 89 SOURCE REF: KEYWORDS: ARMS CONTROL ASAT USSR NSR PCC PERSONS : SUBJECT: DRAFT OF PART A RE OPTIONS FOR PARTIAL MEASURES TO REDUCE THREATS TO KEY SATELLITES PER NSR-14 ACTION: ACTION COMPLETED PER TOBEY DUE DATE: 08 AUG 89 STATUS: C STAFF OFFICER: KANTER : LOGREF : PILES: IFR_O- SCP: NSROO14 CODES: Docu NT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR_INFO NSC CHRON UNCLA",
+      "selected_for_body": true
+    },
+    {
+      "page": 44,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2014SEGREE/SENSETIVE- RECORD ID: 8920966 . - a ACTION DATA SUMMARY REPORT - | DOC ACTION OFFICER . CAO ASSIGNED ACTION REQUIRED -001 KANTER Z 89080510 PREPARE MEMO FOR SCOWCROFT : . 002 X 89081413 ACTION COMPLETED PER TOBEY | | . | UNCLASSIFIED UPON REMOVAL OF CLASSIFIED ATTACHMENTS . cae af Bho \u2014SEGRET/SENSEPEVE\u2014",
+      "selected_for_body": false
+    },
+    {
+      "page": 45,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u00ab RECEIVED 05 AUG 89 10 TO SCOWCROFT FROM ROY, J DOCDATE 64 AUG 89 HOLMES, H 0% AUG 89 | UNCLASSIFIED UPON KEYWORDS: ARMS CONTROL ASAT REMOVAL OF CLASSIFIED | USSR NSE ATTACHMENTS . CAP aso | PCC | SUBJECT: NSR 14 PAPER ON OPTIONS FOR PARTIAL MEASURES TO REDUCE THREATS / KEY SATELLITES ACTION: PREPARE MEMO FOR SCOWCROFT DUE: 08 AUG 89 STATUS S PT y \\ | | EORPAGL ION FOR CONCURRENCE FOR INFO | SE, TOBEY HUGHES SITTMANN | QO eape on Ne ASAT Ale | KANTER \u00a9 Qwx e ds Pe + a Ei | \" WORKING Oo (2) Coap",
+      "selected_for_body": false
+    },
+    {
+      "page": 46,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "department of state",
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| . . : 8918182 <)> United States Department of State Regt; 20966 : eames Washington, D.C. 20520 z Sd August 4, 1989 ~CONFIDENTIAL\u2014 \u2014\u20acw/SECRETANOFORN/WNINTEL/SENSITIVE Attachment ) MEMORANDUM FOR BRENT SCOWCROFT THE WHITE HOUSE Subject: NSR-14 Paper On Options for Partial Measures to Reduce Threats to Key Satellites Attached is a memorandum from H. Allen Holmes, Assistant Secretary for Politico-Military Affairs, to Arnold Kanter, Chairman of the Arms Control Policy Coordinating Committee, transm",
+      "selected_for_body": true
+    },
+    {
+      "page": 47,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet | (George Bush Library) | and Type 04d. Memo H. Allen Holmes to Arnold Kanter 8/3/89 (b)(1) Re: Options for Partial Measures to Reduce Threats to Key Satellites (1 pp.) | | | Collection: Record Group: _ Bush Presidential Records Office: \u2018National Security Council : Series: H-Files Subseries: NSR Files WHORM Cat.: File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 OAD Number: 90006-025 FOIA/SYS Case #: 2010-1905-S App",
+      "selected_for_body": false
+    },
+    {
+      "page": 48,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "* \u00b0 Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Class, and Type 04e. Paper Re: Options for Partial ASAT Arms Control Measures (34 8/1/89 (b)(1) 8 Pp.) : Collection: . Record Group: Bush Presidential Records : Office: National Security Council . Series: H-Files Subseries: NSR Files WHORM Cat.: | File Location: NSR-14 - April 03, 1989 - Review of U.S. Arms Control Policies [1] Date Closed: 7/8/2010 OA/ID Number: 90006-025 | FOIA/SYS Case #: 2010-1905-S A",
+      "selected_for_body": false
+    }
+  ],
+  "draft_body": ": THE WHITE HOUSE.\n| WASHINGTON\nApril 3, 1989\na.::. ot A payee\n. NATIONAL SECURITY REVIEW 14\n| 1 SECURITY REVIEW 14. PER E.0. 13526\nMEMORANDUM FOR THE VICE PRESIDENT 5\u00a25 Gas his:\nTHE SECRETARY OF STATE,\nTHE SECRETARY OF DEFENSE\n| THE SECRETARY OF ENERGY Lo\nTHE DIRECTOR, OFFICE OF MANAGEMENT AND BUDGET\n:. THE DIRECTOR OF CENTRAL INTELLIGENCE\nTHE ASSISTANT TO THE PRESIDENT FOR\nNATIONAL SECURITY AFFAIRS\nTHE CHAIRMAN, JOINT CHIEFS OF STAFF\n| THE DIRECTOR, ARMS CONTROL AND DISARMAMENT AGENCY\n| SUBJECT: Review of United States Arms Control Policies (U)\nIn directing the review of defense strategy mandated by NSR-12, I\nstated that I would task the Arms Control Policy Coordinating:\nCommittee to review current U.S. arms control positions and\npolicies both to reflect the results of the defense strategy\nreview and to resolve outstanding issues requiring resolution\n. before resumption of negotiations. The arms control review is to\nproceed in parallel so that preliminary decisions on negotiating\n. positions can be reached by late April. This National Security\n. Review sets forth guidance' for the arms control review. (2)\nNuclear and Space Talks. Not later than May 1, 1989, the Arms\nControl PCC should forward a recommended date for the resumption\nof the Nuclear and Space Talks.: This recommendation should reaffirm or suggest modifications to (a) the existing negotiating\norganizational structure, (b) the existing U.S. position on the\nlinkage between conclusion of a START treaty and resolution of\n'existing Defense and Space Treaty issues, and (c) the existing:\nU.S. position that no new treaties. in this area can be concluded\nwithout the resolution of Soviet violations of the ABM Treaty,\nespecially the large phased-array radar at Krasnoyarsk. (g)\nDefense and Space. Not later than May 3, 1989, the Arms\nControl PCC should complete a review of the existing U.S. position on Defense and Space negotiations. The review should take\naccount of decisions reached as a result of the defense strategy\nreview and should result in (a) options for modifying the U.S.\nnegotiating position; (b) a review of the relationship of the\nDefense and Space Talks to U.S. plans, as determined by the\ndefense strategy review, for defensive systems research, development, testing and deployment; and (c) a review of whether the\nUnited States should seek negotiations restricting anti-\nGeorge Bush H iti\nguenee jeorg jandwriting\n_ Declassify on: OADR @ ff Sis.:\n\n. Satellite weapons, either in.the Defense and Space Talks or else-.\nwhere. Where relevant, the review should make explicit the\nassumptions used concerning interpretation of and adherence to\nthe ABM Treaty. Draft instructions for resumption of negotiations should be submitted on or before June 1, 1989, following my\ndecisions on options developed during the review. (2)\nSTART. The review of the U.S. START position should\nencompass the following elements:\n(1) Review of elements of the existing START position to\nensure that (a) there is U.S. consensus on the strategic rationale underlying those elements, (b) that\nconsensus reflects and complements U.S. defense policy\n| and strategy, and (c) any options for altering the\nexisting position are presented for presidential review\n| in a timely fashion.\n| (2) Comprehensive technical review of the Joint Draft Text\n| to clarify textual ambiguities and to ensure consis---\n:: tency with START policy decisions.::\n(3) Review of those areas in which the U.S. position is.\nincomplete (a) to determine which, if any, must be\ncompleted prior to resumption of negotiations, (b) to\nidentify options for completing these areas, and (c) to\nestablish a schedule for completing remaining elements\n. of the U.S. position. (Z)\nTo accomplish this review, the Arms Control PCC will:\n-- Conduct a series of reviews of specific elements of the U.S.\n- START position in accordance with the schedule set forth at\n. Tab A. In each case the review should result either in a\nrecommendation to reaffirm existing U.S. negotiating positions or in proposed options for change. Recommendations\n. for change should include explicit consideration of the.\nimpact of altering positions to which the Soviets have\npreviously agreed. (f)\n-~ Identify not later than April 3, 1989, those incomplete\nelements of the United States position listed at Tab B, if\nany, which must be completed prior to resumption of negotiations. For each element so identified, establish a work\nplan to present options for presidential decision by June 1,\n1989. In addition, by June 1, 1989, the Arms Control PCC\nshall promulgate a work plan for completing those elements\nof the U.S. position not requiring resolution prior to re-sumption of negotiations. (g)\nBush Library Phoiocopy\nGEGREF:\n\n-- Supervise a thorough and complete interagency technical\nreview of the existing Joint Draft T\u00e9xt. The review should\nbe completed by April 21, 1989. By June 2, 1989, a second\n: review should be completed resulting in recommended treaty\ntext changes to accommodate decisions resulting from the\ndefense strategy review and the arms control review. (Z) |\n-- Forward not later than June 7, 1989, draft START\n. instructions for my review. ():\nConventional Arms Control. By April 14, 1989, the Arms Control\nPCC will review the concept of stabilizing measures associated\nwith the Conventional Forces in Europe (CFE) negotiations. The\nreview will include (a) recommendations on whether such measures\ncan be monitored with high confidence, (b) if not, options for.\ndetermining what verification standards are appropriate, and (c)\noptions for new stabilizing measures the United States should\npropose. (f)\n: By May 10,\u00b01989, the Arms Control PCC will review the concepts of\n---- \"\"thinout zones and exercise constraints, as proposed by the &\nEastern Bloc in the Vienna negotiations. The review will\nidentify options for United States action. (g)\nBy May 24, 1989, the Defense PCC will review the military and\npolitical implications of reductions in NATO and Warsaw Pact\nforces in Europe which exceed those in the initial Western proposal in the CFE negotiations. The review should identify accep-.\ntable levels of reductions and should explicitly consider whether\nsuch reductions require restructuring of existing forces and/or\n' changes in existing NATO strategy. Based on the results of this\nreview, I will issue guidance, if appropriate, to examine\nalternative arms control options. (f)\nBy May 31, 1989, the Arms Control PCC will review possible\n, confidence building m\u00e9asures which might be proposed in the East---\nWest context. The review will identify options for proposing\nadditional CSBMs. (\u00a2)\nChemical Weapons Arms Control. Preliminary decisions associated\nwith the basic United States position concerning a global ban on\nchemical weapons production and stockpiling have been made\nincident to the resumption of multilateral negotiations on that\nsubject in the Conference on Disarmament. Therefore, no further\nreview of United States policy on such a global ban need be\nundertaken until the results of the defense strategy review are\navailable. (f)\n: we] ee 7 oS oe\n\n. The verification of chemical weapons arms control agreements,.\nwhether a global ban or any other formal limit, remains difficult. No later than June 10, 1989, the Arms Control PCC should\ncomplete a review of verification requirements for chemical\nweapons arms control, identifying those requirements specifically\n. applicable to a global ban and establishing, if possible, a means\n| of certifying the sufficiency of criteria for such a ban. (J)\nNuclear Testing. Guidance for the review of issues concerning\nthe Threshold Test Ban Treaty and Peaceful Nuclear Explosions\nTreaty requiring resolution prior to resumption of the Nuclear\nTesting Talks has been promulgated separately. The question of\nfuture U.S. requirements for nuclear testing, whether the United\nStates should reaffirm or modify its commitment to the \"step-bystep\" approach to nuclear testing limitations, and what, if any,\nadditional limitations on U.S. nuclear testing beyond those of\nthe TIBT and PNET would promote U.S. defense strategy and objectives will be addressed in the on-going defense strategy review.\nAdditional tasking to the Arms Control PCC on the development of\nspecific policy and positions for negotiations following TTBT and\n.. \u00bb PNET ratification will await the completion of that review. (Z)\nNuclear Weapons Free Zones. By June 10, 1989, the Arms Control\nPCC should review U.S. policy with respect to nuclear weapons\n| free zones. The review should result in reaffirmation of or\n|. suggested modifications to the policy principles the United\nStates uses in evaluating proposals for nuclear weapons free\nzones and should recommend U.S. policy with regard to all\nexisting or proposed zones. (\u00a3)\nNaval Arms Control. By August 1, 1989, the Arms Control PCC\nshould review the United States position on naval arms control.\nThe review should reaffirm or suggest modifications to existing\nU.S. policy rejecting naval arms control proposals as not in the\nUnited States interest. In addition, the review should explicitly consider the various proposals in this area made by the\n, Soviet Union and its 'allies and provide recommendations on which,\nif any, (a) are in the U.S. and allied interest and should be\npursued, (b) might be acceptable in return for Soviet concessions\nin other areas, or (c) are unacceptable. (\u00a2)\nTab A START Policy Review\nTab B Significant Gaps in the U.S. START Position\n\nDS a ee a eee ee SS ee ee\n: s LDF PROFILE See ID 892 x\naS Seat:\nRECEIVED 28 MAR 89 20\nTa SCOWCROFT FROM KANTER DOCDATE 27 MAR 89\nBROOKS 27 MAR 89\nSCOWCROFT 31 MAR 89\nKEYWORDS: ARMS CONTROL START\nNST DST\nCRW NUCLEAR TESTING\nSUBJECT: NSRK 44 REVIEW OF US ARMS CONTROL POLICIES\nACTION: FWD TO FRES FOR SIG DUE: @3 APR 89 STATUS CD D>,\nFOR ACTION FOR CONCURRENCE FOR INFO |\nSCOUCROFT,\ncar ene |\nCOMMENTS\nREFS LOG CA cvs BR) |\nCTION OFFICER (S$) ASSIGNED ACTION REQUIRED DUE COPIES TO\nnate Gack pr. W/ATTCH FILE 2000 0)\n\nctr PAGE BOG\n| KANTER Bose? BRECK S Beogay\n| SCOMCROFT BPOSRi PRES T DENT BPO4O8\n| FOR COMMENT FOR INFORMATION\nser OFFICER CAQ ASST GHED ACTION REGUIRED |\nSCOMCROE T & Seg a2e29 FWD TO PRES FOR SiG. CENITTAL |\nPRESTDENT z Poss is FOR SLGNATURE (UPDATES) 2\nx BPH4osis PRES S60 MSR 14 |\nDUEDATE 890403 STATUS CD FINDATE 996403 (0) B FILE IFR O NSCIF NEReOT4\nS/O KAaNTER INFO\nDDOEDATE NSC DISTRIBUTION DISPATCH FOR ACTION DISPATCH FOR IMFO\n| a90331 VICE PRESIDENT\n-- SUMUNU,\nBeO4os HUGHES QUAYLE, D\n890403 VAN ERON BAKER, J\n\n6cTes ey\nBr Mekint\nSutiation Koon |\nLUM ire. house |\n\nfe - Bee ' Fe {\n. 7 i \"National Security Council\nThe White House\nPROOFED Brig Pe fog Oe (is\nURGENT NOTPROOFED: ___________ SYSTEM PRS (SQ INT\nBYPASSED WW:DESK> 2 DOCLOG: ae AO\nSEQUENCE TO HAS SEEN DISPOSITION\nBob Perito\nPhilip Hughes eh. Vive Koyeeys\nBob Gates\nBrent Scowcroft\nPhilip Hughes\nSituation Room eh\nWest Wing Desk Ly, t D\nNSC Secretariat fe 5\nce: vp Sununu Other\nCOMMENTS Should be seen by:\n(Date/Time)\n\neee Ue ~~\nf National Security Council\nThe White House\na); a 202d)\nPROOFED BY: LOG #\nURGENTNOTPROOFED: ___________ SYSTEM PRS, CSO INT\nBYPASSEDAGWY DESKS DOCLOG CA yah? a\n} q l ] SEQUENCE TO HAS SEEN DISPOSITION\nPhilip Hughes Ss Cy Provide\nBob Gates 2. % A --___.\n~~ Sih\nBrent Scowcroft, Ver\noo\nPhilip Hughes,,\noc\nSituation Roome-\n24 3, sy\nWest Wing DesI FES, ws\nox\nNSC Secretariat = |\n2 |\nBr ee Uae a es gl as |\nvp Sununu Other\nCOMMENTS Should be seen by:\n2 eB F (Date/Time)\nAs preiousl, MWdicotag by Koski, he. ~\nhas a mt Schade nant eae ae\ni. The NSLhie sali--\nGS oltre this Ais#. \u00e93\n@2s0 coufasn a Aaak line Fra nect wel.\n\"4D,\n\nTHE WHITE HOUSE\nWASHINGTON /\nMEMORANDUM FOR THE VICE PRESIDENT\nTHE SECRETARY OF STATE\nTHE SECRETARY OF DEFENSE\nTHE SECRETARY OF ENERGY\nTHE DIRECTOR, OFFICE OF/ MANAGEMENT AND BUDGET\nTHE DIRECTOR OF CENT. INTELLIGENCE\nTHE ASSISTANT TO THE PRESIDENT FOR\nNATIONAL SECURITY FAIRS\nTHE CHAIRMAN, JOINT/CHIEFS OF STAFF\nTHE DIRECTOR, ARMS /CONTROL AND DISARMAMENT AGENCY\nSUBJECT: Review of United States Arms Control Policies (U)\nIn directing the review of defense strategy mandated by NSR-12, I\nstated that I would task the Arms Control Policy Coordinating\nCommittee to review current \u2122.S. arms control positions and\npolicies both to reflect th\u00a2@ results of the defense strategy\nreview and to resolve outstanding issues requiring resolution\nbefore resumption of negotjations. The arms control review is to\nproceed in parallel so th preliminary decisions on negotiating\npositions can be reached by late April. This National Security\nReview sets forth guidange for the arms control review. va}\nNuclear and Space Talks Not later than May 1, 1989, the Arms\nControl PCC should forward a recommend\u00e9d dat\u00e9-fox--the.resumpt ion\nof the Nuclear and Spage Talks. This recommendation should reaffirm or suggest modififations to (a) the existing negotiating\norganizational structy\u00a5re, (b) the existing U.S. position on the\nlinkage between conclusion of a START treaty and resolution of\n\\ existing Defense an@ Space Treaty issues, and (c) the existing\nU.S. position that nfo new treaties in this area can be concluded\nwithout the resolutdon of Soviet violations of the ABM Treaty,\nespecially the large phased-array radar at Krasnoyarsk. (9)\nDefense and ace. Not later than May 3, 1989, the Arms\nControl PCC shoulA complete a review of CHE @xtsting_U.S. pos-\n\\ ition on Defense/and Space negotiations. The review should take\nY account of decisfions reached as a result of the defense strategy\nreview and shoufd result in (a) options for modifying the U.S.\nnegotiating pos/ition; (b) a review of the relationship of the\nDefense and Space Talks to U.S. plans, as determined by the\ndefense strategy review, for defensive systems research, development, testing/d\u00e9nd deployment; and (c) a review of whether the\nUnited States should seek negotiations restricting anti-\nPER E.O. 13526\nDeclassify on: OADR LPILM 4014-004\nSECRET tle\n\nt\nwgwana yo NBME\nAgia avo AAVEWELE\ngn OW te ell 68\naaiao3e |\n\nat is 5 il i re\n--SEGREE-- RECORD 1D, geeenie F\n'. NSC/RMO PROFILE RECEIVED: 09 JUN 89 20\nTO: AGENCIES\nFROM: HUGHES DOC DATE: 10 JUN 89\n: SOURCE REF:\nKEYWORDS: START ARMS CONTROL\nNSR\nPERSONS:\nSUBJECT: AGENCY POSITIONS ON NSR-14 RE START & DEFENSE & SPACE ISSUES\nACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 27 NOV 92 STATUS: C\nSTAFF OFFICER: KANTER LOGREF: 8920241\nEILES: IFR_O_ NSCP: NSROO14 CODES:\nes DOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR_INFO\nDAVIS\n| KANTER\nNSC CHRON\ncar ajaho\n| COMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CM CLOSED BY: 'BK Doc 20F 2\n. --SEGRET--\n\n\"a FF Soe. f\nNational Security Council\nThe White House\nPROOFED BY: LOG # zZ 0G 3\nURGENT NOT PROOFED: SYSTEM sew\nBYPASSED WW DESK: DOCLO! AIO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec ao ee f;\nPhilip Hughes Za Mz\n7\nBob Gates - 3 f =\n| \"Cocos See eee\nBrent Scowcroft \u00a2\u00b0\nfe phllisnghes\nSituation Roo bd\nituation Room\n5\nWest Wing Desk\" >\nme)\nco\nNSC Secretariat: 5: c\nsine. ice ee ira ae Rede cna EEE ce nc Sate\n3 Pee,\nForan) omion Orbis fotenn/s=aatr ac\nce: vp Sununu Other\nShould be seen by:\n(Wate/ ime)\nCOMMENTS\n\ni.\noo.,\nMESSAGE NO. CLASSIFICATION S EG E paces?\nFROM___G._ PHILIP HUGHES <4: -\n(NAME) (EXTENSION) < (ROOM NUMBER)\nMESSAGE vescription ART & DEFENSE\nJ\n5 Log #; 20613\neee to a OPTS\nTO_(AGENCY) DELIVER TO: DEPT/ROOM NO. = EXTENSION\nSTATE J. STAPLETON ROY EXEC SEC\nOe ee a SS\nDOD COL GEORGE P. COLE, JR. EXEC SEC\nen cee --_-- =\nDOE WILLIAM V. VITALE EXEC SEC -. =\nSed ------S a -- --_--_----------.\n| CIA H. LAWRENCE SANDALL EXEC SEC\nEXEC ASSISTANT\nJCS CAPT ANTHONY MANESS TO CHAIRMAN\nEO\nES _---- NS ---- ------.\n-- eeeeeeeeeeeSeSSSSSsSSSSeSses--\"'\"'\"' '\"_OCOCS\nREMARKS URGENT:\n| ene ele.\ne\n\nNATIONAL SECURITY COUNCIL\n\"SECRET WASHINGTON, D.C. 20506 20plS\nJune 9, 1989\n\"Bo b: L vecanmend ne\nACTION outherr 3\u00a2 Fhe\nMEMORANDUM FOR BRENT SCOWCROFT attathed.\nTHROUGH: ARNOLD KANTER ye Arne\nFROM: RICHARD(BAVIS\nSUBJECT: Executive Secretary Memorandum on\nSTART and Defense & Space\nThe attached memorandum from Philip Hughes to Executive\nSecretaries calls for agency positions on all of the issues in\nthe NSR-14 START and Defense & Space papers, by 5:00 p.m.,\nMonday. This tasking will allow us to complete the decision\npackage for action immediately following the final NSC meeting on\nThursday.\nwiriMfovey concurs\nRECOMMENDATION\nThat you authorize Philip Hughes to sign the memorandum at Tab I.\nApprove: Disapprove\nAttachment\nTab I Memo to Executive Secretaries\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B), September 11, 2006\nBy cae____ NARA, Date 2/\u00e9/o__\n~SECREP--\nDeclassify on: OADR SEGRETFas Eee ek ee ee a eae a it ta eh i ci es oe ee eel ee\n\n--SEGRET/NO---FORN-DIS- RECORD ID: 8920674\nNSC/S PROFILE RECEIVED: 19 JUN 89 08\nTO: SCOWCROFT\n| FROM: DAVIS DOC DATE: 16 JUN 89\n| TOBEY SOURCE REF:\n| GORDON\n| KEYWORDS: START DEFENSE POLICY\n| SPACE POLICY ARMS CONTROL\n| NSR NSC SYSTEM\n| PERSONS:\nSUBJECT: NST DECISIONS / ADDITIONAL NSC DECISIONS / POSITIONS IN SPACE &\nDEFENSE TALKS\n| ACTION: SCOWCROFT DISAPPROVED RECOM 2 DUE DATE: 07 FEB 91 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF:\n| FILES: IFR 0 SCP: NSROO14 CODES:\nNe DOCUMEN DISTRIBUTION\n| FOR ACTION FOR_CONCURRENCE FOR_INFO\nDAVIS\n| GORDON\n| KANTER\nTOBEY\ncar 718110\nCOMMENTS: _ eee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: AC DOC 10F 3\n| ~SEERET/NO-FORN-DES-\n\nP PD &\n_ National Security Council\n5 The White House\nPROOFED BY: ook noert\nURGENT NOT PROOFED: SYSTEM = PRS INT\nBYPASSED WW DESK: DOCLOG AIO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec as) a ee\nPhilipHughes <>:\nBob Gates sS\na\nBrent Scowcroft__\nNy!\nPhilip Hughes So |\nbd\nSituation Room,\n[Sy\nWest Wing Desk\nBe Secretariat\nce vP Sununu O\nShould be seen by:\nWate? ime)\naf 2074. Amie ps aMendiy\nCompleye Bb. Adf fo Fiz -\n\n| Document Originally\n| Attached to\nFollowing Page\n\n-SECGRET/SENSETIVE-- RECORD ID: 8920966 *\n'. NSC/S PROFILE RECEIVED: 05 AUG 89 10\nTO: KANTER\nFROM: HOLMES, H DOC DATE: 03 AUG 89\nSOURCE REF:\nKEYWORDS: ARMS CONTROL ASAT\nUSSR NSR\nPCC\nPERSONS:\nSUBJECT: DRAFT OF PART A RE OPTIONS FOR PARTIAL MEASURES TO REDUCE THREATS\nTO KEY SATELLITES PER NSR-14\nACTION: ACTION COMPLETED PER TOBEY DUE DATE: 08 AUG 89 STATUS: C\nSTAFF OFFICER: KANTER: LOGREF:\nPILES: IFR_O- SCP: NSROO14 CODES:\nDocu NT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR_INFO\nNSC CHRON\ncar ali\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: LF CLOSED BY: NSBTM poc 20F 2\n--SEGRET/SENSETIVE--\n\n|..: 8918182\n<)> United States Department of State\nRegt; 20966\n: eames Washington, D.C. 20520\nz Sd\nAugust 4, 1989\n--\u20acw/SECRETANOFORN/WNINTEL/SENSITIVE Attachment )\nMEMORANDUM FOR BRENT SCOWCROFT\nTHE WHITE HOUSE\nSubject: NSR-14 Paper On Options for Partial Measures to Reduce\nThreats to Key Satellites\nAttached is a memorandum from H. Allen Holmes, Assistant\nSecretary for Politico-Military Affairs, to Arnold Kanter,\nChairman of the Arms Control Policy Coordinating Committee,\ntransmitting a paper prepared per NSR-14 tasking.\n./ Stapleton Roy\nxecutive Secretary\nAttachment: As stated\nDepartment of State Guidelines\nE.O. 12958, SEC 3.4 (B), July 21, 1997\nBy ene NARA, Date 7/9).\n-{w/ SECRET/NOFORN/WNINTEL/SENSITIVE Attachment)",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

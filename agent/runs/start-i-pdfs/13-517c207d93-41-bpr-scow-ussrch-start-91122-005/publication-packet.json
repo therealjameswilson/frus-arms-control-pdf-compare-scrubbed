@@ -1,0 +1,474 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4708332/41-bpr-scow-ussrch-start-91122-005.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "3faf2bd5ca74985e4eaa4973dec2318a6e4f54cec2c0f114c1ce3e7787adbb6d",
+    "page_count": 30,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "115,133,140",
+    "doc_key": null,
+    "title": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (May 1990)",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (May 1990)",
+    "file_unit": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (May 1990)"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files, OA/ID 91122-005, Soviet Power Collapse in Eastern Europe-Strategic Arms Control (May 1990). Secret. Sent for action. Sent through Kanter and Blackwill. A stamped notation indicates Scowcroft saw the memorandum. Scowcroft initialed the memorandum.\n\nSource: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files, OA/ID 91122-005, Soviet Power Collapse in Eastern Europe-Strategic Arms Control (May 1990). No classification marking. All brackets are in the original text.\n\nSource: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files, OA/ID 91122-005, Soviet Power Collapse in Eastern Europe-Strategic Arms Control (May 1990). No classification marking.\n",
+  "selected_pages": [
+    4,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2009-0275-S 2009-0275-S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: Scowcroft, Brent, Collection Series: USSR Chronological Files Subseries: START [Strategic Arms Reduction Treaty] Files OA/ID Number: 122, Folder ID Number: 91122-005 Folder Title: Soviet Power Collapse in Eastern Eur",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Doc. No. / Type Subject/Title Date Restriction Classification Ola. Memo John Gordon to Brent Scowcroft 5/10/90 (b)(1) Ss Re: US/USSR Statement on Follow-on Negotiations (2 pp.) Olb. Draft Re: Draft Joint Statement Follow-on Strategic Negotiations (1 n.d. (b)(1) S Pp-) 02a. Letter Brent Scowcroft to Senator Helms (2 pp.) 5/30/90 oy 02b. Letter Brent Scowcroft to Senator Grassley (2 pp.) 5/30/90 Oe 02c. Letter Brent Scowcroft to Senator McClure (2 p",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Doc. No. / Type Subject/Title Date Restriction Classification 02j. Letter United States Senate to President Bush (2 pp.) 5/23/90 wf Page 2 of 2 Collection: Record Group: Bush Presidential Records Office: Scowcroft, Brent, Files Series: USSR Chronological Files Subseries: START [Strategic Arms Reduction Treaty] Files WHORM Cat.: File Location: Soviet Power Collapse in Eastern Europe - Strategic Arms Control (May 1990) Pinksheet Number: cap1040 - OA",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". sy SECRET RECORD ID: 9003739 \u2018 NSC/S PROFILE RECEIVED: 10 MAY 90 16 TO: SCOWCROFT \\ aah A FROM: GORDON DOC DATE: 10 MAY 90 KANTER SOURCE REF: BLACKWILL KEYWORDS: NUCLEAR WEAPONS START USSR ICBM PERSONS: SUBJECT: US / USSR STATEMENT RE FOLLOW-ON NEGOTIATIONS ACTION: NOTED BY SCOWCROFT DUE DATE: 14 MAY 90 STATUS: C STAFF OFFICER: GORDON LOGREF: FILES: PA NSCP: CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR_INFO BLACKWILL GORDON KANTER DECLASSIFIED White House Guidelines E.O. 12958,",
+      "selected_for_body": true
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Document No. Subject/Title of Document Date Restriction Class. and Type Ola. Memo John Gordon to Brent Scowcroft 5/10/90 (b)(1) Ny Re: US/USSR Statement on Follow-on Negotiations (2 pp.) Collection: Record Group: Bush Presidential Records Office: Scowcroft, Brent, Collection Series: USSR Chronological Files Subseries: START [Strategic Arms Reduction Treaty] Files WHORM Cat.: File Location: Soviet Power Collapse in Eastern Europe - Strategic Arms Control (May 1990) Date Closed: 3/17/2009 OA/ID Nu",
+      "selected_for_body": false
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Document No. Subject/Title of Document Date Restriction Class. and Type Olb. Draft Re: Draft Joint Statement Follow-on Strategic Negotiations n.d. (b)(1) s (1 pp.) Collection: Record Group: \u2014_ Bush Presidential Records Office: Scowcroft, Brent, Collection Series: USSR Chronological Files Subseries: START [Strategic Arms Reduction Treaty] Files WHORM Cat.: File Location: Soviet Power Collapse in Eastern Europe - Strategic Arms Control (May 1990) Date Closed: 3/17/2009 OA/ID Number: 91122-005 FOIA",
+      "selected_for_body": false
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a a UNCLASSIFIED RECORD ID: 9004204 NSC/S PROFILE REC : M 14 CH sity TO: WALLOP, MALCOLM ais bab FROM: SCOWCROFT DOC DATE: 30 MAY 90 SOURCE REF: KEYWORDS: USSR ARMS CONTROL DISARMAMENT START co PERSONS: HELMS, JESSE A . GRASSLEY, CHARLES MCCLURE, JAMES A THURMOND, STROM SUBJECT: SCOWCROFT LTR ON ALCM & SLCM AGREEMENTS ee ACTION: SCOWCROFT SGD LTR DUE DATE: 29 MAY 90 STATUS: C STAFF OFFICER: DAVIS LOGREF: FILES: WH NSCP: CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR INFO DAVIS GORD",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 ME Dear Senator Helms: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic forces",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". \u2018 2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 ",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Dear Senator Grassley: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic forces",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". , 2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 ",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 pew Dear Sena AfcClure: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic force",
+      "selected_for_body": true
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ", : 2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 ",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Dear Senator Thurmond: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic forces",
+      "selected_for_body": true
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 km a",
+      "selected_for_body": true
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Farr Pe Dear Sengtof Lott: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic fo",
+      "selected_for_body": true
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 km a",
+      "selected_for_body": true
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Afi Dear Senatof Symms: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic force",
+      "selected_for_body": true
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 km a",
+      "selected_for_body": true
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Dear ore This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic forces inferior to t",
+      "selected_for_body": true
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 km a",
+      "selected_for_body": true
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Dear seo ache: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic forces inferio",
+      "selected_for_body": true
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SI.CMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 km ",
+      "selected_for_body": true
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE WASHINGTON May 30, 1990 Dear sanagoefaiop: This is in response to your May 23 letter to the President asking about the tentative agreements made with the Soviet Union on strategic forces during the May Ministerial in Moscow. At the outset, I can assure you that the Administration is fully cognizant of the provisions of the Jackson Amendment. Any treaty the President submits to the Senate for its advice and consent will not limit the United States to levels of strategic forces inf",
+      "selected_for_body": true
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "2 nuclear SLCMs with a range greater than 600 kilometers. We did agree to a maximum number the U.S. could declare at any one time that is well above the number of nuclear SLCMs we have today and expect to have during the period of the treaty. The Soviets wanted all SLCMs with a range in excess of 600 km included in the declaration. We wanted to restrict the declaration to nuclear SLCMs whose range was above a 300 km threshold. In the end, we reached a compromise: all nuclear SLCMs above 600 km a",
+      "selected_for_body": true
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "blank_or_noise",
+      "cues": [],
+      "model_match_score": 0.0,
+      "text_preview": "4 > wo H H",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:",
+        "letter from"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "42u4 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 May 29, 1990 ACTION S MEMORANDUM FOR BRENT SCOWCROFT Nep THROUGH: ARNOLD KANTERKS2 Rik FROM: JOHN congue DAVISK\u2019 SUBJECT: Letter from Senator Helms on ALCM and SLCM Agreements Senator Helms and eight other Senators have written the President expressing concern about the ALCM and SLCM agreements reached in Moscow at the last Ministerial (Tab II). A proposed response for your signature is at Tab I. Concurrence by: Robert exfewir, Condi Rice, Gi",
+      "selected_for_body": true
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SFYras y JOE a om NE Guang LUGAR IANA se eaaer eet tcncur Mires maa 4204 SOHN F KERRY. MASSACHUS! MARRY PRESSUER. SOUTH DAKOTA . : DANIEL PF MOYNINAN, NEW YORK, GORDON J HUMPHREY. NEW HAMPSHIRE CHARLES 8 ROBB, VIRGINIA Connie MACK. FLORIDA COMMITTEE ON FOREIGN RELATIONS GERYLO 8 CHRISTIANSON. STAFF OIRECTOR JAMES P LUCIER. MINORITY STAFF DIRECTOR WASHINGTON, DC 20510-6225 , pre May 23, 1990 re Y ' f The President The White House Washington, D.C. Dear Mr. President: Reports of Secretary Baker\u2019s t",
+      "selected_for_body": true
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-2- shall not constrain any military programs of the United States [emphasis supplied] unless otherwise provided for in accordance with Section 33 of the Arms Control and Disarmament Act.\" Section 33 of the Arms Control and Disarmament Act, of course, states that U.S. armed forces may be limited only through the treaty-making power or through further affirmative legisla- tion. Nevertheless, press reports state that Secretary Baker did agree to constrain U.S. military programs in a so-called \"sid",
+      "selected_for_body": true
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "so ID# 143884 THE WHITE HOUSE CORRESPONDENCE TRACKING WORKSHEET INCOMING DATE RECEIVED: MAY 24, 1990 NAME OF CORRESPONDENT: THE HONORABLE JESSE HELMS SUBJECT: REQUESTS A RESPONSE FROM THE PRESIDENT ON TWO CONCERNS IN THE PROPOSED FRAMEWORK STATEMENT FOR A START TREATY WITH THE SOVIET UNION BEFORE IT IS SIGNED AT THE FORTHCOMING SUMMIT ACTION DISPOSITION ROUTE TO: ACT DATE TYPE C COMPLETED OFFICE/AGENCY (STAFF NAME) CODE YY/MM/DD RESP D YY/MM/DD i FREDERICK MCCLURE ORG 90/05/24 < 90 /0S/2+ REFERR",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": ". sy SECRET RECORD ID: 9003739\n' NSC/S PROFILE RECEIVED: 10 MAY 90 16\nTO: SCOWCROFT \\ aah A\nFROM: GORDON DOC DATE: 10 MAY 90\nKANTER SOURCE REF:\nBLACKWILL\nKEYWORDS: NUCLEAR WEAPONS START\nUSSR ICBM\nPERSONS:\nSUBJECT: US / USSR STATEMENT RE FOLLOW-ON NEGOTIATIONS\nACTION: NOTED BY SCOWCROFT DUE DATE: 14 MAY 90 STATUS: C\nSTAFF OFFICER: GORDON LOGREF:\nFILES: PA NSCP: CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR_INFO\nBLACKWILL\nGORDON\nKANTER\nWhite House Guidelines\nE.O. 12958, SEC 3.4 (B) September 11, 2006\nBy Ge __NARA, Date 3}r2109\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSDAI CLOSED BY: NSDAI poc 10F 1\n\na a UNCLASSIFIED RECORD ID: 9004204\nNSC/S PROFILE REC: M 14\nCH sity\nTO: WALLOP, MALCOLM ais bab\nFROM: SCOWCROFT DOC DATE: 30 MAY 90\nSOURCE REF:\nKEYWORDS: USSR ARMS CONTROL\nDISARMAMENT START\nco\nPERSONS: HELMS, JESSE A. GRASSLEY, CHARLES\nMCCLURE, JAMES A THURMOND, STROM\nSUBJECT: SCOWCROFT LTR ON ALCM & SLCM AGREEMENTS\nee\nACTION: SCOWCROFT SGD LTR DUE DATE: 29 MAY 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF:\nFILES: WH NSCP: CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR INFO\nDAVIS\nGORDON\nCAMPLEY\nCOMMENTS: a eee en\n5,\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSJWD CLOSED BY: NSLMS poc 110F 11\nUNCLASSIFIED\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nME\nDear Senator Helms:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n. ' 2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nRal\nBrent Scowcroft\nThe Honorable Jesse Helms\nUnited States Senate\nWashington, D. C. 20510-6225\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nDear Senator Grassley:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n., 2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBrent Scowcroft\nThe Honorable Charles E. Grassley\nUnited States Senate\nWashington, D. C. 20510-1501\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\npew\nDear Sena AfcClure:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n,: 2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBrent Scowcroft\nThe Honorable James A. McClure\nUnited States Senate\nWashington, D. C. 20510-1201\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nDear Senator Thurmond:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBrent Scowcroft\nThe Honorable Strom Thurmond\nUnited States Senate\nWashington, D. C. 20510-4001\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nFarr Pe\nDear Sengtof Lott:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBus\nBrent Scowcroft\nThe Honorable Trent Lott\nUnited States Senate\nWashington, D. C. 20510-2403.\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nAfi\nDear Senatof Symms:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBrent Scowcroft\nThe Honorable Steve Symms\nUnited States Senate\nWashington, D. C. 20510-1202\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nDear ore\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBrent Scowcroft\nThe Honorable Orrin G. Hatch\nUnited States Senate\nWashington, D. C. 20510-4402\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nDear seo ache:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SI.CMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBunt\nBrent Scowcroft\nThe Honorable Larry Pressler\nUnited States Senate\nWashington, D. C. 20510-4102\n\nTHE WHITE HOUSE\nWASHINGTON\nMay 30, 1990\nDear sanagoefaiop:\nThis is in response to your May 23 letter to the President asking\nabout the tentative agreements made with the Soviet Union on\nstrategic forces during the May Ministerial in Moscow.\nAt the outset, I can assure you that the Administration is fully\ncognizant of the provisions of the Jackson Amendment. Any treaty\nthe President submits to the Senate for its advice and consent\nwill not limit the United States to levels of strategic forces\ninferior to the limits provided for the Soviet Union.\nWith respect to ALCMs, let me correct an error that has appeared\nin certain press reports on this issue. START will not\nspecifically limit the number of ALCMs nor ALCM-carrying heavy\nbombers. We, like the Soviets, will be allowed to deploy as many\nALCM carriers as we choose within the overall START limits of\n1600 delivery vehicles and 6000 weapons.\nWe have agreed to an ALCM counting rule that is clearly in our\ninterest. Up to 150 U.S. bombers could carry 20 ALCMs, but would\nonly count as carrying 10. Up to 210 Soviet bombers could carry\nas many as 12 ALCMs, but they would count as 8. This counting\nrule would exclude from the 6000 warhead limit a maximum of 1500\nU.S. ALCMs and 840 Soviet ALCMs. The 150/210 numbers are not\nlimits, rather points beyond which there is no \"discounting\" and\nevery additional ALCM counts as one against the START 6000\nwarhead limit.\nFinally, we have informed the Soviets of the fact that we have no\nplans to convert the non-nuclear Tacit Rainbow ALCM to a nuclear\nALCM. However, nothing in START nor in any other commitment we\nhave made would prohibit such a conversion if that becomes in our\ninterest at some point in the future. If a non-nuclear ALCM were\never converted to a nuclear ALCM, that missile would of course\nbecome subject to all of the START provisions on nuclear ALCMs.\nWith respect to SLCMs, we have achieved the key U.S. negotiating\nobjective. The Soviets sought a provision in the START Treaty\nthat would limit nuclear SLCMs, which we could not accept because\nthere is no effective and acceptable way to verify any such\nlimit. They have now agreed to our proposal for separate U.S.\nand Soviet political declarations of the numbers of deployed\n\n2\nnuclear SLCMs with a range greater than 600 kilometers. We did\nagree to a maximum number the U.S. could declare at any one time\nthat is well above the number of nuclear SLCMs we have today and\nexpect to have during the period of the treaty.\nThe Soviets wanted all SLCMs with a range in excess of 600 km\nincluded in the declaration. We wanted to restrict the\ndeclaration to nuclear SLCMs whose range was above a 300 km\nthreshold. In the end, we reached a compromise: all nuclear\nSLCMs above 600 km are included in the declaration but the two\nsides will also exchange data about nuclear SLCMs with ranges\nbetween 300 km and 600 km. Since this approach is limited to\nnuclear SLCMs, it would have no effect on our more than 3000\nconventional SLCMs.\nWe have made good progress in negotiating START. The major,\nsubstantive limits have been agreed. That said, there remains\nmuch to do before an agreement is complete and can be submitted\nto the Senate. The President greatly appreciates your interest\nand hopes that you will support this solid agreement that is in\nour national interest.\nSincerely,\nBien\nBrent Scowcroft\nThe Honorable Malcolm Wallop\nUnited States Senate\nWashington, D. C. 20510-5001\n\n42u4\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nMay 29, 1990\nACTION S\nMEMORANDUM FOR BRENT SCOWCROFT Nep\nTHROUGH: ARNOLD KANTERKS2\nRik\nFROM: JOHN congue DAVISK'\nSUBJECT: Letter from Senator Helms on ALCM and SLCM\nAgreements\nSenator Helms and eight other Senators have written the President\nexpressing concern about the ALCM and SLCM agreements reached in\nMoscow at the last Ministerial (Tab II). A proposed response for\nyour signature is at Tab I.\nConcurrence by: Robert exfewir, Condi Rice, Ginny Bampley and\nPrchoreseoscon.\nRECOMMENDATION\nThat you sign the letters to Senator Helms et al. at Tab I.\nTab I Letters to Senator Helms et al.\nTab II Letter from Senator Helms et al.\n\nSFYras\ny JOE a om NE Guang LUGAR IANA\nse eaaer eet tcncur Mires maa 4204\nSOHN F KERRY. MASSACHUS! MARRY PRESSUER. SOUTH DAKOTA.:\nDANIEL PF MOYNINAN, NEW YORK, GORDON J HUMPHREY. NEW HAMPSHIRE\nCHARLES 8 ROBB, VIRGINIA Connie MACK. FLORIDA COMMITTEE ON FOREIGN RELATIONS\nGERYLO 8 CHRISTIANSON. STAFF OIRECTOR\nJAMES P LUCIER. MINORITY STAFF DIRECTOR WASHINGTON, DC 20510-6225\n, pre May 23, 1990\nre Y '\nf The President\nThe White House\nWashington, D.C.\nDear Mr. President:\nReports of Secretary Baker's trip to the Soviet Union last\nweek for the purpose of drafting a proposed framework statement\nfor a START treaty have raised two profound concerns.\nThe first is that the Jackson Amendment to the 1972 SALT I\nAgreement requires, in the language of the Amendment, \"equal\nlevels\" of strategic forces in any future treaty between the\nUnited States and the Soviet Union limiting intercontinental\nstrategic forces.\nOf course, this is still the law of the land on the fundamental U.S. objective in strategic arms control treaties. Yet\nreports of the meeting between Secretary Baker and Foreign Minister Shevardnadze suggest that the United States conceded to the\nSoviets a 40% advantage [210 vs.150] in the number of heavy bombers carrying air-launched cruise missiles (ALCMs), and also a\nmore than two-to-one advantage over the United States [3,700 vs.\n1,800] in the potential number of ALCMs carried by these bombers.\nAre these reports correct, and, if so, do they meet the\nspirit and legal requirements of the Jackson Amendment?\nSimilarly, did the United States agree to a Soviet-proposed\nrange-limitation on sea-launched cruise missiles (SLCMs) which\nallowed the Soviets to keep several thousand short-range SLCMs\nagainst which the U.S. has no equivalent force?\nIf so, does this agreement meet the spirit and legal requirements of the Jackson Amendment?\nSecondly, the Helms Amendment to the INF Treaty states:\n\"Any joint statement by the United States with the USSR\nof a framework for the negotiation of strategic arms\ntreaties contemplated hereby, and such framework itself, shall serve for the purpose only of guiding the\nconduct of negotiations which the United States herein\nhas declared its desire to pursue expeditiously, and\n\n-2shall not constrain any military programs of the United\nStates [emphasis supplied] unless otherwise provided\nfor in accordance with Section 33 of the Arms Control\nand Disarmament Act.\"\nSection 33 of the Arms Control and Disarmament Act, of\ncourse, states that U.S. armed forces may be limited only through\nthe treaty-making power or through further affirmative legislation. Nevertheless, press reports state that Secretary Baker did\nagree to constrain U.S. military programs in a so-called \"side\nletter\" to the proposed START framework statement in which the\nUnited States agrees not to modernize the U.S. \"Tacit Rainbow\"\nALCM, and also not to equip this ALCM with a nuclear warhead.\nIs it correct that Secretary Baker did agree to such a side\nletter constraining U.S. military programs? If so, does such a\nletter meet the spirit and legal requirements of the Helms Amendment to the INF Treaty and to Section 33 of the Arms Control and\nDisarmament Act?\nMr. President, we would appreciate a response on these matters before the framework statement with the Soviet Union is\nsigned at the forthcoming summit.\nSincerely,\nSs\nVe c\n<i Att\ny\na | 8 fe?\n> aa / fi\nMei AS\nFood Cente\n\nso ID# 143884\nTHE WHITE HOUSE\nCORRESPONDENCE TRACKING WORKSHEET\nINCOMING\nDATE RECEIVED: MAY 24, 1990\nNAME OF CORRESPONDENT: THE HONORABLE JESSE HELMS\nSUBJECT: REQUESTS A RESPONSE FROM THE PRESIDENT ON TWO\nCONCERNS IN THE PROPOSED FRAMEWORK STATEMENT\nFOR A START TREATY WITH THE SOVIET UNION\nBEFORE IT IS SIGNED AT THE FORTHCOMING SUMMIT\nACTION DISPOSITION\nROUTE TO: ACT DATE TYPE C COMPLETED\nOFFICE/AGENCY (STAFF NAME) CODE YY/MM/DD RESP D YY/MM/DD\ni\nFREDERICK MCCLURE ORG 90/05/24 < 90 /0S/2+\nREFERRAL NOTE: oo\nNS Bika. Ginna \\eewa ples BO povog72t\nREFERRAL NOTE:\nOOO I TI OTT\ni ee I as\nREFERRAL NOTE:\nT_T TTT\n-- I I\nREFERRAL NOTE:\n--2JW_ I TI TT\ney Se ee\nREFERRAL NOTE:\nCOMMENTS: INCOMING RECEIVED FROM HENRY PLASTER FOR\nTRACKING, MAY 24 90\nnea ner\nTn\nADDITIONAL CORRESPONDENTS: 8 MEDIA:L INDIVIDUAL CODES: 1220\n__ MAIL USER CODES: (A) (B) (c)\nHK IK KI KK IK KI KKK TOK KKK KI KIRK KK IKK IK RRR RK KKK KEK HIKER RHEE REE EKEKEK\n*ACTION CODES: *DISPOSITION *OUTGOING *\n* * *CORRESPONDENCE: *\n*A-APPROPRIATE ACTION *A-ANSWERED *TYPE RESP=INITIALS *\n*C-COMMENT / RECOM *B-NON-SPEC-REFERRAL * OF SIGNER *\n*D-DRAFT RESPONSE *C-COMPLETED * CODE = A *\n*F-FURNISH FACT SHEET *S-SUSPENDED *COMPLETED = DATE OF *\n*I-INFO COPY/NO ACT NEC* * OUTGOING *\n*R-DIRECT REPLY W/COPY * * *\n*S-FOR-SIGNATURE * * *\n*X-INTERIM REPLY * * *\nHK KKK IKK IK KI KAI IK III IK III IAI KK KR III KKK KK RIKKI KKK RR KKK RHEE EREK\nREFER QUESTIONS AND ROUTING UPDATES TO CENTRAL REFERENCE\n(ROOM 75,0EOB) EXT-2590\nKEEP THIS WORKSHEET ATTACHED TO THE ORIGINAL INCOMING\nLETTER AT ALL TIMES AND SEND COMPLETED RECORD TO RECORDS\nMANAGEMENT.",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

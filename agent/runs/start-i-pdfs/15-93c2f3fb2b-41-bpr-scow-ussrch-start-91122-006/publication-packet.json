@@ -1,0 +1,364 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4708332/41-bpr-scow-ussrch-start-91122-006.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "dd7da3badff3d188f909d58eab99fc386a84d7e7c5d80917b5c8da844d592ad2",
+    "page_count": 22,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "146",
+    "doc_key": null,
+    "title": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (June 1990)",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (June 1990)",
+    "file_unit": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (June 1990)"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files, Soviet Power Collapse in Eastern Europe-Strategic Arms Control (June 1990). Secret. Sent for information. Copied to Quayle and Sununu. A stamped notation at the top of the memorandum reads: \"The President has seen.\" Bush initialed the memorandum in the upper right-hand corner.\n",
+  "selected_pages": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2009-0275-S 2009-0275-S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: Scowcroft, Brent, Collection Series: USSR Chronological Files Subseries: START [Strategic Arms Reduction Treaty] Files OA/ID Number: 91122 Folder ID Number: 91122-006 Folder Title: Soviet Power Collapse in Eastern Eu",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Doc. No. / Type Subject/Title Date Restriction Classification Ola. Note To Mr. Secretary (1 pp.) 6/11/90 oh A 01b. Outline Re: Letter from Senators on START (2 pp.) 6/11/90 ox) B Olc. Letter United States Senate to President Bush (2 pp.) 5/23/90 of 02a. Memo Rich Davis to Brent Scowcroft 6/18/90 oy 54 Re: Points To Make on Modernization Constraints in START (1 pp-) 02b. Paper Re: Point Paper on Modernization/Flight Testing Constraints (2 n.d. os p",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Se GHRUN FILE \u2018 SECRET\u2014 RECORD ID: 9004766 ; NSC/S PROFILE RECEIVED: 13 JUN 90 18 TO: BAKER, J FROM: ROY, J DOC DATE: 11 JUN 90 SOURCE REF: KEYWORDS: USSR ARMS CONTROL START NUCLEAR WEAPONS PERSONS: SUBJECT: STATE REPLY TO SENATORS QUESTIONS RE START TREATY AT MOSCOW MINISTERIAL \u2014__ ee ACTION: NOTED BY PRES W/ COMMENT DUE DATE: 16 JUN 90 STATUS: C STAFF OFFICER: NONE LOGREF : FILES: PA = NSCP: CODES: HALES: PA NSCP! cess DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR_INFO BLACKWILL GORDON ",
+      "selected_for_body": true
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "National Security Council The White House \u201d eee PROOFED BY: LOG # \u2014_ URGENT NOT PROOFED: SYSTEM co NSC INT i BYPASSED WW DESK: DOCLOG AlO SEQUENCE TO HAS SEE! DISPOSITION Bill Sittmann fos _\u00a3 . bal / Bob Gates O f Brent Scowe\u00a5oft = eS Bill Sittmany = a . ths = > Situation Reom 2 \u2014_____ West Wing Desk SS A k NSC Secretariat mS & | A ) ce: ve Sununu Other Should be seen by: \u2014\u2014\u2014Parelrimey\u2014\u2014\u2014 COMMENTS \u2018 , & _ a a",
+      "selected_for_body": true
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "department of state",
+        "letter from"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "& United States Department of State for Security Assistance, Science THE PRESIDENP*HAS*Steay SeRET as \\ PY - \u00bb June ll, 1990 . vw \\ \u201cyg Vin: og\u201d Mr. Secretary: Ww In response to your request, Vv attached is a two-page paper we have\u2019 worked with L on the questions about the outcome of the Moscow ministerial / in the letter from S or Helms et al to the President. L} 6\u201d | SECRET DECL: OADR DECLASSIFIED PER E.O. 13526 Rolo-2.309-MK Fe 3/iaia",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". June 11, 1990 SECRET The letter suggests tha he (aLcM) provisions of START, the Gicw)aeciaration, and the \u2018etter on Tacit Rainbow may violate varjous provisions of law. In fact, none of these raises &A%)| substantive or legal problems or infringes on Congressional prerogatives. oo \u2014\u2014\u2014 9, he_AL lution US (as discussed further 1D rion and will be submitted as part of the START Treaty to the Senate for its advice and consent before it enters into force. The SLCM declaration will be a political co",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET : : -2- . \u00b0 Th ination of the r_nu counting rules is ver avora is. \u00a3t he vie up_to these numbers, the US would have \u20ac \u00a54\u00a5! nore total s_(3000 US vs. oviet) and more \u2018\u201cuncounted\"ALCMs (1500 US vs. 840 Soviet). \u2014 \u2014\u2014\u2014S \u00b0 Since the resolution on ALCMs favors the US, it does not raise questions concerning the letter or the spirit of the gem Amendment . The letter asks if the Soviets were allowed to keep several thousand short-range SLCMs, and whether this would meet the letter or spirit of the",
+      "selected_for_body": false
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ry . REM an = SSS Bnited States Senate : = \u2014\u2014\u2014 COMMITTEE ON PORBIGN RELATIONS Fah ye WasameTon, BC 208 10-6228 May 23, 1990 The President The White House Washington, D.C. Dear Mr. President: Reports of Secretary Baker\u2019s trip to the Soviet Union last week for the purpose of drafting a proposed framework statement for a START treaty have raised two profound concerns. The first is that the Jackson Amendment to the 1972 SALT I Agreement requires, in the language of the Amendment, SA levels* of strat",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". 3 -2- peli not constrain eny military programs of the United . States (emphasis Supplied} unless otherwise Provided for in accordance with Section 33 of the Arms Control and Disarmament Act.\u00b0 Section 33 of the Arms Control and Disarmament Act, of course, states that U.S. armed forces may be limited only through the treaty-making power or through further affirmative legisla- tion. Nevertheless, press reports state that Secretary Baker did agree to constrain U.S. military programs in a so-called",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SONFLDENTIAL- RECORD ID: 9004894 _* ; NSC/S PROFILE RECEIVED: 18 JUN 90 15 TO: SCOWCROFT 1 CHPGN FIL ay FROM: DAVIS DOC DATE: 18 JUN 90 KANTER SOURCE REF: KEYWORDS: START ARMS CONTROL SALT USSR ICBM PERSONS : SUBJECT: MODERNIZATION CONSTRAINTS IN START nC oon epgprsegen ACTION: NOTED BY SCOWCROFT W/ COMMENT DUE DATE: 21 JUN 90 STATUS: C STAFF OFFICER: DAVIS LOGREF : FILES: WH NSCP: CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO DAVIS KANTER NSC CHRON DECLASSIFIED ; White House ",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 . SE ee ee , National Security Council . an ; The White House Vex \u00a2. 02-45 L_ a PROOFED BY: y ) 7 NO LOG # 4H $I aa URGENT NOT PROOFED: SYSTEM NSC INT BYPASSED WW DESK: DOCLOG LS AIO ____ ' _ LA SEQUENCE TO HAS SEEN DISPOSITION is CA . Bob Gates y Brent Scowcroft SS AP, lV 4 Bill Sittmann 4 _ ag te Situation Room a en West Wing Desk 3 FF, NSC Secretariat 6 2 rn) ie ee 7 cc: vp Sununu Other Should be seen by: \u2014\u2014\u2014WateTimey COMMENTS 2 \u2014_ DISPATCH INSTRUCTIONS: cd",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 Wa ; CONETEDENTIAS iat ay 4894 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 June 18, 1990 INFORMATION MEMORANDUM FOR BRENT SCOWCROFT Nat! Sec Advisor has seen THROUGH: ARNOLD KANTER(Q~ FROM: RICH pavigel. SUBJECT: Points To Make on Modernization Constraints in START You recently mentioned that the Vice President had been questioned on the Hill about why ballistic missile modernization is so important to the U.S. that we cannot accept such constraints in START as the price for getting Sovie",
+      "selected_for_body": true
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "UNCLASSIFIED Point Paper on Modernization/Flight Testing Constraints Why Modernization Constraints on Heavy ICBMs/SS-18 -- Since SALT I, constraints on and the eventual elimination of Soviet heavy ICBMs has been a central U.S. arms control objective. Our efforts in START to get limits on SS-18 modernization have served this objective. ~~ One of our objectives in any follow-on negotiations is to achieve the complete elimination of these systems. -- The SS-18 is a unique category of ICBM whose cha",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". UNCLASSIFIED , 2 -- We would therefore oppose any general, across-the-board modernization constraints. -- We would particularly oppose a ban or numerical limits on flight tests of ICBMs and SLBMs other than on the SS-18 because such flight-testing is necessary to maintain a credible strategic deterrent. -- Flight testing is necessary to retain confidence in the reliability of deployed ballistic missiles, and is the only way to determine the accuracy of the system. -- Flight testing represents ",
+      "selected_for_body": true
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 \u2018 \u2018SEeRET- RECORD ID: 9004618 ; \u2018 NSC/S PROFILE RECEIVED: 08 JUN 90 12 : IDENT TO: PRES CHRON FILE FROM: SCOWCROFT DOC DATE: 25 JUN 90 SOURCE REF: KEYWORDS: START ARMS CONTROL TREATIES PERSONS: SUBJECT: TACIT RAINBOW MISSILE & START TREATY a ACTION: NOTED BY PRES DUE DATE: 12 JUN 90 STATUS: C STAFF OFFICER: KANTER LOGREF: FILES: PA NSCP: CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO KANTER NSC CHRON DECLASSIFIED White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 20",
+      "selected_for_body": true
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a he National Security Council ; The White House prooreDay: __ LIW\u201c> vce 4618 URGENT NOT PROOFED: SYSTEM (85) NSC INT BYPASSED WW DESK: DOCLONeA | A/O SEQUENCETO \u2014- HAS SEEN DISPOSITION writ Sittmann l _ Bob Gates 2 \u2014\u2014 \u2014\u2014\u2014__ nN Brent Scowtroft \u2014 3 A 4 ay . fe, \\) x Bill Sittmahn = bal Lp wi a TO SituatiayRoom __ West iting DesiS 3 2s po i, > \u2014\u2014 \u2014 NSC Secretariat> \u00a9 by { Da cc: vp \u00a9 \u2014\u2014 Sununu Other Should be seen by: \u2014Datetimey \u2014\u2014\u2014_ COMMENTS / . . DISPATCH INSTRUCTIONS: o",
+      "selected_for_body": true
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE WHITE HOUSE ? SECGREF 4618 WASHINGTON 90 UN25 Pz: 12 AB Be ey June 25, 1990 Pune FiLr . cd wid Z INFORMATION rN Z xf .,* MEMORANDUM FOR THE PRESIDENT a . v FROM: BRENT SCOWCROFT (SO vr, SUBJECT: The Tacit Rainbow Missile and the START Treaty Tacit Rainbow is a conventionally-armed cruise missile. Nevertheless, it became the subject of last minute negotiations between Jim Baker and Shevardnadze to resolve the nuclear ALCM issue in START at the May ministerial. Since then, critics of START hav",
+      "selected_for_body": true
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SEGRE -2- The final obstacle to reaching agreement with the Soviets on nuclear ALCM limits was the determination of the range threshold, i.e., the range above which the ALCM would count against the START limits. At the May ministerial, Jim told the Soviets we could accept their proposal for a 600 km range threshold provided that Tacit Rainbow was treated not as an \u201cexisting\" but rather as a \"future\" conventional cruise missile. Gorbachev shook hands with Jim on that deal, but that very evening t",
+      "selected_for_body": true
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "THE SECNETANY OF STATE . WASHINGTON May 19, 1990 Dear Eduard, I have just finished meeting with my arms control experts, who tell me that we are still some distance from completing an overall agreement on the question of air-launched cruise missiles because of continuing differences over the issue of Tacit Rainbow. In particular, my experts have reported your concerns and the three elements of your proposal. I have had an oppor to study your ideas, and am persuaded that Tacit Rainbow need not be",
+      "selected_for_body": false
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "i ; -a- I believe that these points are responsive to your questions. You should feel free to share these points with your colleagues if you think this would be helpful. Of course, I am ready to come over to meet with you now to finalize this and any other issues. Eduard, I would like to conclude by reminding you that you gave me every reason to believe that if I could move to your position on ALCM range, Wwe would finally put the ALCM issue behind us. Let's do s0 now. Sincerely, 4 17 Aames A. B",
+      "selected_for_body": true
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": oe +h . , croup on Strategic Offensive Arms ). 1.8, Non-Paper cd May 12, 1990 Notification Annex, Section. 1, paragraph (4%) and (4**) (page 2) Proposed Language (4*) notification, no later than six months in advance, of the anne nnn - ee . . _=* \u00a9 eee \u2018arrival of the first missile of a new type of long-range non-nuclear TT ALCM at the first declared airbase for heavy bombers equipped for non-nuclear armaments or for heavy bombers equipped for nuclear armaments other than long-range nuclear AL",
+      "selected_for_body": true
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". \"SEGRE? 4618 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 June 8, 1990 ACTION MEMORANDUM FOR BRENT SCOWCROFT FROM: ARNOLD canter Me SUBJECT: Treatment of Tacit Rainbow in START As you requested, a memo to the President on this subject is attached at Tab l. John vote concurs. RECOMMENDATION That you sign the memo to the President at Tab 1. Attachments Tab 1 Memorandum to the President TabaA May 19 Baker Letter on Tacit Rainbow DECLASSIFIED \\White House Guidelines 4, 2008 SECREE E.0, 19626, ",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": "Se GHRUN FILE\n' SECRET-- RECORD ID: 9004766\n; NSC/S PROFILE RECEIVED: 13 JUN 90 18\nTO: BAKER, J\nFROM: ROY, J DOC DATE: 11 JUN 90\nSOURCE REF:\nKEYWORDS: USSR ARMS CONTROL\nSTART NUCLEAR WEAPONS\nPERSONS:\nSUBJECT: STATE REPLY TO SENATORS QUESTIONS RE START TREATY AT MOSCOW\nMINISTERIAL\n--__ ee\nACTION: NOTED BY PRES W/ COMMENT DUE DATE: 16 JUN 90 STATUS: C\nSTAFF OFFICER: NONE LOGREF:\nFILES: PA = NSCP: CODES:\nHALES: PA NSCP! cess\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR_INFO\nBLACKWILL\nGORDON\nMANDEL\nNSC CHRON\nRICE\nROSTOW\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy Cog NARA, Date 3|i7leq\nCOMMENTS:\neee\nee\nee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSWEA CLOSED BY: NSWEA Doc 10F 2\n\"SHCREE-\n\nNational Security Council\nThe White House\n\" eee\nPROOFED BY: LOG # --_\nURGENT NOT PROOFED: SYSTEM co NSC INT\ni BYPASSED WW DESK: DOCLOG AlO\nSEQUENCE TO HAS SEE! DISPOSITION\nBill Sittmann fos _\u00a3\n. bal /\nBob Gates O f\nBrent Scowe\u00a5oft = eS\nBill Sittmany = a\n. ths =\nSituation Reom 2 --_____\nWest Wing Desk SS A k\nNSC Secretariat mS & | A )\nce: ve Sununu Other\nShould be seen by:\n------Parelrimey------\nCOMMENTS\n& _ a\na\n\n& United States Department of State\nfor Security Assistance, Science\nTHE PRESIDENP*HAS*Steay\nSeRET as \\\nPY - \u00bb\nJune ll, 1990. vw \\\n\"yg Vin:\nog\"\nMr. Secretary: Ww\nIn response to your request, Vv\nattached is a two-page paper we have'\nworked with L on the questions about\nthe outcome of the Moscow ministerial /\nin the letter from S or Helms et al\nto the President. L}\n6\" |\nDECL: OADR\nPER E.O. 13526\nRolo-2.309-MK\nFe 3/iaia\n\n. June 11, 1990\nThe letter suggests tha he (aLcM) provisions of START, the\nGicw)aeciaration, and the 'etter on Tacit Rainbow may violate\nvarjous provisions of law. In fact, none of these raises\n&A%)| substantive or legal problems or infringes on Congressional\nprerogatives. oo\n9, he_AL lution US (as discussed further\n1D rion and will be submitted as part of the START Treaty\nto the Senate for its advice and consent before it enters\ninto force.\nThe SLCM declaration will be a political commitment, not a\nlegally binding obligation.\nThe Tacit Rainbow letter makes no commitments of any kind,\nbut merely describes how the technical characteristics of\nthis missile relate to START provisions under\nconsideration.\nNone of these conflict with the provisions cited in the\nletter:\n\u00b0 The Jackson Amendment \"urges and requests the President to\nseek a future treaty that, inter alia, would not limit the\nUnited States to levels of intercontinental forces\ninferior to the limits provided for the Soviet Union....*\nThe ALCM and SLCM solutions both meet this test.\n\u00b0 Section 33 of the Arms Control and Disarmament Act\nrequires that actions which obligate the US to reduce or\nlimit forces or armaments be approved by Congress, either\nas treaties or agreements requiring affirmative action by\nCongress. The ALCM provisions will be part of the treaty;\nthere are no obligations regarding SLCMs or Tacit Rainbow.\n--_--V--_--_--_---------- ee aE\n\u00b0 The \"Helms Amendment\" states that any US-Soviet joint\nstatements on strategic arms negotiations should guide the\nconduct of negotiations and not independently constrain US\nmilitary programs. Nothing we have done independently\nconstrains US military programs.\nGate\nThe letter asserts that the US conceded to the Soviets a\n40% advantage in_the number of ALCM bombers, and a more than\ntwo-to-one advantage in ALCMs. It asks whether this meets the\nletter and spirit of the Jackson Amendment.\n\u00b0 In fact, 150 and 210 are limits r_of US\nan \u20ac vy bombers, but points where the\ngounting rule switches from the discount rule we proposed\nto an as-actually-equipped rule.\nSECRET PER E.0. 13526\nLOj0-2909- MR\nBhrelreiz3 AM\n\nry\n. REM an\n= SSS Bnited States Senate\n: = ------ COMMITTEE ON PORBIGN RELATIONS\nFah ye WasameTon, BC 208 10-6228\nMay 23, 1990\nThe President\nThe White House\nWashington, D.C.\nDear Mr. President:\nReports of Secretary Baker's trip to the Soviet Union last\nweek for the purpose of drafting a proposed framework statement\nfor a START treaty have raised two profound concerns.\nThe first is that the Jackson Amendment to the 1972 SALT I\nAgreement requires, in the language of the Amendment, SA\nlevels* of strategic forces in any future treaty between the\nUnited Seater and Che Soviet Union limiting intercontinental\ntrategic forces.\nOf course, this is still the law of the land on the fundamental U.S. objective in strategic arms control treaties. Yet\nxreports of the meeting between Secretary Baker and Foreign Minister Shevardnadze suggest that the United States conceded to the\nSoviets a 40\u00a7 advantage (210 vs.150] in the number of heavy bombers carryiny air-launched cruise missiles (ALCMs), end also a\nmore than two-to-one advantage over the United States (3,700 vs.\n1,800} in the potential number of ALCMs carried by these bombers.\n_ Are these reports correct, and, if so, do they meet the\nspirit and legal requirements of the Jackson Amendment?\nSimilarly, did the United States agree to a Soviet-proposed\nrange~limitation on sea-launched cruise missiles (SLCMs) which\nallowed the Soviets to keep several thousand short-range SLCMs\nagainst which the U.S. has no equivalent force?\nIf so, does this agreement meet the spirit and legal requirements of the Jackson Amendment?\nSecondly, the Helms Amendment to the INF Treaty states:\n\"Any joint statement by the United States with the USSR\nof a framework for the negotiation of strategic arms\ntreaties contemplated hereby, and such framework itself, shall serve for the purpose only of guiding the\nconduct of negotiations which the United States herein\nhas declared its desire to pursue expeditiously, and\n\n. 3 -2peli not constrain eny military programs of the United\n. States (emphasis Supplied} unless otherwise Provided\nfor in accordance with Section 33 of the Arms Control\nand Disarmament Act.\u00b0\nSection 33 of the Arms Control and Disarmament Act, of\ncourse, states that U.S. armed forces may be limited only through\nthe treaty-making power or through further affirmative legislation. Nevertheless, press reports state that Secretary Baker did\nagree to constrain U.S. military programs in a so-called 'side\nletter\" to the Proposed START framework statement in which the\nUnited States agrees not to modernize the 0.8. 'Tacit Rainbow\"\nALCM, and also not to equip this ALCM with a nuclear warhead.\nIs it correct that Secretary Baker did agree to such a side\nletter constraining U.S. military programs? If 80, does such a\nletter meet the spirit and lega) requirements of the Helms Amendment to the INF Treaty and to Section 33 of the Arms Control and\nDisarmament Act?\nMr. President, wa would appreciate a response on these matters before the framework statement with the Soviet Union is\nsigned at the forthcoming summit.\nSincerely,\n~ awn bled,\n] 1\nMNS Cha\nSs ae,\nLS VA\nt\n\nSONFLDENTIAL- RECORD ID: 9004894\n_*; NSC/S PROFILE RECEIVED: 18 JUN 90 15\nTO: SCOWCROFT 1\nCHPGN FIL\nay\nFROM: DAVIS DOC DATE: 18 JUN 90\nKANTER SOURCE REF:\nKEYWORDS: START ARMS CONTROL\nSALT USSR\nICBM\nPERSONS:\nSUBJECT: MODERNIZATION CONSTRAINTS IN START\nnC oon epgprsegen\nACTION: NOTED BY SCOWCROFT W/ COMMENT DUE DATE: 21 JUN 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF:\nFILES: WH NSCP: CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nDAVIS\nKANTER\nNSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy Cop NARA, Date 3]19]08\nCOMMENTS: me\nen nn\ngern\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSALW CLOSED BY: NSDAI DOC 10F 1\nCONEEBENTEAL-\n\n'. SE ee ee\n, National Security Council. an\n; The White House Vex \u00a2. 02-45 L_\na PROOFED BY: y ) 7 NO LOG # 4H $I aa\nURGENT NOT PROOFED: SYSTEM NSC INT\nBYPASSED WW DESK: DOCLOG LS AIO ____\n' _ LA SEQUENCE TO HAS SEEN DISPOSITION\nis CA\n. Bob Gates y\nBrent Scowcroft SS AP, lV 4\nBill Sittmann 4 _ ag te\nSituation Room a en\nWest Wing Desk 3 FF,\nNSC Secretariat 6 2 rn)\nie\nee\n7\ncc: vp Sununu Other\nShould be seen by:\n------WateTimey\nCOMMENTS 2\n--_ DISPATCH INSTRUCTIONS:\ncd\n\n' Wa;\nCONETEDENTIAS iat ay 4894\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nJune 18, 1990\nINFORMATION\nMEMORANDUM FOR BRENT SCOWCROFT Nat! Sec Advisor\nhas seen\nTHROUGH: ARNOLD KANTER(Q~\nFROM: RICH pavigel.\nSUBJECT: Points To Make on Modernization Constraints in\nSTART\nYou recently mentioned that the Vice President had been\nquestioned on the Hill about why ballistic missile modernization\nis so important to the U.S. that we cannot accept such\nconstraints in START as the price for getting Soviet agreement to\nban SS-18 modernization. The attached points outline our best,\nif not wholly satisfying, response to this question. Our basic\nline has been as follows:\n- We oppose modernization constraints in general because\nmodernization is necessary to restructure forces and improve\nstability.\n- Modernization constraints on the SS-18 are part of a\nspecific U.S. effort since SALT to get the Soviets to\neliminate all of their heavy missiles over time.\n- The U.S. has proposed to impede SS-18 modernization and\nencourage its retirement by limiting the number of SS-18'\nflight-tests.\n- However, such a flight-test limit applied across-the-board\no all ICBMs or all ballistic missiles would undercut the\nreliability and credibility of our strategic deterrent.\n_n Me _ Flight-testing has discovered flaws in several types of\nU7 H deployed U.S. ICBMs and SLBMs that might not have been\nwet BY) pinpie\" \u00a31: or corrected in a satisfactory manner without\noe Pad ample flight-testing.\n' si Ayg - Although other types of modernization constraints have\nFY been considered (for example, SALT II limited changes in the\na size of stages or launch weight) none has been found that\n5\" would be both verifiable and effective in limiting\nye modernization.\nAttachment\nTab A Points on START Modernization Constraints\n-CONPIDENTTAL\nDeclassify on: OADR DECLASSIFIED\nr\n:. Lero-27BO%-AR\nShehos 4A\n\nUNCLASSIFIED\nPoint Paper on Modernization/Flight Testing Constraints\nWhy Modernization Constraints on Heavy ICBMs/SS-18\n-- Since SALT I, constraints on and the eventual elimination\nof Soviet heavy ICBMs has been a central U.S. arms control\nobjective. Our efforts in START to get limits on SS-18\nmodernization have served this objective.\n~~ One of our objectives in any follow-on negotiations is to\nachieve the complete elimination of these systems.\n-- The SS-18 is a unique category of ICBM whose characteristics and vulnerability make it a particularly\ndestabilizing system.\n- The number of warheads deployed on this system,\ncombined with their yield and accuracy, quick response,\nand short flight times, provides a first-strike\ncapability against the U.S. ICBM force.\n- The system also has a large throw-weight potential\nwhich could be used to increase the number of warheads\ncarried by the missile, and thus break out of START\nlimits.\n-- The U.S. has no comparable system.\n- Peacekeeper is not deployed in sufficient numbers to\npose a credible first-strike threat against the Soviet\nICBM force,.\n- Peacekeeper -- with only one-half the throw-weight\ncapability of the SS-18 -- does not possess significant\nbreak-out potential in terms of additional warheads.\nBroader Constraints on Modernization\n~~ The U.S. has insisted upon the right to modernize our\nforces in START, in order to facilitate the development and\ndeployment of new systems that improve stability.\n- This right is explicitly codified in the draft\ntreaty:\n\"Except as prohibited by the provisions of\nthis Treaty, modernization and replacement of\nstrategic offensive arms may be carried out.\"\nUNCLASSIFIED\n\n. UNCLASSIFIED\n, 2\n-- We would therefore oppose any general, across-the-board\nmodernization constraints.\n-- We would particularly oppose a ban or numerical limits on\nflight tests of ICBMs and SLBMs other than on the SS-18\nbecause such flight-testing is necessary to maintain a\ncredible strategic deterrent.\n-- Flight testing is necessary to retain confidence in the\nreliability of deployed ballistic missiles, and is the only\nway to determine the accuracy of the system.\n-- Flight testing represents the most severe environment for\na ballistic missile. only through flight testing can the\neffects of heating, vibration, gravity forces, dynamic and\natmospheric pressure on the missile be evaluated.\n-- Flight testing is thus needed to uncover reliability or\ndesign flaws.\n- Flight testing revealed the anomalies in the\nmanufacturing of Peacekeeper guidance sets.\n- Flight testing revealed the Trident D-5's problem\nwith dynamic pressures.\n- Age-related problems in the Minuteman II and the\nMinuteman III were discovered through flight testing.\n-- Without flight testing, such problems might not have been\nuncovered or corrected ina satisfactory manner.\n-- Severe constraints or a ban on ballistic missile flight\ntesting would lead to a loss of confidence in our ICBM and\nSLBM forces, and could thus lead to a loss of confidence in\nthe credibility and effectiveness of our nuclear deterrent.\nUNCLASSIFIED\n\n' ' 'SEeRET- RECORD ID: 9004618\n; ' NSC/S PROFILE RECEIVED: 08 JUN 90 12\n: IDENT\nTO: PRES CHRON FILE\nFROM: SCOWCROFT DOC DATE: 25 JUN 90\nSOURCE REF:\nKEYWORDS: START ARMS CONTROL\nTREATIES\nPERSONS:\nSUBJECT: TACIT RAINBOW MISSILE & START TREATY\na\nACTION: NOTED BY PRES DUE DATE: 12 JUN 90 STATUS: C\nSTAFF OFFICER: KANTER LOGREF:\nFILES: PA NSCP: CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nKANTER\nNSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy Cop NARA, Date 3/2/67\nCOMMENTS:\nee\neee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSMEN CLOSED BY: NSJRP DOC 20F 2\nSEGREE-\n\na he National Security Council\n; The White House\nprooreDay: __ LIW\"> vce 4618\nURGENT NOT PROOFED: SYSTEM (85) NSC INT\nBYPASSED WW DESK: DOCLONeA | A/O\nSEQUENCETO --- HAS SEEN DISPOSITION\nwrit Sittmann l _\nBob Gates 2 ---- ------__\nnN\nBrent Scowtroft -- 3 A 4\nay. fe, \\) x\nBill Sittmahn = bal Lp\nwi a TO\nSituatiayRoom __\nWest iting DesiS 3 2s po i,\nNSC Secretariat> \u00a9 by {\nDa\ncc: vp \u00a9 ---- Sununu Other\nShould be seen by:\n--Datetimey ------_\nCOMMENTS\nDISPATCH INSTRUCTIONS:\no\n\nTHE WHITE HOUSE ?\nSECGREF 4618\nWASHINGTON\n90 UN25 Pz: 12\nAB Be ey\nJune 25, 1990 Pune FiLr\n. cd\nwid Z\nINFORMATION rN Z\nxf.,*\nMEMORANDUM FOR THE PRESIDENT a. v\nFROM: BRENT SCOWCROFT (SO vr,\nSUBJECT: The Tacit Rainbow Missile and the START Treaty\nTacit Rainbow is a conventionally-armed cruise missile.\nNevertheless, it became the subject of last minute negotiations\nbetween Jim Baker and Shevardnadze to resolve the nuclear ALCM\nissue in START at the May ministerial. Since then, critics of\nSTART have tried to distort the record on Tacit Rainbow to make\nit seem as though we made a concession to the Soviets. The facts\nclearly demonstrate otherwise and we are effectively countering\nthe critics' arguments.\nTacit Rainbow is armed with a forty-pound high explosives\nwarhead. Launched from B-52 bombers, F-16 fighter aircraft, and\nfrom ground launchers, its mission is to suppress enemy air\ndefenses. Under certain optimal conditions, its range can be up\nto about 800 km. The missile is still in development, with a\nscheduled deployment in the mid-1990s. The Air Force and the\nArmy eventually hope to buy a combined total of more than 30,000\nunits.\nAlthough Tacit Rainbow clearly has nothing to do with the\nstrategic nuclear weapons that would be limited in START, it\nbecame an issue because we and the Soviets had agreed at the June\n1988 Summit to count all \"existing\" cruise missiles, whether\nnuclear or conventionally-armed, as though they were nuclear.\n(\"Future\" conventional cruise missiles are excluded from START\nlimits provided they are \"distinguishable\" from nuclear ALCMs.)\nConsequently, if Tacit Rainbow were deemed to be an \"existing\"\ncruise missile, it would have to count against our START limit of\n6000 nuclear warheads. As a practical matter, this would mean\nthat we would be unable to deploy this very valuable conventional\ncapability.\ncc: Vice President\nChief of Staff\nSECGRELD\nDeclassify on: OADR\nPER E.O. 13526\nLo1o-2 90d. MR\nBlrelrors AM\n\nSEGRE -2-\nThe final obstacle to reaching agreement with the Soviets on\nnuclear ALCM limits was the determination of the range threshold,\ni.e., the range above which the ALCM would count against the\nSTART limits. At the May ministerial, Jim told the Soviets we\ncould accept their proposal for a 600 km range threshold provided\nthat Tacit Rainbow was treated not as an \"existing\" but rather as\na \"future\" conventional cruise missile.\nGorbachev shook hands with Jim on that deal, but that very\nevening the Soviet military began to walk the agreement back by\ninsisting that a variety of additional limits be imposed on Tacit\nRainbow. We rejected any such conditions because START does not\nlimit conventional cruise missiles.\nIn an effort to give the Soviets a face-saving way to back down\nfrom their new demands, the next day Jim gave Shevardnadze a\nletter on the Tacit Rainbow missile. I suspect that Shevardnadze\nwas able to use the letter to good effect in overcoming internal\nobjections to the ALCM deal he and Gorbachev had made. Whatever\nthe explanation, Baker and Shevardnadze met later in the day to\nconfirm that complete agreement on the ALCM issue had been\nreached.\nA copy of Jim's letter is attached at Tab A. As you will see,\nthe letter simply reiterates previous U.S. proposals and records\nseveral well known facts about the missile. Contrary to what\nsome critics are claiming, it does not accept any limits on Tacit\nRainbow nor assume any new obligations.\nAttachment\nTab A May 19 Baker Letter on Tacit Rainbow\nSEEREP\n\ni; -a-\nI believe that these points are responsive to your\nquestions. You should feel free to share these points with your\ncolleagues if you think this would be helpful. Of course, I am\nready to come over to meet with you now to finalize this and any\nother issues.\nEduard, I would like to conclude by reminding you that you\ngave me every reason to believe that if I could move to your\nposition on ALCM range, Wwe would finally put the ALCM issue\nbehind us. Let's do s0 now.\nSincerely, 4\n17\nAames A. Baker, III\nThe Honorable Eduard Shevardnadze,\nMinister of Foreign Affairs of the,\nUnion of Soviet Socialist Republics,\nMoscow.\n\n: oe +h\n., croup on Strategic\nOffensive Arms\n). 1.8, Non-Paper\ncd May 12, 1990\nNotification Annex, Section. 1, paragraph (4%) and (4**)\n(page 2)\nProposed Language\n(4*) notification, no later than six months in advance, of the\nanne nnn - ee.. _=* \u00a9 eee\n'arrival of the first missile of a new type of long-range non-nuclear\nTT\nALCM at the first declared airbase for heavy bombers equipped for\nnon-nuclear armaments or for heavy bombers equipped for nuclear\narmaments other than long-range nuclear ALCMs at which it is to be\nlocated. Such notification shall include the distinguishing\nfeatures of the new type of long-range non-nuclear ALCM and a\nproposed date and location for the exhibition provided for in\n: paragraph 11 of Article XI of the Treaty;\n(4**) notification, no later than 24 hours after arrival, of\nthe arrival of the first missile of the first new type of long-range\nnon-nuclear ALCM at the airbase for heavy bombers equipped for\nnon-nuclear armaments or for heavy bombers equipped for nuclear\narmaments other than long-range nuclear ALCMs at which it is first\nlocated;\nExisting Language\nNone.\n{ ]! Proposed by the U.S. side\n{ ]2 Proposed by the Soviet side\n-SECREF PER E.O 12958,\n1499-0201- F\nOL - >\n\n. \"SEGRE? 4618\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nJune 8, 1990\nACTION\nMEMORANDUM FOR BRENT SCOWCROFT\nFROM: ARNOLD canter Me\nSUBJECT: Treatment of Tacit Rainbow in START\nAs you requested, a memo to the President on this subject is\nattached at Tab l.\nJohn vote concurs.\nRECOMMENDATION\nThat you sign the memo to the President at Tab 1.\nTab 1 Memorandum to the President\nTabaA May 19 Baker Letter on Tacit Rainbow\n\\White House Guidelines 4, 2008\nSECREE E.0, 19626, SEC 3.4 (b), September 11,\nDeclassify on: OADR ByLoi_NARA, Date slalu",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

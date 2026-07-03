@@ -1,0 +1,1020 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-28-90010-007.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "b4b89b58700196f8567c28ad79c0c81fb6a879c7ff6747e3675337c872d9c812",
+    "page_count": 73,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "24",
+    "doc_key": null,
+    "title": "NSC/DC 028 - May 31, 1989 - NSC/DC Meeting on NSR-14 / Defense and Space / Start Fundamental Limits, Keywords: Start",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC/DC 028 - May 31, 1989 - NSC/DC Meeting on NSR-14 / Defense and Space / Start Fundamental Limits, Keywords: Start",
+    "file_unit": "NSC/DC 028 - May 31, 1989 - NSC/DC Meeting on NSR-14 / Defense and Space / Start Fundamental Limits, Keywords: Start"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, OA/ID 90010-007, NSC/DC 028-May 31, 1989-NSC/DC Meeting on NSR-14/Defense and Space/Start Fundamental Limits. Secret. Sent for action. Sent through Kanter. A stamped notation indicates Gates saw the memorandum.\n",
+  "selected_pages": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20,
+    22,
+    25,
+    27,
+    28,
+    30,
+    31,
+    32,
+    33,
+    35,
+    37,
+    39,
+    40,
+    41,
+    43,
+    45,
+    46,
+    48,
+    49,
+    50,
+    51,
+    53,
+    54,
+    56,
+    57,
+    59,
+    60,
+    61,
+    62,
+    63,
+    65,
+    67,
+    68,
+    70,
+    71,
+    72,
+    73
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Originally Processed With FOIA(s): FOIA Number: 2005-1002-F; 2008-1289-F 2005-1002-F; 2008-1289-F This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files OA/ID Number: 90010 Folder ID Number: 90010-007 Folder Title: NSC/DC 028 - May 31, 1989 - NSC/DC Meeting on NSR-1",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Doc. No. / Type . Subject/Title Date Restriction Classification \u201801. Minutes Re: Meeting of the Deputies Committee (5 pp.) 5/31/89 (b)(1), s - 02. Summary \u2014_- Re: Summary of Conclusions for Deputies Committee Meeting 5/31/89 (b)(1) Ss - : (pp) 03a. Summary _ Re: Summary of Conclusions Deputies Committee Meeting (1 5/31/89 (b)(1) \u201c8 pp.) : 03b. DraftMemo G. Philip Hughes to Distribution List, n.d. (b)1) a) . * Re: Summary of Conclusions (1 pp.) ; .",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet : (George Bush Library) Doc. No. / Type Subject/Title , Date Restriction Classification ~ 03h. Agenda Re: Deputies Committee Meeting Arms Control Review (1 pp) 5/31/89 (b)(1) Ss 03i, Report Re: DST 001 (6 pp.) . 5/26/89 (b)() a) 03j. Report \u201c Re: DST 002 (4 pp.) , 5/26/89 - Oe) Ss 03k. Report Re: NSR 14 START Review Paper One -- Fundamental Limits 5/6/89 (b)(1) Ss _ Grp) : , 031. Memo _ Richard Davis to G. Philip Hughes 5/30/89 ()(1) Ss : Re: Deputies Committee Meeting",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SEGRET- RECORD ID? 8921075 ; NSC/S PROFILE RECEIVED: 07 SEP 89 15 TO: MEMO FOR RECORD FROM: TOBEY DOC DATE: 07 SEP 89 SOURCE REF: KEYWORDS: SPACE POLICY MINUTES ARMS CONTROL START DC PERSONS: SUBJECT: MINUTES FOR DC MTG ON 31 MAY RE START 7 DEFENSE & SPACE ACTION: FOR RECORD PURPOSES DUE DATE: 25 MAY 90 STATUS: C STAFF aan LOGREF: 8920554 8920555 | FILES: 0 s 0 __NsR0014 ODES: Qs ro | DOCUMENT DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR INFO DECLASSIFIED White House Guidelines E.O. 12958, SEC 3",
+      "selected_for_body": true
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "* SECRET RECORD ID: 8921075 ; ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 ; ; X 89090715 FOR RECORD PURPOSES DECLASSIFIED White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 2006 . By cap __ NARA, Date johg/o9 \u201cSECRET",
+      "selected_for_body": false
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": SEGREF : NATIONAL SECURITY COUNCIL SECRET WASHINGTON, D.C. 20506 21075 Meeting of the Deputies Committee DATE: May 31, 1989 TIME: 11:00-12:00 noon PLACE: Situation Room SUBJECT: NSR 14 Papers on START and Defense & Space PARTICIPANTS: 7 Vice President\u2019s Office White House Carnes Lord Robert Gates State NSC Allan Holmes Edward Rowny Arnold Kanter Richard Burt William Tobey James Timbie Defense Paul Wolfowitz Stephen Hadley Energy Henson Moore Vic Alessi ACDA George Murphy JCS H. T. Johnston OMB",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Py \u2014 = SEGRE? 2 Defense & Space position could constrain U.S. activities, while placing no limits on the Soviets. Mr. Gates concluded by asking if his understanding of agency positions was correct. (2) Amb. Holmes said that the State Department favored going back to Geneva with the existing U.S. position, but that more work needs to be done. Specifically, given the importance of \"Brilliant Pebbles\" is the system based on \"other physical principles,\" and is implicit Soviet acceptance of our right",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| | : SFeect . . SECREP 3 existing position. He said that there would be a maelstrom of Congressional and Allied reaction to withdrawal from the ABM Treaty, and that therefore the current U.S. position was necessary to redress asymmetries in U.S. and Soviet options because the Soviet Union would not face such pressures. (Z) Gen. Johnston said that we should not let the Soviets have a date certain for the end of the ABM Treaty. He said he felt that Art. III of the current U.S. draft treaty did th",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SBCREP\u2014 a it. (~ Mr. Diefenderfer agreed. (jg) Amb. Burt said the practical difference between 3000 and 3300 is negligible, but we should not change now. (sf Mr. Gates then summarized four options for heavy ICBMs: equality through elimination over seven years or longer; the current approach of banning flight testing, production, and modernization; banning flight testing only; and permitting flight testing and limited modernization in return for equal U.S. legal rights to deploy heavy missiles. (",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| \u2018 : rae 0 SBERET 5 guarantee Soviet superiority. He asked, what would we have to pay for zero heavy missiles? And, why did we give up our rights to heavy missiles in the first place? He said he favored cutting the Soviet limit to 77, vice 154, but that ACDA favored option 3. (~) Mr. Diefenderfer said no comment. (f Mr. Timbie said that if the Soviets can keep their heavies, and we cannot deploy them, the Senate would likely not ratify the Treaty. v0 Amb. Rowny said that we should probe the Sov",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "-SEEREF- RECORD ID: 8921076 NSC/S PROFILE RECEIVED: 07 SEP 89 15 | TO: MEMO FOR RECORD FROM: TOBEY DOC DATE: 07 SEP 89 SOURCE REF: KEYWORDS: SPACE POLICY soc Dc PERSONS: SUBJECT: SUMMARY OF CONCLUSIONS FOR DC MTG ON 31 MAY RE START & DEFENSE & SPACE ACTION: FOR RECORD PURPOSES DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICER: TOBEY LOGREF: 8920554 8920555 FILES: IFM 0 sss nae NSROO14 CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR INFO DECLASSIFIED White House Guidelines E.0. 12958, SEC 3",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Ss ~SEGREE- RECORD ID: 8921076 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED , 001 ; ; X 89090715 FOR RECORD PURPOSES DECLASSIFIED , . White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 2006 . By cap __ NARA, Date tofiqlog ~SEGRET-",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". \u201d NATIONAL SECURITY COUNCIL, SEGRES WASHINGTON, D.C. 20506 21076 | Summary of Conclusions for Deputies Committee Meetin DATE: May 31, 1989 TIME: 11:00-12:00 PLACE: Situation Room SUBJECT: Summary of Conclusions of DC Meeting on Defense and Space Paper (8 It was agreed that: -- With a re-write of a JCS rationale in favor of their option in the first Defense & Space paper, the Defense & Space papers on activities during and after a period of non-withdrawal from the ABM Treaty are ready for consi",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~SEGRET- RECORD 1D: 8920554 NSC/S PROFILE RECEIVED: 30 MAY 89 14 TO: GATES FROM: TOBEY DOC DATE: 06 JUN 89 KANTER SOURCE REF: KEYWORDS: START DEFENSE POLICY SPACE POLICY soc Dc AGENDA PERSONS: SUBJECT: SUMMARY OF CONCLUSIONS FOR DC MTG ON 31\u00b0MAY RE DEFENSE & SPACE & START FUNDAMENTALS ACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICER: DAVIS ; LOGREF: 8920555 8921075 FILES: IFM 0 Ssuhs coe ___NSRO014 CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO ",
+      "selected_for_body": true
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 ~SEORE- RECORD ID: 8920554 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES ; Z 89053014 FOR SIGNATURE 002 Z 89053018 DONLEY SGD MEMO TO AGENCIES 003 GATES 2% 89053007 ADD-ON / FOR DECISION 003 X 89060107 NOTED BY GATES 004 GATES Z 89060713 ADD-ON / FOR DECISION 004 Z 89091114 SEE 8921076 FOR FINAL ACTION 004 ; X 89091117 OBE / STATUS ORIGINAL UNKNOWN . DECLASSIFIED White House Guidelines . E.0. 12958, SEC 3.4 (B) September 11, 2006 . By cap _\u2019 NARA, Daie t",
+      "selected_for_body": false
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "National Security Council The White House PROOFED BY: a4 toc #_4OS54 URGENT NOT PROOFED: SYSTEM = PRS fs) INT BYPASSED WW DESK: DOCLOG A, ~ AIO pz | SEQUENCE TO HAS $EEN DISPOSITION Dep Exec pee | aes i. cee Philip Hughes c. a. uw Bob Gates eg pests pace eae Brent Scowcroft = ar Soy Philip Hughes = \u2122~ pieleacici eee = | SituationRoom = cc Eee eee West Wing Desk oS 4 OBE NSC Secretariat 53 ee oe a 2 y a Gc: vp Sununu Other Should be seen by: Wate? ime, COMMENTS : Ha wuts Ninth Sa!",
+      "selected_for_body": true
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 SHEREE 20554 add-on June 6, 1989 R ACTION MEMORANDUM FOR ROBERT M. GATES THROUGH: ARNOLD KANTER | Cale FROM: niet enGeay SUBJECT: Summary of Conclusions for DC Meeting At Tab I is a memo transmitting the Summary of Conclusions of the Deputies\u2019 Committee meeting on 31 May 1989 in the Situation Room. RECOMMENDATION That you authorize Philip Hughes to sign memo to his counterparts , at Tab I. Approve Disapprove Attachment Tab I Memo to Counterparts D",
+      "selected_for_body": true
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03a. Summary Re: Summary of Conclusions Deputies Committee Meeting 5/31/89 (b)(1) (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: : File Location: NSC/DC 028 - May 31, 1989 - NSC.DC Meeting on NSR-14/Defense and Space/Start Fundamental Limits, | Keywords: Start | : Date Closed: 10/19/2009 OA/ID Number: 90010-007 FOIA/SYS Case #: 2009",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ":. NATIONAL SECURITY COUNCIL add-on MEMORANDUM FOR MR. J. STAPLETON ROY . H. LAWRENCE SANDALL Executive Secretar xecutive Secretary Department of Stat Central Intelligence Agency COL GEORGE P. COLE, VR. CAPT ANTHONY MANESS Executive Secretary Executive Assistant to the Department of Defense Chairman Joint Chiefs of Staff MR. WILLIAM V. VITALE Executive Secretary MS. BARBARA STARR Department of Energy Acting Executive Secretary Arms Control and Disarmament Agency Subject: Summary of ConcJ\\sions o",
+      "selected_for_body": true
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| a \u201cSEGREE RECORD ID: 8920554 \u00b0 : NSC/S PROFILE RECEIVED: 30 MAY 89 14 TO: GATES FROM: DAVIS DOC DATE: 31 MAY 89 TOBEY SOURCE REF: KANTER KEYWORDS: START DEFENSE POLICY SPACE POLICY soc pc AGENDA PERSONS: SUBJECT: BACKGROUND MATERIAL FOR DC MTG ON 31 MAY RE NSR 14 / DEFENSE & SPACE & START FUNDAMENTALS ACTION: NOTED BY GATES DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICER: DAVIS LOGREF: 8920555 8921075 EILES:_IFU oO NSCP:_D a | NSROO14 CODES: ~~ DOCUMENT DISTRIBUTION FOR_ACTION FOR _CONCURRENCE FOR",
+      "selected_for_body": true
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; SEGRET\u2014 RECORD ID: 8920554 . . ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES ; ; Z 89053014 FOR SIGNATURE ; 002 Z 89053018 DONLEY SGD MEMO TO AGENCIES 003 GATES . Z 89053007 ADD-ON / FOR DECISION 003 X 89060107 NOTED BY GATES 004 GATES Z 89060713 ADD-ON / FOR DECISION . 004 Z 89091114 SEE 8921076 FOR FINAL ACTION . : 004 : X 89091117 OBE / STATUS ORIGINAL UNKNOWN ; DEGLASSIFIED White House Guidelines E.O. 12958, SEC 3.4 (B) September 11, 2006 ; By caP__ ",
+      "selected_for_body": false
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": \u00e9 National Security Council The White House Cee le URGENTNOTPROOFED: ___________ SYSTEM pay | BYPASSED WW DESK: a pode =r==n0O\" |} - | SEQUENCETO HASSEEN _ DISPOSITION cna eis ee ee Philip Hughes Zs \u2014 ) Bob Gates 7 i Brent Scowcrdft\u201d : ei ci aa cI Philip Hughes \u00a9 Situation Room\u2014> West Wing Desi ; 5 = NSC Secretariat? ( 2 ieee, 2 eee cc: vp Sununu Other COMMENTS Should be seen by: (Date/Time) re OYN Sap May & (Oumy Corde? PRO Dam Se RT EE Se ne a a ae ee a ee",
+      "selected_for_body": true
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Document No. Subject/Title of Document Class. | and Type 03c. Memo Richard Davis/Will Tobey to Robert Gates 5/30/89 (b)(1) Ss Re: Deputies Committee Meeting, Wednesday, May 31, 1989, 11:00 a.m. -- START Fundamental Limits, and Defense and Space (6 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 028 - May 31, 1989 - NSC.DC M",
+      "selected_for_body": false
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECREE DSTO01 5/26/89 DsT 001 (U) Purpose. To review U.S. policy options regarding the means of assuring U.S. testing rights during a specified period of non-withdrawal from the ABM Treaty, in the context of a Defense & Space Treaty. (%) Current Status. The United States and the Soviet Union disagree about the activities that would be permitted during a period of non-withdrawal from the ABM Treaty. The U.S. seeks to preserve its full ABM Treaty (broad interpretation) rights to research, developm",
+      "selected_for_body": false
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SBEREE as an ABM Test satellite. Further, it is the view of the United States that the number of U.S. designated ABM test satellites in orbit simultaneously shall not exceed a number well short of that associated with any realistic deployed capability. The United States believes the number 15 falls well below that threshold.\" (8) To help clarify ABM testing permitted during the non-withdrawal -period_and to_provide for greater predictability, the U.S. also proposed in the draft Predictability Pr",
+      "selected_for_body": true
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": , 4\" SEGREP : responded negatively to the additions to the . } Predictability Protocol proposed by the U.S. in association with our assurance on testing of space-based components capable of substituting for ABM interceptor missiles. As a means of identifying testing activities in space that would be permitted during the non-withdrawal period, the Soviets proposed in April 1987 that the sides negotiate a\u2014\u2014---- 7 \"list\" of criteria for devices to be banned from launch into space, using as a star",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": , y SGECREE program for evaluation of the Brilliant Pebbles concept is t being developed and reviewed for compliance with the ABM Treaty. This program consists of 12 flight tests to be completed by mid-FY92. While the compliance certification process has not yet been completed for these tests, we expect to conduct them consistent with the \"restrictive\" interpretation of the ABM Treaty. This test program would also be compatible with the U.S. unilateral assurance on testing .in space and propos",
+      "selected_for_body": true
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a3 -SEGREE : Those who favor this option believe that the U.S. unilateral assurance and predictability protocol proposal would gain implicit Soviet acknowledgment of certain ABM Treaty testing rights during the non-withdrawal period, reduce treaty interpretation debates during and after ratification, provide a militarily meaningful distinction between permitted testing and prohibited deployment of OPP ABM systems in space, and satisfy stated Soviet -concerns - regarding that distinction. They ar",
+      "selected_for_body": true
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECREF This option is supported by (3) . Future Work. Additional options for assuring U.S. testing rights during a specified period of non-withdrawal (e.g. . differentiated periods of testing restrictions during the non-withdrawal period under restrictive, broad, or broader-than-broad interpretations of the ABM Treaty or pursuit of the Soviet \"list\" proposal). were considered, but not included in the paper because no agency believes that such options would be possible to analyze thoroughly befor",
+      "selected_for_body": false
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": ; DECLASSIFIED 5736789 PER E.O. 13526 Lojo~-1993-M& not plg)rote pst 002 (U) Purpose. To review U.S. policy options with respect to rights of the parties after a period of non-withdrawal from the ABM Treaty in the context of a Defense & Space Treaty. (#) - Current Status. The sides have not resolved to U.S. Satisfaction what happens at the end of the non-withdrawal period. At the Washington Summit, President Reagan and General Secretary Gorbachev agreed that each side would have the right to c",
+      "selected_for_body": true
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "CECRED shall give six months written notice to the other Party of its intention to deploy such-defenses. In this event, this notice requirement shall supersede the notice provision of Article XV of the ABM Treaty. Following the six month notification period, all remaining ABM Treaty provisions shall be considered terminated unless the Parties agree otherwise.\" This position is embodied in Article III, paragraph 2. of the U.S. draft treaty text. (e-2) : : Soviet Position. The Soviets seek a Defen",
+      "selected_for_body": true
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "national security review"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". go? - r - + | | SBCREP 2. Reevaluate U.S. Defense & Space Objectives. This 1 option would entail not resuming the Defense & Space talks until the fundamental U.S. objectives in D & S have been reaffirmed at the Cabinet level. Those who support this option believe that one of the basic intents of the National Security Review, to identify the objectives of DST, has not yet been accomplished. They argue thatthe President\u2019s objectives for DST should \u2018 be clearly stated before proceeding further wi",
+      "selected_for_body": true
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": . (ar ane Op 5 ee \u201cSeer space-based weapons, regardless of physical principle, as the quid pro quo for a non-withdrawal period. At the end of the non-withdrawal period, the sides would simply regain their right to withdraw from the ABM Treaty. Or, this option could be implemented in conjunction with Option 2. in DST 001, which would make explicit such a right. (3% : Those who would support this option believe that the most important U.S. interest is to demonstrate the feasibility of strategic ",
+      "selected_for_body": true
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03f. Report Re: NSR 14 START Review Paper One -- Fundamental 5/6/89 (b)) Limits (6 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: File Location: NSC/DC 028 - May 31, 1989 - NSC.DC Meeting on NSR-14/Defense and Space/Start Fundamental Limits, Keywords: Start Date Closed: 10/19/2009 OA/ID Number: 90010-007 FOIA/SYS Case #: 2009-1002-F Ap",
+      "selected_for_body": false
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": ; -SEEREE RECORD ID:8920554 \u2014 NSC/S PROFILE RECEIVED: 30 MAY 89 14 TO: AGENCIES FROM: HUGHES DOC DATE: 06 JUN 89 SOURCE REF: KEYWORDS: START DEFENSE POLICY SPACE POLICY soc pc AGENDA PERSONS: SUBJECT: NOTIFICATION OF DC MTG ON 31 MAY RE NSR \u201814 / DEFENSE & SPACE & START FUNDAMENTALS ACTION: DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICER: DAVIS LOGREF: 8920555 8921075 pues: in o_ NSCP 002s ___NsRoo14 CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR_INFO DECLASSIFIED White House Guidelin",
+      "selected_for_body": true
+    },
+    {
+      "page": 36,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": ' SECRET -RECORD ID: 8920554 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES : ; Z 89053014 FOR SIGNATURE ; 002 . Z 89053018 DONLEY SGD MEMO TO AGENCIES 003 GATES Z 89053007 ADD-ON / FOR DECISION 003 X 89060107 NOTED BY GATES 004 GATES : . Z 89060713 ADD-ON / FOR DECISION ; 004 Z 89091114 SEE 8921076 FOR FINAL ACTION 004 . X 89091117 OBE / STATUS ORIGINAL UNKNOWN | | | ; DECLASSIFIED | White House Guidelines . E.0. 12958, SEC 3.4 (B) September 11, 2006 By ",
+      "selected_for_body": false
+    },
+    {
+      "page": 37,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "& National Security Council The White House PROOFED BY: LOG # ei o SS ] URGENT NOT PROOFED: SYSTEM PRS CNSC) INT BYPASSED WW DESK: DOCLOG Beato ot | SEQUENCE TO HAS SEEN DISPOSITION Dep Exec \\ aS -\u2014 PhilipHughes x DS Be Fo Bob Gates fe pe ee Brent Scowcroft & seta ag ence ec Ey Philip Hughes s Situation Rooms West Wing vel \u00a5 d Dy| . NSC Secretariat nN > 7 (3) \u00a3 SITTMANN a a Ce cc: vp Sununu Other Should be seen by: Tv (Dateline COMMENTS NOU - Ka- GeUS Cenro/ of)",
+      "selected_for_body": true
+    },
+    {
+      "page": 38,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~ NATIONAL.SeCURITY COUNCIL Log Number DisTRIBUTION RECORD Date subi: DO MIG StMay a DOCUMENT CLASSIFICATION: (TOP SECRET secre OO CONFIDENTIAL CUUNCLASSIFIED eS EXTERNAL DISTRIBUTION: #CYS Date Time Reseived/Signed for By: THE VICE PRESIDENT *T Aus 0Ob30\u2014- THE SECRETARY OF STATE LAA Exec. se/Room 7241 2 BO l 59 B03 THE SECRETARY OF THE TREASURY Main Bidg/Room 3422 a EEE THE SECRETARY OF DEFENSE The Pentagon \u2014 DIRECTOR, ACDA 30] A \u2018 ae 1 5B CHAIRMAN US START DELEGATION % ACDA, 5933 State \u2014\u2014 Se e",
+      "selected_for_body": false
+    },
+    {
+      "page": 39,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "WASHFAX RECEIPT] . THE WHITE HOLSE. t MESSAGE NO. CLASSIFICATION SEGREF races_/\u00a5f \u2014 : \u00a35 FROM G. PHILIP HUGHES - (NAME) (EXTENSION) (ROOM NUMBER) MESSAGE DESCRIPTION Dc HT, 3l May TO_(AGENCY) DELIVER 10: DEPT/ROOM NO. EXTENSION \u2014_ es H Lawhance Spria Slee Gee | a | REMARKS : . DECLASSIFIED White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 2006 By cap NARA, Date tohale9 e",
+      "selected_for_body": true
+    },
+    {
+      "page": 40,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "department of state",
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL 20554 SECREE WASHINGTON, D.C. 20506 May 30, 1989 MEMORANDUM FOR MR. CARNES LORD MR. FRANK HODSOLL Assistant to the Vice Executive Associate Director President for National Office of Management and Security Affairs Budget MR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL | Executive Secretary Executive Secretary Department of State Central Intelligence Agency COLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS Executive Secretary Executive Assistant to the Department of Defens",
+      "selected_for_body": true
+    },
+    {
+      "page": 41,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SReRat 20554 DEPUTIES COMMITTEE MEETIN [S_ CONTROL REVIEW Wednesday, May 31, 1989 White House Situation Room 11:00 a.m. | | SR-14, Def e and S$ i START Fundamental, Limits | Agenda I. Introductory Remarks by the Chairman II. Defense and Space III. START Fundamental Limits IV. Recommendations for the NSC ~ : DECLASSIFIED SEGREE : . . . White House Guidelines Declassify on: OADR - E.0. 13526, SEC 3.4 (b), September 11, 2008 : By wtiea_NARA, Date uiz/zer4",
+      "selected_for_body": true
+    },
+    {
+      "page": 42,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET DECLASSIFIED psT001 PER E.O. 13526 5/26/89 2010 -1943- mF DST 001 (U) Mawr blelrere Purpose. To review U.S. policy options regarding the means of assuring U.S. testing rights during a specified period of non-withdrawal from the ABM Treaty, in the context of a Defense & Space Treaty. (8% Current Status. The United States and the Soviet Union disagree about the activities that would be permitted during a period of non-withdrawal from the ABM Treaty. The U.S. seeks to preserve its full ABM T",
+      "selected_for_body": false
+    },
+    {
+      "page": 43,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SHERES as an ABM Test satellite. Further, it is the view of the United States that the number of U.S. designated ABM test satellites in orbit simultaneously shall not exceed a number well short of that associated with any realistic deployed capability. The United States believes the number 15 falls well below that threshold.\" (84 To help clarify ABM testing permitted during the non-withdrawal period and to provide for greater predictability, the U.S. also proposed in the draft Predictability Pro",
+      "selected_for_body": true
+    },
+    {
+      "page": 44,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "GEGREtT SEGREP responded negatively to the additions to the Predictability Protocol proposed by the U.S. in association with our assurance on testing of space-based components capable of substituting for ABM interceptor missiles. As a means of identifying testing activities in space that would be permitted during the non-withdrawal period, the \u201cSoviets proposed in April 1987 that the sides negotiate a . \"list\" of criteria for devices to be banned from launch into space, using as a starting point",
+      "selected_for_body": false
+    },
+    {
+      "page": 45,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Cre Er SECRER program for evaluation of the Brilliant Pebbles concept is being developed and reviewed for compliance with the ABM Treaty. This program consists of 12 flight tests to be completed by mid-FY92. While the compliance certification process has not yet been completed for these tests, we expect to conduct them consistent with the \"restrictive\" interpretation of the ABM Treaty. This test program would also be compatible with the U.S. unilateral assurance on . testing in space and propose",
+      "selected_for_body": true
+    },
+    {
+      "page": 46,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SSCREL Those who favor this option believe that the U.S. unilateral assurance and predictability protocol proposal would gain implicit Soviet acknowledgment of certain ABM Treaty testing rights during the non-withdrawal period, reduce treaty interpretation debates during and after ratification, provide a militarily meaningful distinction between permitted testing and prohibited deployment of OPP ABM systems in space, and satisfy stated Soviet concerns regarding that distinction. They argue furth",
+      "selected_for_body": true
+    },
+    {
+      "page": 47,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "scearcr SECREL This option is supported by =a) Future Work. Additional options for assuring U.S. testing rights during a specified period of non-withdrawal (e.g. differentiated periods of testing restrictions during the non-withdrawal period under restrictive, broad, or broader-than-broad interpretations of the ABM Treaty or | pursuit of the Soviet \"list\" proposal) were considered, but not included in the paper because no agency believes that such options would be possible to analyze thoroughly ",
+      "selected_for_body": false
+    },
+    {
+      "page": 48,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "(alma pes SECRET DST002 5/26/89 pst 002 (U) , Purpose. To review U.S. policy options with respect to rights of the parties after a period of non-withdrawal from the ABM Treaty in the context of a Defense & Space Treaty. (3% Current Status. The sides have not resolved to U.S. satisfaction what happens at the end of the non-withdrawal period. At the Washington Summit, President Reagan and General Secretary Gorbachev agreed that each side would | have the right to choose its course of action. This ",
+      "selected_for_body": true
+    },
+    {
+      "page": 49,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRED shall give six months written notice to the other Party of its intention to deploy such defenses. In this event, this notice requirement shall supersede the notice provision of Article xv of the ABM Treaty. Following the six month notification period, all remaining ABM Treaty provisions shall be considered terminated unless the Parties agree otherwise.\" This position is embodied in Article III, paragraph 2. of the U.S. draft treaty text. (8) Soviet Position. The Soviets seek a Defense & S",
+      "selected_for_body": true
+    },
+    {
+      "page": 50,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "national security review"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ee Ty SECREE 2. Reevaluate U.S. Defense & Space Objectives. This option would entail not resuming the Defense & Space talks until the fundamental U.S. objectives in D & S have been reaffirmed at the Cabinet level. Those who support this option believe that one of the basic intents of the National Security Review, to identify the objectives of DST, has not yet been accomplished. They argue that the President\u2019s objectives for DST should be clearly stated before proceeding further with discussion o",
+      "selected_for_body": true
+    },
+    {
+      "page": 51,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "oe CIEL I Nie FF SEGRE space-based weapons, regardless of physical principle, as the quid pro quo for a non-withdrawal period. At the end of the non-withdrawal period, the sides would simply regain their right to withdraw from the ABM Treaty. Or, this option could be implemented in conjunction with Option 2. in DST 001, which would make explicit such a right. (8%) Those who would support this option believe that the most important U.S. interest is to demonstrate the feasibility of strategic defe",
+      "selected_for_body": true
+    },
+    {
+      "page": 52,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type 03k, Report Re: NSR 14 START Review Paper One -- Fundamental 5/6/89 (b)(1) Ss Limits (6 pp.) Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files WHORM Cat.: | File Location: NSC/DC 028 - May 31, 1989 - NSC.DC Meeting on NSR-14/Defense and Space/Start Fundamental Limits, Keywords: Start Date Closed: 10/19/2009 OA/ID Number: 90010-007 FOIA/SYS Case #: 2009-",
+      "selected_for_body": false
+    },
+    {
+      "page": 53,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cSBEREE 20554 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 | May 30, 1989 ACTION MEMORANDUM FOR G. PHILIP HUGHES THROUGH: ARNOLD KANTER Mt FROM: RICHARD pavrQidn SUBJECT: Deputies Committee Meeting to Discuss NSR-14 (Defense and Space; START Fundamental Limits) i . . 0d The subject meeting is scheduled for +0+3\u00a2 a.m., on Wednesday, May 31, in the White House Situation Room. This DC will focus on the U.S. negotiating position in DST, and the U.S. position on numerical limits and heavy ICBMs i",
+      "selected_for_body": true
+    },
+    {
+      "page": 54,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SEERET- RECORD ID: 8920555) . ' NSC/S PROFILE RECEIVED: 30 MAY 89 15 | TO: GATES FROM: DAVIS DOC DATE: 26 MAY 89 SOURCE REF: KEYWORDS: START DEFENSE POLICY SPACE POLICY pc PERSONS: SUBJECT: FOUR BACKGROUND PAPERS FOR DC MTG ON 31 MAY RE START DEFENSE AND SPACE ACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 06 FEB 90 STATUS: C STAFF OFFICER: DAVIS LOGREF: 8920554 8921075 FILES: ie ce NSCP: DC028_ CODES: si \u2018erie? DOCUMENT DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR INFO | | | { | DECLASSIFIED |",
+      "selected_for_body": true
+    },
+    {
+      "page": 55,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| -SECREP RECORD ID: 8920555 | : \u2018 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 GATES ; ; Z 89053015 FOR INFORMATION 001 . X 90020209 OBE / STATUS ORIGINAL UNKNOWN | | ; | DECLASSIFIED | ; White House Guidelines | E.0. 12958, SEC 3.4 (B) September 11, 2006 | By cap NARA, Date 1o/,a/o9 . . ~SEGRET- Y -",
+      "selected_for_body": false
+    },
+    {
+      "page": 56,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "National Security Council The White House PROOFED BY: toc#_ 2ZOSSS URGENT NOT PROOFED: | ae SYSTEM PRS Gis INT BYPASSED WW DESK: voc.oc Bx AIO SEQUENCE TO HAS SEEN DISPOSITION Dep Exec | omy Philip Hughes > Co Set Searels [\u2014) Bob Gates F oe) Brent Scowcroft a Sissies rece Philip Hughes Py sinstionncon ituation Room = : West Wing Desk 44 NSC Secretariat 9 MS Bil B Pe ee eee \u2014 ee [scien 7 omaigg/_Sasinh Aten water See cc: vP Sununu Other Should be seen by: ees: aaa COMMENTS",
+      "selected_for_body": true
+    },
+    {
+      "page": 57,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| . AOS s . ? \u2018 . : NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20508 . May 26, 1989 MEMORANDUM FOR MR. ROBERT GATES \u2018 \\ FROM: RICHARD bavi | Subject: Papers for the Deputies Meeting | 5/31 : . | | Attached are the four papers on START and Defense | and Space to be discussed by Deputies next Wednesday, | May 31. A briefing memo will follow on Tuesday. Attachments Papers for Deputies Meeting",
+      "selected_for_body": true
+    },
+    {
+      "page": 58,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) and Type | 03m. Report Re: NSR 14 START Review Paper One -- Fundamental 5/6/89 (b)(1) | Limits (6 pp.) Collection: | | Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files | WHORM Cat.: File Location: NSC/DC 028 - May 31, 1989 - NSC.DC Meeting on NSR-14/Defense and Space/Start Fundamental Limits, Keywords: Start : Date Closed: 10/19/2009 OA/D Number: 90010-007 FOIA/SYS Case #:",
+      "selected_for_body": false
+    },
+    {
+      "page": 59,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\"| SECRET START 04\u00a2 . 5/6/89 | NSR_14 START Review Paper Four -- Air Breathing Systems | : Purpose. To review U.S. positions on dealing with air breathing | systems under START. | Background. A fundamental premise underlying the U.S. approach to START is that we must be capable of maintaining an adequate deterrent under a START regime. In order to do so, and to improve stability, the U.S. has consistently opposed tight con- straints on ALCMs and other bomber weapons in START. The orig- inal U.S.",
+      "selected_for_body": true
+    },
+    {
+      "page": 60,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": 7 ( rt 1 | -SRGREP 2 In establishing this position, the United States recognized that _ the Soviets would have an equal right to exploit the rules. The United States judged, however, that protecting our ability to cover and damage targets was more important than constraining similar Soviet capabilities. Discussion -- General. Because of the importance of this area and the close interrelationship of all heavy bomber/ALCM posi- tions, a comprehensive review is required. There is consensus - that",
+      "selected_for_body": true
+    },
+    {
+      "page": 61,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "counting rule, could actually decrease the U.S. ability to deploy the necessary high number of bomber weapons. On the other hand, such a move would simplify U.S. obligations under the treaty, since no distinctions would have to be made (or verified) re- garding conventionally-armed versus nuclear-armed ALCMs, or heavy bombers equipped for ALCMs vice those not so equipped. A less radical move would be to return to the earlier U.S. position that each heavy bomber equipped for ALCMs should count as",
+      "selected_for_body": true
+    },
+    {
+      "page": 62,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". SEERES 4 over, the 1,500 km range better protects U.S. options for future cruise missiles pending resolution of how future nuclear and non- nuclear cruise missile are to be distinguished from each other. The U.S. has indicated some flexibility on the range issue in return for Soviet acceptance of the remainder of the U.S.. ALCM- heavy bomber positions, although we have not specified what range we might accept. Some believe this flexibility should be with- drawn, either permanently or until sat",
+      "selected_for_body": true
+    },
+    {
+      "page": 63,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "United States. Others believe that the primary consideration is protecting U.S. programs, not constraining Soviet ones. While NTM can distinguish physical features of different cruise missiles, it is not an effective means of determining whether those cruise missiles carry nuclear or conventional warheads. There may be operational penalties from designing future conven- tional cruise missiles such that they are physically distinguish- able. In addition, weapons carried internally in a bomber wea",
+      "selected_for_body": true
+    },
+    {
+      "page": 64,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET DECLASSIFIED psT001 PER E.O. 13526 5/26/89 Doyo 1943-Ae DST 001 (U) wo vl 8/2016 Purpose. To review U.S. policy options regarding the means of assuring U.S. testing rights during a specified period of non-withdrawal from the ABM Treaty, in the context of a Defense & Space Treaty. (B\u00ae) Current Status. The United States and the Soviet Union disagree about the activities that would be permitted \u201cduring a period of non-withdrawal from the ABM Treaty. The U.S. seeks to preserve its full ABM Tr",
+      "selected_for_body": false
+    },
+    {
+      "page": 65,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET . as an ABM Test satellite. Further, it is the view of the United States that the number of U.S. designated ABM test satellites in orbit simultaneously shall not exceed a number well short of that associated with any realistic deployed capability. The United States believes the number 15 falls well below that threshold.\" (81 To help clarify ABM testing permitted during the non-withdrawal period and to provide for greater predictability, the U.S. also proposed in the draft . Predictability",
+      "selected_for_body": true
+    },
+    {
+      "page": 66,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET | responded negatively to the additions to the Predictability Protocol proposed by the U.S. in association with our assurance on testing of space-based components capable of substituting for ABM interceptor missiles. As a means of identifying testing activities in space that : would be permitted during the non-withdrawal period, the Soviets proposed in April 1987 that the sides negotiate a \"list\" of criteria for devices to be banned from launch : into space, using as a starting point thei",
+      "selected_for_body": false
+    },
+    {
+      "page": 67,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECREP program for evaluation of the Brilliant Pebbles concept is being developed and reviewed for compliance with the ABM Treaty. This program consists of 12 flight tests to be completed by mid-FY92. While the compliance certification process has not yet been completed for these tests, we expect to conduct them consistent with the \"restrictive\" \u2018interpretation of the ABM Treaty. This test program would also be compatible with the U.S. unilateral assurance on testing in space and proposed Predic",
+      "selected_for_body": true
+    },
+    {
+      "page": 68,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "oo : E EG re E-p SBERET Those who favor this option believe that the U.S. unilateral assurance and predictability protocol proposal . would gain implicit Soviet acknowledgment of certain ABM Treaty testing rights during the non-withdrawal period, reduce treaty interpretation debates during and after ratification, provide a militarily meaningful distinction between permitted testing and prohibited deployment of OPP ABM systems in space, and satisfy stated Soviet concerns . regarding that distinct",
+      "selected_for_body": true
+    },
+    {
+      "page": 69,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~SEERED | This option is supported by s | Future Work. Additional options for assuring U.S. testing rights during a specified period of non-withdrawal (e.g. differentiated periods of testing restrictions during the non-withdrawal period under restrictive, broad, or broader-than-broad interpretations of the ABM Treaty or | pursuit of the Soviet \"list\" proposal) were considered, but not included in the paper because no agency believes that such options would be possible to analyze thoroughly befor",
+      "selected_for_body": false
+    },
+    {
+      "page": 70,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ", SECRET . DsT002 DECLASSIFIED 5/26/89 PER E.0. 13526 Dole -1973-mMe DsT 002 (U) vb 8 /z01b \u2014 Purpose. To review U.S. policy options with respect to rights of the parties after a period of non-withdrawal from the ABM Treaty in the context of a Defense & Space Treaty. (89 Current Status. The sides have not resolved to U.S. satisfaction what happens at the end of the non-withdrawal period. At the Washington Summit, President Reagan and General Secretary Gorbachev agreed that each side would have t",
+      "selected_for_body": true
+    },
+    {
+      "page": 71,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECREP shall give six months written notice to the other Party of its intention to deploy such defenses. In this event, this notice requirement shall supersede the notice | provision of Article XV of the ABM Treaty. Following the | six month notification period, all remaining ABM Treaty | provisions shall be considered terminated unless the . Parties agree otherwise.\" This position is embodied in . Article III, paragraph 2. of the U.S. draft treaty text. wy Soviet Position. The Soviets seek a De",
+      "selected_for_body": true
+    },
+    {
+      "page": 72,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "national security review"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| SECRET | 2. Reevaluate U.S. Defense & Space Objectives. This option would entail not resuming the Defense & Space talks until the fundamental U.S. objectives in D & S have been : | reaffirmed at the Cabinet level. : Those who support this option believe that one of the , basic intents of the National Security Review, to identify the objectives of DST, has not yet been accomplished. They argue that the President's objectives for DST should be clearly stated before proceeding further with | disc",
+      "selected_for_body": true
+    },
+    {
+      "page": 73,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "4 ~ | . . : . BEERS? . space-based weapons, regardless of physical principle, as the quid pro quo for a non-withdrawal period. At the end of the non-withdrawal period, the sides would simply regain their right to withdraw from the ABM Treaty. Or, this option could be implemented in conjunction with Option 2. in DST 001, which would make explicit such a right. (8% Those who would support this option believe that the most important U.S. interest is to demonstrate the feasibility of strategic defen",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": "-SEGRET- RECORD ID? 8921075\n; NSC/S PROFILE RECEIVED: 07 SEP 89 15\nTO: MEMO FOR RECORD\nFROM: TOBEY DOC DATE: 07 SEP 89\nSOURCE REF:\nKEYWORDS: SPACE POLICY MINUTES\nARMS CONTROL START\nDC\nPERSONS:\nSUBJECT: MINUTES FOR DC MTG ON 31 MAY RE START 7 DEFENSE & SPACE\nACTION: FOR RECORD PURPOSES DUE DATE: 25 MAY 90 STATUS: C\nSTAFF aan LOGREF: 8920554 8920555\n| FILES: 0 s 0 __NsR0014 ODES:\nQs ro\n| DOCUMENT DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR INFO\nWhite House Guidelines\nE.O. 12958, SEC 3.4 (B) September 11, 2006\n. By cae__ NARA, Date toalog\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: B CLOSED BY: B DOC 10F 1\n\n: SEGREF\n: NATIONAL SECURITY COUNCIL\nSECRET WASHINGTON, D.C. 20506 21075\nMeeting of the Deputies Committee\nDATE: May 31, 1989\nTIME: 11:00-12:00 noon\nPLACE: Situation Room\nSUBJECT: NSR 14 Papers on START and Defense & Space\nPARTICIPANTS: 7\nVice President's Office White House\nCarnes Lord Robert Gates\nState NSC\nAllan Holmes\nEdward Rowny Arnold Kanter\nRichard Burt William Tobey\nJames Timbie\nDefense\nPaul Wolfowitz\nStephen Hadley\nEnergy\nHenson Moore\nVic Alessi\nACDA\nGeorge Murphy\nJCS\nH. T. Johnston\nOMB\nWilliam Diefenderfer\nMinutes\nMr. Gates began by saying the purpose of the meeting is to ensure\nthat the papers fairly represent the views of agencies and\nthoroughly discuss the options. He said he would like to begin\nthe Defense & Space paper on activities during a period of\nnon-withdrawal from the ABM Treaty. There, he said that he\nunderstood that all agencies except the JCS favored our current\nposition. As he understood it, the JCS are concerned that our\nSREREP\nDECLASSIFY ON: OADR DECLASSIFIED\n| PER E.O. 13526\ndo(0-\nSEGREF F4-ue\nC& 4le(ra\n\nPy -- =\nSEGRE? 2\nDefense & Space position could constrain U.S. activities, while\nplacing no limits on the Soviets. Mr. Gates concluded by asking\nif his understanding of agency positions was correct. (2)\nAmb. Holmes said that the State Department favored going back to\nGeneva with the existing U.S. position, but that more work needs\nto be done. Specifically, given the importance of \"Brilliant\nPebbles\" is the system based on \"other physical principles,\" and\nis implicit Soviet acceptance of our right to test OPP systems in\nspace sufficient for Senate ratification? ()\nAmb. Wolfowitz said that OSD was happy with the paper and favored\nOption 1 (the current U.S. position). He also held open the\npossibility that we may wish to seek clearer Soviet acceptance of\nU.S. rights at a later date. (f)\nMr. Moore said that Energy was also happy with the paper, and\nfavored the current position. He continued that \"Brilliant\nPebbles\" research is very promising. (J)\nMr. Murphy said that he favored Option 1 (the current U.S.\nposition). (f)\nGen. Johnston said that we need to clarify ambiguity in the ABM\nTreaty regime in order to attain Senate ratification and to allay\nUK and French concerns. (jf)\nMr. Gates asked wouldn't the JCS position that we should seek the\nright to all ABM testing in space cause us to renegotiate the ABM\nTreaty, something we have been reluctant to do? (P)\nMr. Timbie observed that the U.S. initiative on space-based\nsensors would require amendment of the ABM Treaty. g\nGen. Johnston observed that the ABM Treaty supports the essence\nof the sensor initiative. )\nAmb. Rowny said that amending the ABM Treaty to allow all\nspace-based ABM testing would open a Pandora's box. (#4\nMr. Gates asked if all were agreed that the U.S. initiative on\nspace-based sensors should be retained, and received general\nassent. He then moved the discussion to the second Defense &\nSpace paper on activities after the non-withdrawal period. He\nagain characterized agency views, stating that all except the JCS\nfavor retention of the current U.S. position, and noting that the\nJCS are concerned that the U.S. position could imply a date\ncertain for termination of the ABM Treaty. (%\nAmb. Holmes said that State Department is comfortable with the\ntei\n\n|: SFeect\nSECREP 3\nexisting position. He said that there would be a maelstrom of\nCongressional and Allied reaction to withdrawal from the ABM\nTreaty, and that therefore the current U.S. position was\nnecessary to redress asymmetries in U.S. and Soviet options\nbecause the Soviet Union would not face such pressures. (Z)\nGen. Johnston said that we should not let the Soviets have a date\ncertain for the end of the ABM Treaty. He said he felt that Art.\nIII of the current U.S. draft treaty did that. (f)\nAmb. Wolfowitz said that OSD likes the current position. He said\nit recognizes the basic asymmetry between U.S. and Soviet legal\nand political constraints. He said that the Soviets can leave\nthe ABM Treaty any time they wish, while the U.S. is constrained\nin its actions. )\nAmb. Holmes said that perhaps we should look at ways of dealing\nwith this in the future. (J)\nMr. Moore. said the Energy joins the consensus in favor of the\npresent position. ()\nMr. Murphy and Mr. Diefenderfer agreed. (7g\nGen. Johnston offered a written substitute for the JCS rationale\nfor their preferred option in the Defense & Space paper on\nactivities during a period of non-withdrawal from the ABM Treaty.\n(Z)\nMr. Gates then turned to START issues. He said there are three\nissues: the Strategic Nuclear Delivery Vehicle (SNDV) limit;\nICBM warhead sublimits; and heavy missiles. On the first issue,\nMr. Gates acknowledged that he would have to speak with General\nScowcroft, as there was interagency consensus that we should\nretain the limit of 1600. On the ICBM sublimit, the question was\nwhether to pursue a sublimit of 3,000 or 3,300. 4)\nAmb. Holmes said State did not wish to denigrate the coin and\nthat we should stick with 3,000, especially given that we do not\nknow what we would want in return. B)\nAmb. Wolfowitz agreed saying the most pressing problem is that of\nICBM first strike potential, and that before we move to a higher\nnumber we should be clear on what we want in return. )\nGen. Johnston suggested that we should negotiate to see if we can\nget something, but not give concessions away. 6-4)\nMr. Murphy said that we should stick with the present position,\nnoting that if we don't know what we want, we probably won't get\nae\n\nSBCREP-- a\nit. (~\nMr. Diefenderfer agreed. (jg)\nAmb. Burt said the practical difference between 3000 and 3300 is\nnegligible, but we should not change now. (sf\nMr. Gates then summarized four options for heavy ICBMs:\nequality through elimination over seven years or longer; the\ncurrent approach of banning flight testing, production, and\nmodernization; banning flight testing only; and permitting flight\ntesting and limited modernization in return for equal U.S. legal\nrights to deploy heavy missiles. (9)\nAmb. Holmes said we should stick with the current position -- no\nnew missiles, no modernization, no testing. We may wish to\nconsider private probing on the side to see if the Soviets are\nwilling to go beyond 50 percent reductions in return for enough\ntesting for reliability, but not for modernization. 4)\nAmb. Wolfowitz said we should stay with the current position. He\nsaid he would favor option 1, banning heavy missiles, but was\nunsure of what we would have to pay for such a ban, or what it\nwould be worth. ()\nMr. Gates asked whether anyone seriously favored the fourth\noption, equal legal rights to deploy heavy missiles, given that\nthe U.S. would be unlikely ever to exercise such rights. \u00a5\nAmb. Burt said he did not share Mr. Gates' view. He said that if\nwe can SS-18 two bad things could happen. First, we might have\nto make a significant concession. Second, five to ten years from\nnow we might face a formidable Soviet hard target threat from\nSS-24s and SLBMs. Nonetheless, he said he would like the\nflexibility to talk to the Soviets about limits that go beyond\nthose presently proposed, but not to discuss this publicly. 2)\nMr. Gates observed that if we take a treaty to the Senate arguing\nwe have fulfilled the Jackson Amendment because we have a de jure\nright to heavy missiles but no intention to deploy such missiles,\nwe will be told to get stuffed. ()\nGen. Johnston said the JCS favor Option 4 and would give the\nNegotiator authority to try to get something in return. He\nacknowledged that the Jackson Amendment might be of concern. B)\nMr. Moore said he favored the status quo, and that we should\nchange only if we have good reason to.\nMr. Murphy said he was against standing pat, because it would\nSSERBP\n\nrae 0\nSBERET 5\nguarantee Soviet superiority. He asked, what would we have to\npay for zero heavy missiles? And, why did we give up our rights\nto heavy missiles in the first place? He said he favored cutting\nthe Soviet limit to 77, vice 154, but that ACDA favored option 3.\nMr. Diefenderfer said no comment. (f\nMr. Timbie said that if the Soviets can keep their heavies, and\nwe cannot deploy them, the Senate would likely not ratify the\nTreaty. v0\nAmb. Rowny said that we should probe the Soviets to see if they\nare willing to accept deeper cuts in heavy missiles but not pay\nanything for the additional cuts. 2)\nAmb. Wolfowitz observed that it is a miracle that the Soviets\nappear to be unaware of U.S. contingency guidance on the subject,\nthat had been in effect since last year. v4\n-- End of Meeting --\n\n-SEEREF- RECORD ID: 8921076\nNSC/S PROFILE RECEIVED: 07 SEP 89 15\n| TO: MEMO FOR RECORD\nFROM: TOBEY DOC DATE: 07 SEP 89\nSOURCE REF:\nKEYWORDS: SPACE POLICY soc\nDc\nPERSONS:\nSUBJECT: SUMMARY OF CONCLUSIONS FOR DC MTG ON 31 MAY RE START & DEFENSE &\nSPACE\nACTION: FOR RECORD PURPOSES DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICER: TOBEY LOGREF: 8920554 8920555\nFILES: IFM 0 sss nae NSROO14 CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap NARA, Date phiqleq\nCOMMENTS:\nee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: B CLOSED BY: B poc 10F 1\n-SEGRET--\n\n. \" NATIONAL SECURITY COUNCIL,\nSEGRES WASHINGTON, D.C. 20506 21076\n| Summary of Conclusions for\nDeputies Committee Meetin\nDATE: May 31, 1989\nTIME: 11:00-12:00\nPLACE: Situation Room\nSUBJECT: Summary of Conclusions of DC Meeting on Defense and\nSpace Paper (8\nIt was agreed that:\n-- With a re-write of a JCS rationale in favor of their\noption in the first Defense & Space paper, the Defense\n& Space papers on activities during and after a period\nof non-withdrawal from the ABM Treaty are ready for\nconsideration by NSC principals. (gj\n-- START papers on SNDV limits, ICBM sublimits, and heavy\nmissiles are ready for consideration by NSC principals.\n(3)\nSEGRE\nDECLASSIFY ON: OADR PER E.O. 1 3526\n. mu ol elroe\nGEGRET\n\n~SEGRET- RECORD 1D: 8920554\nNSC/S PROFILE RECEIVED: 30 MAY 89 14\nTO: GATES\nFROM: TOBEY DOC DATE: 06 JUN 89\nKANTER SOURCE REF:\nKEYWORDS: START DEFENSE POLICY\nSPACE POLICY soc\nDc AGENDA\nPERSONS:\nSUBJECT: SUMMARY OF CONCLUSIONS FOR DC MTG ON 31\u00b0MAY RE DEFENSE & SPACE &\nSTART FUNDAMENTALS\nACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICER: DAVIS; LOGREF: 8920555 8921075\nFILES: IFM 0 Ssuhs coe ___NSRO014 CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cae NARA, Date toh 109\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: NSLMS DOC 4O0F 4\n-SEGREE-\n\nNational Security Council\nThe White House\nPROOFED BY: a4 toc #_4OS54\nURGENT NOT PROOFED: SYSTEM = PRS fs) INT\nBYPASSED WW DESK: DOCLOG A, ~ AIO pz\n| SEQUENCE TO HAS $EEN DISPOSITION\nDep Exec pee | aes i. cee\nPhilip Hughes c. a.\nuw\nBob Gates eg pests pace eae\nBrent Scowcroft = ar Soy\nPhilip Hughes = \u2122~ pieleacici eee\nSituationRoom = cc Eee eee\nWest Wing Desk oS 4 OBE\nNSC Secretariat 53 ee\noe a\n2 y a\nGc: vp Sununu Other\nShould be seen by:\nWate? ime,\nCOMMENTS:\nHa wuts Ninth Sa!\n\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nSHEREE 20554\nadd-on\nJune 6, 1989 R\nACTION\nMEMORANDUM FOR ROBERT M. GATES\nTHROUGH: ARNOLD KANTER | Cale\nFROM: niet enGeay\nSUBJECT: Summary of Conclusions for DC Meeting\nAt Tab I is a memo transmitting the Summary of Conclusions of the\nDeputies' Committee meeting on 31 May 1989 in the Situation Room.\nRECOMMENDATION\nThat you authorize Philip Hughes to sign memo to his counterparts\n, at Tab I.\nApprove Disapprove\nAttachment\nTab I Memo to Counterparts DECLASSIFIED\nF White House Guidelines\npabeh Summary of Conclusions -- \u00a3.Q, 42958, SEC 3.4 (B) September 11, 2006\nBy cap__ NARA, Date yof19109\nSEEREF\nDeclassify on: OADR\n\n:. NATIONAL SECURITY COUNCIL\nadd-on\nMEMORANDUM FOR\nMR. J. STAPLETON ROY. H. LAWRENCE SANDALL\nExecutive Secretar xecutive Secretary\nDepartment of Stat Central Intelligence Agency\nCOL GEORGE P. COLE, VR. CAPT ANTHONY MANESS\nExecutive Secretary Executive Assistant to the\nDepartment of Defense Chairman\nJoint Chiefs of Staff\nMR. WILLIAM V. VITALE\nExecutive Secretary MS. BARBARA STARR\nDepartment of Energy Acting Executive Secretary\nArms Control and Disarmament\nAgency\nSubject: Summary of ConcJ\\sions of DC Meeting on START and\nDefense and Space\\ (ef\nAttached is the Summary /of Ca4nclusions of the Deputies' Committee\nMeeting held on 31 May A989 ak the White House. (sf\nG. ilip Hughes\nExecutive Secretary\nAttachment\nSummary gf Conclusions (gf\nDer taniity on: OADR White House Guidelines\n.:Q\u00b0'13526, SEC 3.4 (b), September 11, 2006\nByi4_ NARA, Date wisho4\n\n| a \"SEGREE RECORD ID: 8920554\n\u00b0: NSC/S PROFILE RECEIVED: 30 MAY 89 14\nTO: GATES\nFROM: DAVIS DOC DATE: 31 MAY 89\nTOBEY SOURCE REF:\nKANTER\nKEYWORDS: START DEFENSE POLICY\nSPACE POLICY soc\npc AGENDA\nPERSONS:\nSUBJECT: BACKGROUND MATERIAL FOR DC MTG ON 31 MAY RE NSR 14 / DEFENSE & SPACE\n& START FUNDAMENTALS\nACTION: NOTED BY GATES DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF: 8920555 8921075\nEILES:_IFU oO NSCP:_D a | NSROO14 CODES:\n~~ DOCUMENT DISTRIBUTION\nFOR_ACTION FOR _CONCURRENCE FOR_INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap _ NARA, Datepfelog\nCOMMENTS:\nnae ene\nee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: NSLMS DOC 30F 4\n-SEGREE\n\n: \u00e9 National Security Council\nThe White House\nCee le\nURGENTNOTPROOFED: ___________ SYSTEM pay\n| BYPASSED WW DESK: a pode =r==n0O\" |} -\n| SEQUENCETO HASSEEN _ DISPOSITION\ncna eis ee ee\nPhilip Hughes Zs --\n) Bob Gates 7\ni\nBrent Scowcrdft\": ei ci aa cI\nPhilip Hughes \u00a9\nSituation Room-->\nWest Wing Desi; 5\nNSC Secretariat? ( 2\nieee, 2 eee\ncc: vp Sununu Other\nCOMMENTS Should be seen by:\n(Date/Time)\nre OYN\nSap May & (Oumy Corde?\nPRO Dam\nSe RT EE Se ne a a ae ee a ee\n\nSBEREE\nas an ABM Test satellite. Further, it is the view of the\nUnited States that the number of U.S. designated ABM test\nsatellites in orbit simultaneously shall not exceed a\nnumber well short of that associated with any realistic\ndeployed capability. The United States believes the\nnumber 15 falls well below that threshold.\" (8)\nTo help clarify ABM testing permitted during the\nnon-withdrawal -period_and to_provide for greater\npredictability, the U.S. also proposed in the draft\nPredictability Protocol that the Parties shall provide\neach other with the following data:\n1. Identification, no more than 12 hours after\nlaunch of each space object in earth orbit from which a\ncomponent of an ABM system capable of substituting for an\nABM interceptor missile is to be tested to counter a\nstrategic ballistic missile or its elements in flight\ntrajectory;\n2. Notification within 12 hours after the re-entry\nof an ABM Test Satellite from its orbit or after a change\nin orbit; and,\n3. Notification of a test using such a space\nobject in earth orbit to counter a strategic ballistic\nmissile or its elements in flight trajectory no less than\ntwo hours prior to the conduct of any such test...\nThus, should the Soviets accept the current U.S. draft\npredictability protocol, they would necessarily accept:\ncertain ABM testing in space, thereby implicitly accepting. -- \u00b0:\nsome aspects of the broad interpretation. (B\u00ae) a,\nU.S. Position: Space-based Sensors. The U.S. has also\nproposed that the sides agree not to object, \"on the basis.\nof the ABM Treaty, to the development, testing, and\ndeployment... of space-based sensors.\" In explaining\nthis initiative to the Soviets, the U.S. noted that\nsatellite sensor programs are vitally important to both\nsides in providing warning of an attack, and thus are also\nvitally important to stability. Furthermore, it is very\ndifficult and, as both sides improve their systems,\nbecoming increasingly more difficult to distinguish\nindependently between space-based sensors capable of\nsubstituting for ABM radars and those that are not. Thus,\nlimitations on the capability of deployed space-based\nsensors are neither desirable nor verifiable. The U.S.\nhas presented to the Soviets a definition of \"space-based\nsensors\" in the context of this proposal; but it has not\nbeen agreed to by the Soviets. (8)\nSoviet Position. The Soviets have criticized the sensor\n. proposal as undermining the ABM Treaty and they have\nSECRET -2-\n\n:, y\nSGECREE\nprogram for evaluation of the Brilliant Pebbles concept is t\nbeing developed and reviewed for compliance with the ABM\nTreaty. This program consists of 12 flight tests to be\ncompleted by mid-FY92. While the compliance certification\nprocess has not yet been completed for these tests, we\nexpect to conduct them consistent with the \"restrictive\"\ninterpretation of the ABM Treaty. This test program would\nalso be compatible with the U.S. unilateral assurance on\ntesting.in space and proposed Predictability Protocol\nnotification measures. (8) Re\nIt is not clear at this time how long and to what extent\nadditional, useful Brilliant Pebbles testing can be\ncarried out after mid-FY92 consistent with the restrictive\ninterpretation, or for that matter the broad interpretation. However, development and testing of Brilliant\nPebbles, if they are regarded as \"based on other physical\nprinciples,\" would probably proceed more usefully under..\nthe broad, interpretation after mid-Fry92. If the broad\ninterpretation applies to Brilliant Pebbles, system\ndevelopment and testing could proceed unrestricted to the\npoint where an ABM system is \"created,\" resulting in a ]\nfaster rate of growth in confidence in technical\nfeasibility than a program conducted under the restrictive\ninterpretation. (8)\n, If the concept for a Brilliant Pebbles system is not\ndetermined to be \"based on other physical principles,\" it\ncould not be developed and tested under the broad\ninterpretation. We would then have to test under the.:\nrestrictive interpretation. While this would still permit 1\n- us to increase confidence in the feasibility of the\ntechnology, the rate of increase, and perhaps its absolute. oy\n- value would be less than could be achieved under a broad.: 4\ninterpretation program. (8) Fo\nN.B. No determination has yet been made as to whether an..\nABM system incorporating the Brilliant Pebbles concept\nwould be an ABM system \"based on other physical\nprinciples.\" This issue includes considerations beyond\nthose associated with the issue of whether kinetic energy\nABM weapons are based on OPP. wd\n- Options. Options for assuring U.S. testing rights during\na period of non-withdrawal from the ABM Treaty are\nintended to insure U.S. legal rights and political support\n- to conduct testing necessary to establish the feasibility\nof effective strategic defenses and to avoid the need to\nwithdraw from the ABM Treaty in order to complete such\ntesting. (8)\n, 1. Affirm the current position. This option would entail\ncontinuing to use the current U.S. working paper when we:\n. return to negotiations in Geneva. (84\n-SECRED --4-\n\na3\n-SEGREE:\nThose who favor this option believe that the U.S.\nunilateral assurance and predictability protocol proposal\nwould gain implicit Soviet acknowledgment of certain ABM\nTreaty testing rights during the non-withdrawal period,\nreduce treaty interpretation debates during and after\nratification, provide a militarily meaningful distinction\nbetween permitted testing and prohibited deployment of OPP\nABM systems in space, and satisfy stated Soviet -concerns regarding that distinction. They argue further that the.\nu.S. completed its Defense & Space position only late in\nRound X, and that we have not yet even had an opportunity\nto explain fully the position to the Soviets. (8)\nOption 1. is supported by: State, ACDA, OSD, Amb. Rowny\nand the Defense & Space Negotiator. (&)\n2. Negotiate a new space-testing proposal. This would\nentail negotiating an agreement with the Soviets based on\nthe space testing initiative described above. However, it\nwould apply to testing of all space-based weapons systems\nwhether or not they are OPP:\nIn order to ensure that the testing of space-based\n| ABM interceptor missiles or components capable of\nsubstituting for ABM interceptor missiles does not\nrepresent the deployment of such components, the me\n| United States proposes that the Parties confine\n: such testing to designated ABM test satellites.\n| Any platform based in space from which an ABM.\ninterceptor missile or a component capable of\nsubstituting for an ABM interceptor missile is Oo\ntested to counter a strategic ballistic missile or =:\nits elements in flight trajectory, shall be ~\ndesignated an an ABM test satellite. Further, the a\nnumber of designated ABM test satellites orbited.\nsimultaneously by either side shall not exceed xX.\n(6:4) |\nThose who support this option argue that despite some\nprogress on the Predictability Protocol and hints of\nmaneuver room on the sensor proposal, a unilateral testing\nassurance does not provide a common U.S.-Soviet\n|. understanding of what is and is not allowed during the\n| non-withdrawal period, and would constrain the U.S.\nwithout constraining the Soviets. They believe that\nnegotiating reciprocal space-based testing constraints\nand allowances is the best mechanism for reaching\nagreement on research development, and testing activities\nduring the non-withdrawal period. Pinally, they argue\nthat such an approach would likely enhance the probability\nfor Congressional ratification and allay Allied concerns about strategic imbalances. (34 '\nSECREE -5-\n\nDECLASSIFIED 5736789\nPER E.O. 13526\nLojo~-1993-M&\nnot plg)rote pst 002 (U)\nPurpose. To review U.S. policy options with respect to\nrights of the parties after a period of non-withdrawal\nfrom the ABM Treaty in the context of a Defense & Space\nTreaty. (#) -\nCurrent Status. The sides have not resolved to U.S.\nSatisfaction what happens at the end of the non-withdrawal\nperiod. At the Washington Summit, President Reagan and\nGeneral Secretary Gorbachev agreed that each side would\nhave the right to choose its course of action. This was\ncodified, in the Washington Summit Joint Statement that,\n\"intensive discussions of strategic stability shall begin\nnot later than three years before the end of the specified:\nperiod, after which, in the event the sides have not\nagreed otherwise, each side would be free to decide its\nown course of action.\" (84\nThe U.S. made clear at the time its view that this right:\nincluded the right to deploy strategic defenses without\nfurther reference to the ABM Treaty, and that the Defense\n& Space Treaty must reflect this. )\nGorbachev said that while he did not like the idea of a:.\nright to deploy, he \"could accept it\" if there were a:\nspecified non-withdrawal period, and in this context,\n. after the specified period, \"each side would be free to.\nchoose its own course of action.\" This formulation was.,.\nembodied in the Washington Summit Joint Statement and the.\nU.S. draft Defense & Space Treaty. (8) se:\n| The Soviets refused, however, to acknowledge that the\nWashington Summit Joint Statement language provided this\n| right, arguing that a side would have to withdraw from the\nABM Treaty at that time in order to deploy defenses. The\nSoviets continue to assert that at the end of the 7\nnon-withdrawal period, a side merely recovers its Article\nXV withdrawal rights under the ABM Treaty. Thus, the\n| Soviets believe that the Defense & Space agreement should\n| terminate at the end of the non-withdrawal period. (8)\n|. U.S. Position. The U.S. seeks agreement to a Defense &\nSpace Treaty of unlimited duration which would have the\nsides retain certain ABM Treaty constraints after the\nnon-withdrawal period \"until a Party chooses a different.\ncourse of action.\" The U.S. draft treaty text also\nprovides (as a condition for agreeing to a non-withdrawal\nperiod) that \"if, after the specified period, either Party\ndecides to deploy strategic ballistic missile defenses\n: that are prohibited by the ABM Treaty, then that Party\nSECRED\nDeclassify on: OADR = MS re --t\n\nCECRED\nshall give six months written notice to the other Party of\nits intention to deploy such-defenses. In this event,\nthis notice requirement shall supersede the notice\nprovision of Article XV of the ABM Treaty. Following the\nsix month notification period, all remaining ABM Treaty\nprovisions shall be considered terminated unless the\nParties agree otherwise.\" This position is embodied in\nArticle III, paragraph 2. of the U.S. draft treaty text.\n(e-2)::\nSoviet Position. The Soviets seek a Defense & Space\n_ agreement of a duration limited to that of the\nnon-withdrawal period, after which, unless agreed\notherwise, the sides would return to the ABM Treaty regime\nand recover their Article XV withdrawal rights. That is,\nthe Soviets would make the \"right to deploy without\nfurther reference to the ABM Treaty\" one of the subjects\nfor negotiations prior to the end of the non-withdrawal\nperiod. If the sides fail to reach agreement on this, or\nother issues, the sides would return to the ABM Treaty:\nafter the non-withdrawal period. oo\nOptions. Options for dealing with what rights the parties\nhave after the period of non-withdrawal from the ABM\nTreaty should diminish political barriers to deployment of\neffective strategic defenses while maintaining ABM Treaty\nconstraints on Soviet ballistic missile defenses until the: t\nUnited States is ready to commit itself to deployment of\ndefenses. (8):\n1. Affirm the current position. This would entail making\u00bb\nexplicit a right to deploy defenses after the\nnon-withdrawal period by maintaining Article III, '.\nparagraph 2. of the U.S. draft treaty text, detailed:\nabove. (9%\nThose who support this option believe the provisions. are\nconsistent with what President Reagan and General\nSecretary Gorbachev agreed to. They argue the provisions.\nare necessary to guarantee the quid pro quo of the Defense\n& Space Treaty; trading agreement not to withdraw from the\nABM Treaty in order to deploy defenses for a specified\nperiod of time, in return for freedom to deploy strategic\ndefenses afterwards, without further reference to the ABM\nTreaty. They also argue that clarifying WSJS language\nwill avoid interpretation debates after ratification.\nFinally, they argue that this provision is necessary to\nfacilitate deployment of strategic defenses because\nwithdrawing from the ABM Treaty could be a difficult\npolitical barrier. (8)\nThis option is supported by State, OSD, ACDA, Amb. Rowny ~\nand the Defense & Space Negotiator.\nSGECREL. -2-\n--_--=e OPA DLT\n: SEG a\n\n. go? - r - + |\nSBCREP\n2. Reevaluate U.S. Defense & Space Objectives. This 1\noption would entail not resuming the Defense & Space talks\nuntil the fundamental U.S. objectives in D & S have been\nreaffirmed at the Cabinet level.\nThose who support this option believe that one of the\nbasic intents of the National Security Review, to identify\nthe objectives of DST, has not yet been accomplished.\nThey argue thatthe President's objectives for DST should\n' be clearly stated before proceeding further with.\ndiscussion of negotiating positions. They also believe\nthat to simply reaffirm previously held positions --- that\nwere based on a different set of national security\nparameters -- could prove to be a serious mistake and\nresult in a lost opportunity for the USG. Those who hold\nthis view believe that Article III would have the effect\nof specifying a date certain when the U.S. would withdraw\nfrom the ABM Treaty and that this could provide the Soviet\nUnion with an opportunity/right to deploy a territorial\ndefense that the United States may be unable or unwilling:\nto exercise. (8) 4\n3. Non-withdrawal X years, non-deployment Y years. This\noption would entail seeking agreement to a non-withdrawal\nperiod of x years; followed by a non-deployment period of\n{2] ly] years, during which the sides would have intensive\ndiscussions on a cooperative transition and have unlimited.\ntesting rights; after which, unless the Parties agree\notherwise, each would be free to deploy strategic defenses\nwithout further reference to the ABM Treaty. (This option\ncould be implemented in conjunction with options for.\ndifferentiated periods of permitted testing activities Mot\ndiscussed in DST 001.) (8) -.. 7:\nThose who would support this option believe it would help.\novercome the political barrier of withdrawing from the ABM\nTreaty in order to deploy strategic defenses by logically a 2\nconnecting the right to deploy without further reference\nto the ABM Treaty to the outcome of discussions on a:\ncooperative transition, rather than to a non-withdrawal\npledge. The onus for failure of the discussions (should\nit occur) would fall on the Soviets, providing the U.S.\nwith a stronger political argument for deployment. Also,\nin conjunction with proposals for differentiated periods\nof permitted testing activities, it could shorten the time\nunder the restrictive interpretation of the ABM Treaty.\nThis option is not now supported by any agency. (8)\n4. Drop the right to deploy in exchange for unlimited\ntesting rights during the non-withdrawal period as a quid\npro quo for a non-withdrawal eriod. This option wou\n: instead entail making explicit a right to test all\nSECRET -3- |\neye VERLAG\n\n:. (ar ane Op 5 ee\n\"Seer\nspace-based weapons, regardless of physical principle, as\nthe quid pro quo for a non-withdrawal period. At the end\nof the non-withdrawal period, the sides would simply\nregain their right to withdraw from the ABM Treaty. Or,\nthis option could be implemented in conjunction with\nOption 2. in DST 001, which would make explicit such a\nright. (3%:\nThose who would support this option believe that the most\nimportant U.S. interest is to demonstrate the feasibility\nof strategic defenses through realistic testing, and that\nif this can be done, it will naturally diminish the\npolitical barriers to deployment of defenses. They also\nwould argue that there is little practical difference\nbetween the political difficulty in providing six months\nnotice of an intention to deploy defenses and six months\nnotice of withdrawal from the ABM Treaty. (8)\nThis option is not now supported by any agency. (3\nFuture Work. Options considered in this paper were::\nlimited to those that could conceivably be implemented as\nwe return to the negotiations in Geneva in June.\nMoreover, options 3 and 4 are included in the paper\ndespite the fact that no agency now supports. them. Some |\nagencies believe that these are promising options, which,\nmerit further consideration, but would not be appropriate:.\nto table now. Moreover, other options must and will be\nconsidered. In this work, thorough analysis of our\nnegotiating position in light of SDI deployment objectives 7 a\nstemming from the President's decision on the course and i:\nfunding of the SDI program will also be considered. (8). ae\nSECRED -4ee de\n\n:; -SEEREE RECORD ID:8920554 --\nNSC/S PROFILE RECEIVED: 30 MAY 89 14\nTO: AGENCIES\nFROM: HUGHES DOC DATE: 06 JUN 89\nSOURCE REF:\nKEYWORDS: START DEFENSE POLICY\nSPACE POLICY soc\npc AGENDA\nPERSONS:\nSUBJECT: NOTIFICATION OF DC MTG ON 31 MAY RE NSR '14 / DEFENSE & SPACE & START\nFUNDAMENTALS\nACTION: DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF: 8920555 8921075\npues: in o_ NSCP 002s ___NsRoo14 CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR_INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cae __ NARA, Date to/gq]o9\nCOMMENTS: ee\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: NSLMS DOC 20F 4\n-SREREE-\n\n& National Security Council\nThe White House\nPROOFED BY: LOG # ei o SS ]\nURGENT NOT PROOFED: SYSTEM PRS CNSC) INT\nBYPASSED WW DESK: DOCLOG Beato ot\n| SEQUENCE TO HAS SEEN DISPOSITION\nDep Exec \\ aS\n--- PhilipHughes x DS Be Fo\nBob Gates fe pe ee\nBrent Scowcroft & seta ag ence ec Ey\nPhilip Hughes s\nSituation Rooms\nWest Wing vel \u00a5 d Dy|.\nNSC Secretariat nN > 7 (3) \u00a3\nSITTMANN a a\nCe\ncc: vp Sununu Other\nShould be seen by:\nTv (Dateline\nCOMMENTS\nNOU - Ka- GeUS Cenro/ of)\n\nWASHFAX RECEIPT].\nTHE WHITE HOLSE.\nt\nMESSAGE NO. CLASSIFICATION SEGREF races_/\u00a5f\n--: \u00a35\nFROM G. PHILIP HUGHES -\n(NAME) (EXTENSION) (ROOM NUMBER)\nMESSAGE DESCRIPTION Dc HT, 3l May\nTO_(AGENCY) DELIVER 10: DEPT/ROOM NO. EXTENSION\nes H Lawhance Spria Slee Gee\n| a\n| REMARKS:.\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap NARA, Date tohale9\ne\n\nNATIONAL SECURITY COUNCIL 20554\nSECREE WASHINGTON, D.C. 20506\nMay 30, 1989\nMEMORANDUM FOR\nMR. CARNES LORD MR. FRANK HODSOLL\nAssistant to the Vice Executive Associate Director\nPresident for National Office of Management and\nSecurity Affairs Budget\nMR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL\n| Executive Secretary Executive Secretary\nDepartment of State Central Intelligence Agency\nCOLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS\nExecutive Secretary Executive Assistant to the\nDepartment of Defense Chairman\nJoint Chiefs of Staff\nMR. WILLIAM V. VITALE\nExecutive Secretary MS. BARBARA STARR\nDepartment of Energy Acting Executive Secretary\nArms Control and Disarmament\nAgency\nSUBJECT: Deputies Committee Meeting on NSR-14,\nWednesday, May 31, 1989, WHSR, 11:00 a.m. (8\nA meeting of the Deputies Committee will be held to discuss\nNSR-14 (Defense and Space, START Fundamental Limits) on\nWednesday, May 31 at 11:00 a.m., in the White House Situation\nRoom. This meeting will focus on the U.S. position in DST, and\nthe U.S. position on numerical limits and heavy ICBMs in START.\nThe papers for the meeting are attached. Attendance should be\nprincipals plus one. In addition, Ambassadors Richard Burt and\nEdward Rowny are invited to attend. An agenda for Wednesday's\nmeeting is attached. (9)\nfn G. Philip Hughes\nExecutive Secretary\nTab A Agenda (8)\nTab B Discussion Papers (34\n\"SEcRee PER E.0. 1\nDeclassify on: OADR cee\nwA 6/8/2016\n\nSReRat 20554\nDEPUTIES COMMITTEE MEETIN\n[S_ CONTROL REVIEW\nWednesday, May 31, 1989\nWhite House Situation Room\n11:00 a.m.\n| SR-14, Def e and S$ i\nSTART Fundamental, Limits\n| Agenda\nI. Introductory Remarks by the Chairman\nII. Defense and Space\nIII. START Fundamental Limits\nIV. Recommendations for the NSC ~\nSEGREE:.\n.. White House Guidelines\nDeclassify on: OADR - E.0. 13526, SEC 3.4 (b), September 11, 2008\n: By wtiea_NARA, Date uiz/zer4\n\nSHERES\nas an ABM Test satellite. Further, it is the view of the\nUnited States that the number of U.S. designated ABM test\nsatellites in orbit simultaneously shall not exceed a\nnumber well short of that associated with any realistic\ndeployed capability. The United States believes the\nnumber 15 falls well below that threshold.\" (84\nTo help clarify ABM testing permitted during the\nnon-withdrawal period and to provide for greater\npredictability, the U.S. also proposed in the draft\nPredictability Protocol that the Parties shall provide\neach other with the following data:\n1. Identification, no more than 12 hours after\nlaunch of each space object in earth orbit from which a\ncomponent of an ABM system capable of substituting for an\nABM interceptor missile is to be tested to counter a\nstrategic ballistic missile or its elements in flight\ntrajectory;\n2. Notification within 12 hours after the re-entry\n| of an ABM Test Satellite from its orbit or after a change\n| in orbit; and,\n3. Notification of a test using such a space\nobject in earth orbit to counter a strategic ballistic\nmissile or its elements in flight trajectory no less than\ntwo hours prior to the conduct of any such test.\nThus, should the Soviets accept the current U.S. draft\npredictability protocol, they would necessarily accept\ncertain ABM testing in space, thereby implicitly accepting\nsome aspects of the broad interpretation. (8\nU.S. Position: Space-based Sensors. The U.S. has also\nproposed that the sides agree not to object, \"on the basis\nof the ABM Treaty, to the development, testing, and\ndeployment... of space-based sensors.\" In explaining\nthis initiative to the Soviets, the U.S. noted that\nsatellite sensor programs are vitally important to both\nsides in providing warning of an attack, and thus are also\nvitally important to stability. Furthermore, it is very\ndifficult and, as both sides improve their systems,\nbecoming increasingly more difficult to distinguish\nindependently between space-based sensors capable of\nsubstituting for ABM radars and those that are not. Thus,\nlimitations on the capability of deployed space-based\n| sensors are neither desirable nor verifiable. The U.S.\nhas presented to the Soviets a definition of \"space-based\nsensors\" in the context of this proposal; but it has not\nbeen agreed to by the Soviets. (87\nSoviet Position. The Soviets have criticized the sensor\nproposal as undermining the ABM Treaty and they have\nSBCREP -2-\n\nCre Er\nSECRER\nprogram for evaluation of the Brilliant Pebbles concept is\nbeing developed and reviewed for compliance with the ABM\nTreaty. This program consists of 12 flight tests to be\ncompleted by mid-FY92. While the compliance certification\nprocess has not yet been completed for these tests, we\nexpect to conduct them consistent with the \"restrictive\"\ninterpretation of the ABM Treaty. This test program would\nalso be compatible with the U.S. unilateral assurance on\n. testing in space and proposed Predictability Protocol\nnotification measures. (8)\nIt is not clear at this time how long and to what extent\nadditional, useful Brilliant Pebbles testing can be\ncarried out after mid-Fy92 consistent with the restrictive\ninterpretation, or for that matter the broad interpre--,\ntation. However, development and testing of Brilliant\nPebbles, if they are regarded as \"based on other physical\nprinciples,\" would probably proceed more usefully under\nthe broad interpretation after mid-FY92. If the broad\ninterpretation applies to Brilliant Pebbles, system\ndevelopment and testing could proceed unrestricted to the\npoint where an ABM system is \"created,\" resulting in a\nfaster rate of growth in confidence in technical\nfeasibility than a program conducted under the restrictive\ninterpretation. (84\nIf the concept for a Brilliant Pebbles system is not\ndetermined to be \"based on other physical principles,\" it\ncould not be developed and tested under the broad\ninterpretation. We would then have to test under the\nrestrictive interpretation. While this would still permit\nus to increase confidence in the feasibility of the\ntechnology, the rate of increase, and perhaps its absolute\nvalue would be less than could be achieved under a broad\ninterpretation program. (S#)\nN.B. No determination has yet been made as to whether an\nABM system incorporating the Brilliant Pebbles concept\nwould be an ABM system \"based on other physical\nprinciples.\" This issue includes considerations beyond\nthose associated with the issue of whether kinetic energy\nABM weapons are based on OPP. (8)\nOptions. Options for assuring U.S. testing rights during\na period of non-withdrawal from the ABM Treaty are\nintended to insure U.S. legal rights and political support\nto conduct testing necessary to establish the feasibility\nof effective strategic defenses and to avoid the need to\nwithdraw from the ABM Treaty in order to complete such\ntesting. (84\n1. Affirm the current position. This option would entail\ncontinuing to use the current U.S. working paper when we\n. return to negotiations in Geneva. (3).\nSECRER -4- 7\nGreGREt\n\nSSCREL\nThose who favor this option believe that the U.S.\nunilateral assurance and predictability protocol proposal\nwould gain implicit Soviet acknowledgment of certain ABM\nTreaty testing rights during the non-withdrawal period,\nreduce treaty interpretation debates during and after\nratification, provide a militarily meaningful distinction\nbetween permitted testing and prohibited deployment of OPP\nABM systems in space, and satisfy stated Soviet concerns\nregarding that distinction. They argue further that the\nU.S. completed its Defense & Space position only late in\nRound X, and that we have not yet even had an opportunity\nto explain fully the position to the Soviets. (8\n| Option 1. is supported by: State, ACDA, OSD, Amb. Rowny\n| and the Defense & Space Negotiator. (3)\n2. Negotiate a new space-testing proposal. This would\nentail negotiating an agreement with the Soviets based on\n| the space testing initiative described above. However, it\nwould apply to testing of all space-based weapons systems\nwhether or not they are OPP:\nIn order to ensure that the testing of space-based\nABM interceptor missiles or components capable of\nsubstituting for ABM interceptor missiles does not\nrepresent the deployment of such components, the\nUnited States proposes that the Parties confine\nsuch testing to designated ABM test satellites.\nAny platform based in space from which an ABM\ninterceptor missile or a component capable of\nsubstituting for an ABM interceptor missile is\ntested to counter a strategic ballistic missile or\nits elements in flight trajectory, shall be\ndesignated an an ABM test satellite. Further, the\nnumber of designated ABM test satellites orbited\nsimultaneously by either side shall not exceed X.\n(2)\nThose who support this option argue that despite some\nprogress on the Predictability Protocol and hints of\nManeuver room on the sensor proposal, a unilateral testing\nassurance does not provide a common U.S.-Soviet\nunderstanding of what is and is not allowed during the\nnon-withdrawal period, and would constrain the U.S.\nwithout constraining the Soviets. They believe that\nnegotiating reciprocal space-based testing constraints\nand allowances is the best mechanism for reaching\nagreement on research development, and testing activities\nduring the non-withdrawal period. Finally, they argue\nthat such an approach would likely enhance the probability\nfor Congressional ratification and allay Allied concerns\nabout strategic imbalances. (81\nSEGRE -5-\n'el ne a) ) meet\nSEGREF\n\n(alma pes\nDST002\n5/26/89\npst 002 (U)\n, Purpose. To review U.S. policy options with respect to\nrights of the parties after a period of non-withdrawal\nfrom the ABM Treaty in the context of a Defense & Space\nTreaty. (3%\nCurrent Status. The sides have not resolved to U.S.\nsatisfaction what happens at the end of the non-withdrawal\nperiod. At the Washington Summit, President Reagan and\nGeneral Secretary Gorbachev agreed that each side would\n| have the right to choose its course of action. This was\ncodified in the Washington Summit Joint Statement that,\n\"intensive discussions of strategic stability shall begin\n. not later than three years before the end of the specified\nperiod, after which, in the event the sides have not\nagreed otherwise, each side would be free to decide its\n| own course of action.\" (34\n\\ The U.S. made clear at the time its view that this right\nincluded the right to deploy strategic defenses without\nfurther reference to the ABM Treaty, and that the Defense\n& Space Treaty must reflect this. (8)\n| Gorbachev said that while he did not like the idea of a\n| right to deploy, he \"could accept it\" if there were a\nspecified non-withdrawal period, and in this context,\n. after the specified period, \"each side would be free to\n| choose its own course of action.\" This formulation was\nembodied in the Washington Summit Joint Statement and the\nU.S. draft Defense & Space Treaty. (8):\nThe Soviets refused, however, to acknowledge that the\nWashington Summit Joint Statement language provided this\nright, arguing that a side would have to withdraw from the\nABM Treaty at that time in order to deploy defenses. The\nSoviets continue to assert that at the end of the.\nnon-withdrawal period, a side merely recovers its Article\nXV withdrawal rights under the ABM Treaty. Thus, the\nSoviets believe that the Defense & Space agreement should\n| terminate at the end of the non-withdrawal period. (sf,\nU.S. Position. The U.S. seeks agreement to a Defense &\nSpace Treaty of unlimited duration which would have the\nsides retain certain ABM Treaty constraints after the\nnon-withdrawal period \"until a Party chooses a different\n|. course of action.\" The U.S. draft treaty text also\n: provides (as a condition for agreeing to a non-withdrawal\nperiod) that \"if, after the specified period, either Party\ndecides to deploy strategic ballistic missile defenses\n- that are prohibited by the ABM Treaty, then that Party\nsReRnE DECLASSIFIED\n| Declassify on: OADR Ee PORT PER E.O. 13526\nSLGRET \"ete\n. eal bis/rorn |\n\nSECRED\nshall give six months written notice to the other Party of\nits intention to deploy such defenses. In this event,\nthis notice requirement shall supersede the notice\nprovision of Article xv of the ABM Treaty. Following the\nsix month notification period, all remaining ABM Treaty\nprovisions shall be considered terminated unless the\nParties agree otherwise.\" This position is embodied in\nArticle III, paragraph 2. of the U.S. draft treaty text.\n(8)\nSoviet Position. The Soviets seek a Defense & Space\nagreement of a duration limited to that of the\nnon-withdrawal period, after which, unless agreed:\notherwise, the sides would return to the ABM Treaty regime\nand recover their Article XV withdrawal rights. That is,\nthe Soviets would make the \"right to deploy without\nfurther reference to the ABM Treaty\" one of the subjects\nfor negotiations prior to the end of the non-withdrawal\nperiod. If the sides fail to reach agreement on this, or\nother issues, the sides would return to the ABM Treaty\nafter the non-withdrawal period.\nOptions. Options for dealing with what rights the parties\nhave after the period of non-withdrawal from the ABM\nTreaty should diminish political barriers to deployment of\neffective strategic defenses while maintaining ABM Treaty\nconstraints on Soviet ballistic missile defenses until the\nUnited States is ready to commit itself to deployment of\ndefenses. (3%:\n1. Affirm the current position. This would entail making\nexplicit a right to deploy defenses after the\nnon-withdrawal period by maintaining Article III,\nparagraph 2. of the U.S. draft treaty text, detailed\nabove. (#4.\n: Those who support this option believe the provisions are\nconsistent with what President Reagan and General\nSecretary Gorbachev agreed to. They argue the provisions\nare necessary to guarantee the quid pro quo of the Defense\n& Space Treaty; trading agreement not to withdraw from the\nABM Treaty in order to deploy defenses for a specified\nperiod of time, in return for freedom to deploy strategic\ndefenses afterwards, without further reference to the ABM\nTreaty. They also argue that clarifying WSJS language\nwill avoid interpretation debates after ratification.\nFinally, they argue that this provision is necessary to\nfacilitate deployment of strategic defenses because\nwithdrawing from the ABM Treaty could be a difficult\npolitical barrier. (8)\nThis option is supported by State, OSD, ACDA, Amb. Rowny\nand the Defense & Space Negotiator.\nSEGRE -2-\nCah YN ten\n\nee Ty\nSECREE\n2. Reevaluate U.S. Defense & Space Objectives. This\noption would entail not resuming the Defense & Space talks\nuntil the fundamental U.S. objectives in D & S have been\nreaffirmed at the Cabinet level.\nThose who support this option believe that one of the\nbasic intents of the National Security Review, to identify\nthe objectives of DST, has not yet been accomplished.\nThey argue that the President's objectives for DST should\nbe clearly stated before proceeding further with\ndiscussion of negotiating positions. They also believe\nthat to simply reaffirm previously held positions -- that\nwere based on a different set of national security\nparameters -- could prove to be a serious mistake and\n| result in a lost opportunity for the USG. Those who hold\nthis view believe that Article III would have the effect\nof specifying a date certain when the U.S. would withdraw\nfrom the ABM Treaty and that this could provide the Soviet\nUnion with an opportunity/right to deploy a territorial\ndefense that the United States may be unable or unwilling\nto exercise. (3)\n| 3. Non-withdrawal xX years, non-deployment \u00a5 years. This\n| option would entail seeking agreement to a non-withdrawal\nperiod of x years; followed by a non-deployment period of\n{2] [y] years, during which the sides would have intensive\n| discussions on a cooperative transition and have unlimited\n| testing rights; after which, unless the Parties agree\n: otherwise, each would be free to deploy strategic defenses\nwithout further reference to the ABM Treaty. (This option\ncould be implemented in conjunction with options for\ndifferentiated periods of permitted testing activities\n| discussed in DST 001.) (34\n| Those who would support this option believe 'it would help\novercome the political barrier of withdrawing. from the ABM\nTreaty in order to deploy strategic defenses by logically\nconnecting the right to deploy without further reference\nto the ABM Treaty to the outcome of discussions on a\n| cooperative transition, rather than to a non-withdrawal\n| pledge. The onus for failure of the discussions (should\nit occur) would fall on the Soviets, providing the U.S.\nwith a stronger political argument for deployment. Also,\nin conjunction with proposals for differentiated periods\nof permitted testing activities, it could shorten the time\nunder the restrictive interpretation of the ABM Treaty.\n7) 5\nThis option is not now supported by any agency. (834\n| 4. Drop the right to deploy in exchange for unlimited\ntesting rights during the non-withdrawal period as a quid\npro quo for a non-withdrawal period. This option would\n. instead entail making explicit a right to test all\nSREREP -3-\n-- Orepeyr\nCL WIVe,\n\noe CIEL I Nie FF\nSEGRE\nspace-based weapons, regardless of physical principle, as\nthe quid pro quo for a non-withdrawal period. At the end\nof the non-withdrawal period, the sides would simply\nregain their right to withdraw from the ABM Treaty. Or,\nthis option could be implemented in conjunction with\nOption 2. in DST 001, which would make explicit such a\nright. (8%)\nThose who would support this option believe that the most\nimportant U.S. interest is to demonstrate the feasibility\nof strategic defenses through realistic testing, and that\nif this can be done, it will naturally diminish the\npolitical barriers to deployment of defenses. They also\nwould argue that there is little practical difference\nbetween the political difficulty in providing six months\nnotice of an intention to deploy defenses and six months\nnotice of withdrawal from the ABM Treaty. (34)\nThis option is not now supported by any agency. (3\nFuture Work. Options considered in this paper were\nlimited to those that could conceivably be implemented as\nwe return to the negotiations in Geneva in June.\nMoreover, options 3 and 4 are included in the paper\ndespite the fact that no agency now supports them. Some\nagencies believe that these are promising options, which\nmerit further consideration, but would not be appropriate\nto table now. Moreover, other options must and will be\nconsidered. In this work, thorough analysis of our\nnegotiating position in light of SDI deployment objectives\nstemming from the President's decision on the course and\nfunding of the SDI program will also be considered. (384\non +\n~SECRER -4-\nJEL VIVE. 7\n\n\"SBEREE 20554\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\n| May 30, 1989\nACTION\nMEMORANDUM FOR G. PHILIP HUGHES\nTHROUGH: ARNOLD KANTER Mt\nFROM: RICHARD pavrQidn\nSUBJECT: Deputies Committee Meeting to Discuss\nNSR-14 (Defense and Space; START Fundamental\nLimits)\ni.. 0d\nThe subject meeting is scheduled for +0+3\u00a2 a.m., on Wednesday,\nMay 31, in the White House Situation Room. This DC will focus on\nthe U.S. negotiating position in DST, and the U.S. position on\nnumerical limits and heavy ICBMs in START.\nThe notification memorandum for the May 31 meeting is attached at\nTab I, the agenda at Tab A, and the discussion papers at Tab B.\nRECOMMENDATION\nThat you sign the memorandum at Tab I.\nApprove Disapprove\nTab I Memo to Executive Secretaries\nTab A Agenda\nTab B Discussion Papers\nPER E.O. 13526\n2010-1993-MR\nmer olglrer\nSEGREE\nDeclassify on: OADR SEGREF\n\nSEERET- RECORD ID: 8920555)\n. ' NSC/S PROFILE RECEIVED: 30 MAY 89 15\n| TO: GATES\nFROM: DAVIS DOC DATE: 26 MAY 89\nSOURCE REF:\nKEYWORDS: START DEFENSE POLICY\nSPACE POLICY pc\nPERSONS:\nSUBJECT: FOUR BACKGROUND PAPERS FOR DC MTG ON 31 MAY RE START DEFENSE AND\nSPACE\nACTION: OBE / STATUS ORIGINAL UNKNOWN DUE DATE: 06 FEB 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF: 8920554 8921075\nFILES: ie ce NSCP: DC028_ CODES:\nsi 'erie?\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR INFO\n| White House Guidelines\n| E.O. 12958, SEC 3.4 (B) September 11, 2006\n| By cae NARA, Date 10/19/09\n| COMMENTS:\n| DISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: AC CLOSED BY: NSAJC Doc 10F 1\n\nNational Security Council\nThe White House\nPROOFED BY: toc#_ 2ZOSSS\nURGENT NOT PROOFED: | ae SYSTEM PRS Gis INT\nBYPASSED WW DESK: voc.oc Bx AIO\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec | omy\nPhilip Hughes > Co Set Searels\nBob Gates F\noe)\nBrent Scowcroft a Sissies rece\nPhilip Hughes Py\nsinstionncon\nituation Room =:\nWest Wing Desk 44\nNSC Secretariat 9 MS Bil B\nPe ee eee\n-- ee\n[scien 7 omaigg/_Sasinh Aten water\nSee\ncc: vP Sununu Other\nShould be seen by:\nees: aaa\nCOMMENTS\n\n|. AOS s\n: NATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20508.\nMay 26, 1989\nMEMORANDUM FOR MR. ROBERT GATES\nFROM: RICHARD bavi\n| Subject: Papers for the Deputies Meeting\n| 5/31\n| Attached are the four papers on START and Defense\n| and Space to be discussed by Deputies next Wednesday,\n| May 31. A briefing memo will follow on Tuesday.\nPapers for Deputies Meeting\n\n\"| SECRET START 04\u00a2\n. 5/6/89\n| NSR_14 START Review Paper Four -- Air Breathing Systems\n: Purpose. To review U.S. positions on dealing with air breathing\n| systems under START.\n| Background. A fundamental premise underlying the U.S. approach\nto START is that we must be capable of maintaining an adequate\ndeterrent under a START regime. In order to do so, and to\nimprove stability, the U.S. has consistently opposed tight constraints on ALCMs and other bomber weapons in START. The original U.S. position did not directly limit these systems, constraining them only indirectly through an overall limit on the\nnumber of heavy bombers. If ALCMs and other bomber weapons are\nto count under the 6,000 warhead limit in START, as currently\nagreed, they must be heavily discounted in order to allow meeting\n| present and START projected U.S. military requirements.\n| Significant features of the current U.S. approach include::\n-- Counting bombers which carry only gravity bombs and SRAMs as\n\"one\" against both the 1600 SNDV and 6000 warhead limits.\n-- Counting ALCM-carrying heavy bombers as one unit against the\n1600 SNDV limit and 10 warheads against the 6000 warhead\nlimit regardless of actual load or capability.\n-- Considering \"ALCMs\" to include only nuclear-armed airlaunched cruise missiles with ranges in excess of 1500\n; kilometers.:\n-- Rejecting any limits on long-range conventionally-armed\ncruise missiles (LRCCM). Treating all currently existing\nlong-range air-to-surface cruise missiles as nuclear armed\nwhile distinguishing future LRCCMs from treaty accountable\nALCMs through NTM.\n-- Rejecting any limits on nondeployed ALCMS or on total ALCM\ninventory.\n-- Providing for a limited number of former heavy bombers (i.e.\nconventional bombers) which would not count against either\nthe 1600 or 6000 limits.\n-- Providing separate basing for the three classes of bombers\n(ALCM-carrying heavy bombers, non-ALCM carrying heavy\nbombers, former heavy bombers), with a limited on-site\ninspection right for non-ALCM carrying heavy bombers of a\n. type tested with treaty accountable ALCMs.\nPER E.O, 13526\n\"SEGREP i: Lolw-1993-ma\n\n: 7 ( rt 1\n| -SRGREP 2\nIn establishing this position, the United States recognized that\n_ the Soviets would have an equal right to exploit the rules. The\nUnited States judged, however, that protecting our ability to\ncover and damage targets was more important than constraining\nsimilar Soviet capabilities.\nDiscussion -- General. Because of the importance of this area\nand the close interrelationship of all heavy bomber/ALCM positions, a comprehensive review is required. There is consensus\n- that the United States should not alter its current rejection of\nSoviet attempts to place sublimits on bomber weapons or to constrain ALCMs, e.g., to limit nondeployed ALCMs.\nDiscussion -- Counting Rules. For many years the United States\nrejected placing any limits on ALCMs. The U.S. approach to ALCM\ncounting rules discounts ALCMs and heavily discounts non-ALCM\nnuclear weapons on bombers. Some have raised the question of\nwhether discounting bomber weapons would in fact favor the\nSoviets in the long run, given the asymmetries in air defenses.\nOthers believe that, while the Soviets appear to be well posi-~\ntioned to exploit these counting rules, encouraging greater:\n. Soviet reliance on air-breathing systems is a central goal of the\nU.S. START position. Moreover, the U.S. requires these systems\nfor target coverage, while the Soviets do not.\nThe most common alternative counting rule is the so-called \"as-\n. equipped\" approach, in which ALCM bombers are counted against the\n6000 limit based on the maximum number of ALCMs they are capable\nof carrying. This position, favored by the Soviets, would either\n(a) require substantial modifications to U.S. bombers to limit\nthe number of ALCMs they could carry or (b) lead to unrealistically high attributions which would severely inhibit U.S.\nflexibility. The Soviets claim that the U.S. attribution rule\nprovides the U.S. with an unfair advantage since future widebodied aircraft could carry dozens of cruise missiles but would\nonly be attributed with ten. Some favor attempting to meet this\nstated Soviet concern by placing some upper limit on the ALCMcarrying capacity of individual aircraft. Others believe the\nloss of flexibility and verification problems make it imprudent\nto attempt to placate what they 'see as a spurious Soviet concern.\nTo move toward a more stabilizing defense posture, some believe\nthe U.S. could consider readopting its original position that\nALCMs and other bomber weapons will not be counted or limited\nunder START. This would entail -having limits only on ballistic\nmissile warheads and on strategic nuclear delivery systems.\nHeavy bombers would continue to count against the latter limit\nonly. Others believe that this move would encourage competition\nin air-breathing systems and, because of the Soviet lead in air\ndefenses, therefore would not be stabilizing. Moreover, this\nmove could incite strong Soviet condemnation as backtracking on a\nkey U.S. concession and, by reopening the Reykjavik bomber\nsacha SEGREF\n\ncounting rule, could actually decrease the U.S. ability to deploy\nthe necessary high number of bomber weapons. On the other hand,\nsuch a move would simplify U.S. obligations under the treaty,\nsince no distinctions would have to be made (or verified) regarding conventionally-armed versus nuclear-armed ALCMs, or heavy\nbombers equipped for ALCMs vice those not so equipped.\nA less radical move would be to return to the earlier U.S.\nposition that each heavy bomber equipped for ALCMs should count\nas six warheads (instead of ten), regardless of the number\nactually carried. While this position would not simplify the\ntreaty in any way, and could encounter Soviet opposition, it\ncould increase U.S. flexibility and confidence in meeting targeting requirements under START constraints.\nIn evaluating these options, a complicating factor is the reduced\nproduction rate for the B-2 and Congressional concern with B-2\ncosts. If the B-2 program is significantly delayed, ALCM options\nand flexibility could become more important for the United\nStates..\nOptions -- Counting Rules. The following options exist:\n-- Option 1 -- Accept the Soviet demand for an \"as equipped\"\ncounting rule for ALCMs.\n-- Option 2 -- Retain the existing ALCM attribution rule of ten\nper bomber, but add a limit on the maximum ALCM carrying\n: capability of individual bombers..\n-- Option 3 -- Make no change to the U.S. position on counting\nrules; retain the existing ALCM attribution rule of ten per\nbomber.\n-- Option 4 -- Return to the earlier U.S. position that each\n| heavy bomber equipped for ALCMs should count as six warheads, regardless of the number actually carried.\n-- Option 5 -- Eliminate all limits on ALCMs, retaining only an\noverall limit on heavy bombers.\nDiscussion -- ALCM Range. The U.S. has taken the position that\nnuclear-armed air-to-surface missiles with a range of less than\n1,500 km should not be counted in START. The Soviets would\nestablish the ALCM range threshold at 600 km. A range cut-off of\n1500 kilometers protects U.S. options to extend the range of\nmissiles on both heavy bombers and on tactical aircraft to offset\nimproved Soviet air defense, without having such missiles count\nas ALCMs under START. Although there are no current programs for\nnuclear armed cruise missiles with ranges between 600 and 1500\nkilometers, some believe there is a clear military requirement to\n: protect the option to deploy such systems in the future. More-\n\"SECREE = OJ yi +\nEE\n\n. SEERES 4\nover, the 1,500 km range better protects U.S. options for future\ncruise missiles pending resolution of how future nuclear and nonnuclear cruise missile are to be distinguished from each other.\nThe U.S. has indicated some flexibility on the range issue in\nreturn for Soviet acceptance of the remainder of the U.S.. ALCMheavy bomber positions, although we have not specified what range\nwe might accept. Some believe this flexibility should be withdrawn, either permanently or until satisfactory resolution of the\nALCM distinguishability problem and definition of the military.\nrequirements for theater standoff nuclear weapons in a post-CFE\nenvironment.\nOptions -- ALCM Range. The following options exist:\n-- Option 1 -- Accept a 600 kilometer range cutoff, contingent\non resolution of:\n-- (Option 1A) the ALCM distinguishability issue; or\n-- (Option 1B) all remaining ALCM issues.\n-- Option 2 -- Accept a 1000 kilometer range cutoff, contingent.\non resolution of:\n-- (Option 2A) the ALCM distinguishability issue; or\n-- (Option 2B) all remaining ALCM issues.\n| -- Option 3 -- Maintain the existing U.S. position of a 1500\n! kilometer range cutoff, but continue to indicate flexibility\nin return for Soviet acceptance of other elements of our\n| ALCM position.\n| -- Option 4 -- Maintain the existing U.S. position of a 1500\nkilometer range cutoff; do not indicate any flexibility.\n: Discussion -- ALCM Distinguishability. This issue is related to\nthe previous two. We have agreed with the Soviets that all\ncurrently existing long-range (with the range threshold still\nunresolved, as noted above) air-to-surface cruise missiles will\nbe considered to be nuclear armed, and that future conventionally\narmed long-range air-to-surface cruise missiles will either be\ndistinguishable from nuclear-armed cruise missiles by NTM or will\nbe considered to be nuclear armed.\nIn establishing this position, the United States recognized that\nit provided no assurance against supposed conventional cruise\nmissiles being illegally equipped with nuclear warheads. Some\nbelieve this is a serious problem, since it provides the Soviets\nwith an option for deploying \"conventional\" cruise missiles\n(which we could not reliably verify not to be nuclear armed) on a\nwide variety of aircraft, thus increasing the threat to the\nese SEGRET\n\nUnited States. Others believe that the primary consideration is\nprotecting U.S. programs, not constraining Soviet ones.\nWhile NTM can distinguish physical features of different cruise\nmissiles, it is not an effective means of determining whether\nthose cruise missiles carry nuclear or conventional warheads.\nThere may be operational penalties from designing future conventional cruise missiles such that they are physically distinguishable. In addition, weapons carried internally in a bomber\nweapons bay cannot be seen by NTM. Finally, the U.S. may find\nthe requirement to display systems to NTM onerous from a operational, security or logistics standpoint.\nOptions -- ALCM Distinguishability. The following options exist:;\n-- Option 1 -- Reconsider our basic position on ALCM distinguishability and agree to treat all cruise missiles over a\nspecified range (1500 kilometers) as nuclear armed.\n-- Option 2 -- Reaffirm our existing approach to ALCM dis-:\ntinguishability, accepting the drawbacks indicated above as\nthe necessary price for avoiding constraints on conventional\ncruise missiles.\n-- Option 3 -- Reconsider our existing approach. Undertake a\nstudy of alternatives. If (as is probable) this study is\nnot complete when negotiations resume, inform the Soviets\nthat we have the ALCM distinguishability issue under review.\n\nas an ABM Test satellite. Further, it is the view of the\nUnited States that the number of U.S. designated ABM test\nsatellites in orbit simultaneously shall not exceed a\nnumber well short of that associated with any realistic\ndeployed capability. The United States believes the\nnumber 15 falls well below that threshold.\" (81\nTo help clarify ABM testing permitted during the\nnon-withdrawal period and to provide for greater\npredictability, the U.S. also proposed in the draft.\nPredictability Protocol that the Parties shall provide\neach other with the following data:\nuo 1. Identification, no more than 12 hours after\nlaunch of each space object in earth orbit from which a\ncomponent of an ABM system capable of substituting for an\nABM interceptor missile is to be tested to counter a\nstrategic ballistic missile or its elements in flight\ntrajectory;\n2. Notification within 12 hours after the re-entry\n: of an ABM Test Satellite from its orbit or after a change\nin orbit; and,\n3. Notification of a test using such a space\nobject in earth orbit to counter a strategic ballistic\nmissile or its elements in flight trajectory no less than\ntwo hours prior to the conduct of any such test.\nThus, should the Soviets accept the current U.S. draft\npredictability protocol, they would necessarily accept\ncertain ABM testing in space, thereby implicitly accepting\nsome aspects of the broad interpretation. (sf\nU.S. Position: Space-based Sensors. The U.S. has also\nproposed that the sides agree not to object, \"on the basis\n'of the ABM Treaty, to the development, testing, and\ndeployment... of space-based sensors.\" In explaining\nthis initiative to the Soviets, the U.S. noted that\nsatellite sensor programs are vitally important to both\nsides in providing warning of an attack, and thus are also\nvitally important to stability. Furthermore, it is very\ndifficult and, as both sides improve their systems,\nbecoming increasingly more difficult to distinguish\nindependently between space-based sensors capable of\nsubstituting for ABM radars and those that are not. Thus, |\nlimitations on the capability of deployed space-based\nsensors are neither desirable nor verifiable. The U.S.\n7 has presented to the Soviets a definition of \"space-based\nsensors\" in the context of this proposal; but it has not\nbeen agreed to by the Soviets. (3)\nSoviet Position. The Soviets have criticized the sensor\n|. proposal as undermining the ABM Treaty and they have\nSECREE -2-\n\nSECREP\nprogram for evaluation of the Brilliant Pebbles concept is\nbeing developed and reviewed for compliance with the ABM\nTreaty. This program consists of 12 flight tests to be\ncompleted by mid-FY92. While the compliance certification\nprocess has not yet been completed for these tests, we\nexpect to conduct them consistent with the \"restrictive\"\n'interpretation of the ABM Treaty. This test program would\nalso be compatible with the U.S. unilateral assurance on\ntesting in space and proposed Predictability Protocol\nnotification measures. (8)\nIt is not clear at this time how long and to what extent\nadditional, useful Brilliant Pebbles testing can be:\ncarried out after mid-FY92 consistent with the restrictive\ninterpretation, or for that matter the broad interpre--:\ntation. However, development and testing of Brilliant\nPebbles, if they are regarded as \"based on other physical\nprinciples,\" would probably proceed more usefully under\nthe broad interpretation after mid-FY92. If the broad\ninterpretation applies to Brilliant Pebbles, system\ndevelopment and testing could proceed unrestricted to the\npoint where an ABM system is \"created,\" resulting in a\nfaster rate of growth in confidence in technical\nfeasibility than a program conducted under the restrictive\ninterpretation. (3\nIf the concept for a Brilliant Pebbles system is not\ndetermined to be \"based on other physical principles,\" it\n| could not be developed and tested under the broad\ninterpretation. We would then have to test under the\nrestrictive interpretation. While this would still permit\nus to increase confidence in the feasibility of the\n: technology, the rate of increase, and perhaps its absolute\n| value would be less than could be achieved under a broad\ninterpretation program. (8)\nN.B. No determination has yet been made as to whether an\nABM system incorporating the Brilliant Pebbles concept\nwould be an ABM system \"based on other physical\nprinciples.\" This issue includes considerations beyond\nthose associated with the issue of whether kinetic energy\nABM weapons are based on OPP. (8%\nOptions. Options for assuring U.S. testing rights during\n. a period of non-withdrawal from the ABM Treaty are\nintended to insure U.S. legal rights and political support\nto conduct testing necessary to establish the feasibility\nof effective strategic defenses and to avoid the need to\nwithdraw from the ABM Treaty in order to complete such\ntesting. (3\n1. Affirm the current position. This option would entail\ncontinuing to use the current U.S. working paper when we\n: return to negotiations in Geneva. (8\nSEGRED -4oT f --.\n\noo: E EG re E-p\nSBERET\nThose who favor this option believe that the U.S.\nunilateral assurance and predictability protocol proposal\n. would gain implicit Soviet acknowledgment of certain ABM\nTreaty testing rights during the non-withdrawal period,\nreduce treaty interpretation debates during and after\nratification, provide a militarily meaningful distinction\nbetween permitted testing and prohibited deployment of OPP\nABM systems in space, and satisfy stated Soviet concerns.\nregarding that distinction. They argue further that the\nU.S. completed its Defense & Space position only late in\nRound X, and that we have not yet even had an opportunity\nto explain fully the position to the Soviets. (8)\nOption 1. is supported by: State, ACDA, OSD, Amb. Rowny\nand the Defense & Space Negotiator. (9)\n2. Negotiate a new space-testing proposal. This would\nentail negotiating an agreement with the Soviets based on\nthe space testing initiative described above. However, it\nwould apply to testing of all space-based weapons systems\nwhether or not they are OPP:\nIn order to ensure that the testing of space-based\n. ABM interceptor missiles or components capable of\nsubstituting for ABM interceptor missiles does not\nrepresent the deployment of such components, the\nUnited States proposes that the Parties confine\nsuch testing to designated ABM test satellites.\nAny platform based in space from which an ABM\ninterceptor missile or a component capable of\n- substituting for an ABM interceptor missile is\ntested to counter a strategic ballistic missile or\nits elements in flight trajectory, shall be\nt designated an an ABM test satellite. Further, the\nnmumber of designated ABM test satellites orbited\nsimultaneously by either side shall not exceed xX.\n(3\nThose who support this option argue that despite some\nprogress on the Predictability Protocol and hints of\nManeuver room on the sensor proposal, a unilateral testing\nassurance does not provide a common U.S.-Soviet\nunderstanding of what is and is not allowed during the\nnon-withdrawal period, and would constrain the U.S.\nwithout constraining the Soviets. They believe that\nnegotiating reciprocal space-based testing constraints\nand allowances is the best mechanism for reaching\nagreement on research development, and testing activities\nduring the non-withdrawal period. Finally, they argue\nthat such an approach would likely enhance the probability\nfor Congressional ratification and allay Allied concerns\nabout strategic imbalances. (9%.\nSECREE -5-\n\n. DsT002\nDECLASSIFIED 5/26/89\nPER E.0. 13526\nDole -1973-mMe DsT 002 (U)\nvb 8 /z01b --\nPurpose. To review U.S. policy options with respect to\nrights of the parties after a period of non-withdrawal\nfrom the ABM Treaty in the context of a Defense & Space\nTreaty. (89\nCurrent Status. The sides have not resolved to U.S.\nsatisfaction what happens at the end of the non-withdrawal\nperiod. At the Washington Summit, President Reagan and\nGeneral Secretary Gorbachev agreed that each side would\nhave the right to choose its course of action. This was\ncodified in the Washington Summit Joint Statement that,\n\"intensive discussions of strategic stability shall begin\nnot later than three years before the end of the specified\nperiod, after which, in the event the sides have not\n| agreed otherwise, each side would be free to decide its\nown course of action.\" (8)\nThe U.S. made clear at the time its view that this right\nincluded the right to deploy strategic defenses without\nfurther reference to the ABM Treaty, and that the Defense\n& Space Treaty must reflect this. (8)::\nGorbachev said that while he did not like the idea of a\nright to deploy, he \"could accept it\" if there were a\nspecified non-withdrawal period, and in this context,\nafter the specified period, \"each side would be free to\nchoose its own course of action.\" This formulation was\nembodied in the Washington Summit Joint Statement and the\nU.S. draft Defense & Space Treaty. (83\nThe Soviets refused, however, to acknowledge that the\nWashington Summit Joint Statement language provided this\nright, arguing that a side would have to withdraw from the\nABM Treaty at that. time in order to deploy defenses. The\nSoviets continue to assert that at the end of the\nnon-withdrawal period, a side merely recovers its Article\nXV withdrawal rights under the ABM Treaty. Thus, the\nSoviets believe that the Defense & Space agreement should\nterminate at the end of the non-withdrawal period. (8)\nU.S. Position. The U.S. seeks agreement to a Defense &\nSpace Treaty of unlimited duration which would have the\nsides retain certain ABM Treaty constraints after the\nnon-withdrawal period \"until a Party chooses a different\ncourse of action.\" The U.S. draft treaty text also\nprovides (as a condition for agreeing to a non-withdrawal.\nperiod) that \"if, after the specified period, either: Party\ndecides to deploy strategic ballistic missile defenses\n: that are prohibited by the ABM Treaty, then that Party\nDeclassify on: OADR SEGREF\n\nSECREP\nshall give six months written notice to the other Party of\nits intention to deploy such defenses. In this event,\nthis notice requirement shall supersede the notice\n| provision of Article XV of the ABM Treaty. Following the\n| six month notification period, all remaining ABM Treaty\n| provisions shall be considered terminated unless the.\nParties agree otherwise.\" This position is embodied in.\nArticle III, paragraph 2. of the U.S. draft treaty text.\nwy\nSoviet Position. The Soviets seek a Defense & Space\nagreement of a duration limited to that of the\nnon-withdrawal period, after which, unless agreed\notherwise, the sides would return to the ABM Treaty regime\nand recover their Article XV withdrawal rights. That is,\nthe Soviets would make the \"right to deploy without\nfurther reference to the ABM Treaty\" one of the subjects\nfor negotiations prior to the end of the non-withdrawal\nperiod. If the sides fail to reach agreement on this, or\nother issues, the sides would return to the ABM Treaty\nafter the non-withdrawal period.\nOptions. Options for dealing with what rights the parties\nhave after the period of non-withdrawal from the ABM\nTreaty should diminish political barriers to deployment of\neffective strategic defenses while maintaining ABM Treaty\nconstraints on Soviet ballistic missile defenses until the\nUnited States is ready to commit itself to deployment of\ndefenses. (34\n1. Affirm the current position. This would entail making\nexplicit a right to deploy defenses after the\nnon-withdrawal period by maintaining Article III,\nparagraph 2. of the U.S. draft treaty text, detailed\nabove. (8) -\nThose who support this option believe the provisions are\nconsistent with what President Reagan and General\nSecretary Gorbachev agreed to. They argue the provisions\nare necessary to guarantee the quid pro quo of the Defense\n. & Space Treaty; trading agreement not to withdraw from the\nABM Treaty in order to deploy defenses for a specified\nperiod of.time, in return for freedom to deploy strategic\ndefenses afterwards, without further reference to the ABM\nTreaty. They also argue that clarifying WSJS language\nwill avoid interpretation debates after ratification.\nFinally, they argue that this provision is necessary to\nfacilitate deployment of strategic defenses because \u00a9\nwithdrawing from the ABM Treaty could be a difficult\npolitical barrier. (34\nThis option is supported by State, OSD, ACDA, Amb. Rowny\nand the Defense & Space Negotiator.\nSECREP -2-;\n\n| 2. Reevaluate U.S. Defense & Space Objectives. This\noption would entail not resuming the Defense & Space talks\nuntil the fundamental U.S. objectives in D & S have been:\n| reaffirmed at the Cabinet level.:\nThose who support this option believe that one of the,\nbasic intents of the National Security Review, to identify\nthe objectives of DST, has not yet been accomplished.\nThey argue that the President's objectives for DST should\nbe clearly stated before proceeding further with\n| discussion of negotiating positions. They also believe\nthat to simply reaffirm previously held positions -- that\nwere based on a different set of national security\n| parameters -- could prove to be a serious mistake and\n: result in a lost opportunity for the USG. Those who hold\n. this view believe that Article III would have the effect\n, of specifying a date certain when the U.S. would withdraw\nfrom the ABM Treaty and that this could provide the Soviet\nUnion with an opportunity/right to deploy a territorial\ndefense that the United States may be unable or unwilling\nto exercise. (8)\n3. Non-withdrawal X years, non-deployment Y years. This\noption would entail seeking agreement to a non-withdrawal\nperiod of x years; followed by a non-deployment period of\n[2] ly] years, during which the sides would have intensive\ndiscussions on a cooperative transition and have unlimited\ntesting rights; after which, unless the Parties agree\notherwise, each would be free to deploy strategic defenses\nwithout further reference to the ABM Treaty. (This option\ncould be implemented in conjunction with options for\ndifferentiated periods of permitted testing activities\ndiscussed in DST 001.) (s)\nThose who would support this option believe it would help overcome the political barrier of withdrawing from the ABM.\nTreaty in order to deploy strategic defenses by logically\nconnecting the right to deploy without further reference\nto the ABM Treaty to the outcome of discussions on a\ncooperative transition, rather than to a non-withdrawal\npledge. The onus for failure of the discussions (should\nit occur) would fall on the Soviets, providing the U.S.\n| with a stronger political argument for deployment. Also,\n| in conjunction with proposals for differentiated periods\n: of permitted testing activities, it could shorten the time\n| under the restrictive interpretation of the ABM Treaty.\n2)\nThis option is not now supported by any agency. {8\n4. Drop the right to deploy in exchange for unlimited\ntesting rights during the non-withdrawal period as a quid\npro quo for a non-withdrawal period. This option would\ninstead entail making explicit a right to test all\nSEGRED -3- -ee\n\n4 ~\nBEERS?.\nspace-based weapons, regardless of physical principle, as\nthe quid pro quo for a non-withdrawal period. At the end\nof the non-withdrawal period, the sides would simply\nregain their right to withdraw from the ABM Treaty. Or,\nthis option could be implemented in conjunction with\nOption 2. in DST 001, which would make explicit such a\nright. (8%\nThose who would support this option believe that the most\nimportant U.S. interest is to demonstrate the feasibility\nof strategic defenses through realistic testing, and that\nif this can be done, it will naturally diminish the\npolitical barriers to deployment of defenses. They also\nwould argue that there is little practical difference\nbetween the political difficulty in providing six months\nnotice of an intention to deploy defenses and six months\nnotice of withdrawal from the ABM Treaty. (8).\nThis option is not now supported by any agency. (s)\nFuture Work. Options considered in this paper were.\n. Timited to those that could conceivably be implemented as\nwe return to the negotiations in Geneva in June.\nMoreover, options 3 and 4 are included in the paper\ndespite the fact that no agency now supports them. Some\nagencies believe that these are promising options, which\nmerit further consideration, but would not be appropriate\nto table now. Moreover, other options must and will be\nconsidered. In this work, thorough analysis of our\nnegotiating position in light of SDI deployment objectives\nstemming from the President's decision on the course and\nfunding of the SDI program will also be considered. (5)\nSECRER, -4-\nTT \" -- | oad\nQL --Gt 4 fame t.",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

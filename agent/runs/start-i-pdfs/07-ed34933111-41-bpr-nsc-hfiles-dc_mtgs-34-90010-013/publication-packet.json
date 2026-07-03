@@ -1,0 +1,289 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-34-90010-013.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "9b1f66cef264e4447f9e9f28398a65e2bd938fd0b9e23368b119265bd5305b26",
+    "page_count": 16,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "31",
+    "doc_key": null,
+    "title": "NSC/DC 034 - June 12, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on New Initiatives, Keywords: Start, Arms Control",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC/DC 034 - June 12, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on New Initiatives, Keywords: Start, Arms Control",
+    "file_unit": "NSC/DC 034 - June 12, 1989 - NSC/DC Meeting on NSR-14 re: U.S. Start Position on New Initiatives, Keywords: Start, Arms Control"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, OA/ID 90010-013, NSC/DC 034-June 12, 1989-NSC/DC Meeting on NSR-14 re: U.S. START Positions on New Initiatives. Secret. The meeting took place in the Situation Room.\n",
+  "selected_pages": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    13,
+    14,
+    15,
+    16
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2005-1002-F; 2008-1289-F 2005-1002-F; 2008-1289-F This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files Subseries: NSC/DC Meetings Files OA/ID Number: 90010 Folder ID Number: 90010-013 Folder Title: NSC/DC 034 - June 12, 1989 - NSC/DC Meeting on NSR-14",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | Doc. No. / Type Subject/Title Date Restriction Classification ee | Ola. Memo Richard Davis to Robert Gates TNI89 (b)(1) Ss | Re: Deputies Committee Meetings on START (1 pp.) | .01b. Summary Re: Summary of Conclusions for the Deputies Committee 6/12/89 (b)(1) Ss Meeting (2 pp.) 02a. Memo G. Philip Hughes to Distribution List 6/9/89 (b)(1) Ss Re: Deputies Committee Meeting on NSR-14 (1 pp.) 02b. Agenda Re: Deputies Committee Meeting Arms Control P",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "P SEGRE RECORD 10 ge: \u00ab ree NSC/S PROFILE RECEIVED: 15 TO: GATES FROM: DAVIS DOC DATE: 19 JUL 89 KANTER : SOURCE REF: | KEYWORDS: ARMS CONTROL START pe soc PERSONS: | SUBJECT: SUMMARY OF CONCLUSIONS OF JUN 12 DC MTG ON NEW INITIATIVES IN START ACTION: GATES APPROVED RECOM DUE DATE: 30 JUL 90 STATUS: CD | STAFF OFFICER: DAVIS LOGREF: 8920612 8920675 FL NSC CODES: Docu T DISTRIBUTION FOR ACTION FOR _CONCURRENCE FOR _INFO DECLASSIFIED White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 200",
+      "selected_for_body": true
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Fe -SEOREE RECORD ID: 8920937 \u2018 mom ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 Z -89073115 FOR DECISION 001 X 89073115 GATES APPROVED RECOM DECLASSIFIED | White House Guidelines | E.0. 12958, SEG 3.4 (B) September 11, 2006. By cap _ NARA, Date johaloq | ; | \u201cSEGRE :",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "rae > 20937 . NATIONAL SECURITY COUNCIL : | . WASHINGTON, D.C. 20608 . - July 19, 1989 | ACTION MEMORANDUM FOR ROBERT GATES : THROUGH: anon hf@ireR _ FROM: RICHARD navi de SUBJECT: Deputies Committee Meetings on START Attached (Tabs A, B, and C) are copies for the record of the summaries of conclusions from the June 7, 9, 12, 1989 Deputies Committee review of START. Initial drafts of these summaries . were forwarded prior to the NSC meetings on these issues, but | were not approved for the files",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:",
+        "summary of conclusions"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "i : NATIONAL SECURITY COUNCIL 20937 | WASHINGTON. D.C, 20506 : Summary of Conclusions for DATE: June 12, 1989 LOCATION: Situation Room TIME: 11:00 AM - NOON . SUBJECT:- Summary of Conclusions of DC Meeting on New Initiatives in START (8) . PARTICIPANTS: The Vice President\u2019s Office CIA: Carnes Lord Richard. Kerr Douglas MacEachin State: Reginald Bartholomew JCS: . Edward Rowny John Baldwin Richard Burt . Thomas Fox Roger Harrison ACDA: Defense: George Murphy. - Donald Atwood William Fite Paul Wol",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "_, SBGRES 2 | Robert Gates responded that the logical conclusion of Atwood\u2019s concern about the uncertain future of mobile ICBMs on the Hill is that you make no changes because you are afraid of what you will end up with. How do you devise new initiatives that account for uncertainty on the Hill? Does Hill uncertainty influence the new initiatives we can propose? (8f Reginald Bartholomew responded that we need not be passive vis-a-vis the Hill. The two approaches should be integrated. We have two",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "wo -SBGREP RECORD 10; 9920612. ; \u201c NSC/S PROFILE RECEIVED: 89 21 TO: HUGHES FROM: KANTER DOC DATE: 09 JUN 89 | DAVIS : SOURCE REF: HUGHES KEYWORDS: START ARMS CONTROL NSR DC AGENDA PERSONS: SUBJECT: DC MTG TO DISCUSS NSR-14 / U S START POSITION ON NEW INITIATIVES / AGENDA / JUN 12 ACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 25 MAY 90 STATUS: C STAFF OFFICERe=DAVIS LOGREF: 8920675 8920937 | FILES: VD, si how.) SROO14 CODES: - vockig DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR _INFO DAVIS KANTER",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SO, SEGREF- RECORD. ID: 8920612 4 ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 HUGHES Z 89060921 FOR SIGNATURE. 001 X 89060921 HUGHES SGD MENO TO AGENCIES ; | . . \u2018\\ 1 | | DECLASSIFIED : ; White House Guidelines _ E.0, 12958, SEC 3.4 (B) September 11, 2008 By cae __ NARA, Date sofiq/og -SEGREP\u2014 ; ,",
+      "selected_for_body": false
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "National Security Council The White House PROOFED BY: LOG # Z ob / z. URGENT NOT PROOFED: SYSTEM LD Use) INT BYPASSED WW DESK: pococ Aa IO ee SEQUENCE TO HAS SEEN DISPOSITION Dep Exec Be Z 3 Philip Hughes a a BobGates \u201c? ER) Oi See Brent Scowcroff Philip Hughes oo Situation Rooms West Wing Desk? 2 CU, a NSC Secretariat cc: vp Sununu Other Should be seen by: Se \u00b0 \"101 ) ee COMMENTS j De NON AGHAA_ of i2 | 22)",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 20612 NATIONAL SECURITY COUNCIL LogNumber DisTRIBUTION RECORD Date 9 JUN 89 Subject; DC MTG ON JUN 12 a amamasaren cronies Yee Otway EXTERNAL DISTRIBUTION: #CYS Date Time Received/Signed for By: THE VICE PRESIDENT 1 eae ee THE SECRETARY OF STATE v a) ] y G 22 i) {An Exec. secRoom 7241 ] yet Zl 4 THE SECRETARY OF THE TREASURY i Main BidgRoom 3422 Neen n EEE | THE SECRETARY OF DEFENSE The Pentagon ee ee DIRECTOR, ACDA 1 4 Room $933/Dept. of State CHAIRMAN US START DELEGATION % ACDA, $933 State N",
+      "selected_for_body": false
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "distribution record",
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a i 20612 NATIONAL SECURITY COUNCIL logNumber DisTRIBUTION RECORD Date 9 SUN 89 Subject; _DC MTG ON JUN 12 - : ecmemcasimavan gree Ye Gcmonrn Gunes cnc EXTERNAL DISTRIBUTION: _#0Ys. Date Time Received/Signed for By: THE VICE PRESIDENT 2 14 a a THE SECRETARY OF STATE a Exec seyRoom 7241 ] SSMS THE SECRETARY OF THE TREASURY Main BidgRoom 3422 Te THE SECRETARY OF DEFENSE The Pentagon eres \u00ab|| Sei acne tee DIRECTOR, ACDA \u2018 Room \u00a7933/Dept. of State ee CHAIRMAN US START DELEGATION % ACDA, 5933 State N",
+      "selected_for_body": false
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "WASHFAX RECEIPT : THE WHITE HOLSE MESSAGE NO. CLASSIFICATION Sa? bee uy PAGES A FROM___G._ PHILIP HUGHES . (NAME) (EXTENSION) (ROOM NUMBER) MESSAGE Description__ DC UT, (2 TAN TO (AGENCY) DELIVER TO: DEPT/ROOM NO. ; EXTENSION \u2014 Dod Ge Yo _ ke lo - \u00ab . _ \u2014NEK: f PAT bx SEc oe A Lawrence Sawa Gee foc Ss Le Potty Hovess Gace Ye \u2014__\u2014_\u2014_\u2014_\u2014_\u2014 Se ee eee (ir REMARKS : . \u2014 DECLASSIFIED ; White House Guidelines E.0. 12058, SEC 3.4 (B) September 11, 2006 | By cae _ NARA, Date jolyale9",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "department of state",
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". 20612 \u201cSBeREE NATIONAL SECURITY COUNCIL. WASHINGTON, D.C. 20508 June 9, 1989 MEMORANDUM FOR : MR. CARNES LORD MR. FRANK HODSOLL Assistant to the Vice Executive Associate Director President for National Office of Management and Security Affairs Budget MR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL Executive Secretary Executive Secretary Department of State . Central Intelligence Agency COLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS Executive Secretary Executive Assistant to the Department of ",
+      "selected_for_body": true
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| Lo, ar ne Cs SEGRET > Sheppm 20612 DEPUTIES COMMITTEE MEETING ARMS CONTROL POLICY REVIEW Monday, June 12, 1989 White House Situation Room 11:00 a.m. NSR-14, U.S. START PROPOSAL: NEW _ INITIATIVES Agenda I. Introductory Remarks by the Chairman II. START: _ New Initiatives : | III. Recommendations for the NSC DECLASSIFIED White House Guidelines 44, 2008 E.O. 13526, SEC 3.4 (b}, September 11, By_4S_NARA, Dates/all SEGRES Declassify on: OADR Witt,",
+      "selected_for_body": true
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "/ pera SEGREF 20612 NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 June 9, 1989 ACTION MEMORANDUM FOR G. PHILIP HUGHES THROUGH: ARNOLD KANTER yi FROM: sicaOedr: s SUBJECT: Deputies Committee Meeting to Discuss NSR-14 (U.S. START Position on New Initiatives) The subject meeting is scheduled for 11:00 a.m., on Monday, June 12, in the White House Situation Room. This DC will focus on the remaining agenda item from Friday\u2019s meeting. The notification memorandum for the June 12 meeting is attached a",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": "P SEGRE RECORD 10 ge: \u00ab\nree NSC/S PROFILE RECEIVED: 15\nTO: GATES\nFROM: DAVIS DOC DATE: 19 JUL 89\nKANTER: SOURCE REF:\n| KEYWORDS: ARMS CONTROL START\npe soc\nPERSONS:\n| SUBJECT: SUMMARY OF CONCLUSIONS OF JUN 12 DC MTG ON NEW INITIATIVES IN START\nACTION: GATES APPROVED RECOM DUE DATE: 30 JUL 90 STATUS: CD\n| STAFF OFFICER: DAVIS LOGREF: 8920612 8920675\nFL NSC CODES:\nDocu T DISTRIBUTION\nFOR ACTION FOR _CONCURRENCE FOR _INFO\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap NARA, Date tofsleg\nCOMMENTS:.\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: EN CLOSED BY: poc 10F 1\nET\n\nrae > 20937\n. NATIONAL SECURITY COUNCIL:\n|. WASHINGTON, D.C. 20608.\n- July 19, 1989\n| ACTION\nMEMORANDUM FOR ROBERT GATES:\nTHROUGH: anon hf@ireR _\nFROM: RICHARD navi de\nSUBJECT: Deputies Committee Meetings on START\nAttached (Tabs A, B, and C) are copies for the record of the\nsummaries of conclusions from the June 7, 9, 12, 1989 Deputies\nCommittee review of START. Initial drafts of these summaries.\nwere forwarded prior to the NSC meetings on these issues, but\n| were not approved for the files.\nRECOMMENDATIONS\nThat you approve the summary of conclusions on air breathing\nsystems and nondeployed missiles at Tab A..\n| Approve Disapprove\nThat you approve the summary of conclusions on mobile ICBMs at.\n- Tab B....\n:.. Aruba ha\nApprove Disapprove\nThat you approve the summary of conclusions on new initiatives at f\nTab C.;; Te.\n: Approve \\ Disapprove\nTab A Summary of Conclusions - Air Breathing Systems and\nNondeployed Missiles.\nTab B Summary of Conclusions - Mobile ICBMs\nTab C Summary of Conclusions - New Initiatives\nexeran DECLASSIFIED\nDeclassify on: OADR PER E.O, 13526\n210-1999. MR\n\ni:\nNATIONAL SECURITY COUNCIL 20937\n| WASHINGTON. D.C, 20506\n: Summary of Conclusions for\nDATE: June 12, 1989\nLOCATION: Situation Room\nTIME: 11:00 AM - NOON\n. SUBJECT:- Summary of Conclusions of DC Meeting on New Initiatives\nin START (8).\nPARTICIPANTS:\nThe Vice President's Office CIA:\nCarnes Lord Richard. Kerr\nDouglas MacEachin\nState:\nReginald Bartholomew JCS:\n. Edward Rowny John Baldwin\nRichard Burt. Thomas Fox\nRoger Harrison\nACDA:\nDefense: George Murphy.\n- Donald Atwood William Fite\nPaul Wolfowitz\nStephen Hadley White House:\nRobert Gates\nEnergy:\nJohn Tuck NSC: ~.\nVictor Alessi Arnold Kanter\nRichard Davis\nWilliam Diefenderfer\nFrank Hodsoll.\nSummary of Conclusions\nThere was agreement that three categories of new initiatives:\n: should be examined. They include measures that: minimize the\nconsequences of ICBM silo vulnerability, minimize the\nconsequences of undetected cheating on mobile limits and, of\n: lesser importance, measures that increase warning time. (8)\nReginald Bartholomew suggested that our primary problem is the\nthreat to stability caused by MIRVed, vulnerable, fixed-silo\nICBMs. From that problem flows our mobile program and our\ninterest in deMIRVing. We need to ask how arms control fits into\nour programs on the Hill. (8)\nPER E.0. 13526\n| SEcREE To10. 19g Beane\nDeclassify on: OADR\nwrens 3hhelb.\n\n_, SBGRES\n2\n| Robert Gates responded that the logical conclusion of Atwood's\nconcern about the uncertain future of mobile ICBMs on the Hill is\nthat you make no changes because you are afraid of what you will end\nup with. How do you devise new initiatives that account for\nuncertainty on the Hill? Does Hill uncertainty influence the new\ninitiatives we can propose? (8f\nReginald Bartholomew responded that we need not be passive vis-a-vis\nthe Hill. The two approaches should be integrated. We have two\nprograms that reflect a strategic rationale that mobility is good.\nDonald Atwood agreed and added that we should be leading the Congress\non these issues. (8)\nRichard Burt suggested that we should go to the Congress with\ninitiatives that will help establish a new consensus. We need to be\nmore sophisticated in building a majority coalition. (ss\nRobert Gates asked if, aside from the politics, there is disagreement\nthat deMIRVing mobile ICBMs is stabilizing? Richard Burt responded\nthat we have to prevent a Soviet move to silo-based ICBMs. Douglas\nMacEachin agreed. Reginald Bartholomew added that we needed to avoid\nan outcome that banned a survivable basing mode and encouraged the\nSoviets to move their missiles to vulnerable silos. Steven Hadley\n- said another counterargument is that, to prevent breakout, you have\nto ban silo-based variants of mobile MIRVed missiles; that MX would.\nbe banned; and that it will be 1997 before Midgetman enters the\nforce. (6:9)\nPaul Wolfowitz suggested a ban on all MIRVed ICBMs. John Baldwin\nsaid that would move us to a dyad. Burt agreed that it may be a good\nlong-term solution, but it was too tough now. Bartholomew added that\nthe greater the burden we place on the Soviets the more we will\nstimulate counterproposals. (8)\nRobert Gates asked for views on the idea of installing portal\nmonitoring systems now at mobile assembly facilities. Bartholomew\nsaid he favored it, and other measures such as a data exchange and a\nban on telemetry encryption. (%.\n8\n\nwo -SBGREP RECORD 10; 9920612.\n; \" NSC/S PROFILE RECEIVED: 89 21\nTO: HUGHES\nFROM: KANTER DOC DATE: 09 JUN 89\n| DAVIS: SOURCE REF:\nHUGHES\nKEYWORDS: START ARMS CONTROL\nNSR DC\nAGENDA\nPERSONS:\nSUBJECT: DC MTG TO DISCUSS NSR-14 / U S START POSITION ON NEW INITIATIVES /\nAGENDA / JUN 12\nACTION: HUGHES SGD MEMO TO AGENCIES DUE DATE: 25 MAY 90 STATUS: C\nSTAFF OFFICERe=DAVIS LOGREF: 8920675 8920937\n| FILES: VD, si how.) SROO14 CODES:\nvockig DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR _INFO\nDAVIS\nKANTER\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap__ NARA, Date so/a/og\nCOMMENTS: i:\na\nSSS ess\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: CM CLOSED BY: CM poc 10F 1\n\nNational Security Council\nThe White House\nPROOFED BY: LOG # Z ob / z.\nURGENT NOT PROOFED: SYSTEM LD Use) INT\nBYPASSED WW DESK: pococ Aa IO ee\nSEQUENCE TO HAS SEEN DISPOSITION\nDep Exec Be Z 3\nPhilip Hughes a\na\nBobGates \"? ER) Oi See\nBrent Scowcroff\nPhilip Hughes oo\nSituation Rooms\nWest Wing Desk? 2 CU, a\nNSC Secretariat\ncc: vp Sununu Other\nShould be seen by:\nSe \u00b0 \"101 ) ee\nCOMMENTS j\nDe NON AGHAA_\nof i2 | 22)\n\nWASHFAX RECEIPT\n: THE WHITE HOLSE\nMESSAGE NO. CLASSIFICATION Sa? bee uy PAGES A\nFROM___G._ PHILIP HUGHES.\n(NAME) (EXTENSION) (ROOM NUMBER)\nMESSAGE Description__ DC UT, (2 TAN\nTO (AGENCY) DELIVER TO: DEPT/ROOM NO.; EXTENSION\nDod Ge Yo _ ke\nlo - \u00ab. _\n--NEK: f PAT bx SEc oe\nA Lawrence Sawa Gee foc\nSs Le\nPotty Hovess Gace Ye\n--__--_--_--_--_-- Se ee\neee (ir\nREMARKS:. --\n; White House Guidelines\nE.0. 12058, SEC 3.4 (B) September 11, 2006\n| By cae _ NARA, Date jolyale9\n\n. 20612\n\"SBeREE NATIONAL SECURITY COUNCIL.\nWASHINGTON, D.C. 20508\nJune 9, 1989\nMEMORANDUM FOR:\nMR. CARNES LORD MR. FRANK HODSOLL\nAssistant to the Vice Executive Associate Director\nPresident for National Office of Management and\nSecurity Affairs Budget\nMR. J. STAPLETON ROY MR. H. LAWRENCE SANDALL\nExecutive Secretary Executive Secretary\nDepartment of State. Central Intelligence Agency\nCOLONEL GEORGE P. COLE, JR. CAPTAIN ANTHONY MANESS\nExecutive Secretary Executive Assistant to the\nDepartment of Defense Chairman.\nJoint Chiefs of Staff\nMR. WILLIAM V. VITALE\nExecutive Secretary MS. BARBARA STARR\nDepartment of Energy Acting Executive Secretary\nArms Control and Disarmament\n: Agency\nSUBJECT: Deputies Committee Meeting on NSR-14;\nMonday, June 12, 1989, WHSR, 11:00 a.m. (#\nA meeting of the Deputies Committee will be held to discuss NSR-\n14 (New Initiatives), on Monday, June 12, at 11:00 a.m., in the\nWhite House Situation Room. This meeting will focus on\nalternative new initiatives for the U.S. START proposal. An\nagenda for this meeting is attached. Discussion papers on New\nInitiatives have been distributed to the Arms Control Policy\nCoordinating Committee and the Deputies Committee. Attendance at\nthis meeting should be principals plus one. In addition,\nAmbassadors Richard Burt and Edward Rowny are invited to attend.\n1-4) f SO\"\nSS Ta\nWE fen\n7 y gl\nwe A LEZ =\nGo Phila b\n, Executiv\u00e9 etary\nAttachment\nTab A Agenda (3)\n| PER E.0. 13526\nSECRET Lore-1998- MR\nDeclassify on: OADR Si Gi + 1 Baroy AM\nVW\n\n| Lo, ar ne\nCs SEGRET\n> Sheppm 20612\nDEPUTIES COMMITTEE MEETING\nARMS CONTROL POLICY REVIEW\nMonday, June 12, 1989\nWhite House Situation Room\n11:00 a.m.\nNSR-14, U.S. START PROPOSAL:\nNEW _ INITIATIVES\nAgenda\nI. Introductory Remarks by the Chairman\nII. START: _ New Initiatives:\n| III. Recommendations for the NSC\nWhite House Guidelines 44, 2008\nE.O. 13526, SEC 3.4 (b}, September 11,\nBy_4S_NARA, Dates/all\nSEGRES\nDeclassify on: OADR\nWitt,\n\n/ pera SEGREF 20612\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nJune 9, 1989\nACTION\nMEMORANDUM FOR G. PHILIP HUGHES\nTHROUGH: ARNOLD KANTER yi\nFROM: sicaOedr: s\nSUBJECT: Deputies Committee Meeting to Discuss NSR-14 (U.S.\nSTART Position on New Initiatives)\nThe subject meeting is scheduled for 11:00 a.m., on Monday, June\n12, in the White House Situation Room. This DC will focus on the\nremaining agenda item from Friday's meeting.\nThe notification memorandum for the June 12 meeting is attached\nat Tab I, and the agenda at Tab A.\nRECOMMENDATION\nThat you sign the memorandum at Tab I.\n| Tab I Memorandum to Executive Secretaries\n| Tab A Agenda\n| White House Guidelines\n| E.0. 12958, SEC 3.4 (8) ae\n| By chP__ NARA, Date johialo}\nDeclassify on: OADR",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

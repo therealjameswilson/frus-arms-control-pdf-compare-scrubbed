@@ -1,0 +1,732 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-58-90002-028.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "9bd3a4c3f1c03a0dd8ddb4009661788ae15def8160bb24c4b9292656d3f39de5",
+    "page_count": 52,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "219,220",
+    "doc_key": null,
+    "title": "NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks",
+    "file_unit": "NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0058-June 06, 1991-Strategic Arms Reduction Talks. Secret. Attached but not printed is the meeting agenda. A stamped notation indicates Bush saw the memorandum; beneath the notation, an unknown hand wrote \"6-6-91.\" Gordon, Davis, and Kuehne sent the memorandum to Scowcroft for his signature under cover of a June 5 memorandum. (Ibid.) According to the Presidential Daily Diary, Bush presided over a meeting of the National Security Council from 3:49-4:32 p.m. No minutes were found.\n\nSource: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0058-June 06, 1991-Strategic Arms Reduction Talks. Secret. Gordon, Davis, and Kuehne sent the paper to Scowcroft through Kanter under a July 5 covering memorandum: \"At Tab I is a meeting memorandum to the President for the June 6 NSC meeting on START. At Tab II are talking points for your use at the meeting to lead the participants through the issues in the proposed letter to Gorbachev.\"\n",
+  "selected_pages": [
+    5,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    23,
+    29,
+    31,
+    35,
+    45,
+    48,
+    49,
+    50
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2005-1003-F; 2009-0857-F; S S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: National Security Council Series: H-Files | Subseries: NSC Meetings Files OA/ID Number: 90002 Folder ID Number: 90002-028 Folder Title: NSCO0058 - June 06, 1991 - Strategic Arms Reduction Talks Stack: Row: Sect",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 - Withdrawal/Redaction Sheet - (George Bush Library) . Doc. No. / Type Subject/Title Date Restriction Classification . \\ Ola. List Re: NSC Meeting 12/17/90 (b)(3), (b)(6) [50 U.S.C. 403g, Sec. 6] . . : [Personal Information Redacted] (1 pp.) ( 01b. Graph Re: The Cabinet Room (1 pp.) 12/17/90 (b)(1) - Olc. Memo Robin A. Uhl to Distribution List , 12/5/90 (b)(1) Cc Re: Presidential Appointment (1 pp.) . 02a. Outline From Brent Scowcroft 6/6/91 (b)(1) Ss Re: National Security Council Meeting (2 p",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- Withdrawal/Redaction Sheet oe (George Bush Library) Doc. No./Type Subject/Title Date Restriction Classification | 02g. Draft Outline From Brent Scowcroft 6/6/91 (b)(1) Ss | Re: National Security Meeting (1 pp.) . | 02h. Draft Talking Re: Points To Be Made \u2018for National Security Council Meeting on n.d. (b)(1) Ss Points START (1 pp.) | 03a. Memo William F. Sittmann to Distribution List 6/5/91 (b)(1) Ss Re: National Security Council Meeting (1 pp.) 03b. Agenda Re: National Security Council Meetin",
+      "selected_for_body": false
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "er Withdrawal/Redaction Sheet (George Bush Library) | Document No. Subject/Title of Document Date Restriction Class. pane Type \u2014 Ola. List Re: NSC Meeting 12/17/90 (b)(3); (66) [50 U.S.C. 403g, Sec. 6] [Personal Information Redacted] (1 pp.) Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OA/ID Number: 90",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "* : . . NSC_MEETING . 7. MONDAY, DECEMBER 17, 1990 . wey : 11:00 - 11:30AM oe CABINET ROOM- . : MSLTE HOUSE a ; wt e@ President : : . soe Vice President : rent Scowcroft . . \u00a2#6hn Sununu . \u2018Merlin Fitzwater fe) : : [Karnes Lord . . NSC, Lames Pavitt Otcholas Rostow . STATE rence Eagleburger Douglas Mulholland (b)(6) TREASURY w (iSeretary Brady ohn Robson (passholder) D ; . ecretary Cheney oo CFPatl Wolfowitz JUSTICE : orney General Thornburgh lliam Barr ; | in Powell eatin Graves (b)(6) . : as, ",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "* e Withdrawal/Redaction Sheet (George Bush Library) \u2014-- 7 Document No, Subject/Title of Document Date Restriction : and Type} Olb. Graph Re: The Cabinet Room (1 pp.) 12/17/90 (b)(1) - Collection: Record Group: _ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OAD Number: 90002-028 FOIA/SYS Case #: 2005-1003-F Appeal Case #: Re-revie",
+      "selected_for_body": false
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Roc . . UNCLASSIFIED RECORD ID: 9021341 A NSC/S PROFILE RECEIVED: 04 DEC 90 15 TO: SCOWCROFT FROM: HAGIN, J DOC DATE: 12 DEC 90 SOURCE REF: KEYWORDS: NSC PERSONS: SUBJECT: CORRECTED COPY / PRES APPROVED ACTIVITY RE NSC MTG 19 DEC ACTION: FOR RECORD PURPOSES DUE DATE: 07 DEC 90 STATUS: C STAFF OFFICER: NONE LOGREF: FILES: IFM NSCP: CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR _INFO GATES : HILL NSC cma | SCOWCROFT SITTMANN COMMENTS: es eee DISPATCHED BY DATE BY HAND W/ATTCH | OPENE",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201cot 21341 A/o 4 , THE WHITE HOUSE CORRECTED COPY : . . WASHINGTON MEMORANDUM ; TO: General Scowcroft . - FROM: JOSEPH W. HAGIN . SUBJECT: APPROVED PRESIDENTIAL ACTIVITY EVENT: NSC Meeting DATE: December-i47-2999 D&\u00e9MBEF-I87-1990 December 19, 1990 TIME: \u201crer\u00e9e-amm. IF30-pvm. 11:00 a.m. DURATION: One Hour LOCATION: Cabinet Room ATTIRE: : Business suit ' REMARKS REQUIRED: None : MEDIA COVERAGE: : None FIRST LADY . : PARTICIPATION: No ADDITIONAL | INFORMATION: CONTACT: , . TELEPHONE: OFFICE _ HOME .",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "0\u2019 nh PARTICIPANTS \\) K A The President The Vice President Zases A. Baker, Secretary of State ee F. Brady, Secretary of the Treasury _Richard B. Cheney, Secretary of Defense RL Nard L. Thornburgh, The Attorney General (Bishard G. Darman, Director of the Office of Management & Budget ohn H. Sununu, Chief of Staff Brent Scowcroft, Assistant to the President for National Security fairs urftiien H. Webster, Director of Central Intelligence | S\u00e9neral Colin L. Powell, Chairman, Joint Chiefs of Staff R",
+      "selected_for_body": true
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "- Withdrawal/Redaction Sheet | (George Bush Library) Se Olc. Memo Robin A. Uhl to Distribution List 12/5/90 (b)(1) Cc | Re: Presidential Appointment (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks ! Date Closed: 9/28/2009 OA/D Number: 90002-028 | FOIA/SYS Case #: 2005-1003-F Appeal Case #: | Re-review Case #: Appeal Dispos",
+      "selected_for_body": false
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "re THE WHITE HOUSE ye? ; WASHINGTON i December 1, 1990 , TO: JOSEPH W. HAGIN, II, Deputy Assistant to the . President for Appointments and Scheduling i FROM: BRENT Sconors AE i REQUEST: To hold a NSC Meeting PURPOSE: NSC\u2019 Annual Review on special subjects and review of sensitive program. Lo i BACKGROUND: Nore, fo PREVIOUS The President and NSC met on July 25, 1989 , PARTICIPATION: for the 1989 NSC Annual Review of Special + a subjects and on August 15,,1990 fora .-: discussion of the sensitive p",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u201c| Sih eR se Roti k oe nN Re gees eA : ee See pees ECGs oie Tee Ee wr TOSRT SR eS Ege Bo SSR | oe pe er ene ee eee ee s WV . i . oe .",
+      "selected_for_body": true
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| . PARTICIPANTS | : | The President The Vice President . : ) : James A. Baker, Secretary of State Nicholas F. Brady, Secretary of the Treasury | ' Richard B. Cheney, Secretary of Defense u \u2018 . Richard L. Thornburgh, The Attorney General - : Richard G. Darman, Director of the Office of Management & Budget . John H. Sununu, Chief of Staff aed : | Brent Scowcroft, Assistant to the President for National Security | : Affairs -.. Pate 7 soe ao . | . William H. Webster, Director of Central Intelligen",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "vee HEY SG PE Tat oS eae\u201d \u201ca ee eS Sh aaiee se 4 ne Pees eee Bao se | S - ae ee ae foes Spe eee ter alg $ECE Saker ants PS alae PACU oe eee a eae oS ae BS eo a eee ae Brae wa eS FS. Suceen cies ts 0a Bes occa irserts Seats cele eee! Bee peece ps ees ee Se eae ee Ce Ba ee EOS os a See Eee ees Ree era ge 5, Rice be Se es COTE Ey Seana aera ar en pe og Rt ee me, ee gp eG i a Dees gach sk eee ie, EE se Ee ReS ee peace a ene wes es sb Seer lS sf. da Me sve meoe er pen lego (2 Pee ee | Gere Ress Merem",
+      "selected_for_body": true
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ey eB ER tn ees \u00ab alae cet a Sea ag St Se eens peas .; mor ee on 2\u00b0 \u201cSEG iene TE WASHNGTON, 2S F008 on aS BER 2 Sa eg ae Pe Sa a eee November 30, 1990 : esc eae : + oc ces a SCRE Ee ace: Renan < COWCROFT _ ere MEMORANDUM FOR PRENT 5 oes wd eee: THROUGH: \u201cWILLIAM W. .WORKZ . Nessa eee re AY?! eee: EEE PROM, ees ayo NeS ee ane ae fei oe ee EASE. SOA 8 SS eager eee Spends E fora NSC Meeting on ROSALES OS vag tas = Ps es Schedule Propos ae eit eee Cas 351090 Vaan i <a \u201cTee neg Pane ee biscts, -Frida",
+      "selected_for_body": true
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ", \u00a2 -SECRET\u2014 RECORD ID: 9120433 5 ae NSC/S PROFILE RECEIVED: 05 JUN 91 11 | TO: PRESIDENT FROM: SCOWCROFT DOC DATE: 06 JUN 91 SOURCE REF: KEYWORDS: USSR START NSC AGENDA ARMS CONTROL LIMITED ACCESS PERSONS: SUBJECT: BACKGROUND FOR 6 JUN NSC MTG ON START / LIMITED ACCESS | ACTION: NOTED BY PRES DUE DATE: 08 JUN 91 STATUS: C STAFF OFF jqgonnON F \u2014 LOGREF : | FILES: IFM_O_ : NSOOSS CODES: | Es DOCUMENT DISTRIBUTION | FOR ACTION FOR CONCURRENCE FOR_INFO DAVIS | GORDON KUEHNE NSC CHRON DECLASSIFIED W",
+      "selected_for_body": true
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| : : SEEREE- RECORD ID: 9120433 Le tal ACTION DATA SUMMARY REPORT DOC ACTION OFFICER : CAO ASSIGNED ACTION REQUIRED 001 SITTMANN ; Z 91060519 FOR SIGNATURE | 002 X + 91060519 SITTMANN SGD MEMO TO AGENCIES 003 SCOWCROFT Z 91060608 FWD TO PRES FOR INFORMATION 004 PRESIDENT Z 91060615 FOR INFORMATION 004 X. 91060619 NOTED BY PRES 005 ; X 91061019 SCOWCROFT SGD MEMO TO AGENCIES | | DECLASSIFIED White House Guidelines E.0. 12958, SEC 3.4 (B) September 11, 2006 By cap__ NARA, Date a/aglog . : } . . \u201c",
+      "selected_for_body": false
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". ce ae National Security Council js The White House PROOFED BY: tog # 709.3 3 URGENT NOT PROOFED: SYSTEM PRS (NSC) INT BYPASSED WW DESK: pocioclV=-a1o / <Q SEQUENCE TO HAS SEEN DISPOSITION JE . Ken Hill ( Coepg.\u2014 | Bill Sittmann pa es . Bob Gates Brent Scowcroft be Bill Sittmann eI a Situation Room [s) West Wing Desk S Py) NSC Secretariat ESP gpa CS ec: vp Sununu Other RD & \u201cMee mat Qwse\u2014 = Shouid be seen by: es Wate/ ime) COMMENTS DISPATCH INSTRUCTIONS:",
+      "selected_for_body": true
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "~ \u00bb ~ . \u2018+ \u00b0 National Security Council 2 The White House PROOFED BY: ices. DOCS | URGENT NOT PROOFED: SYSTEM prs (_\u201cNsc) INT | BYPASSED WW DESK: DOCLOG AIO Du SEQUENCETO \u2014_- HAS SEEN DISPOSITION Ken Hill Bill Sittmann ee See es) Bob Gates 2 Se. ee | Brent Scowcroft - ee | Bill Sittmann | Situation Room West Wing Desk se NSC Secretariat cc: ve Sununu Other Should be seen by: Date? ime) COMMENTS lu ee ae: Dzc& ae ii 2aaP ay ORAL 5 7 DISPATCH INSTRUCTIONS: 2) /5-< ke a. a \u00a2 f i gfe. a a; os of oe. ",
+      "selected_for_body": true
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) y | Document No. Subject/Title of Document Date Restriction Class. Po amd Type 02a. Outline From Brent Scowcroft 6/6/91 (b)(1) Ss Re: National Security Council Meeting (2 pp.) Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council . Series: H-Files | Subseries: NSC Meetings Files : WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OAD Number: 90002-028 FOIA/",
+      "selected_for_body": false
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) 5 Document No. Subject/Title of Document Restriction Class. band Type _ 02b. Agenda Re: National Security Council Meeting (1 pp.) 6/6/91 (bl) S Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSCO0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OA/ID Number: 90002-028 FOIA/SYS Case #: 2005-1003-F Appeal Case",
+      "selected_for_body": false
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) {Document No. Subject/Title of Document Class, fo amg Type 02c. Talking Re: Points To Be Made for National Security Council (b)C1) Ss Points Meeting on START (2 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OAD Number: 90002-028 FOIA/SYS Case #: 2005-10",
+      "selected_for_body": false
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". 4 PARTICIPANTS The President The Vice President Nicholas Brady, Secretary of the Treasury Dick Cheney, Secretary of Defense . Dick Thornburgh, Attorney General James Watkins, Secretary of Energy . Richard Darman, Director of the Office of Management and Budget John Sununu, Chief of Staff Brent Scowcroft, Assistant to the President for National Security Affairs Robert M. Gates, Deputy Assistant to the President for National Security Affairs William Webster, Director of Central Intelligence Lawr",
+      "selected_for_body": true
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \u2014\u2014\u2014\u2014 | Document No. Subject/Title of Document Class. Vo amg Type fn _\u2014 02d. Draft Letter | To President Mikhail Gorbachev (4 pp.) 6/5/91 (b)(1) Ss | Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OA/ID Number: 90002-028 FOIA/SYS Case #: 2005-1003-F Appeal ",
+      "selected_for_body": false
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Hl Document No. Subject/Title of Document Date Restriction Class, i, , and Type ee oe es \u2014_\u2014 02e. Memo John Gordon/Rich Davis/Art Kuehne to Brent Scowcroft 6/5/91 (b)(1) Ss Re: Meeting Memorandum for June 6 NSC Meeting on START (I pp.) | Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files , Subseries: NSC Meetings Files WHORM Cat.: | File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction",
+      "selected_for_body": false
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) + Document No. Subject/Title of Document Class. SL, \u2014 02f. Talking Re: Points To Be Made for NSC Meeting on START (6 pp.) (b)(1) s Points Collection: Record Group: \u2014_ Bush Presidential Records | Office: National Security Council Series: H-Files | Subseries: NSC Meetings Files | WHORM Cat.: 7 File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 QAAD Number: 90002-028 FOIA/SYS Case #: 2005-1003-F Appeal Case",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) + Document No, Subject/Title of Document Date Restriction Class. sand Type \u2014 \u2014\u2014 02g. Draft Outline | From Brent Scowcroft 6/6/91 (b)(1) Ss Re: National Security Meeting (1 pp.) | Collection: | Record Group: Bush Presidential Records | Office: National Security Council Series: H-Files | Subseries: NSC Meetings Files WHORM Cat.: File Location: NSCO0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OA/ID Number: 90002-028 FO",
+      "selected_for_body": false
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) \u201cDocument No. Subject/Title of Document Date Restriction Ee _ \u2014 02h. Draft Re: Points To Be Made for National Security Council n.d, (b)(1) Talking Points Meeting on START (1 pp.) Collection: Record Group: \u2014_ Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OA/ID Number: 90002-028 FOIA/S",
+      "selected_for_body": false
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Shen RECORD rDggeaaekss sg zs NSC/S PROFILE RECEIVED: 05 JUN 91 11\u00b0 - TO: AGENCIES FROM: SITTMANN DOC DATE: 05 JUN 91 SOURCE REF: KEYWORDS: USSR START NSC AGENDA ARMS CONTROL LIMITED ACCESS PERSONS: SUBJECT: MTG ANNOUNCEMENT & AGENDA FOR 6 JUN NSC MTG ON START ACTION: SITIMANN SGD MEMO TO AGENCIES DUE DATE: 08 JUN 91 STATUS: C STAFF OFFICER: GORDON LOGREF : | FILES: IFM 0 ___NSCP:_NS0058_ CODES: | ese JOCUMENT DISTRIBUTION FOR ACTION FOR_CONCURRENCE FOR_INFO | DAVIS | GORDON KANTER KUEHNE NSC CH",
+      "selected_for_body": true
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "| \u2018SECRET- RECORD ID: 9120433 | : : ACTION DATA SUMMARY REPORT ; | DOC ACTION OFFICER . \u00b0 CAO ASSIGNED ACTION REQUIRED . 001 SITTMANN Z 91060519 FOR SIGNATURE 002 X 91060519 SITTMANN SGD MEMO TO AGENCIES 003 SCOWCROFT Z 91060608 FWD TO PRES FOR INFORMATION 004 PRESIDENT Z 91060615 FOR INFORMATION 004 : X 91060619 NOTED BY PRES 005 ; So , X 91061019 SCOWCROFT SGD MEMO TO AGENCIES | ; DECLASSIFIED : \u2019 White House Guidelines : E.0. 12958, SEC 3.4 (B) September 11, 2006 | . By cae NARA, Date 9/as/op",
+      "selected_for_body": false
+    },
+    {
+      "page": 31,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". . \u201cNational Security Council Se ; The White House v - PROOFED BY: We LOG # 20435 URGENT NOT PROOFED: SYSTEM = PRS Gsc) INT BYPASSED WW DESK: DOCLOG vA AIO. sa Ky wild SEQUENCE TO HAS SEEN DISPOSITION \\Y ken will } Clo A Bill Sittmann paces ss Bob Gates =a Brent Scowcroft 3 eee ee Bill Sittmann Ba a Situation Room West Wing Desk a WA &{ 5 2 : NSC Secretariat SZ Ne ; een Lae tel peaked tects vp Sununu i ees | Should be seen by: \u2014 oem COMMENTS \u2018 DISPATCH INSTRUCTIONS: EX Stes Ons Yas Moke Bf",
+      "selected_for_body": true
+    },
+    {
+      "page": 32,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) ; Document No. Subject/Title of Document Date Restriction Class. ef 03a. Memo William F. Sittmann to Distribution List 6/5/91 (b)(1) s Re: National Security Council Meeting (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files , WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks | Date Closed: 9/28/2009 OA/ID Number: 9002-028 FOIA",
+      "selected_for_body": false
+    },
+    {
+      "page": 33,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) | ; | Document No. Subject/Title of Document Date Restriction Class, | to and Type panne oo | b, Agenda Re: National Security Council Meeting (1 pp.) 6/6/91 (b)(1) s Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OAD Number: 90002-028 FOIA/SYS Case #: 2005-10",
+      "selected_for_body": false
+    },
+    {
+      "page": 34,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "URGENT a NATIONAL SECURITY COUNCIL LOG 9120433 | DISTRIBUTION RECEIPT DATE 05 JUN 91 | | SUBJECT: MTG ANNOUNCEMENT & AGENDA | DOCUMENT CLASSIFICATION: SECRET EXTERNAL DISTRIBUTION: DATE TIME SIGNATURE | a fe) 0760 denne te Maoh | _ . pA | - COPY: 1 | ROOM 292, OEOB WASHINGTON, DC 20500 | : pyle x ty ~ ( | : YSA\\ Zk Mi Dowel be, q ROOM 7224, MAT re COPY: 1 2201 C STREET, NW WASHINGTON, DC 20520 ese ili 655 dea K ROOM 5110 eae COPY: 1 10TH & PENN AVE NW WASHINGTON, DC 20530 \u2014 Glelar_ 445 GDF Gs \u201cN",
+      "selected_for_body": false
+    },
+    {
+      "page": 35,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "TIME Uf TRANSMISSION \\ TIME OF RECEIF See aT TT eas THE SITUATION ROOM PRECEDENCE: IMMEDIATE RELEASER;: ; CPRIORITY> \u2014__ ROUTINE DTG: ee MESSAGE NO. CLASSIFICATION __-SECRET- PAGES 2 2 FROM _ WILLIAM F. SITTMANN VA fe 456-6534 : SS \u2014_\u2014_\u2014___..__.. \u201c : (Name) (Phone Number) (Room No.) . MESSAGE DESCRIPTION __nsc mrcG : \u2014 Ft \u2014\u2014\u2014C*' | . LOG # 20433 : | STATE EXECUTIVE SECRETARY : \u2014\u2014\u2014\u2014\u2014 nn \u2014\u2014\u2014\u2014\u2014- \u2014\u2014 _eeesS\u2014CSCM . TREASURY _ EXECUTIVE SECRETARY DOD EXECUTIVE SECRETARY A \u2014_-_-_eoOo EE \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 a J DOE",
+      "selected_for_body": true
+    },
+    {
+      "page": 36,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) : Document No. Subject/Title of Document Date Restriction Se 03c. Memo Richard Davis to William F. Sittmann 6/5/91 (by) Re: NSC Meeting (1 pp.) | Collection: Record Group: \u2014_ Bush Presidential Records . . Office: National Security Council Series: H-Files | Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OAD Number: 90002-028 FOIA/SYS Case #: 2005-1003-F Appeal",
+      "selected_for_body": false
+    },
+    {
+      "page": 37,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) ; Document No. Subject/Title of Document Date Restriction Class. EL ce Se een _ 03d. Memo William F, Sittmann to Distribution List n.d, (b)(1) s Re: National Security Council Meeting (1 pp.) Collection: | Record Group: \u2014 Bush Presidential Records | Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.; File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OAD Number: 900",
+      "selected_for_body": false
+    },
+    {
+      "page": 38,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "? ; Ws 3 8B NATIONAL SECURITY COUNCIL LOG 9120433 DISTRIBUTION RECEIPT DATE 10 JUN 91 SUBJECT: PRES LTR TO PRES GORBACHEV OF USSR RE START DOCUMENT CLASSIFICATION: SEGREE- EXTERNAL DISTRIBUTION: DATE TIME SIGNAFURE \u2018DEFENSE } \"SECRETARY COPY: 1 ROOM 3E880 PENTAGON WASHINGTON, DC S OF STAFF ROOM 2E873 COPY: 1 PENTAGON DEPT OF DEFENSE WASHINGTON, DC | Maren, 2A 00 A en VIA EXECUTIVE SECRETARY : COPY: 1 | ROOM 5933, MAIN STATE | 2201 C STREET, NW WASHINGTON, DC 20451 | | DECLASSIFIED White House Gu",
+      "selected_for_body": false
+    },
+    {
+      "page": 39,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL LOG 9120433. DISTRIBUTION RECEIPT DATE 10 JUN 91 SUBJECT: PRES LTR TO PRES GORBACHEV OF USSR RT DOCUMENT CLASSIFICATION: SECREP , wai EXTERNAL DISTRIBUTION: ATE TIME s cies, a ant fs bs EPARTMENT OF DEFENSE VIA EXECUTIVE SECRETARY \u20ac0BSiIchAL_ Barry ROOM SE860 Mil. Asst. to SecDef \" PENTAGON POMC NR epee * WASHINGTON, DC POWELL, C a JOINT CHIEFS OF STAFF ROOM 2E873 COPY: 1 PENTAGON DEPT OF DEFENSE WASHINGTON, DC LEHMAN, R a ARMS CONTROL & DISARMAMENT AGENCY VIA EXECUTIVE",
+      "selected_for_body": false
+    },
+    {
+      "page": 40,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; NATIONAL SECURITY COUNCIL L0G sinks 4 DISTRIBUTION RECEIPT DATE N91 SUBJECT: MTG ANNOUNCEMENT & AGENDA DOCUMENT CLASSIFICATION: SEGREF IIR EXTERNAL DISTRIBUTION: _etia TIME SIGNATURE =, F THE VICE PRESIDENT VIA LARRY BRANSCUM f COPY: 1 ROOM 292, OEOB i WASHINGTON, DC 20500 Se oo | PEARSON, W a | DEPARTMENT OF STATE | ROOM 7224, MAIN STATE COPY: 2 | 2201 C STREET, NW WASHINGTON, DC 20520 LEVIN, D a DEPARTMENT OF JUSTICE ROOM 5110 copy: 1 10TH & PENN AVE NW WASHINGTON, DC 20530 HOWARD, R a OFC O",
+      "selected_for_body": false
+    },
+    {
+      "page": 41,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": NATIONAL SECURITY COUNCIL 103 9120433 \u00b0 > DISTRIBUTION RECEIPT DATE 05 JUN 91 SUBJECT: MTG ANNOUNCEMENT & AGENDA DOCUMENT CLASSIFICATION: SEGREF EXTERNAL DISTRIBUTION: DATE TIME SIGNATURE JACKSON, K OFFICE OF THE VICE PRESIDENT VIA LARRY BRANSCUM copy: 1 ROOM 292, OEOB : WASHINGTON, DC 20500 cE DEPARTMENT OF STATE e ROOM 7224, MAIN STATE \u00e9 coPY: 1 2201 C STREET, NW { WASHINGTON, DC 20520 7 LEVIN, D | DEPARTMENT OF JUSTICE | ROOM 5110 copy: 1 10TH & PENN AVE NW WASHINGTON, DC 20530 HOWARD, R OF",
+      "selected_for_body": false
+    },
+    {
+      "page": 42,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL LOG 9120433 DISTRIBUTION RECEIPT DATE 10 JUN 91 SUBJECT: PRES LTR TO PRES GORBACHEV OF USSR RE START DOCUMENT CLASSIFICATION: -SEGREE\u2014 EXTERNAL DISTRIBUTION: DATE TIME SIGNATURE CHENEY, R DEPARTMENT OF DEFENSE VIA EXECUTIVE SECRETARY COPY: 1 ROOM 3E880 PENTAGON = WASHINGTON, DC _ Pe Lo! (Pyyal\u2014 JOINT CHIEFS OF STAFF ROOM 2E873 COPY: 1 \u2018 PENTAGON DEPT OF DEFENSE | WASHINGTON, DC \u2014 LEHMAN, R ARMS CONTROL & DISARMAMENT AGENCY VIA EXECUTIVE SECRETARY COPY: 1 ROOM 5933, MAIN",
+      "selected_for_body": false
+    },
+    {
+      "page": 43,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "si: A. : a Re, C/o 7 NATIONAL SECURITY COUNCIL Fic reac a a DISTRIBUTION RECEIPT DATE 05 JUN 91 SUBJECT: MTG ANNOUNCEMENT & AGENDA | DOCUMENT CLASSIFICATION: -SEGRET EXTERNAL DISTRIBUTION: DATE TIME SIGNATURE | JACKSON, K ee ee OFFICE OF THE VICE PRESIDENT VIA LARRY BRANSCUM COPY: 1 ROOM 292, OEOB WASHINGTON, DC 20500 PEARSON, W Se DEPARTMENT OF STATE | ROOM 7224, MAIN STATE COPY: 1 | 2201 C STREET, NW WASHINGTON, DC 20520 ace SSE DEPARTMENT OF JUSTICE ROOM 5110 5 COPY: 1 10TH & PENN AVE NW WASH",
+      "selected_for_body": false
+    },
+    {
+      "page": 44,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": NATIONAL SECURITY COUNCIL LOG 9120433 rl DISTRIBUTION RECEIPT DATE 05 JUN 91 \u00a2 SUBJECT: MTG ANNOUNCEMENT & AGENDA DOCUMENT CLASSIFICATION: -SEGREE EXTERNAL DISTRIBUTION: DATE TIME SIGNATURE JACKSON, K ee en OFFICE OF THE VICE PRESIDENT VIA LARRY BRANSCUM COPY: 1 ROOM 292, OEOB WASHINGTON, DC 20500 PEARSON, W DEPARTMENT OF STATE ROOM 7224, MAIN STATE COPY: 1 2201 C STREET, NW WASHINGTON, DC 20520 LEVIN, D DEPARTMENT OF JUSTICE ROOM 5110 : COPY: 1 10TH & PENN AVE NW 2 scagccmeeiee oy: WASHINGTON",
+      "selected_for_body": false
+    },
+    {
+      "page": 45,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ", 'S PROFI eT | ; : . NSC/S PROFILE RECEIVED: , TO: AGENCIES FROM: SCOWCROFT DOC DATE: 10 JUN 91 SOURCE REF: KEYWORDS: USSR START Nsc AGENDA ARMS CONTROL LIMITED ACCESS PERSONS : SUBJECT: PRES LTR TO PRES GORBACHEV OF USSR RE START | ACTION: SCOWCROFT SGD MEMO TO AGENCIES DUE DATE: 08 JUN 91 STATUS: C STAFF OFFICER: GORDON LOGREF: | FILES: IFM 0 yscp: SSC 0054 CODES: | pocuMENT DISTRIBUTION | | FOR ACTION FOR _CONCURRENCE FOR_INFO | KANTER | NSC CHRON DECLASSIFIED White House Guidelines E.0. 129",
+      "selected_for_body": true
+    },
+    {
+      "page": 46,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". SECRET RECORD ID: 9120433 \u2018 sot ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED | 001 SITTMANN Z 91060519 FOR SIGNATURE : 002 X 91060519 SITTMANN SGD MEMO TO AGENCIES 003 SCOWCROFT Z 91060608 FWD TO PRES FOR INFORMATION | 004 PRESIDENT Z 91060615 FOR INFORMATION 004 X 91060619 NOTED BY PRES 005 X 91061019 SCOWCROFT SGD MEMO TO AGENCIES | ; | | . ] DECLASSIFIED White House Guidelines : E.0. 12958, SEC 3.4 (B) September 11, 2006 : By cap __ NARA, Date 9/o6/9 SEGRER",
+      "selected_for_body": false
+    },
+    {
+      "page": 47,
+      "method": "ocr",
+      "page_class": "distribution_record",
+      "cues": [
+        "external distribution"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL LOG 9120433...\u00bb DISTRIBUTION RECEIPT DATE 10 JUN 91 SUBJECT: PRES LTR TO PRES GORBACHEV OF USSR RE START DOCUMENT CLASSIFICATION: -SEGREF EXTERNAL DISTRIBUTION: DATE TIME SIGNATURE CHENEY, R | DEPARTMENT OF DEFENSE | VIA EXECUTIVE SECRETARY COPY: 1 | ROOM 3E880 | PENTAGON WASHINGTON, DC POWELL, C : ee JOINT CHIEFS OF STAFF ROOM 2E873 ; COPY: 1 PENTAGON DEPT OF DEFENSE d Hi. WASHINGTON, DC 7 ee | me /) ay | eaten, 2 rod a ott Lt fos ARMS CONTROL & DISARMAMENT AGENCY \u2018 VI",
+      "selected_for_body": false
+    },
+    {
+      "page": 48,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 NATIONAL SECURITY COUNCIL ID 9120433 REFERRAL DATE: 10 JUN 91 MEMORANDUM FOR: DUBIA, J : EXECUTIVE SECRETARY - DOD DOCUMENT DESCRIPTION: TO: AGENCIES SOURCE: SCOWCROFT DATE: 10 JUN 91 SUBJ: PRES LTR TO PRES GORBACHEV OF USSR RE START REQUIRED ACTION: *** PLEASE PASS THIS ITEM \"EYES ONLY\" : TO SECRETARY CHENEY *** . DUEDATE: COMMENT: Welt &. Ana i - GEORGE VAN ERON DIRECTOR NSC SECRETARIAT",
+      "selected_for_body": true
+    },
+    {
+      "page": 49,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL ID 9120433 . REFERRAL DATE: 10 JUN 91 MEMORANDUM FOR: SUMRALL, G JCS DOCUMENT DESCRIPTION: TO: AGENCIES SOURCE: SCOWCROFT DATE: 10 JUN 91 SUBJ: PRES LTR TO PRES GORBACHEV OF USSR RE START REQUIRED ACTION: *** PLEASE PASS THIS ITEM \"EYES ONLY\" TO CHAIRMAN POWELL ** DUEDATE: , COMMENT: Wb E. An Cc. GEORGE VAN ERON ; , DIRECTOR NSC SECRETARIAT",
+      "selected_for_body": true
+    },
+    {
+      "page": 50,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": \u2018 \u2018 NATIONAL SECURITY COUNCIL ID 9120433 REFERRAL DATE: 10 JUN 91 . | MEMORANDUM FOR: STARR, B ; ACDA DOCUMENT DESCRIPTION: TO: AGENCIES SOURCE: SCOWCROFT DATE: 10 JUN 91 SUBJ: PRES LTR TO PRES GORBACHEV OF USSR RE START REQUIRED ACTION: *** PLEASE PASS THIS ITEM \"EYES ONLY\" | TO DIRECTOR LEHMAN *** DUEDATE: COMMENT: : Co GEORGE VAN ERON \u2018 DIRECTOR NSC SECRETARIAT",
+      "selected_for_body": true
+    },
+    {
+      "page": 51,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "a \u00a2 Withdrawal/Redaction Sheet (George Bush Library) j Document No. Subject/Title of Document Date Restriction Class. | ~ And Type | | 04a. Memo Brent Scowcroft to Dick Cheney/Colin Powell/Ronald 06/10/91 (b)(1) s Lehman Re: Letter to President Gorbachev (1 pp.) Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/200",
+      "selected_for_body": false
+    },
+    {
+      "page": 52,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "5 72 (George Bush Library) j Document No. Subject/Title of Document Date Restriction i... and Type | 04b. Draft Letter | To President Mikhail Gorbachev (4 pp.) 6/5/91 (b)(1) - Collection: Record Group: Bush Presidential Records Office: National Security Council Series: H-Files Subseries: NSC Meetings Files WHORM Cat.: File Location: NSC0058 - June 06, 1991 - Strategic Arms Reduction Talks Date Closed: 9/28/2009 OA/D Number: 90002-028 FOIA/SYS Case #: 2005-1003-F Appeal Case #: Re-review Case #: ",
+      "selected_for_body": false
+    }
+  ],
+  "draft_body": "*:.. NSC_MEETING\n. 7. MONDAY, DECEMBER 17, 1990\n. wey: 11:00 - 11:30AM\noe CABINET ROOM-.:\nMSLTE HOUSE a;\nwt e@ President::.\nsoe Vice President\n: rent Scowcroft.\n. \u00a2#6hn Sununu.\n'Merlin Fitzwater\nfe):\n: [Karnes Lord..\nNSC,\nLames Pavitt\nOtcholas Rostow.\nSTATE\nrence Eagleburger\nDouglas Mulholland (b)(6)\nTREASURY\nw (iSeretary Brady\nohn Robson (passholder)\nD;.\necretary Cheney oo\nCFPatl Wolfowitz\nJUSTICE:\norney General Thornburgh\nlliam Barr;\n| in Powell\neatin Graves (b)(6).:\nas, iam Webster\n(b)(3) [50 U.S.C. 403g, Sec. 6]\nOMB\nRichard Darman |\n\nRoc\n.. UNCLASSIFIED RECORD ID: 9021341\nA NSC/S PROFILE RECEIVED: 04 DEC 90 15\nTO: SCOWCROFT\nFROM: HAGIN, J DOC DATE: 12 DEC 90\nSOURCE REF:\nKEYWORDS: NSC\nPERSONS:\nSUBJECT: CORRECTED COPY / PRES APPROVED ACTIVITY RE NSC MTG 19 DEC\nACTION: FOR RECORD PURPOSES DUE DATE: 07 DEC 90 STATUS: C\nSTAFF OFFICER: NONE LOGREF:\nFILES: IFM NSCP: CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR _INFO\nGATES:\nHILL\nNSC cma\n| SCOWCROFT\nSITTMANN\nCOMMENTS:\nes\neee\nDISPATCHED BY DATE BY HAND W/ATTCH |\nOPENED BY: NSGLM CLOSED BY: NSGLM Doc 20F 2\nUNCLASSIFIED\n\n\"ot 21341 A/o\n4\n, THE WHITE HOUSE CORRECTED COPY\n:.. WASHINGTON\nMEMORANDUM;\nTO: General Scowcroft.\n- FROM: JOSEPH W. HAGIN.\nSUBJECT: APPROVED PRESIDENTIAL ACTIVITY\nEVENT: NSC Meeting\nDATE: December-i47-2999 D&\u00e9MBEF-I87-1990 December 19, 1990\nTIME: \"rer\u00e9e-amm. IF30-pvm. 11:00 a.m.\nDURATION: One Hour\nLOCATION: Cabinet Room\nATTIRE:: Business suit\n' REMARKS REQUIRED:\nNone:\nMEDIA COVERAGE::\nNone\nFIRST LADY.\n: PARTICIPATION: No\nADDITIONAL\n| INFORMATION:\nCONTACT:,\n. TELEPHONE: OFFICE _ HOME.\nNOTE: PROJECT OFFICER,SEE ATTACHED CHECKLIST\n'Ed Rogers Marlin Fitzwater Ede Holiday |\n: James Cicconi David Demarest ~ David Valdez. |\nFred McClure Fran Norris USSS - PPD\nSusan Porter Rose Sig Rogich Gary Walters |\nPatty Presock John Keller WHCA Audio/Visual !\nChriss Winston Bruce Caughman WHCA Operations |\n; Laurie Firestone J. Bonnie Newman C. Boyden Gray\n.. William Kristol Paul Bateman Laura Melillo\nJackie Kennedy Debra Romash John Herrick\nDeb Anderson Richard Trefry\n' LRF 12/03/90 |\n\n0'\nnh\nPARTICIPANTS \\) K\nA\nThe President\nThe Vice President\nZases A. Baker, Secretary of State\nee F. Brady, Secretary of the Treasury\n_Richard B. Cheney, Secretary of Defense\nRL Nard L. Thornburgh, The Attorney General\n(Bishard G. Darman, Director of the Office of Management & Budget\nohn H. Sununu, Chief of Staff\nBrent Scowcroft, Assistant to the President for National Security\nfairs\nurftiien H. Webster, Director of Central Intelligence\n| S\u00e9neral Colin L. Powell, Chairman, Joint Chiefs of Staff\nRobert M. Gates, Deputy Assistant to the President and Deputy for\n| National Security Affairs\nWilliam W. Working, NSC, Senior Director, Intelligence Programs\nNicholas Rostow, NSC, Legal Adviser\nJames L. Pavitt, NSC, Director of Intelligence Policy\n| (Notetaker)\n\nre THE WHITE HOUSE ye?;\nWASHINGTON i\nDecember 1, 1990,\nTO: JOSEPH W. HAGIN, II, Deputy Assistant to the.\nPresident for Appointments and Scheduling i\nFROM: BRENT Sconors AE i\nREQUEST: To hold a NSC Meeting\nPURPOSE: NSC' Annual Review on special subjects and\nreview of sensitive program. Lo i\nBACKGROUND: Nore, fo\nPREVIOUS The President and NSC met on July 25, 1989\n, PARTICIPATION: for the 1989 NSC Annual Review of Special + a\nsubjects and on August 15,,1990 fora.-:\ndiscussion of the sensitive program,\n: DATE & TIME: December 14, 1990, 10:00 A.M.+- 11200 A.Moe Le.\n_ DURATION: 60 minutes: BBS ein le Eg Ee\nLOCATION: \"7 ig; Cabinet Room\" eet Ee aes EN woes: tol\nPARTICIPANTS: _ See List at Tab AL 0\nOUTLINE OF EVENTS: The President will make A brief opening q:522 eh teak. |\n. Statement and a Closing 'statement on 'special 22)! Fe\n- '; Subjects;. Cel PLES RARER te Ree Rake,\nREMARKS REQUIRED: *\" \"Brief remarks, De BEE Fee EE\nMEDIA COVERAGE: None, ee a.\nRECOMMENDED BY: NSC Intelligence Directorate: 2. |. Bo,\nOPPOSED BY: | None ==; 12 Tae, BREE 3 Sp\"hi ee Le Ee. |\nDO Eee \u00a3i8 28. one ae\n: sci Sha es 7 cy be ES A Ee eee EES\nAttachment \u00abiy iiyp eee oo SE See ee ES\nTRS Met OPES ee eee or Se\nDEE Sep ac a eae a |\n\n\"| Sih eR se Roti k oe nN Re gees eA\n: ee See pees ECGs oie Tee Ee wr TOSRT SR eS Ege Bo\nSSR | oe pe er ene ee eee ee\ns\nWV.\ni\n. oe.\n\n|. PARTICIPANTS\n| The President\nThe Vice President.:\n): James A. Baker, Secretary of State\nNicholas F. Brady, Secretary of the Treasury |\n' Richard B. Cheney, Secretary of Defense u '.\nRichard L. Thornburgh, The Attorney General -:\nRichard G. Darman, Director of the Office of Management & Budget\n. John H. Sununu, Chief of Staff aed: |\nBrent Scowcroft, Assistant to the President for National Security |\n: Affairs -.. Pate 7 soe ao. |\n. William H. Webster, Director of Central Intelligence -- |\nGeneral Colin L. Powell, Chairman, Joint Chiefs of Staff |\n- Robert M. Gates, Deputy Assistant to the President and Deputy for |\nNational Security Affairs -... |\nWilliam w. Working, NSC, Senior Director, Intelligence Programs |\nNicholas Rostow, NSC, Legal Adviser.:\nJames L. Pavitt, NSC, Director of Intelligence Policy: |\n(Notetaker) Mri Pi. Sa:\nUeiase oo soe sae gE - oo\n\nvee HEY SG PE Tat oS eae\" \"a ee eS Sh aaiee se 4\nne\nPees eee Bao se\n| S - ae ee ae foes Spe eee ter alg $ECE Saker ants PS alae PACU\noe eee a eae oS ae\nBS eo a eee ae Brae wa eS FS. Suceen cies ts 0a Bes occa irserts Seats cele eee! Bee peece ps\nees ee Se eae ee Ce Ba\nee EOS os a See Eee ees Ree era ge 5,\nRice be Se es COTE Ey Seana aera ar en pe og\nRt ee me, ee gp eG i a\nDees gach sk eee ie, EE se Ee ReS ee\npeace a ene wes es sb Seer lS sf. da Me sve meoe er pen lego (2 Pee ee |\nGere Ress Meremepeg 3) 2 TE Feeney Rees ee \"a ES ee ee ee ees |:\nSame aes ee FOREN Sk. eee: 2 os ree\nHeGREE SS ee ae ee a pe a ay\noo ae Fo ee epee Se ee\nsiberian a Bee pape er\nEE ee on aah sesin ec sigihaidasithas EEE REL Es OSS\nAES ie nee Or pene oe 0 ee ee Bry tee Ne\n. SES SO Sas ee ae ae ay Seay PUES UPPER ee 2 oe\nee ee ee\nis a eae sees ae Sahat Sires ee ie Gee See ee ee:\nSE SRES py SRE Eee or oe oo\nCOPE eee ene De a Se eye ee ear Sees inne Ba\nSS oe pe 2 Ps a aes ee\nees oe ee oe ee ee a\naa da Boe ee ees aera SEER ER Sunes 4 i\n2 saga beds ee Pes eae\nA Re EAE Rab eee aes ee ae\nee Wee as Se ees SE ose et\nro oh Re Se\n5 oe ie ue oo vkigy Heese oS poe a ee nee ae\noe Eee eee a ee\n3 bes og BEE pe vest eee gee nat hers ee gee\nRee eer TEE Ve oe eee Lge UE CSRS Bee a ee Stag\nSa oe SRA AT PR ee ee\nSSR ee Se ER AS Sees ee ae\nHeer ae geoi ta ESR Bh BCS ph ee ae\nRe oe egeseren! Be\" isd Ferd gee ee _\nee ee ass USB ee a aa\nCe er ee ire re ee ae GA eet OTE URS GT BAER ot Be\nBe pee ones ee ae eo\nBESS Ss Se Tip eh OO TER SS Se eee ge\n: TAPE SENT SoER eae\n\ney eB ER tn ees \u00ab alae cet a Sea ag St Se eens peas.; mor ee on\n2\u00b0 \"SEG iene TE WASHNGTON, 2S F008 on aS BER 2 Sa eg\nae Pe Sa a eee November 30, 1990: esc eae\n: + oc ces a SCRE Ee ace: Renan <\nCOWCROFT _ ere\nMEMORANDUM FOR PRENT 5 oes wd eee:\nTHROUGH: \"WILLIAM W..WORKZ. Nessa eee re AY?! eee:\nEEE PROM, ees ayo NeS ee ane ae fei oe ee EASE. SOA\n8 SS eager eee Spends E fora NSC Meeting on ROSALES OS vag\ntas = Ps es Schedule Propos ae eit eee Cas 351090 Vaan i <a\n\"Tee neg Pane ee biscts, -Fridayjede ye eae ba i, ney te ob Oe hog\nSees apes ees a Eig! be Sere Sent id NSC.\"Meeting 200 Spe Lat AEE Go aoe\npares ar tchadnle beac opal for' a' pro) ee [990 Se \"ae rab ste Foe TEP REE OE EL Se ee\naa pubs ects on Friday. D ee a ee ae ee\nBe a er ORT EA CPt cue ne aes vag \"SBE\n* SSeS RR COMMENDY BT TON pig ee ee Reese\nayes one ch\u00e9edule Proposal So ee eee\npoe ere oan Bie ae Se [7 eee Bo\nBs we et es eee a ae eee oS er Se Se Rib e 8 ON Sagas are\n=e BEALE contents etter es Ce vty See ees igas BA woo. ad\nee heeeh 1153 \u00a2 Sees: AES belbeies tt Ces. EE EC eee nm\n\"SEE Seep eab: kG agen one hence SoS es ee\namature \"ee Bee ae\nSse ee ee ene aves po geaeg er oa eel, - ag\nBee Ee ae foes os\nee eo nes ee Ses ae Se Coie SS ye\nPe ee pe Rees\nHe eae Pee Se qe eee Petre aah a butts saga\ni ER pace perce See ee Seo ce Baxi ae hae aed BS RRS a fst 2 fuse\nMER ae te ego eens ule ee ae Gee See eee eee Roo ie Se eee\nLee hl BP ge MoD\nee ag ie Se gg APES S \"a\nmee ee REESS SER a Sore pean a Be ay ae ne POM. ee\n2 oe 8, oe OEE Ba\nE aN ad &. F S552 Eo oe \" a ea ee ion 4\nmets: 2b\" an Polit SREB ea Ee \"ee ahh Meats = ner: 4\nReiechciiee ite: Maaety UD ESneee een + 'TSS eee ss Be: as:a ug\ners S902 BR Some us es es We aa\n? a Sak,. ve Dsl Ler Rg bgr Be 3\" they Boe Ee hr os\n\n, \u00a2 -SECRET-- RECORD ID: 9120433\n5 ae NSC/S PROFILE RECEIVED: 05 JUN 91 11\n| TO: PRESIDENT\nFROM: SCOWCROFT DOC DATE: 06 JUN 91\nSOURCE REF:\nKEYWORDS: USSR START\nNSC AGENDA\nARMS CONTROL LIMITED ACCESS\nPERSONS:\nSUBJECT: BACKGROUND FOR 6 JUN NSC MTG ON START / LIMITED ACCESS\n| ACTION: NOTED BY PRES DUE DATE: 08 JUN 91 STATUS: C\nSTAFF OFF jqgonnON F -- LOGREF:\n| FILES: IFM_O_: NSOOSS CODES:\n| Es DOCUMENT DISTRIBUTION\n| FOR ACTION FOR CONCURRENCE FOR_INFO\nDAVIS\n| GORDON\nKUEHNE\nNSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy cap _ NARA, Date 9/28/67\nCOMMENTS: PER GORDON - THIS NSC MTG DID TAKE PLACE ON 6 JUN AT 3:45 - 4:45 PM\nWEA\nDISPATCHED BY DATE BY HAND W/ATTCH\n| OPENED BY: NSWEA CLOSED BY: NSWEA Doc 40F 5\nSEGRE\n\nce ae National Security Council\njs The White House\nPROOFED BY: tog # 709.3 3\nURGENT NOT PROOFED: SYSTEM PRS (NSC) INT\nBYPASSED WW DESK: pocioclV=-a1o /\n<Q SEQUENCE TO HAS SEEN DISPOSITION\nJE.\nKen Hill ( Coepg.--\n| Bill Sittmann pa es\n. Bob Gates\nBrent Scowcroft be\nBill Sittmann eI a\nSituation Room\n[s)\nWest Wing Desk S Py)\nNSC Secretariat ESP gpa CS\nec: vp Sununu Other RD & \"Mee mat\nQwse-- =\nShouid be seen by: es\nWate/ ime)\nCOMMENTS\nDISPATCH INSTRUCTIONS:\n\n~. '+ \u00b0 National Security Council 2\nThe White House\nPROOFED BY: ices. DOCS\n| URGENT NOT PROOFED: SYSTEM prs (_\"Nsc) INT\n| BYPASSED WW DESK: DOCLOG AIO Du\nSEQUENCETO --_- HAS SEEN DISPOSITION\nKen Hill\nBill Sittmann ee See\nes)\nBob Gates 2 Se. ee\n| Brent Scowcroft - ee\n| Bill Sittmann\n| Situation Room\nWest Wing Desk se\nNSC Secretariat\ncc: ve Sununu Other\nShould be seen by:\nDate? ime)\nCOMMENTS lu ee ae: Dzc& ae\nii\n2aaP ay ORAL\n5 7\nDISPATCH INSTRUCTIONS: 2) /5-< ke a. a \u00a2\nf\ni gfe. a\na; os of oe.;\n\n. 4\nPARTICIPANTS\nThe President\nThe Vice President\nNicholas Brady, Secretary of the Treasury\nDick Cheney, Secretary of Defense.\nDick Thornburgh, Attorney General\nJames Watkins, Secretary of Energy.\nRichard Darman, Director of the Office of Management\nand Budget\nJohn Sununu, Chief of Staff\nBrent Scowcroft, Assistant to the President for National\nSecurity Affairs\nRobert M. Gates, Deputy Assistant to the President for National\nSecurity Affairs\nWilliam Webster, Director of Central Intelligence\nLawrence Eagleburger, Deputy Secretary of State\nColin Powell, Chairman of the Joint Chiefs of Staff\nStephen Read Hanmer, Jr., Deputy Director of the Arms\nControl and Disarmament Agency\nArnold Kanter, Senior Director for Arms Control and\n| Defense Policy\n\nShen RECORD rDggeaaekss sg\nzs NSC/S PROFILE RECEIVED: 05 JUN 91 11\u00b0\nTO: AGENCIES\nFROM: SITTMANN DOC DATE: 05 JUN 91\nSOURCE REF:\nKEYWORDS: USSR START\nNSC AGENDA\nARMS CONTROL LIMITED ACCESS\nPERSONS:\nSUBJECT: MTG ANNOUNCEMENT & AGENDA FOR 6 JUN NSC MTG ON START\nACTION: SITIMANN SGD MEMO TO AGENCIES DUE DATE: 08 JUN 91 STATUS: C\nSTAFF OFFICER: GORDON LOGREF:\n| FILES: IFM 0 ___NSCP:_NS0058_ CODES:\n| ese JOCUMENT DISTRIBUTION\nFOR ACTION FOR_CONCURRENCE FOR_INFO |\nDAVIS |\nGORDON\nKANTER\nKUEHNE\nNSC CHRON\nWhite House Guidelines\nE.O. 12958, SEC 3.4 (B) September 11, 2006\nBy caP__ NARA, Date 9/a8/og\nCOMMENTS:\nWA \u00e9/s a\nDISPATCHED BY DATE BY HAND y\nOPENED BY: NSWEA CLOSED BY: NSWEA Doc 20F 5 |\nSEOREE\n\n.. \"National Security Council\nSe; The White House v -\nPROOFED BY: We LOG # 20435\nURGENT NOT PROOFED: SYSTEM = PRS Gsc) INT\nBYPASSED WW DESK: DOCLOG vA AIO. sa\nKy wild SEQUENCE TO HAS SEEN DISPOSITION\n\\Y ken will } Clo A\nBill Sittmann paces ss\nBob Gates =a\nBrent Scowcroft 3 eee ee\nBill Sittmann Ba a\nSituation Room\nWest Wing Desk a WA &{ 5 2:\nNSC Secretariat SZ Ne;\neen Lae tel peaked tects\nvp Sununu i ees |\nShould be seen by:\n-- oem\nCOMMENTS '\nDISPATCH INSTRUCTIONS:\nEX Stes Ons Yas Moke Bf\n\nTIME Uf TRANSMISSION \\ TIME OF RECEIF\nSee aT TT eas\nTHE SITUATION ROOM\nPRECEDENCE: IMMEDIATE RELEASER;:;\nCPRIORITY> --__\nROUTINE DTG:\nee\nMESSAGE NO. CLASSIFICATION __-SECRET- PAGES 2 2\nFROM _ WILLIAM F. SITTMANN VA fe 456-6534:\nSS --_--_--___..__.. \"\n: (Name) (Phone Number) (Room No.).\nMESSAGE DESCRIPTION __nsc mrcG:\n-- Ft ------C*'\n|. LOG # 20433:\n| STATE EXECUTIVE SECRETARY:\n---------- nn ----------- ---- _eeesS--CSCM\n. TREASURY _ EXECUTIVE SECRETARY\nDOD EXECUTIVE SECRETARY A\n--_-_-_eoOo EE ------------------ a\nJ DOE EXECUTIV\u00ae: SECRETARY,\n| ll ti*im\nCIA EXECUTIVE SECRETARY..\nCIA.\nacs \"__. COL_GEORGE L. SUMRALL, JR.,\nTT OR\nACDA EXECUTIVE SECRETARY\nVEE. SECRETARY:\nREMARKS *%*%* PLEASE DELIVER IMMEDIATELY UPON RECEIPT TO\nADDRESSEE ****\nACDA - STUIII/fax = 647-5550 DECLASSIFIED;\n| | COORDINATION = 647-6731 or 7613/8667 White House Guidelines\nE.0. 12958, SEC 3.4.(B) September 11, 2B\n. By ca? NARA, Date thew =\n\n, 'S PROFI eT\n|;:. NSC/S PROFILE RECEIVED:\n, TO: AGENCIES\nFROM: SCOWCROFT DOC DATE: 10 JUN 91\nSOURCE REF:\nKEYWORDS: USSR START\nNsc AGENDA\nARMS CONTROL LIMITED ACCESS\nPERSONS:\nSUBJECT: PRES LTR TO PRES GORBACHEV OF USSR RE START\n| ACTION: SCOWCROFT SGD MEMO TO AGENCIES DUE DATE: 08 JUN 91 STATUS: C\nSTAFF OFFICER: GORDON LOGREF:\n| FILES: IFM 0 yscp: SSC 0054 CODES:\n| pocuMENT DISTRIBUTION\n| FOR ACTION FOR _CONCURRENCE FOR_INFO\n| KANTER\n| NSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy eaP__ NARA, Date \u00a2/o8/o9\nCOMMENTS:\n2 J\nDISPATCHED BY WA DATE | [oO BY HAND W/ATTCH\nOPENED BY: NSWEA CLOSED BY: NSWEA DOC 5 0F 5\nSheREE\n\n' NATIONAL SECURITY COUNCIL ID 9120433\nREFERRAL DATE: 10 JUN 91\nMEMORANDUM FOR: DUBIA, J\n: EXECUTIVE SECRETARY - DOD\nDOCUMENT DESCRIPTION: TO: AGENCIES\nSOURCE: SCOWCROFT\nDATE: 10 JUN 91\nSUBJ: PRES LTR TO PRES GORBACHEV OF USSR RE START\nREQUIRED ACTION: *** PLEASE PASS THIS ITEM \"EYES ONLY\":\nTO SECRETARY CHENEY ***.\nDUEDATE:\nCOMMENT:\nWelt &. Ana i\n- GEORGE VAN ERON\nDIRECTOR NSC SECRETARIAT\n\nNATIONAL SECURITY COUNCIL ID 9120433\n. REFERRAL DATE: 10 JUN 91\nMEMORANDUM FOR: SUMRALL, G\nJCS\nDOCUMENT DESCRIPTION: TO: AGENCIES\nSOURCE: SCOWCROFT\nDATE: 10 JUN 91\nSUBJ: PRES LTR TO PRES GORBACHEV OF USSR RE START\nREQUIRED ACTION: *** PLEASE PASS THIS ITEM \"EYES ONLY\"\nTO CHAIRMAN POWELL **\nDUEDATE:,\nCOMMENT:\nWb E. An\nCc.\nGEORGE VAN ERON\n;, DIRECTOR NSC SECRETARIAT\n\n: ' ' NATIONAL SECURITY COUNCIL ID 9120433\nREFERRAL DATE: 10 JUN 91\n| MEMORANDUM FOR: STARR, B\n; ACDA\nDOCUMENT DESCRIPTION: TO: AGENCIES\nSOURCE: SCOWCROFT\nDATE: 10 JUN 91\nSUBJ: PRES LTR TO PRES GORBACHEV OF USSR RE START\nREQUIRED ACTION: *** PLEASE PASS THIS ITEM \"EYES ONLY\"\n| TO DIRECTOR LEHMAN ***\nDUEDATE:\nCOMMENT:\n: Co GEORGE VAN ERON\n' DIRECTOR NSC SECRETARIAT",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}

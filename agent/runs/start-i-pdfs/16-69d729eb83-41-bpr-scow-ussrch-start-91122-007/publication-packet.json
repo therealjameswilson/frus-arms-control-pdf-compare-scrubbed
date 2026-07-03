@@ -1,0 +1,458 @@
+{
+  "agent": "FRUS_PUBLICATION_AGENT",
+  "run_mode": "universal_source_draft",
+  "training_profile": {
+    "process_model": "FRUS_PUBLICATION_AGENT",
+    "trained_from": "START I exact-source PDF/FRUS comparison set",
+    "training_data": "assets/data/frus-pdf-compare.json",
+    "training_summary": {
+      "comparison_rows": 25,
+      "candidate_direct_pdf_rows": 331,
+      "excluded_direct_pdf_rows": 306,
+      "frus_documents": 25,
+      "unique_pdf_urls": 17,
+      "volumes": [
+        "frus1989-92v31"
+      ]
+    },
+    "process_profile": "agent/patterns/start_i_publication_process.json",
+    "universal_deployment": true
+  },
+  "source_pdf": {
+    "source": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4708332/41-bpr-scow-ussrch-start-91122-007.pdf",
+    "local_path": "[local cache omitted from public artifact]",
+    "sha256": "a670f0651c17cdafe30add89b21f856cf4aeaa19e5b988ff0a29fc14a2af9a5d",
+    "page_count": 30,
+    "pages_examined": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "ocr_required": true
+  },
+  "target": {
+    "volume_id": "frus1989-92v31",
+    "doc_no": "151",
+    "doc_key": null,
+    "title": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (August 1990)",
+    "frus_url": "",
+    "document_type": null,
+    "date": null,
+    "place": null,
+    "sender": null,
+    "recipient": null,
+    "classification": null,
+    "archive_title": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (August 1990)",
+    "file_unit": "Soviet Power Collapse in Eastern Europe--Strategic Arms Control (August 1990)"
+  },
+  "ocr_required": true,
+  "source_note_model": "Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, USSR Chronological Files, START Files, OA/ID 91122-007, Soviet Power Collapse in Eastern Europe-Strategic Arms Control (August 1990). Secret. Sent for information. Sent through Gordon. A stamped notation indicates Scowcroft saw the memorandum. Scowcroft initialed the top of the memorandum.\n",
+  "selected_pages": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    21,
+    22,
+    25,
+    27,
+    28,
+    29,
+    30
+  ],
+  "page_inventory": [
+    {
+      "page": 1,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "administrative marker",
+        "record group/collection",
+        "record group"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Originally Processed With FOIA(s): FOIA Number: 2009-0275-S 2009-0275-S This is not a textual record. This is used as an administrative marker by the George Bush Presidential Library Staff. Record Group/Collection: | George H.W. Bush Presidential Records Collection/Office of Origin: Scowcroft, Brent, Collection Series: USSR Chronological Files Subseries: START [Strategic Arms Reduction Treaty] Files OA/ID Number: 91122 Folder ID Number: 91122-007 Folder Title: Soviet Power Collapse in Eastern Eu",
+      "selected_for_body": false
+    },
+    {
+      "page": 2,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Withdrawal/Redaction Sheet (George Bush Library) Doc. No. / Type Subject/Title Date Restriction Classification Ola. Memo Rich Davis to Brent Scowcroft 8/3/90 Od & Re: Rick Burt's Memorandum On The Prospects of Completint START This Year (3 pp.) Olb. Report Re: Cotting [Getting] START Done (1 pp.) 8/2/90 oy); (b)(3) & Olc. Report Re: Master List of START Issues (9 pp.) 8/2/90 oy) B& 02a. Profile Sheet Gordon to Scowcrofi/Gates 08/06/90 ot) w Re: [Classified Subject] (1 pp.) 02b. Report John Gordo",
+      "selected_for_body": false
+    },
+    {
+      "page": 3,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "rm ee, SECRET- RECORD ID: 9006250 NSC/S PROFILE RECEIVED: 03 AUG 90 10 TO: SCOWCROFT FROM: DAVIS DOC DATE: 03 AUG 90 & GORDON SOURCE REF: KEYWORDS: START PERSONS: Wianuie fi SUBJECT: BURT MEMO ON PROSPECTS OF COMPLETING START THIS YEAR ACTION: NOTED BY SCOWCROFT DUE DATE: 07 AUG 90 STATUS: C STAFF OFFICER: DAVIS LOGREF: 9006257 FILES: PA NSCP: CODES: DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR INFO DAVIS GORDON NSC CHRON DECLASSIFIED White House Guidelines E.0. 12958, SEC 3.4 (B) Septem",
+      "selected_for_body": true
+    },
+    {
+      "page": 4,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; oT SECRETS RECORD ID: 9006250 . ACTION DATA SUMMARY REPORT DOC ACTION OFFICER CAO ASSIGNED ACTION REQUIRED 001 DAVIS Z 90080312 PREPARE MEMO FOR SCOWCROFT 002 SCOWCROFT Z 90080610 FOR INFORMATION 002 X 90100912 NOTED BY SCOWCROFT DECLASSIFIED g White House Guidelines -O. 12958, SEC 3.4 (B) September 11, 2006 By Cop _ NARA, Date sfraoq SECRET-",
+      "selected_for_body": false
+    },
+    {
+      "page": 5,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "memorandum for",
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "NATIONAL SECURITY COUNCIL WASHINGTON, D.C. 20506 August 3, 1990 INFORMATION /\u20acED MEMORANDUM FOR BRENT SCOWCROFT N Mt g THROUGH: JOHN GORDON, ACTING bag Ady, an =~ FROM: RICH pavisK SUBJECT: Rick Burt\u2019s Memorandum On The Prospects of Completing START This Year Rick Burt has written you a 7-page memorandum (attached) which details his concern that we will not be able to complete START in 1990. He has compiled a list of over 100 issues to be resolved in the 150 days that remain this year. In additi",
+      "selected_for_body": true
+    },
+    {
+      "page": 6,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "\u2018 . SECREP 2 a START work program for the next several months and will consider Rick\u2019s suggestions in our recommendations to you. His specific proposals include the following: 1. Make more effective use of the ministerial process. We should: -- Schedule a Ministerial every month until START is signed with prearranged agendas; -- Organize internally so that we can make real-time decisions at Ministerials; -- Where possible, record Ministerial decisions in treaty text form at the Ministerial itsel",
+      "selected_for_body": true
+    },
+    {
+      "page": 7,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "=\u2014\u2014 Schedule a standing meeting of PCC principals ever Wednesday evening and Saturday morning; at this meeting the basic rule would be: If a PCC principal doesn\u2019t krow enough to discuss the subject without an interogency study. defer to the Negotiator; -- Forbid backstopping from delaying sendiny cahles fcvward to the NSC beyond a Negotiating Group requested due dete: -- Direct evening and Saturday meetings of backstoppirs, PCC Subcommittee, or PCC when needed to meet a Negotiatina Groun request",
+      "selected_for_body": true
+    },
+    {
+      "page": 8,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "RCDA CCMCUA WM Ge Pas-Puly VAT we AUG Ub Ta PAS : Las? EAS i. <4 U.S. Delegation - to the Nuclear and Space \u2018l'alks The Ambassador August 2, 1990 Near Brent. Many thanks for sending me a photograph of my meeting last Spring with the President in the Oval Office. It was thoughtful of you. Recently, Linton Brooks and I have heen thinking about the status of START and whether it is possible to expedite the negotiating process in order to finish the trealy this yeac. Attached are our thoughts. As yo",
+      "selected_for_body": true
+    },
+    {
+      "page": 9,
+      "method": "ocr",
+      "page_class": "administrative_marker",
+      "cues": [
+        "record group",
+        "oa/id number"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "Document No. Subject/Title of Document Date Restriction Class. and Type O1b. Report Re: Cotting [Getting] START Done (1 pp.) 8/2/90 (wey; (b)(3) x Collection: Record Group: Bush Presidential Records Document Decliassified Office: Scowcroft, Brent, Files (Document Follows) Series: USSR Chronological Files By ion on gluecee Subseries: START [Strategic Arms Reduction Treaty] Files WHORM Cat.: File Location: Soviet Power Collapse in Eastern Europe - Strategic Arms Control (August 1990) Date Closed: ",
+      "selected_for_body": false
+    },
+    {
+      "page": 10,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET August 2, 1990 Cotting START Done what is the problem? The President has directed, both publicly and privately. that we complete START in 1990. The President and his senior team seem to believe this goal can be attained. In fact, it cannot, without a drastic change in our current approach. Indeed, without such a change, it is probable that START will not be completed until spring 1991 or later, casting doubt on our ability to complete ratification before the middle of a Presidential elect",
+      "selected_for_body": true
+    },
+    {
+      "page": 11,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ACDA GENEVA 41 22 733-7019 SAT 62 AUG 96 16:34 PG.63 SECRET =- 2 = itself. As a result, the Soviets are taking excessively long to respond and are often putting forth unhelpful positions. In addition, the Soviet delegation often appears slow to implement agreements and sometimes seeks to walk them back. These problems can only be solved in Mosocw. Thus, no matter what we But the problems are not only in Moscow. In my view there are a number of of problems on our side, problems we can and must do",
+      "selected_for_body": true
+    },
+    {
+      "page": 12,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ACDA GENEVA 41 22 733-7619 SAT 62 AUG 36 16:36 PG .84 SECRET -3- ~- New tagging procedures were drafted early this year but took over four months for Washington review. It is unclear that they are any better for this effort. -- Basic issues on tagging, supposedly resolved earlier, are being reopened and reexamined. The schedule for some of them runs into next year. -- The average time to respond to routine guidance requests is going up. Of the last 20 Round XII1 requests for guidance where the N",
+      "selected_for_body": true
+    },
+    {
+      "page": 13,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET a in Moscow or in Washington -- until a summit or some other \"action forcing event\u201d is scheduled. What do we need to do? Just as there is no single cause for our problem, there is also no single solution. If we are serious, however, there are steps we can take, many of them somewhat radical, They include: l. Make more effective use of the ministerial process. We should: -- Agree with the Soviets now that there will be a Ministerial every month until START is signed (late September, late O",
+      "selected_for_body": true
+    },
+    {
+      "page": 14,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "RECRET- . -5- We should: -~ Forbid the drafting of treaty language in Washington. Guidance should come in teims of principles and objectives, with treaty drafting done in Geneva. -- Expedite reaching U.S. positions on all outstanding issues so that no U.S. position remains untabled by September 15. (See attached list for specifics) -~ Establish a policy now that, on September 20, the Negotiating group should accept Soviet positions in all areas in which there is no U.S. position. Allow exception",
+      "selected_for_body": true
+    },
+    {
+      "page": 15,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "ACDA GENEVA 41 22 743-7619 SAT 82 AUG 96 16:42 PG .U6, . SECRET ~6- -- Ad ref agreements automatically approved after eight working days unless Washington directs otherwise, -- Schedule a standing meeting of PCC principals every Wednesday evening and Saturday morning. At this meeting -- and only at this meeting -- consider whether to repudiate ad ref agreements. Basic rule: If a PCC principal doesn't know enough to discuss the subject without an interagency study, defer to the Negotiator. -- On ",
+      "selected_for_body": false
+    },
+    {
+      "page": 16,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET . _9- before a similar audience after une summit. My idea altempts to combine the features of these past sessions. -- After the President's departure, announce the new procedures set forth above. Stress that they have been agreed to at the cabinet level. 6. Convince the Soviet bureaucracy that we're serious. We should schedule a summit for late this year. Probably nothing less wili do the trick. The svune: a summit is scheduled, the better -- it will enable us to begin disciplining the bu",
+      "selected_for_body": true
+    },
+    {
+      "page": 17,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET August 2, 1990 MASTER LIST OF START ISSUES (NOTE: Items marked \"***\" not shared with the Soviets.) General Issues and Issues Relating to the Treaty Itself 1. Non-circumvention of the treaty 2. Strategic offensive arms beyond the national territory and verification thereof 3. Suspect-site inspections -- Specification of facilities subject to SSI -- Tours of solid rocket motor production facilities -- Exchange of data on solid rocket motor production facilities -- Right of refusal suspect s",
+      "selected_for_body": true
+    },
+    {
+      "page": 18,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET -2- 10. Complex of ALCM-related issues: -- Whether to establish a management regime for ALCMs and, if so, how the regime would work; -- Elimination of ALCMs and other heavy bomber armaments during elimination of heavy bombers; -- ALCM distinguishibility; -- Ban on non-nuclear ALCMs with multiple weapons; -- Definition issues including flight test and deployment descriptions; -- ALCM-associated inspection regime. 11. Bomber issues -- Limits on former heavy bomber and heavy bombers equipped",
+      "selected_for_body": false
+    },
+    {
+      "page": 19,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECRET a3 21. Use of the term \"warhead\" versus \"reentry vehicle\u201d. Whether to have a definition of re-entry vehicle, and if so what it should be. 22. Dealing with ballistic missiles with MRVs. 23. Treating the question of releases or simulated releases. 24. Issues relating to throw-weight. -- Approach to demonstrated throw-weight. -- Approach to potential throw-weight. -- Use of range capability concept. -- How to record the 50 percent throw-weight reduction. -- Whether the pre-announced flight t",
+      "selected_for_body": false
+    },
+    {
+      "page": 20,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": : SECRET . \u201c4. 32. Support equipment. -- What is to be included. -- What restrictions apply. -- Mobile missile transporters. 33. Use of the term \"stage in its final assembly form/solid rocket motor.\" 34. Type rule for ballistic and cruise missiles tested as weapon delivery vehicles. 35. Unique identifiers. -- Selection of specific unique identifier technology. -- Which systems should have unique identifiers. -- When and where these unique identifiers should be applied. -- Technical procedures ",
+      "selected_for_body": false
+    },
+    {
+      "page": 21,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". SECRET -5= 45. Follow-on negotiations. s 46. Whether to treat silo-based and rail-mobile SS-24s as one missile type or two. 47. How long to have the baseline period run and how to regulate elimination during that period. . 48. Whether to have an Attribution Annex or to record agreed attributed values in the MOU. Procedures for updating agreed attributed values, regardless of where they are located. 49. How to treat the Small ICBM (existing or future type). (2*%) Issues Relating to Definitions ",
+      "selected_for_body": true
+    },
+    {
+      "page": 22,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "SECREF == 4. Should the Ballistic Missile Launch Agreement be included in the Treaty? Issues in Protocol on nversion or Elimination 1. Procedures and restictions for removing propellant during destruction. 2. Verification of missile type before elimination of missiles in canisters. 3. Whether and under what conditions to allow launch canister reuse, both as a launch canister and otherwise. 4. Procedures for removal of silos from accountability during conversion. 5. Procedures for removal of SLBM",
+      "selected_for_body": true
+    },
+    {
+      "page": 23,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ": SECRET -7- 4. Criteria for site diagrams, photographs and precision of coordinates. 5. List of technical characteristic of strategic offensive arms which would be specified in the MOU --. Provision of data on variants. -- Technical characteristics to be provided. -- Production data to be provided. 6. List of technical characteristics to be demonstrated during exhibitions of strategic offensive arms. 7. Provision of new annexes listing facilities subject to PPCM and suspect site inspection. Iss",
+      "selected_for_body": false
+    },
+    {
+      "page": 24,
+      "method": "ocr",
+      "page_class": "withdrawal_sheet",
+      "cues": [
+        "restriction"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ". SECRET . aie 7. Inspection quotas for all inspection types. 8. Frequency of replacement of monitors. 9. Modality for informing in-country escort of intentions. 10. Size criteria for inspections. 11. Procedures for operational dispersals of submarines and heavy bombers. 12. Pre-inspection restrictions at submarine bases for RV OSI. 13. Suspect-site inspection procedures. 14. Procedures for RV OSI, including for mobile ICBMs. 15. Missile verification -- Content of pre-inspection briefing for mob",
+      "selected_for_body": false
+    },
+    {
+      "page": 25,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": ", , SECREF -9- 22. Recourse for violation of conditions of inspections. 23. Procedures for inspection of containers, canisters, vehicles, etc. 24. Use of names of inspections as appropriate. 25. Equipment annexes. 26. Agreed types of airplanes for delivering equipment. 27. Navigation equipment and airplane routes. 28. Inspection sites and associated points of entry. 29. Insertion of appropriate provision for INF MOA (forty plus items). 30. Additional inspection protocol blanks (numbers on lists,",
+      "selected_for_body": true
+    },
+    {
+      "page": 26,
+      "method": "ocr",
+      "page_class": "routing_profile",
+      "cues": [
+        "action officer"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "oe yl \u2018 SEG i dNaL SECURITY COUNCIL TIME sel JRGE. peep SECRETARIAT STAFFING DOCUMENT GIN Si\u00a5ED ewer TEM LOG NUMBER: @&G@REOI ACTION OFFICER: eae Due! AUGER: YA. Prepare Memo F& scowcrof Gates O Appropriate Action _~=+~Prepare Memo For Cieconi (0 Prepare Memo for Sittmann (1 =Prepare Memo to CONCURRENCES/COMMENTS* PHONE* to action officer at ext. Boole FYI FYI FYI O OC Barth O CO Johnson O O Pryce O O Basora O O Kaeuper oO Rademaker O O Beers Ko Kanter a me O O Blackwill O CO Kitchen OD \u2018Rodman ",
+      "selected_for_body": false
+    },
+    {
+      "page": 27,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "the white house"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "INE UN Re RE Se Cotas National Security Council aad en ~ : The White House s URGENTNOTPROOFED:____\u2014Cts\u00abCSYSTEMM_PRS/ NSC OINT BYPASSED WW DESK: DOCLOG bw | pee SEQUENCETO = HAS SEEN DISPOSITION . \u20147 KenHill \\ s= Bill Sittmann ~ Pa : , ~* Bob Gates ed os No) z= s Un Brent Scowcroft _ ee Bill Sittmaon = SO & S$ SituationRoom <X Se oy West Wing Desk ( NSC Secretariat [pssain 7 Icnemes7\u201d Oech fata Hentai a ce: vp Sununu Other Should be seen by: Water ime) COMMENTS \u2018 : = & aA. = if . DISPATCH INSTRUC",
+      "selected_for_body": true
+    },
+    {
+      "page": 28,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "subject:"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "; FSR SHEREE RECORD ID: 9007993 \u2018 NSC/S PROFILE RECEIVED: 09 OCT 90 13 TO: SCOWCROFT mya ge Py GATES preeSe thaw ie FROM: GORDON DOC DATE: 06 AUG 90 SOURCE REF: KEYWORDS: CFE ARMS CONTROL START CBW USSR PERSONS: BAKER, J SHEVARDNADZE, EDUARD SUBJECT: ARMS CONTROL ISSUES DISCUSSED BY SEC BAKER & FOMIN SHEVARDNADZE IN IRKUTSK ACTION: NOTED BY GATES DUE DATE: 12 OCT 90 STATUS: C STAFF OFFICER: GORDON LOGREF: FILES: PA NSCP: CODES DOCUMENT DISTRIBUTION FOR ACTION FOR CONCURRENCE FOR_INFO GORDON NSC ",
+      "selected_for_body": true
+    },
+    {
+      "page": 29,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "August 6, 1990 General -- Bob -- I have a short debrief of the arms control issues discussed by Secretary Baker and Foreign Minister Shevardnadze in Irkutsk. The source is General Howard Graves who was on the trip but did not sit in on the meetings (his source was Dennis Ross, who took notes). The main points are: = Shevardnadze complained about the slowness of the START process, wants to break through the bureaucratic process, urged a high-level working group to prepare issues for consideration",
+      "selected_for_body": true
+    },
+    {
+      "page": 30,
+      "method": "ocr",
+      "page_class": "source_document",
+      "cues": [
+        "substantial OCR text without administrative cues"
+      ],
+      "model_match_score": 0.0,
+      "text_preview": "= On Open Skies, Shevardnadze expressed concerns about US aircraft flying over the USSR: \"all territories should be open, but the inspected party should have the right to choose whose aircraft will be used.\" He said that the inspecting party could install agreed sensors on the aircraft selected by the inspecting party. Baker said that he would discuss this with our allies. - Shevardnadze pressed Baker for the details of our CW inspection regime. He seemed to say that if the US moves away from \u201ca",
+      "selected_for_body": true
+    }
+  ],
+  "draft_body": "rm ee, SECRET- RECORD ID: 9006250\nNSC/S PROFILE RECEIVED: 03 AUG 90 10\nTO: SCOWCROFT\nFROM: DAVIS DOC DATE: 03 AUG 90 &\nGORDON SOURCE REF:\nKEYWORDS: START\nPERSONS: Wianuie fi\nSUBJECT: BURT MEMO ON PROSPECTS OF COMPLETING START THIS YEAR\nACTION: NOTED BY SCOWCROFT DUE DATE: 07 AUG 90 STATUS: C\nSTAFF OFFICER: DAVIS LOGREF: 9006257\nFILES: PA NSCP: CODES:\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR INFO\nDAVIS\nGORDON\nNSC CHRON\nWhite House Guidelines\nE.0. 12958, SEC 3.4 (B) September 11, 2006\nBy Cop NARA, Date 3], 7/07\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSMEN CLOSED BY: NSMEN poc 20F 2\n~SEEREE-\n\nNATIONAL SECURITY COUNCIL\nWASHINGTON, D.C. 20506\nAugust 3, 1990\nINFORMATION /\u20acED\nMEMORANDUM FOR BRENT SCOWCROFT N\nMt g\nTHROUGH: JOHN GORDON, ACTING bag Ady,\nan =~\nFROM: RICH pavisK\nSUBJECT: Rick Burt's Memorandum On The Prospects of\nCompleting START This Year\nRick Burt has written you a 7-page memorandum (attached) which\ndetails his concern that we will not be able to complete START in\n1990. He has compiled a list of over 100 issues to be resolved\nin the 150 days that remain this year. In addition, the process\nof resolving many of these issues will reveal other differences\nthat must be added to the list. Although his bottom line is very\npessimistic from our perspective, his main point is valid: both\nwe and the Soviets must change our approach to the negotiations\nif we are to finish the treaty this year.\nRick singles out the following problems:\n--- The Soviets are taking excessively long to respond to U.S.\nproposals and are often putting forward unhelpful positions.\n- Closing out existing ministerial issues will require\nfurther ministerial-level discussion and additional\nministerial issues are being uncovered.\n-~ Washington is taking too long to establish positions and\nrespond to the Negotiator's ad ref agreements.\n- As we approach the end of negotiations, Geneva will have\nincreasing difficulty in translating agreed positions into\ndetailed, sound treaty text.\n- The working level in Washington does not believe the U.S.\nis committed to finish the Treaty this year and is not\nenergized to devote the hours needed to work toward that\ngoal.\nWhat do we need to do?\nRick's proposals range from the unexceptional to the draconian.\nHe believes almost all of his suggestions need to be implemented\nto get a Treaty by the end of the year. We have been developing\nSEGREE DECLASSIFIED\nDeclassify on: OADR\nPER E.O. 13526\nWhalren\n\n'. SECREP 2\na START work program for the next several months and will\nconsider Rick's suggestions in our recommendations to you. His\nspecific proposals include the following:\n1. Make more effective use of the ministerial process. We\nshould:\n-- Schedule a Ministerial every month until START is signed\nwith prearranged agendas;\n-- Organize internally so that we can make real-time decisions\nat Ministerials;\n-- Where possible, record Ministerial decisions in treaty text\nform at the Ministerial itself to speed up the\nimplementation process;\n-- Give Shevardnadze lists of technical issues being worked in\nMoscow so he can lean on his technical experts and the\nMoscow bureaucracy;\n2. Make more effective use of our assets in Washington. We\nshould:\n-- Expedite reaching U.S. positions on all outstanding issues\nso that no U.S. position remains untabled by September 15;\n-- Establish a policy now that, on September 20, the\nNegotiating Group should accept Soviet positions in all\nareas in which there is no U.S. position. Allow exceptions\nonly with the personal approval of a Cabinet Officer.\n3. Make more effective use of our assets in Geneva. We should:\n-- Assign two additional State advisors to the Negotiating\nGroup as soon as possible;\n-- Reorganize the Negotiating Group to address the problem that\nthe Inspection Protocol and Memorandum of Inspection\nProcedures are as large, and contain as many issues, as all\nother treaty documents combined.\n4. Improve Washington turn around time. We should:\n-- Discontinue the use of Blackbird cables except for rare\nsensitive topics not intended to be disseminated beyond PCC\nprincipals (this was the original intended purpose of the\nBlackbird channel but Rick has never used it that way);\n-- Formally establish a new procedure for ad referendum\nagreements that would automatically approve them after eight\nworking days unless Washington directs otherwise;\nSEGRET\n\n=---- Schedule a standing meeting of PCC principals ever\nWednesday evening and Saturday morning; at this meeting the\nbasic rule would be: If a PCC principal doesn't krow enough\nto discuss the subject without an interogency study. defer\nto the Negotiator;\n-- Forbid backstopping from delaying sendiny cahles fcvward to\nthe NSC beyond a Negotiating Group requested due dete:\n-- Direct evening and Saturday meetings of backstoppirs, PCC\nSubcommittee, or PCC when needed to meet a Negotiatina Groun\nrequested due date.\n5. Convince the bureaucracy that we're serious. We should:\n---- Convene a meeting in Room 450 of the Old Executive Jffice\nBuilding of all START players down through the hachstopping\nstaff level;\n-- Have the President make a five minute drop-by;\n-- After the President's departure, announce the new procedures\nset forth above. Stress that they have been agreec to at\nthe cabinet level.\n6. Convince the Soviet bureaucracy that we're serious. We\nshould schedule a summit for late this year. Probably nothing\nless will do the trick. The sooner a summit is schedulel, the\nbetter -- it will enable us to begin disciplining the bureaucracy\nnow and leave us less vulnerable to charges of a last minute rush\nto completion.\nAttachment:\nTab I - Burt Memorandum and List of Unresolved Issues\nSECREL\n\nRCDA CCMCUA WM Ge Pas-Puly VAT we AUG Ub Ta PAS\n: Las?\nEAS i. <4 U.S. Delegation\n- to the Nuclear and Space 'l'alks\nThe Ambassador\nAugust 2, 1990\nNear Brent.\nMany thanks for sending me a photograph of my meeting\nlast Spring with the President in the Oval Office. It was\nthoughtful of you.\nRecently, Linton Brooks and I have heen thinking about\nthe status of START and whether it is possible to expedite\nthe negotiating process in order to finish the trealy this\nyeac. Attached are our thoughts. As you will see, we are\npretty pessimistic.\nI plan to he back in Washington in September and hope\nLo stop by and pay you a visit then.\nSincerely,\nRichard Burt\nHead of Delegation\nAtbachment.\nAS (1) Dpaqe memo: Getting STAET bone\n2) 4 page lest: Master List of START ISHS\ncc: Arnold Kanter.\n. Assistant to the President,\nfur Nalional Security Affairs,\nThe White House,\nWashington, DC 20500.\n\nAugust 2, 1990\nCotting START Done\nwhat is the problem? The President has directed, both publicly\nand privately. that we complete START in 1990. The President\nand his senior team seem to believe this goal can be attained.\nIn fact, it cannot, without a drastic change in our current\napproach. Indeed, without such a change, it is probable that\nSTART will not be completed until spring 1991 or later, casting\ndoubt on our ability to complete ratification before the middle\nof a Presidential election year. Failure to complete START in\nthe next few months could also mean that the window for ever\ncompleting the Treaty will disappear, either due to accelerating\nchanges in the Soviet Union or to the growing (but erroneous)\nperception that a START Treaty has been overtaken by events and\nig no longer important.\nEven with a dramatic change in approach, completion in 1990 is\nfar from certain. This paper documents the problem and offers a\ncomprehensive set of possible changer. It does not repeat the\nwell know arguments on why we should finish in 1990, but simply\nsets forth some of the reasons why we probably won't finish and\nwhat we need to do to get the job done.\nHow much is Jeft? An internal Negotiating Group review reveals\na simple, but stark fact: There are well over a hundred\njgnifi;; y\nsigned. A list is attached. Many single items actually reflect\nseveral contested issues. For example, there are 22 disputed\nnotifications treated as a single issue. Similarly ALCM\ninspections are treated ag a single issuc, although they consume\nseveral pages of treaty text. Thus the list of remaining issues\ncan probably be expandcd to include several hundred individual\ndecisions of the type that traditionally cate a paragraph in a\nguidance cable. With 153 days (including Sundays and holidays)\nto resolve over a hundred issues and record the results in the\ntreaty by December 31, it is clear that the chances of finishing\nSTART in 1990 are slim. Our problems, however, run far deeper\nthan this.\nWhy are we in trouble? it is important to recognize that there\nis no single solution because there is no single problem. We\nhave a series of problems, any one of which, could preclude\ncompletion, Some are beyond our control; the Soviets are\n. distracted at home and the Soviet military is reasserting\nDEC! ASSIFIED\nPER E.O. 13626\nQolo- AVlo M2\nSECRET- ey Bhs\n\nACDA GENEVA 41 22 733-7019 SAT 62 AUG 96 16:34 PG.63\n=- 2 =\nitself. As a result, the Soviets are taking excessively long to\nrespond and are often putting forth unhelpful positions. In\naddition, the Soviet delegation often appears slow to implement\nagreements and sometimes seeks to walk them back. These\nproblems can only be solved in Mosocw. Thus, no matter what we\nBut the problems are not only in Moscow. In my view there are a\nnumber of of problems on our side, problems we can and must do\nsomething about. Indeed, if we do not solve some of them soon,\nthe problem will not be completing a treaty in 1990, it will be\ncompleting a treaty in 1991,\nOur most significant problems include:\n1. We aren't closing out ministerial level issues.\nMeetings between Secretary Baker and Foreign Minister\nShevardnadze have been ertrective in resolving issues.\nUnfortunately, we are identifying ministerial issues faster than\nwe are solving them. At a minimum, we probably need a\nMinisterial push to solve the following:\n-- Backfire.\niad Heavy ICBMs \"\n-- Non-circumvention\n-- Whether to destroy missiltes/warheads/ALCMs\n-- Perimeter and Portal Continuous Monitoring (PPCM)\n-- Third country basing and inspections\n-- Inspection and notification regime for ALCMs\nOther issues will doubtless emerge as we move toward the end.\nThe INF experience shows minor and arcane issues can sometimes\nbecome sticking points requiring high-level political\nresolution. An additional problems is that, when decisions are\ntaken, the Soviet negotiating group sometimes must wait weeks\nfor instructions on implementing them.\npositions or to respond to ad ref agreements reached in Geneva.\nSome examples:\n-- It took over a year to establish our PPCM position.\n-- It has been more then a year and we still don't have a firm\nposition on suspect site inspection.\n-- Our position on new types and RV counting for future types\n. has been under review since November. We are weeks away\nfrom having an initial position on this major hole in the\nTreaty. When we do, we will have less than four months to\nsell a position it took us nine months to establish.\n\nACDA GENEVA 41 22 733-7619 SAT 62 AUG 36 16:36 PG.84\n-3-\n~- New tagging procedures were drafted early this year but took\nover four months for Washington review. It is unclear that\nthey are any better for this effort.\n-- Basic issues on tagging, supposedly resolved earlier, are\nbeing reopened and reexamined. The schedule for some of\nthem runs into next year.\n-- The average time to respond to routine guidance requests is\ngoing up. Of the last 20 Round XII1 requests for guidance\nwhere the Negotiating Group requested a response by a\nspecitic date, only four were answered by the date\nrequested; the remainder averaged over two weeks late.\n-~- A review of what data the United States will require in the\nMemorandum of Understanding has been underway intermittently\nfor over two years, with most difficult issues yet to be\nfaced.\n-- An ad ref agreement on launch control facilities was sent\nfor Washington approval on June 29. Five weeks later, it is\nstill under review. There are well over 100 issues left of\ncomparable scope.\n3., Geneva is in danger of becoming a bottleneck. Reaching\ngeneral agreement can be done quickly. Turning that agreement\ninto treaty language is inherently a slow process. Reaching\nagreement with the Soviets on the text is even slower. A\nrecent treaty scrub reveals dozens of minor problems requiring\nfixes to agreed language. Thus the longer it is until we have\nagreed positions, the more risk there is that either (a) we\nwon't finish, or (b) we'll have INF-type problems because of\nobscure or ambiguous drafting.\n4. The working level in Washington doesn't think we will\nor can finish this year. In a number of recent conversations\nwith various Geneva players, ng individual below the Assistant\nSecretary level expected to finish START in 1990 or considered\nthat doing so was important. The delay in Washington\nresponsiveness is one manifestation. On important and time\nsensitive issues, for example, Saturday meetings in Washington\nare common; to our knowledge no meeting on Saturday has ever\nbeen held in Washington based on a need to get things to Geneva\non time. Another manifestation is that reports from meetings\n(once again below the Assistant Secretary level) never include\nany discussion of negotiability or timeliness. In a nutshell,\nthe President's announced decision to complete START this year\nhas had no discernable effect on the working-level in\nWashington. Neither procedures nor attitudes have changed.\n. One thing is thus clear: We lack a firm deadline. One\nreason that the working level is unconvinced that completion in\n1990 is a real goal is the lack of a scheduled summit. Past\nexperience suggests that many issues simply won't be resolved --\n\na\nin Moscow or in Washington -- until a summit or some other\n\"action forcing event\" is scheduled.\nWhat do we need to do? Just as there is no single cause for our\nproblem, there is also no single solution. If we are serious,\nhowever, there are steps we can take, many of them somewhat\nradical, They include:\nl. Make more effective use of the ministerial process. We\nshould:\n-- Agree with the Soviets now that there will be a Ministerial\nevery month until START is signed (late September, late\nOctober, late November).\n-- Agree that no later than 10 days before each Ministerial\neach side will send a letter listing the issues it wants to\nsolve at that Ministerial and its proposals for solving\nthem.\n-- Agree that the traveling team will arrive 24 to 48 hours in\nadvance and begin discussions at once in order to prepare\nissues for the Ministers decision.\n-- Organize internally, 80 that we can make real-time decisions\nat Ministerials to 'settle issues and insist that the Soviets\ndo the same..\n-- Where possible, record ministerial decisions in treaty text\nform at the ministerial itself to speed up the\nimplementation process.\n-- At each Ministerial, give Shevardnadze a list of technical\nissues being worked in Moscow which are of special concern\nto us. Ask Shevardnadze to use this list to lean on his\ntechnical experts and the Moscow bureaucracy in order to\nspring loose specific issues which are hung up in the Soviet\nbureaucracy. (This is similar to the practice we have used\non human rights cases of special interest.)\n-~ At the next opportunity, raise with Shevardnadze the delay\nin having the Soviet negotiating team aware of decisions |\ntaken at ministerials. If necessary, propose that the\nOctober and November ministerials be in Geneva so that the\nSoviets get rapid feedback.\n. -- Have the State Department draft instructions following eacn\nministerial documenting decisions. Do not have these\nreviewed by the interagency process; have them sent as White\nHouse text. Limit such instructions to a record of\ndecisions taken.\n\nRECRET-\n. -5-\nWe should:\n-~ Forbid the drafting of treaty language in Washington.\nGuidance should come in teims of principles and objectives,\nwith treaty drafting done in Geneva.\n-- Expedite reaching U.S. positions on all outstanding issues\nso that no U.S. position remains untabled by September 15.\n(See attached list for specifics)\n-~ Establish a policy now that, on September 20, the\nNegotiating group should accept Soviet positions in all\nareas in which there is no U.S. position. Allow exceptions\nonly with the personal approval of a Cabinet Officer.\n3. Make more effective use of our assets in Geneva. We\nshould:\n-- Assign two additional State advisors to the Negotiating\nGroup as soon as possible.\n-- Recognize that \"the Inspection Protocol and Memorandum of\nInspection Procedures are as large, and contain as many\nissues, as all othet Treaty documents combined, Therefore:\n(a) have three weekly meetings of the Inspection Protocol\nworking group, (bh) use subgroiips te work the large number of\ntechnical issues, and (\u00a2c) make special arrangements to\nextend or return experienced advisors (Mr. Schless (OSD),\nDr, Scalingi (ACDA), and = (ACIS)). On September\n15, reevaluate to see if progress is satisfactory; if not,\n. split the effort into two separate working groups.\n-~~ Continue three Burt-Nazarkin meetings weekly on major\nissues. Add an additional meeting weekly to review the\nstatus of subordinate documents, especially the Inspection\nProtocol and Memorandum of Inspection Procedures.\n4. Improve Washington turn around time. We should:\n-- Discontinue the use ot Blackbird cables except fur sare\nsensitive topics not intended to he disseminated beyond PCC\nprincipals.:\n-- Formally establish a new procedure for ad referendum.\nagreements:\n-~ All ad ref agreements sent as normal RFGa from the\nNegotiator, flagged for delivery to PCC principals.\n\n. _9before a similar audience after une summit. My idea\naltempts to combine the features of these past sessions.\n-- After the President's departure, announce the new procedures\nset forth above. Stress that they have been agreed to at\nthe cabinet level.\n6. Convince the Soviet bureaucracy that we're serious. We\nshould schedule a summit for late this year. Probably nothing\nless wili do the trick. The svune: a summit is scheduled, the\nbetter -- it will enable us to begin disciplining the\nbureaucracy now and leave us less vulnerable to charges of a\nlast minute rush to completion.\nThere is no question that the measures above are draconian.\nThey are also the only way to finisn tnis year -- and even lhen\nthe outcome is not certain. But the issue is not whether we\nfinish this year; the issue is whether we finish at all. We can\nprobably complete a treaty by the spring of 1991 if we adopt\nsome of these measures. We certainly cannot complete a treaty\nby December without adopting almost all of them. If we do none\nof them, we will prubably see START slip through our fingers.\nAttachment: List of unresolved issues\n\nAugust 2, 1990\nMASTER LIST OF START ISSUES\n(NOTE: Items marked \"***\" not shared with the Soviets.)\nGeneral Issues and Issues Relating to the Treaty Itself\n1. Non-circumvention of the treaty\n2. Strategic offensive arms beyond the national territory and\nverification thereof\n3. Suspect-site inspections\n-- Specification of facilities subject to SSI\n-- Tours of solid rocket motor production facilities\n-- Exchange of data on solid rocket motor production\nfacilities\n-- Right of refusal suspect site inspection\n4. Perimeter and portal continuous monitoring\n-- Procedure for establishment\n-- What facilities are to be monitored\n-- PPCM of heavy bomber production\n-- PPCM of mobile launcher production\n-- Adding new facilities to the PPCM list\n-- Conversion and elimination criteria for facilities\nsubject to PPCM\n5. Phasing of reductions of strategic offensive arms\n6. Physical elimination of ballistic missiles and components\n-- Elimination of missles not subject to numerical\nnon-deployed missile limits\n-- Elimination of re-entry vehicles\n7. Strategic R & D boosters\n8. Vehicles for delivering objects into the upper atmosphere\nof space/accountable space launch stages.\n9. Telemetry issues\n-- data exchange\n-- exemptions from the encapsulation ban\n-- strength of transmitted signals\nSEGREE DECLASSIFIED\nPE\u00ae E.O. 13526\nAOlO-B3lOAAR\n4 Sls\n\n-5=\n45. Follow-on negotiations.\ns 46. Whether to treat silo-based and rail-mobile SS-24s as one\nmissile type or two.\n47. How long to have the baseline period run and how to\nregulate elimination during that period.\n. 48. Whether to have an Attribution Annex or to record agreed\nattributed values in the MOU. Procedures for updating agreed\nattributed values, regardless of where they are located.\n49. How to treat the Small ICBM (existing or future type).\n(2*%)\nIssues Relating to Definitions\n1. Whether to have a definition of re-entry vehicle and, if\nso, what it should be.\n2. Heavy bomber definition.\n3. Reconciling differences on facility definitions (most\nreflect other differences in the Treaty).\n4. Reconciling differences on the definitions of ballistic\nmissile/boost stage, driver training vehicles, ICBM for mobile\nlaunchers of ICBMs, launch weight, missile transfer device,\nmissile transporter, portal, and self-contained dispensing\nmechanism.\nNOTE: In addition, fifty-six definitions are in dispute, but\nall are related to issues listed elsewhere.\nIssues Related to Notifications\n1. What specific notifications should be required (22\ninstances of disagreement, most where the U.S. side seeks a\nnotification the Soviets reject).\n2. When should notifications be given (12 instances where the\nsides agree on a notification but disagree on when it is to be\ngiven).\n3. What specific data should be included (7 instances where\nthe sides agree on a notification but disagree on the specific\ncontent of the notification).\nSEERET_\n\nSECREF\n4. Should the Ballistic Missile Launch Agreement be included\nin the Treaty?\nIssues in Protocol on nversion or Elimination\n1. Procedures and restictions for removing propellant during\ndestruction.\n2. Verification of missile type before elimination of missiles\nin canisters.\n3. Whether and under what conditions to allow launch canister\nreuse, both as a launch canister and otherwise.\n4. Procedures for removal of silos from accountability during\nconversion.\n5. Procedures for removal of SLBM launchers from\naccountability during conversion.\n6. SLBM launcher elimination procedures.\n7. How to deal with silos without headworks.\n8. OSI of heavy bomber elimination.\n9. Procedures for facility elimination. Criteria to consider\na facility as eliminated.\n10. Rail line removal during rail-garrison elimination.\n11. Reconciliation of heavy bomber terminology.\n12. Various values for excavation depths, display times,\nremoval distances.\nIssues Relating to the Memorandum of Understanding\n1. What specific data is required and when that data should be\nexchanged.\n2. What MOU data should remain confidential.\n3. How MOU updates are conducted.\n\n,, SECREF\n-9-\n22. Recourse for violation of conditions of inspections.\n23. Procedures for inspection of containers, canisters,\nvehicles, etc.\n24. Use of names of inspections as appropriate.\n25. Equipment annexes.\n26. Agreed types of airplanes for delivering equipment.\n27. Navigation equipment and airplane routes.\n28. Inspection sites and associated points of entry.\n29. Insertion of appropriate provision for INF MOA (forty plus\nitems).\n30. Additional inspection protocol blanks (numbers on lists,\ntime, etc.).\nIss Relati xr Agreement\n1. Early agreement on data denial.\n2. Early agreement on exhibitions, including what exhibitions\nwill be included.\n-- MOU technical exhibitions\n-- Heavy Bomber exhibitions\n-- Former heavy bomber exhibitions\n3 Separate agreement on annual exchange of information on\nstrategic offensive arms.\n4. Modifying the SLCM declarations with respect to SLCMs with\nmultiple warheads in order to be consistent with the ALCM\nprovisions.\n5. Agreement on data exchange and tours of solid rocket motor\nplants prior to treaty signature.\n\nINE UN Re RE Se\nCotas National Security Council aad en ~\n: The White House s\nURGENTNOTPROOFED:____--Cts\u00abCSYSTEMM_PRS/ NSC OINT\nBYPASSED WW DESK: DOCLOG bw\n| pee SEQUENCETO = HAS SEEN DISPOSITION\n. --7\nKenHill \\ s=\nBill Sittmann ~ Pa\nBob Gates ed os No)\nz= s Un\nBrent Scowcroft _ ee\nBill Sittmaon = SO\n& S$\nSituationRoom <X\nSe oy\nWest Wing Desk (\nNSC Secretariat\n[pssain 7 Icnemes7\" Oech fata Hentai\na\nce: vp Sununu Other\nShould be seen by:\nWater ime)\nCOMMENTS\n': = & aA. = if\n. DISPATCH INSTRUCTIONS:\nasa; \u00b0\na\n\n; FSR SHEREE RECORD ID: 9007993\n' NSC/S PROFILE RECEIVED: 09 OCT 90 13\nTO: SCOWCROFT mya ge Py\nGATES preeSe thaw ie\nFROM: GORDON DOC DATE: 06 AUG 90\nSOURCE REF:\nKEYWORDS: CFE ARMS CONTROL\nSTART CBW\nUSSR\nPERSONS: BAKER, J SHEVARDNADZE, EDUARD\nSUBJECT: ARMS CONTROL ISSUES DISCUSSED BY SEC BAKER & FOMIN SHEVARDNADZE IN\nIRKUTSK\nACTION: NOTED BY GATES DUE DATE: 12 OCT 90 STATUS: C\nSTAFF OFFICER: GORDON LOGREF:\nFILES: PA NSCP: CODES\nDOCUMENT DISTRIBUTION\nFOR ACTION FOR CONCURRENCE FOR_INFO\nGORDON\nNSC CHRON\nPER E.O. 13526\n010~ 3B1D-MR\nSts 4/SliQ\nCOMMENTS:\nDISPATCHED BY DATE BY HAND W/ATTCH\nOPENED BY: NSRLG CLOSED BY: NSRLG Doc 10F 1\nTQPR_SECREF\n\nAugust 6, 1990\nGeneral --\nBob --\nI have a short debrief of the arms control issues discussed by\nSecretary Baker and Foreign Minister Shevardnadze in Irkutsk.\nThe source is General Howard Graves who was on the trip but did\nnot sit in on the meetings (his source was Dennis Ross, who took\nnotes). The main points are:\n= Shevardnadze complained about the slowness of the START\nprocess, wants to break through the bureaucratic process,\nurged a high-level working group to prepare issues for\nconsideration by ministers, and expressed the need for a\nprioritized list of issues. These would be dealt with by\nministers on September 13-14 in Moscow, following the 2+4\ntalks, and late in September in New York at the UN.\n- Shevardnadze expressed concern about non-circumvention of\nSTART, and hoped we would work with the UK for an acceptable\nposition. He said that our \"sphere of cooperation\" with the\nUK should be limited in some way.\n= In agreeing to halt production of the SS-24 Mod 1 (the railmobile variant), he said that we need to completely relook\nat our ICBM verification provisions. He tabled two papers\nwhich we are just now reviewing -- they appear to walk away\nfrom PPCM.\n- On Backfire, Shevardnadze said that his letter laid out his\nproposal. Baker told him we would get back to him.\n= On CFE, Baker and Shevardnadze agreed that \"Ottawa is dead.\"\nThe Soviets do want the German manpower commitment recorded\nin some legal sense in CFE 1. They also said that the US\nand the USSR should have some agreement on where both should\nbe on personnel after CFE 1. Shevardnadze said that his\nexperts thought the US level could be \"70 or 80 or 100\nthousand.\" Baker said we would probably go below 195,000\nbut that he did not want to commit to a number.\nShevardnadze said that he would discuss personnel in detail\nwhen they meet in September.\nPER E.O. 13526\nDolo - 28lo- MK\nTep-seeneR \"NIP\n\n= On Open Skies, Shevardnadze expressed concerns about US\naircraft flying over the USSR: \"all territories should be\nopen, but the inspected party should have the right to\nchoose whose aircraft will be used.\" He said that the\ninspecting party could install agreed sensors on the\naircraft selected by the inspecting party. Baker said that\nhe would discuss this with our allies.\n- Shevardnadze pressed Baker for the details of our CW\ninspection regime. He seemed to say that if the US moves\naway from \"anytime-anywhere with no right of refusal\" (as we\nare doing in a sense) that \"we can move to closure.\" Baker\npromised to get back to him on this. Shevardnadze asked if\nwe can appeal to other countries to get the CW treaty\ncomplete in 1991. Baker responded that the US wants to keep\nthe momentum up in CW and they should discuss this in\nMoscow.\n- On nuclear testing, Shevardnadze pressed hard for a date to\nresume negotiations on next steps. Baker resisted, saying\nthat we are not ready to reengage in advance of gaining the\nexperience that the new protocols will give and before\nratification.\n- On BW, Shevardnadze agreed to US visits and discussions at\nthe sites listed in the earlier paper -- the issue of\nreciprocal visits to the US did not come up. I understand\nthat Baker did not respond.\nV/R\nJohn Gordon\nOn",
+  "evidence_classes": {
+    "title": "heuristic_requires_review",
+    "source_note": "proved_by_source_register",
+    "body_text": "proved_by_pdf_ocr_requires_review",
+    "page_span": "heuristic_requires_review"
+  },
+  "reverse_engineered_process": [
+    "inventory supplied source PDF and source-register evidence",
+    "extract embedded text or OCR image-only pages with page provenance",
+    "classify administrative, withdrawal, access, routing, distribution, and source-document pages using START I-trained cues",
+    "select one document span from the PDF",
+    "omit archival scaffolding from body text while preserving provenance evidence",
+    "normalize OCR or embedded text into FRUS-style body paragraphs",
+    "copy or draft source note under explicit evidence control",
+    "emit JSON, Markdown, and TEI-like review outputs"
+  ],
+  "human_review_warnings": [
+    "OCR was required; proofread every body paragraph against the PDF image.",
+    "Universal deployment run without explicit page range; page span requires human confirmation.",
+    "START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.",
+    "Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication."
+  ]
+}
