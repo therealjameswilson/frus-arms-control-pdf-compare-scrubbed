@@ -179,6 +179,27 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertEqual(report["removed_line_count"], 5)
         self.assertEqual(report["replacement_count"], 2)
 
+    def test_frus_editorial_cleanup_removes_letter_and_routing_scaffolding(self) -> None:
+        cleaned, report = agent.frus_editorial_cleanup(
+            "Dear Sen tor Helms:\n"
+            "Body paragraph.\n"
+            "SC.\n"
+            "Brent Scowcroft\n"
+            "The Honorable Jesse Helms\n"
+            "United States Senate\n"
+            "cc: Vice President\n"
+            "Chief of Staff\n"
+            "Attachment\n"
+            "Tab A May 19 Baker Letter on Tacit Rainbow\n"
+        )
+
+        self.assertIn("Dear Senator Helms:", cleaned)
+        self.assertIn("Brent Scowcroft", cleaned)
+        self.assertNotIn("The Honorable", cleaned)
+        self.assertNotIn("cc:", cleaned)
+        self.assertNotIn("Attachment", cleaned)
+        self.assertEqual(report["removed_line_count"], 7)
+
     def test_frus_opener_transform_builds_heading_from_source_header(self) -> None:
         cleaned = "\n".join(
             [
@@ -203,6 +224,27 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertIn("Washington, June 12, 1989, 11 a.m.-noon", transformed.splitlines()[0])
         self.assertNotIn("DATE:", transformed)
         self.assertIn("SUBJECT: Summary of Conclusions", transformed)
+
+    def test_frus_opener_transform_handles_letter_and_directive_headers(self) -> None:
+        letter, letter_report = agent.frus_opener_transform(
+            "WASHINGTON\nMay 30, 1990\nDear Senator Helms:\nBody.",
+            "",
+            {"title": "140. Letter From the President’s Assistant for National Security Affairs (Scowcroft) to Senator Helms 1"},
+        )
+        directive, directive_report = agent.frus_opener_transform(
+            "WASHINGTON\nFebruary 6, 1990\nNATIONAL SECURITY DIRECTIVE 36\nMEMORANDUM FOR THE VICE PRESIDENT\nSUBJECT: Policy\nBody.",
+            "",
+            {"title": "70. National Security Directive 36 1"},
+        )
+
+        self.assertTrue(letter_report["applied"])
+        self.assertEqual(letter_report["start_strategy"], "letter_salutation")
+        self.assertIn("Washington, May 30, 1990", letter.splitlines()[0])
+        self.assertEqual(letter.splitlines()[1], "Dear Senator Helms:")
+        self.assertTrue(directive_report["applied"])
+        self.assertEqual(directive_report["start_strategy"], "directive_preserve_memorandum_for")
+        self.assertIn("Washington, February 6, 1990", directive.splitlines()[0])
+        self.assertEqual(directive.splitlines()[1], "MEMORANDUM FOR THE VICE PRESIDENT")
 
     def test_participant_column_transform_reorders_two_column_meeting_list(self) -> None:
         styled = "\n".join(

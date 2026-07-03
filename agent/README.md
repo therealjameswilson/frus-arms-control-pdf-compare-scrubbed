@@ -86,9 +86,11 @@ python3 agent/frus_publication_agent.py \
 - `accuracy-report.json`: 99% gate report when a benchmark or approved
   transcript is available.
 - `ocr-editorial-cleanup.json`: dropped scan-scaffold lines and deterministic
-  OCR repairs applied to the draft layer while preserving raw `ocr_body`.
+  OCR repairs applied to the draft layer while preserving raw `ocr_body`,
+  including omitted letter-address, routing, `cc:`, and attachment-locator lines.
 - `frus-style-transform.json`: source-header-to-FRUS-opener transforms, with
-  the generated opener and title/date/place/time evidence used.
+  the generated opener and title/date/place/time evidence used for letters,
+  memoranda, directives, and meeting summaries.
 - `frus-participants-transform.json`: participant-list reconstruction,
   including two-column group/name assignments and unparsed lines.
 - `human-certification.json`: benchmark/no-benchmark status, review-image

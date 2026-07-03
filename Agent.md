@@ -263,12 +263,17 @@ other file-unit evidence probably accounts for the missing FRUS text.
 or declassification/classification artifact, plus every deterministic OCR
 repair applied before FRUS-style drafting. The raw `ocr_body` must remain in
 `publication-packet.json`; cleanup is allowed only as a traceable draft layer,
-not as a silent rewrite of the source evidence.
+not as a silent rewrite of the source evidence. Letter address blocks,
+post-signature routing lists, `cc:` blocks, attachment locator lines, and page
+security/footer artifacts may be omitted from body text only when the omission
+is recorded there.
 
 `frus-style-transform.json` must record source-header-to-FRUS-opener transforms,
 including the source lines removed, the generated opener, and the title, date,
 place, and time evidence used. If the source header cannot be established, the
 transform must say it was not applied and leave the draft in review status.
+The transform must cover letters, memoranda, directives, and meeting summaries
+only when the necessary header evidence is visible or compiler-supplied.
 
 `frus-participants-transform.json` must record participant-list reconstruction,
 especially when OCR reads a two-column meeting list row-wise instead of in
