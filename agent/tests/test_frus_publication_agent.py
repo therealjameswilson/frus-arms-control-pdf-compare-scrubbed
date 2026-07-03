@@ -141,13 +141,87 @@ class FrusPublicationAgentTests(unittest.TestCase):
             gaps = (output_dir / "source-support-gaps.json").read_text(encoding="utf-8")
             completeness = (output_dir / "source-completeness.json").read_text(encoding="utf-8")
             transcript = (output_dir / "transcript-lines.json").read_text(encoding="utf-8")
+            human = (output_dir / "human-certification.json").read_text(encoding="utf-8")
             checklist = (output_dir / "review-checklist.md").read_text(encoding="utf-8")
 
         self.assertIn("sampled_missing_benchmark_phrases", gaps)
         self.assertIn("source_incomplete_or_ocr_uncertain", completeness)
         self.assertIn("source_line_no", transcript)
+        self.assertIn("requires_correction_or_source_review", human)
         self.assertIn("Source Completeness", checklist)
         self.assertIn("Sample benchmark phrases not supported", checklist)
+        self.assertIn("Human Certification", checklist)
+
+    def test_transcript_line_entries_flags_uncertain_lines(self) -> None:
+        entries = agent.transcript_line_entries(
+            [
+                {
+                    "page": 4,
+                    "page_class": "source_document",
+                    "text": "Clear line\n[illegible handwritten deletion]\nText ____ uncertain",
+                }
+            ]
+        )
+
+        flagged = [entry for entry in entries if entry["review_flags"]]
+        self.assertEqual(len(flagged), 2)
+        self.assertIn("editorial_uncertainty_marker", flagged[0]["review_flags"])
+        self.assertIn("handwriting_or_illegible_marker", flagged[0]["review_flags"])
+        self.assertIn("ocr_noise_or_uncertain_marks", flagged[1]["review_flags"])
+
+    def test_universal_run_defaults_to_human_review_images_without_approved_transcript(self) -> None:
+        def fake_get_page_texts(_pdf_path, pages, _cache_dir, _dpi, _psm):
+            return [
+                {
+                    "page": page,
+                    "text": "MEMORANDUM FOR THE PRESIDENT\nSubject: Test\nalpha beta gamma",
+                    "method": "ocr",
+                }
+                for page in pages
+            ], True
+
+        parser = agent.build_arg_parser()
+        args = parser.parse_args(
+            [
+                "--pdf",
+                "/tmp/fake.pdf",
+                "--page-range",
+                "1",
+                "--source-note",
+                "Source: Test file.",
+                "--cache-dir",
+                "/tmp/frus-agent-test-cache",
+                "--output-dir",
+                "/tmp/frus-agent-test-output",
+            ]
+        )
+        with (
+            mock.patch.object(agent, "load_payload", return_value=test_payload()),
+            mock.patch.object(agent, "load_process_profile", return_value={}),
+            mock.patch.object(agent, "resolve_pdf", return_value=(Path("/tmp/fake.pdf"), "fake.pdf")),
+            mock.patch.object(agent, "pdf_page_count", return_value=1),
+            mock.patch.object(agent, "sha256_file", return_value="abc123"),
+            mock.patch.object(agent, "get_page_texts", side_effect=fake_get_page_texts),
+        ):
+            packet = agent.build_packet(args)
+
+        human = packet["human_certification"]
+        self.assertEqual(packet["run_mode"], "universal_source_draft")
+        self.assertFalse(packet["accuracy_report"]["benchmark_available"])
+        self.assertEqual(human["status"], "pending_review_image_render")
+        self.assertEqual(human["review_image_pages"], [1])
+        self.assertEqual(human["review_image_dir"], "page-images")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(
+                agent,
+                "render_review_images",
+                return_value=[{"page": 1, "path": "page-images/page-0001.png", "dpi": 150}],
+            ):
+                agent.output_packet(packet, Path(tmp))
+            human_text = (Path(tmp) / "human-certification.json").read_text(encoding="utf-8")
+
+        self.assertIn("ready_for_human_99_percent_review", human_text)
 
     def test_source_completeness_flags_matching_withdrawal_sheet(self) -> None:
         source_support = agent.source_support_report(

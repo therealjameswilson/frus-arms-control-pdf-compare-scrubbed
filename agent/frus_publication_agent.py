@@ -535,6 +535,34 @@ def render_and_ocr_page(pdf_path: Path, page: int, ocr_dir: Path, dpi: int, psm:
     return text
 
 
+def render_review_images(pdf_path: Path, pages: list[int], image_dir: Path, dpi: int) -> list[dict[str, Any]]:
+    """Render selected PDF pages to stable PNG files for human certification."""
+    require_tool("pdftoppm")
+    image_dir.mkdir(parents=True, exist_ok=True)
+    rendered = []
+    for page in pages:
+        dest = image_dir / f"page-{page:04d}.png"
+        if not dest.exists():
+            with tempfile.TemporaryDirectory() as tmp:
+                prefix = Path(tmp) / f"page-{page:04d}"
+                result = run_command(
+                    ["pdftoppm", "-r", str(dpi), "-png", "-f", str(page), "-l", str(page), str(pdf_path), str(prefix)],
+                    timeout=180,
+                )
+                if result.returncode != 0:
+                    raise RuntimeError(result.stderr.strip() or f"pdftoppm failed on page {page}")
+                images = sorted(Path(tmp).glob(f"page-{page:04d}*.png"))
+                if not images:
+                    raise RuntimeError(f"pdftoppm produced no review image for page {page}")
+                shutil.copyfile(images[0], dest)
+        rendered.append({
+            "page": page,
+            "path": str(Path("page-images") / dest.name),
+            "dpi": dpi,
+        })
+    return rendered
+
+
 def get_page_texts(
     pdf_path: Path,
     pages: list[int],
@@ -742,6 +770,23 @@ def is_noise_line(line: str) -> bool:
     return False
 
 
+def line_review_flags(line: str) -> list[str]:
+    flags = []
+    norm = normalize_for_match(line)
+    raw = line or ""
+    if re.search(r"(\?{2,}|_{3,}|\.{4,}|[|{}<>]{2,})", raw):
+        flags.append("ocr_noise_or_uncertain_marks")
+    if re.search(r"\[[^\]]*(illegible|unclear|handwritten|redacted|excised|omitted|deletion|blank)[^\]]*\]", raw, flags=re.I):
+        flags.append("editorial_uncertainty_marker")
+    if re.search(r"\b(illegible|unreadable|unclear|indecipherable|handwritten|handwriting|manuscript)\b", norm):
+        flags.append("handwriting_or_illegible_marker")
+    if re.search(r"\b(redacted|excised|sanitized|withdrawn|withheld|deleted|deletion|excision|blank|omitted)\b", norm):
+        flags.append("redaction_or_excision_marker")
+    if len(raw) >= 12 and len(normalized_tokens(raw)) <= 1:
+        flags.append("low_token_density")
+    return sorted(set(flags))
+
+
 def transcript_line_entries(page_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     entries: list[dict[str, Any]] = []
     for record in page_records:
@@ -756,7 +801,7 @@ def transcript_line_entries(page_records: list[dict[str, Any]]) -> list[dict[str
                 "source_line_no": source_line_no,
                 "text": line,
                 "normalized_token_count": len(normalized_tokens(line)),
-                "review_flags": [],
+                "review_flags": line_review_flags(line),
             })
     return entries
 
@@ -832,8 +877,95 @@ def build_tei_stub(packet: dict[str, Any]) -> str:
     )
 
 
+def refresh_human_certification_status(packet: dict[str, Any]) -> None:
+    human = packet.setdefault("human_certification", {})
+    report = packet.get("accuracy_report", {})
+    if report.get("passed_99_accuracy_gate"):
+        human["status"] = "certified_by_benchmark"
+        human["human_certification_required"] = False
+        human["can_claim_99_without_human"] = True
+        return
+
+    human["human_certification_required"] = True
+    human["can_claim_99_without_human"] = False
+    if report.get("benchmark_available"):
+        human["status"] = "requires_correction_or_source_review"
+        return
+
+    if human.get("review_images_rendered") and packet.get("selected_pages") and packet.get("transcript_lines"):
+        human["status"] = "ready_for_human_99_percent_review"
+    elif human.get("review_image_pages"):
+        human["status"] = "pending_review_image_render"
+    else:
+        human["status"] = "requires_page_images_for_human_certification"
+
+
+def build_human_certification(
+    report: dict[str, Any],
+    selected_pages: list[int],
+    transcript_lines: list[dict[str, Any]],
+    *,
+    review_image_pages: list[int],
+    review_image_dpi: int,
+    body_text_mode: str,
+    source_completeness: dict[str, Any],
+) -> dict[str, Any]:
+    flagged_lines = [entry for entry in transcript_lines if entry.get("review_flags")]
+    human = {
+        "status": "pending",
+        "certification_gate": {
+            "normalized_token_recall": ">= 0.99",
+            "normalized_token_precision": ">= 0.99",
+            "normalized_character_similarity": ">= 0.99",
+            "structure_required_items_passed": True,
+        },
+        "benchmark_available": report.get("benchmark_available"),
+        "machine_99_gate_passed": report.get("passed_99_accuracy_gate"),
+        "human_certification_required": not bool(report.get("passed_99_accuracy_gate")),
+        "can_claim_99_without_human": bool(report.get("passed_99_accuracy_gate")),
+        "selected_pages": selected_pages,
+        "review_image_pages": review_image_pages,
+        "review_image_dir": "page-images" if review_image_pages else None,
+        "review_image_dpi": review_image_dpi if review_image_pages else None,
+        "review_images_rendered": False if review_image_pages else None,
+        "review_images": [],
+        "line_count": len(transcript_lines),
+        "flagged_line_count": len(flagged_lines),
+        "flagged_lines_sample": flagged_lines[:100],
+        "body_text_mode": body_text_mode,
+        "source_completeness_status": source_completeness.get("status"),
+        "required_human_actions": [
+            "Compare every transcript line to the rendered page image.",
+            "Resolve each flagged line before claiming the 99% gate.",
+            "Confirm headings, paragraph order, attachments, excisions, and source-note provenance.",
+            "Run the verifier against an approved transcript when one becomes available.",
+        ],
+    }
+    packet_stub = {
+        "accuracy_report": report,
+        "selected_pages": selected_pages,
+        "transcript_lines": transcript_lines,
+        "human_certification": human,
+    }
+    refresh_human_certification_status(packet_stub)
+    return packet_stub["human_certification"]
+
+
 def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    human = packet.get("human_certification") or {}
+    review_pages = [int(page) for page in human.get("review_image_pages") or []]
+    if review_pages:
+        rendered = render_review_images(
+            Path(packet["source_pdf"]["local_path"]),
+            review_pages,
+            output_dir / "page-images",
+            int(human.get("review_image_dpi") or 150),
+        )
+        human["review_images"] = rendered
+        human["review_images_rendered"] = True
+        packet["human_certification"] = human
+        refresh_human_certification_status(packet)
     (output_dir / "publication-packet.json").write_text(json.dumps(packet, indent=2) + "\n", encoding="utf-8")
     (output_dir / "draft.md").write_text(build_markdown(packet), encoding="utf-8")
     (output_dir / "draft.xml").write_text(build_tei_stub(packet), encoding="utf-8")
@@ -845,6 +977,7 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
         json.dumps(packet.get("approved_transcript_support", {}).get("report", {}).get("gap_report", {}), indent=2) + "\n",
         encoding="utf-8",
     )
+    (output_dir / "human-certification.json").write_text(json.dumps(packet.get("human_certification", {}), indent=2) + "\n", encoding="utf-8")
     (output_dir / "review-checklist.md").write_text(build_review_checklist(packet), encoding="utf-8")
 
 
@@ -859,6 +992,7 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         f"- Body text mode: `{packet.get('body_text_mode')}`",
         f"- Source completeness: `{packet.get('source_completeness', {}).get('status')}`",
         f"- Transcript lines: {len(packet.get('transcript_lines', []))}",
+        f"- Human certification status: `{packet.get('human_certification', {}).get('status')}`",
         "",
         "## Required Human Checks",
         "",
@@ -905,6 +1039,19 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
     if extra_phrases:
         lines.extend(["", "Sample selected-source OCR phrases outside the approved transcript:"])
         lines.extend(f"- {phrase}" for phrase in extra_phrases[:8])
+    human = packet.get("human_certification") or {}
+    flagged = human.get("flagged_lines_sample") or []
+    lines.extend(["", "## Human Certification", ""])
+    lines.append(f"- Status: `{human.get('status')}`")
+    lines.append(f"- Review image directory: `{human.get('review_image_dir')}`")
+    lines.append(f"- Review images rendered: `{human.get('review_images_rendered')}`")
+    lines.append(f"- Flagged transcript lines: {human.get('flagged_line_count', 0)}")
+    if flagged:
+        lines.extend(["", "Flagged line sample:"])
+        for entry in flagged[:10]:
+            flags = ", ".join(entry.get("review_flags") or [])
+            text = compact_ws(entry.get("text") or "")[:160]
+            lines.append(f"- Page {entry.get('page')}, line {entry.get('source_line_no')}: `{flags}` - {text}")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -1135,6 +1282,17 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     draft_body = approved_transcript if use_approved_transcript else ocr_body
     body_text_mode = "approved_transcript_supported_by_selected_span" if use_approved_transcript else "ocr_transcript_requires_review"
     report = accuracy_report(draft_body, benchmark_text, threshold=args.accuracy_threshold)
+    render_review_pages = args.render_review_images if args.render_review_images is not None else not bool(approved_transcript)
+    review_image_pages = selected_pages if render_review_pages else []
+    human_certification = build_human_certification(
+        report,
+        selected_pages,
+        transcript_lines,
+        review_image_pages=review_image_pages,
+        review_image_dpi=args.review_image_dpi,
+        body_text_mode=body_text_mode,
+        source_completeness=source_completeness,
+    )
 
     warnings = []
     if ocr_required:
@@ -1202,6 +1360,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         },
         "source_completeness": source_completeness,
         "accuracy_report": report,
+        "human_certification": human_certification,
         "evidence_classes": {
             "title": "proved_by_published_frus_model" if known_row else "heuristic_requires_review",
             "source_note": "proved_by_published_frus_model" if known_row else "proved_by_source_register" if source_note else "unsupported_do_not_use",
@@ -1270,6 +1429,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--source-incomplete-preflight", action=argparse.BooleanOptionalAction, default=True, help="Skip expensive support OCR when low selected-span support and matching withdrawal sheets show the visible PDF is source-incomplete.")
     parser.add_argument("--source-incomplete-preflight-recall-threshold", type=float, default=0.95, help="Maximum selected-span token recall for source-incomplete preflight skipping.")
     parser.add_argument("--source-incomplete-preflight-phrase-threshold", type=float, default=0.65, help="Maximum selected-span phrase coverage for source-incomplete preflight skipping.")
+    parser.add_argument("--render-review-images", action=argparse.BooleanOptionalAction, default=None, help="Render selected pages to output-dir/page-images for human certification; defaults on when no approved transcript is supplied.")
+    parser.add_argument("--review-image-dpi", type=int, default=150, help="DPI for human-review page images.")
     parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE), help="Cache directory for PDFs and OCR.")
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT), help="Output directory.")
     return parser
@@ -1288,6 +1449,7 @@ def main(argv: list[str] | None = None) -> int:
         "selected_pages": packet["selected_pages"],
         "passed_99_accuracy_gate": packet["accuracy_report"].get("passed_99_accuracy_gate"),
         "source_completeness": packet.get("source_completeness", {}).get("status"),
+        "human_certification": packet.get("human_certification", {}).get("status"),
         "warnings": packet["human_review_warnings"],
     }, indent=2))
     return 0

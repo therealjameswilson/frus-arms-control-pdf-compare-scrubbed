@@ -85,6 +85,8 @@ python3 agent/frus_publication_agent.py \
   transcript lines.
 - `accuracy-report.json`: 99% gate report when a benchmark or approved
   transcript is available.
+- `human-certification.json`: benchmark/no-benchmark status, review-image
+  pages, flagged transcript lines, and remaining human certification actions.
 - `source-support-gaps.json`: sampled missing approved-transcript phrases,
   extra source-OCR phrases, and missing/extra token examples for blocked runs.
 
@@ -117,6 +119,12 @@ with `--approved-transcript-mode never` when you want to inspect raw OCR output.
 By default, source support is checked with multiple selected-span OCR passes
 (`--support-ocr-psms 3,4,6,11`) because different Tesseract segmentation modes
 recover different tokens from degraded scans.
+
+For universal runs without an approved transcript, the agent defaults to
+rendering selected pages into `page-images/page-####.png` and records them in
+`human-certification.json`. Disable this with `--no-render-review-images` only
+when you are creating a text-only diagnostic packet; without page images, the
+packet cannot be marked `ready_for_human_99_percent_review`.
 
 Benchmark-guided span selection records a true contiguous PDF page range in
 `span_selection.pages`. When administrative pages sit inside that range, the
