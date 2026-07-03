@@ -81,6 +81,8 @@ python3 agent/frus_publication_agent.py \
   source-note model, draft body, and human-review warnings.
 - `draft.md`: copy-readable FRUS-style draft packet.
 - `draft.xml`: minimal TEI-like review stub.
+- `transcript-lines.json`: page and source-line provenance for non-noise OCR
+  transcript lines.
 - `accuracy-report.json`: 99% gate report when a benchmark or approved
   transcript is available.
 - `source-support-gaps.json`: sampled missing approved-transcript phrases,
@@ -102,8 +104,8 @@ The verifier exits nonzero unless token recall, token precision, character
 similarity, and required structure checks all pass the configured threshold.
 
 For known training rows, `frus_publication_agent.py` now also writes
-`accuracy-report.json`, `page-inventory.json`, `source-support-gaps.json`, and
-`review-checklist.md`.
+`accuracy-report.json`, `page-inventory.json`, `transcript-lines.json`,
+`source-support-gaps.json`, and `review-checklist.md`.
 Benchmark-guided span pruning is enabled by default and can be disabled with
 `--no-benchmark-prune`.
 
@@ -138,8 +140,8 @@ python3 -m unittest discover -s agent/tests -v
 These tests mock the PDF/OCR boundary so they run without network access,
 Poppler, or Tesseract. They verify that the agent emits an approved transcript
 only when source support passes, blocks unsupported transcripts instead of
-overclaiming, reports concrete source-support gaps, and keeps OCR cache entries
-separated by DPI and PSM.
+overclaiming, reports concrete source-support gaps, writes transcript-line
+provenance, and keeps OCR cache entries separated by DPI and PSM.
 
 ## START I Certification Batch
 

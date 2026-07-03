@@ -223,6 +223,7 @@ Every run must emit:
 - `draft.md`
 - `draft.xml`
 - `page-inventory.json`
+- `transcript-lines.json`
 - `accuracy-report.json`
 - `source-support-gaps.json`
 - `review-checklist.md`
@@ -237,6 +238,10 @@ include sampled approved-transcript phrases missing from selected source OCR,
 sampled selected-source OCR phrases outside the approved transcript, and the
 highest-count missing or extra normalized tokens. A failure report that only
 names a metric is not sufficient.
+
+`transcript-lines.json` must preserve page and source-line provenance for every
+non-noise line used in the OCR transcript, so a human reviewer can certify the
+draft against page images without reverse-engineering the draft body.
 
 `accuracy-report.json` must include:
 

@@ -577,17 +577,33 @@ def is_noise_line(line: str) -> bool:
     return False
 
 
-def clean_body_text(page_records: list[dict[str, Any]]) -> str:
-    kept: list[str] = []
+def transcript_line_entries(page_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    entries: list[dict[str, Any]] = []
     for record in page_records:
         if record.get("page_class") != "source_document":
             continue
-        for raw_line in str(record.get("text", "")).splitlines():
+        for source_line_no, raw_line in enumerate(str(record.get("text", "")).splitlines(), start=1):
             line = repair_ocr_line(raw_line)
             if is_noise_line(line):
                 continue
-            kept.append(line)
-        kept.append("")
+            entries.append({
+                "page": record.get("page"),
+                "source_line_no": source_line_no,
+                "text": line,
+                "normalized_token_count": len(normalized_tokens(line)),
+                "review_flags": [],
+            })
+    return entries
+
+
+def clean_body_text(page_records: list[dict[str, Any]]) -> str:
+    kept: list[str] = []
+    previous_page = None
+    for entry in transcript_line_entries(page_records):
+        if previous_page is not None and entry.get("page") != previous_page:
+            kept.append("")
+        kept.append(str(entry.get("text", "")))
+        previous_page = entry.get("page")
 
     text = "\n".join(kept)
     text = re.sub(r"-\n(?=[a-z])", "", text)
@@ -656,6 +672,7 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
     (output_dir / "draft.md").write_text(build_markdown(packet), encoding="utf-8")
     (output_dir / "draft.xml").write_text(build_tei_stub(packet), encoding="utf-8")
     (output_dir / "page-inventory.json").write_text(json.dumps(packet["page_inventory"], indent=2) + "\n", encoding="utf-8")
+    (output_dir / "transcript-lines.json").write_text(json.dumps(packet["transcript_lines"], indent=2) + "\n", encoding="utf-8")
     (output_dir / "accuracy-report.json").write_text(json.dumps(packet["accuracy_report"], indent=2) + "\n", encoding="utf-8")
     (output_dir / "source-support-gaps.json").write_text(
         json.dumps(packet.get("approved_transcript_support", {}).get("report", {}).get("gap_report", {}), indent=2) + "\n",
@@ -673,11 +690,12 @@ def build_review_checklist(packet: dict[str, Any]) -> str:
         f"- Benchmark available: `{report.get('benchmark_available')}`",
         f"- Selected pages: {', '.join(str(p) for p in packet.get('selected_pages', [])) or 'none'}",
         f"- Body text mode: `{packet.get('body_text_mode')}`",
+        f"- Transcript lines: {len(packet.get('transcript_lines', []))}",
         "",
         "## Required Human Checks",
         "",
         "- Confirm the selected pages contain one document only.",
-        "- Compare OCR/transcription against page images.",
+        "- Compare `transcript-lines.json` against page images.",
         "- Remove routing/profile/distribution scaffolding from body text.",
         "- Confirm title, opener, source note, attachments, and excisions.",
         "- Re-run `agent/verify_frus_accuracy.py` before claiming 99%.",
@@ -843,6 +861,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
     for page in selected_pages:
         page_class = next((rec["page_class"] for rec in page_records if rec["page"] == page), "source_document")
         body_records.append({"page": page, "page_class": page_class, "text": text_by_page.get(page, "")})
+    transcript_lines = transcript_line_entries(body_records)
     ocr_body = clean_body_text(body_records)
     benchmark_text = approved_transcript or model_text
     support_ocr_bodies = [ocr_body] if ocr_body else []
@@ -934,6 +953,7 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         "page_inventory": page_records,
         "draft_body": draft_body,
         "ocr_body": ocr_body,
+        "transcript_lines": transcript_lines,
         "body_text_mode": body_text_mode,
         "approved_transcript_support": {
             "available": bool(approved_transcript),

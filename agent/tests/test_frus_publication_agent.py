@@ -106,6 +106,9 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertTrue(packet["accuracy_report"]["passed_99_accuracy_gate"])
         self.assertEqual(packet["draft_body"], APPROVED_TRANSCRIPT)
         self.assertIn("ocr_body", packet)
+        self.assertTrue(packet["transcript_lines"])
+        self.assertEqual(packet["transcript_lines"][0]["page"], 1)
+        self.assertEqual(packet["transcript_lines"][0]["source_line_no"], 1)
         self.assertEqual(support["report"]["gap_report"]["sampled_missing_benchmark_phrase_count"], 0)
 
     def test_unsupported_transcript_blocks_instead_of_overclaiming(self) -> None:
@@ -133,9 +136,11 @@ class FrusPublicationAgentTests(unittest.TestCase):
             output_dir = Path(tmp)
             agent.output_packet(packet, output_dir)
             gaps = (output_dir / "source-support-gaps.json").read_text(encoding="utf-8")
+            transcript = (output_dir / "transcript-lines.json").read_text(encoding="utf-8")
             checklist = (output_dir / "review-checklist.md").read_text(encoding="utf-8")
 
         self.assertIn("sampled_missing_benchmark_phrases", gaps)
+        self.assertIn("source_line_no", transcript)
         self.assertIn("Sample benchmark phrases not supported", checklist)
 
     def test_benchmark_span_uses_true_contiguous_pdf_pages(self) -> None:
