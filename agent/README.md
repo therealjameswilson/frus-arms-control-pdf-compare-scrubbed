@@ -99,6 +99,11 @@ python3 agent/verify_frus_accuracy.py \
 The verifier exits nonzero unless token recall, token precision, character
 similarity, and required structure checks all pass the configured threshold.
 
+For known training rows, `frus_publication_agent.py` now also writes
+`accuracy-report.json`, `page-inventory.json`, and `review-checklist.md`.
+Benchmark-guided span pruning is enabled by default and can be disabled with
+`--no-benchmark-prune`.
+
 ## START I Batch Run
 
 The full START I PDF batch output is in:

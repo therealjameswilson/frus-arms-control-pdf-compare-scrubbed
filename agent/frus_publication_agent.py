@@ -10,6 +10,7 @@ warnings rather than pretending OCR is final publication text.
 from __future__ import annotations
 
 import argparse
+import difflib
 import hashlib
 import html
 import json
@@ -20,6 +21,7 @@ import tempfile
 import textwrap
 import urllib.parse
 import urllib.request
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -41,11 +43,92 @@ def normalize_for_match(value: str) -> str:
 
 
 def strip_html(fragment: str) -> str:
-    fragment = re.sub(r'<span class="frus-page-break">.*?</span>', " ", fragment or "", flags=re.I | re.S)
+    fragment = re.sub(r'<div class="footnotes".*', " ", fragment or "", flags=re.I | re.S)
+    fragment = re.sub(r'<span class="frus-page-break">.*?</span>', " ", fragment, flags=re.I | re.S)
+    fragment = re.sub(r'<a href="#d\d+fn\d+"[^>]*><sup>\d+</sup></a>', " ", fragment, flags=re.I)
+    fragment = re.sub(r"<sup>\d+</sup>", " ", fragment, flags=re.I)
     fragment = re.sub(r"<br\s*/?>", " ", fragment, flags=re.I)
-    fragment = re.sub(r"</(p|div|li|h[1-6])>", " ", fragment, flags=re.I)
+    fragment = re.sub(r"</(p|div|li|h[1-6]|ul|ol|table|tr|td|th)>", " ", fragment, flags=re.I)
     fragment = re.sub(r"<[^>]+>", " ", fragment)
     return compact_ws(html.unescape(fragment))
+
+
+def normalized_tokens(value: str) -> list[str]:
+    text = html.unescape(value or "").lower()
+    text = text.replace("\u2014", "-").replace("\u2013", "-")
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return [token for token in text.split() if len(token) > 1 and not token.isdigit()]
+
+
+def normalized_chars(value: str) -> str:
+    return " ".join(normalized_tokens(value))
+
+
+def bag_overlap(left: list[str], right: list[str]) -> int:
+    return sum((Counter(left) & Counter(right)).values())
+
+
+def phrase_coverage(benchmark_tokens: list[str], candidate_norm: str, *, n: int = 8, stride: int = 8) -> tuple[float, int, int]:
+    phrases = []
+    for start in range(0, max(0, len(benchmark_tokens) - n + 1), stride):
+        phrase = " ".join(benchmark_tokens[start : start + n])
+        if len(phrase) >= 20:
+            phrases.append(phrase)
+    if not phrases:
+        return 0.0, 0, 0
+    hits = sum(1 for phrase in phrases if phrase in candidate_norm)
+    return hits / len(phrases), hits, len(phrases)
+
+
+def accuracy_report(candidate: str, benchmark: str, *, threshold: float = 0.99) -> dict[str, Any]:
+    if not benchmark:
+        return {
+            "passed_99_accuracy_gate": False,
+            "threshold": threshold,
+            "benchmark_available": False,
+            "human_certification_required": True,
+            "normalized_token_recall": None,
+            "normalized_token_precision": None,
+            "normalized_character_similarity": None,
+            "phrase_coverage": None,
+            "structure_required_items_passed": False,
+            "blocking_reasons": ["benchmark_text_missing"],
+        }
+
+    benchmark_tokens = normalized_tokens(benchmark)
+    candidate_tokens = normalized_tokens(candidate)
+    overlap = bag_overlap(benchmark_tokens, candidate_tokens)
+    token_recall = overlap / max(1, len(benchmark_tokens))
+    token_precision = overlap / max(1, len(candidate_tokens))
+    char_similarity = difflib.SequenceMatcher(None, normalized_chars(benchmark), normalized_chars(candidate)).ratio()
+    phrase_score, phrase_hits, phrase_total = phrase_coverage(benchmark_tokens, " ".join(candidate_tokens))
+    structure_passed = bool(benchmark_tokens and candidate_tokens)
+    blockers = []
+    if token_recall < threshold:
+        blockers.append("normalized_token_recall_below_threshold")
+    if token_precision < threshold:
+        blockers.append("normalized_token_precision_below_threshold")
+    if char_similarity < threshold:
+        blockers.append("normalized_character_similarity_below_threshold")
+    if not structure_passed:
+        blockers.append("structure_required_items_failed")
+
+    return {
+        "passed_99_accuracy_gate": not blockers,
+        "threshold": threshold,
+        "benchmark_available": True,
+        "human_certification_required": False,
+        "normalized_token_recall": round(token_recall, 6),
+        "normalized_token_precision": round(token_precision, 6),
+        "normalized_character_similarity": round(char_similarity, 6),
+        "phrase_coverage": round(phrase_score, 6),
+        "phrase_hits": phrase_hits,
+        "phrase_total": phrase_total,
+        "structure_required_items_passed": structure_passed,
+        "benchmark_token_count": len(benchmark_tokens),
+        "candidate_token_count": len(candidate_tokens),
+        "blocking_reasons": blockers,
+    }
 
 
 def sha256_file(path: Path) -> str:
@@ -296,6 +379,62 @@ def source_document_score(page_text: str, model_text: str) -> float:
     return round((phrase_hits * 2.0) + overlap, 3)
 
 
+def choose_benchmark_span(
+    page_records: list[dict[str, Any]],
+    model_text: str,
+    *,
+    max_span_pages: int = 25,
+) -> dict[str, Any] | None:
+    if not model_text:
+        return None
+    source_records = [record for record in page_records if record.get("page_class") == "source_document"]
+    if not source_records:
+        return None
+
+    best: dict[str, Any] | None = None
+    for start in range(len(source_records)):
+        for end in range(start, min(len(source_records), start + max_span_pages)):
+            candidate_records = [
+                {
+                    "page": record["page"],
+                    "page_class": "source_document",
+                    "text": record.get("text", ""),
+                }
+                for record in source_records[start : end + 1]
+            ]
+            body = clean_body_text(candidate_records)
+            report = accuracy_report(body, model_text)
+            recall = report.get("normalized_token_recall") or 0.0
+            precision = report.get("normalized_token_precision") or 0.0
+            char_similarity = report.get("normalized_character_similarity") or 0.0
+            # Selection favors balanced recall/precision first. Character
+            # similarity remains in diagnostics because OCR order/style can be
+            # poor before final transcription.
+            if recall + precision == 0:
+                f1 = 0.0
+            else:
+                f1 = (2 * recall * precision) / (recall + precision)
+            pages = [record["page"] for record in source_records[start : end + 1]]
+            candidate = {
+                "strategy": "benchmark_guided_contiguous_source_span",
+                "pages": pages,
+                "score": round(f1, 6),
+                "normalized_token_recall": recall,
+                "normalized_token_precision": precision,
+                "normalized_character_similarity": char_similarity,
+                "phrase_coverage": report.get("phrase_coverage"),
+                "candidate_token_count": report.get("candidate_token_count"),
+            }
+            if best is None:
+                best = candidate
+                continue
+            if candidate["score"] > best["score"]:
+                best = candidate
+            elif candidate["score"] == best["score"] and len(candidate["pages"]) < len(best["pages"]):
+                best = candidate
+    return best
+
+
 NOISE_LINE_PATTERNS = [
     r"^bush library photocopy$",
     r"^.*library photocopy$",
@@ -410,6 +549,37 @@ def output_packet(packet: dict[str, Any], output_dir: Path) -> None:
     (output_dir / "publication-packet.json").write_text(json.dumps(packet, indent=2) + "\n", encoding="utf-8")
     (output_dir / "draft.md").write_text(build_markdown(packet), encoding="utf-8")
     (output_dir / "draft.xml").write_text(build_tei_stub(packet), encoding="utf-8")
+    (output_dir / "page-inventory.json").write_text(json.dumps(packet["page_inventory"], indent=2) + "\n", encoding="utf-8")
+    (output_dir / "accuracy-report.json").write_text(json.dumps(packet["accuracy_report"], indent=2) + "\n", encoding="utf-8")
+    (output_dir / "review-checklist.md").write_text(build_review_checklist(packet), encoding="utf-8")
+
+
+def build_review_checklist(packet: dict[str, Any]) -> str:
+    report = packet.get("accuracy_report", {})
+    lines = [
+        "# FRUS Draft Review Checklist",
+        "",
+        f"- 99% gate passed: `{report.get('passed_99_accuracy_gate')}`",
+        f"- Benchmark available: `{report.get('benchmark_available')}`",
+        f"- Selected pages: {', '.join(str(p) for p in packet.get('selected_pages', [])) or 'none'}",
+        "",
+        "## Required Human Checks",
+        "",
+        "- Confirm the selected pages contain one document only.",
+        "- Compare OCR/transcription against page images.",
+        "- Remove routing/profile/distribution scaffolding from body text.",
+        "- Confirm title, opener, source note, attachments, and excisions.",
+        "- Re-run `agent/verify_frus_accuracy.py` before claiming 99%.",
+        "",
+        "## Blocking Reasons",
+        "",
+    ]
+    blockers = report.get("blocking_reasons") or []
+    if blockers:
+        lines.extend(f"- `{blocker}`" for blocker in blockers)
+    else:
+        lines.append("- None recorded.")
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def build_training_profile(
@@ -496,19 +666,34 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         record["cues"] = cues
         record["model_match_score"] = source_document_score(record["text"], model_text)
         record["text_preview"] = compact_ws(record["text"])[:500]
-        record.pop("text", None)
 
+    span_selection: dict[str, Any] = {"strategy": "none", "pages": []}
     selected_pages = []
     if requested_pages is not None:
         selected_pages = pages
+        span_selection = {"strategy": "editor_supplied_page_range", "pages": selected_pages}
     elif model_text:
-        selected_pages = [
-            rec["page"]
-            for rec in page_records
-            if rec["page_class"] == "source_document" and rec["model_match_score"] >= args.match_threshold
-        ]
+        if args.benchmark_prune:
+            best_span = choose_benchmark_span(page_records, model_text, max_span_pages=args.max_span_pages)
+        else:
+            best_span = None
+        if best_span:
+            selected_pages = best_span["pages"]
+            span_selection = best_span
+        else:
+            selected_pages = [
+                rec["page"]
+                for rec in page_records
+                if rec["page_class"] == "source_document" and rec["model_match_score"] >= args.match_threshold
+            ]
+            span_selection = {
+                "strategy": "model_score_threshold",
+                "pages": selected_pages,
+                "match_threshold": args.match_threshold,
+            }
     else:
         selected_pages = [rec["page"] for rec in page_records if rec["page_class"] == "source_document"]
+        span_selection = {"strategy": "all_source_document_pages", "pages": selected_pages}
 
     selected_set = set(selected_pages)
     selected_text_records, _ = get_page_texts(pdf_path, selected_pages, cache_dir, args.ocr_dpi) if selected_pages else ([], ocr_required)
@@ -518,12 +703,14 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
             record["selected_for_body"] = True
         else:
             record["selected_for_body"] = False
+        record.pop("text", None)
 
     body_records = []
     for page in selected_pages:
         page_class = next((rec["page_class"] for rec in page_records if rec["page"] == page), "source_document")
         body_records.append({"page": page, "page_class": page_class, "text": text_by_page.get(page, "")})
     draft_body = clean_body_text(body_records)
+    report = accuracy_report(draft_body, model_text, threshold=args.accuracy_threshold)
 
     warnings = []
     if ocr_required:
@@ -538,6 +725,8 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         warnings.append("Universal deployment run without explicit page range; page span requires human confirmation.")
     if not known_row:
         warnings.append("START I training data supplies process patterns only; publication claims must come from this PDF and supplied metadata.")
+    if not report.get("passed_99_accuracy_gate"):
+        warnings.append("99% accuracy gate did not pass; see accuracy-report.json before using as FRUS output.")
     warnings.append("Confirm attachment treatment, declassification/excision status, title, date, sender, recipient, and TEI before publication.")
 
     return {
@@ -556,13 +745,15 @@ def build_packet(args: argparse.Namespace) -> dict[str, Any]:
         "ocr_required": ocr_required,
         "source_note_model": source_note,
         "selected_pages": selected_pages,
+        "span_selection": span_selection,
         "page_inventory": page_records,
         "draft_body": draft_body,
+        "accuracy_report": report,
         "evidence_classes": {
             "title": "proved_by_published_frus_model" if known_row else "heuristic_requires_review",
             "source_note": "proved_by_published_frus_model" if known_row else "proved_by_source_register" if source_note else "unsupported_do_not_use",
             "body_text": "proved_by_pdf_ocr_requires_review",
-            "page_span": "proved_by_editor_supplied_page_range" if requested_pages else "heuristic_requires_review",
+            "page_span": "proved_by_editor_supplied_page_range" if requested_pages else "proved_by_benchmark_guided_span" if span_selection.get("strategy") == "benchmark_guided_contiguous_source_span" else "heuristic_requires_review",
         },
         "reverse_engineered_process": [
             "inventory supplied source PDF and source-register evidence",
@@ -605,6 +796,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-ocr-pages", type=int, default=12, help="Pages to inspect by default without --page-range.")
     parser.add_argument("--ocr-dpi", type=int, default=160, help="DPI for page rendering before OCR.")
     parser.add_argument("--match-threshold", type=float, default=0.18, help="Minimum model score for auto-selected known-pair pages.")
+    parser.add_argument("--benchmark-prune", action=argparse.BooleanOptionalAction, default=True, help="Use benchmark/model text to choose a compact document span.")
+    parser.add_argument("--max-span-pages", type=int, default=25, help="Maximum source-document pages in a benchmark-guided span.")
+    parser.add_argument("--accuracy-threshold", type=float, default=0.99, help="Threshold for the 99 percent accuracy gate.")
     parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE), help="Cache directory for PDFs and OCR.")
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT), help="Output directory.")
     return parser
@@ -621,6 +815,7 @@ def main(argv: list[str] | None = None) -> int:
         "run_mode": packet["run_mode"],
         "agent": packet["agent"],
         "selected_pages": packet["selected_pages"],
+        "passed_99_accuracy_gate": packet["accuracy_report"].get("passed_99_accuracy_gate"),
         "warnings": packet["human_review_warnings"],
     }, indent=2))
     return 0
