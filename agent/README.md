@@ -89,6 +89,8 @@ python3 agent/frus_publication_agent.py \
   OCR repairs applied to the draft layer while preserving raw `ocr_body`.
 - `frus-style-transform.json`: source-header-to-FRUS-opener transforms, with
   the generated opener and title/date/place/time evidence used.
+- `frus-participants-transform.json`: participant-list reconstruction,
+  including two-column group/name assignments and unparsed lines.
 - `human-certification.json`: benchmark/no-benchmark status, review-image
   pages, flagged transcript lines, and remaining human certification actions.
 - `source-support-gaps.json`: sampled missing approved-transcript phrases,

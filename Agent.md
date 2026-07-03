@@ -240,6 +240,7 @@ Every run must emit:
 - `source-support-gaps.json`
 - `ocr-editorial-cleanup.json`
 - `frus-style-transform.json`
+- `frus-participants-transform.json`
 - `human-certification.json`
 - `review-checklist.md`
 
@@ -268,6 +269,11 @@ not as a silent rewrite of the source evidence.
 including the source lines removed, the generated opener, and the title, date,
 place, and time evidence used. If the source header cannot be established, the
 transform must say it was not applied and leave the draft in review status.
+
+`frus-participants-transform.json` must record participant-list reconstruction,
+especially when OCR reads a two-column meeting list row-wise instead of in
+logical FRUS order. It must list the reconstructed groups, assigned names,
+source line assignments, and any unparsed participant lines.
 
 `transcript-lines.json` must preserve page and source-line provenance for every
 non-noise line used in the OCR transcript, so a human reviewer can certify the

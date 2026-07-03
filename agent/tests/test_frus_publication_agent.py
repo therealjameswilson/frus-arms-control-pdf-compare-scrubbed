@@ -143,6 +143,7 @@ class FrusPublicationAgentTests(unittest.TestCase):
             transcript = (output_dir / "transcript-lines.json").read_text(encoding="utf-8")
             cleanup = (output_dir / "ocr-editorial-cleanup.json").read_text(encoding="utf-8")
             style = (output_dir / "frus-style-transform.json").read_text(encoding="utf-8")
+            participants = (output_dir / "frus-participants-transform.json").read_text(encoding="utf-8")
             human = (output_dir / "human-certification.json").read_text(encoding="utf-8")
             checklist = (output_dir / "review-checklist.md").read_text(encoding="utf-8")
 
@@ -151,11 +152,13 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertIn("source_line_no", transcript)
         self.assertIn("removed_line_count", cleanup)
         self.assertIn("applied", style)
+        self.assertIn("applied", participants)
         self.assertIn("requires_correction_or_source_review", human)
         self.assertIn("Source Completeness", checklist)
         self.assertIn("Sample benchmark phrases not supported", checklist)
         self.assertIn("OCR Editorial Cleanup", checklist)
         self.assertIn("FRUS Style Transform", checklist)
+        self.assertIn("FRUS Participants Transform", checklist)
         self.assertIn("Human Certification", checklist)
 
     def test_frus_editorial_cleanup_removes_scan_scaffolding_with_audit_trail(self) -> None:
@@ -200,6 +203,48 @@ class FrusPublicationAgentTests(unittest.TestCase):
         self.assertIn("Washington, June 12, 1989, 11 a.m.-noon", transformed.splitlines()[0])
         self.assertNotIn("DATE:", transformed)
         self.assertIn("SUBJECT: Summary of Conclusions", transformed)
+
+    def test_participant_column_transform_reorders_two_column_meeting_list(self) -> None:
+        styled = "\n".join(
+            [
+                "31. Summary of Conclusions for a Deputies Committee Meeting Washington, June 12, 1989, 11 a.m.-noon",
+                "SUBJECT: Summary of Conclusions",
+                "PARTICIPANTS:",
+                "The Vice President's Office CIA:",
+                "Carnes Lord Richard. Kerr",
+                "Douglas MacEachin",
+                "State:",
+                "Reginald Bartholomew JCS:",
+                "Edward Rowny John Baldwin",
+                "Richard Burt Thomas Fox",
+                "Roger Harrison",
+                "ACDA:",
+                "Defense: George Murphy.",
+                "Donald Atwood William Fite",
+                "Paul Wolfowitz",
+                "Stephen Hadley White House:",
+                "Robert Gates",
+                "Energy:",
+                "John Tuck NSC:",
+                "Victor Alessi Arnold Kanter",
+                "Richard Davis",
+                "OMB:",
+                "William Diefenderfer",
+                "Frank Hodsoll",
+                "Summary of Conclusions",
+                "There was agreement.",
+            ]
+        )
+
+        transformed, report = agent.frus_participant_column_transform(styled)
+        norm = agent.normalized_chars(transformed)
+
+        self.assertTrue(report["applied"])
+        self.assertIn(
+            "participants the vice president office carnes lord state reginald bartholomew edward rowny richard burt roger harrison defense donald atwood paul wolfowitz stephen hadley energy john tuck victor alessi omb william diefenderfer frank hodsoll cia richard kerr douglas maceachin jcs john baldwin thomas fox acda george murphy william fite white house robert gates nsc arnold kanter richard davis summary of conclusions",
+            norm,
+        )
+        self.assertEqual(report["group_count"], 10)
 
     def test_transcript_line_entries_flags_uncertain_lines(self) -> None:
         entries = agent.transcript_line_entries(
